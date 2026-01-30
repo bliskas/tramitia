@@ -141,12 +141,7 @@
     if (document.querySelector('script[src*="googletagmanager"]')) return;
 
     // Replace GA_MEASUREMENT_ID with your actual Google Analytics ID
-    const GA_ID = 'G-R13T824XGH'; // TODO: Replace with actual GA4 ID
-
-    if (GA_ID === 'G-R13T824XGH') {
-      console.log('Google Analytics ID not configured');
-      return;
-    }
+    const GA_ID = 'G-R13T824XGH';
 
     const script = document.createElement('script');
     script.async = true;
