@@ -183,37 +183,31 @@ const webSiteSchema = getWebSiteSchema();
           {
             title: 'Partida de nacimiento',
             description: 'Esencial para tramites de nacionalidad, residencia y matrimonio.',
-            price: 'Desde 89',
             href: '#contacto',
           },
           {
             title: 'Antecedentes penales',
             description: 'Requerido para visados, permisos de trabajo y residencia.',
-            price: 'Desde 99',
             href: '#contacto',
           },
           {
             title: 'Titulo universitario',
             description: 'Necesario para homologacion de estudios y ejercicio profesional.',
-            price: 'Desde 119',
             href: '#contacto',
           },
           {
             title: 'Acta de matrimonio',
             description: 'Para tramites de reagrupacion familiar y reconocimiento de union.',
-            price: 'Desde 89',
             href: '#contacto',
           },
           {
             title: 'Partida de defuncion',
             description: 'Para tramites de herencia, pensiones y registros.',
-            price: 'Desde 89',
             href: '#contacto',
           },
           {
             title: 'Otros documentos',
             description: 'Poderes, certificados de solteria, notas certificadas, etc.',
-            price: 'Consultar',
             href: '#contacto',
           },
         ].map((service) => (
@@ -221,10 +215,7 @@ const webSiteSchema = getWebSiteSchema();
             href={service.href}
             class="block p-6 bg-white border border-muted/50 rounded-xl card-hover group"
           >
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-semibold text-primary group-hover:text-accent transition">{service.title}</h3>
-              <span class="text-accent font-semibold text-sm bg-accent/10 px-3 py-1 rounded-full">{service.price}</span>
-            </div>
+            <h3 class="text-xl font-semibold text-primary group-hover:text-accent transition mb-3">{service.title}</h3>
             <p class="text-primary/70">{service.description}</p>
           </a>
         ))}
