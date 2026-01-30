@@ -34,3 +34,7 @@ pnpm-debug.log*
 .claude/
 
 CLAUDE.md
+
+# sanity studio
+studio/node_modules/
+studio/dist/

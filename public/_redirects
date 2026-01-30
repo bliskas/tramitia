@@ -1,0 +1,4 @@
+# Redirect www to non-www (301 permanent)
+https://www.tramitia.es/* https://tramitia.es/:splat 301
+
+# Ensure trailing slashes are consistent (Cloudflare Pages handles this by default)

@@ -106,6 +106,14 @@
   const COOKIE_NAME = 'cookie_consent';
   const COOKIE_EXPIRY_DAYS = 365;
 
+  // Extend Window interface for gtag
+  declare global {
+    interface Window {
+      dataLayer: any[];
+      gtag: (...args: any[]) => void;
+    }
+  }
+
   interface CookieConsent {
     essential: boolean;
     analytics: boolean;
@@ -140,25 +148,25 @@
     // Only load if not already loaded
     if (document.querySelector('script[src*="googletagmanager"]')) return;
 
-    // Replace GA_MEASUREMENT_ID with your actual Google Analytics ID
     const GA_ID = 'G-R13T824XGH';
 
+    // Initialize dataLayer and gtag BEFORE loading the script (required by GA4)
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(...args: any[]) {
+      window.dataLayer.push(arguments);
+    };
+
+    // Send initial config
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, {
+      anonymize_ip: true
+    });
+
+    // Load the gtag.js script
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
     document.head.appendChild(script);
-
-    script.onload = () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', GA_ID, {
-        anonymize_ip: true,
-        cookie_flags: 'SameSite=None;Secure'
-      });
-    };
   }
 
   function showBanner(): void {

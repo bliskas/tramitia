@@ -1,5 +1,165 @@
 ---
-import ComingSoonLayout from '../../layouts/ComingSoonLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllPosts } from '../../lib/sanity';
+
+const posts = await getAllPosts();
+
+const categories = [
+  { value: 'apostillas', label: 'Apostillas' },
+  { value: 'documentos', label: 'Documentos' },
+  { value: 'tramites', label: 'Tramites' },
+  { value: 'guias', label: 'Guias' },
+  { value: 'noticias', label: 'Noticias' },
+];
+
+// Schema.org para la pagina del blog
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Blog de Tramitia',
+  description: 'Guias, consejos y noticias sobre apostillas y legalizacion de documentos latinoamericanos en Espana',
+  url: 'https://tramitia.es/blog',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tramitia',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://tramitia.es/logo.svg',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Inicio',
+      item: 'https://tramitia.es',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: 'https://tramitia.es/blog',
+    },
+  ],
+};
 ---
 
-<ComingSoonLayout title="Blog - Proximamente | Tramitia" />
+<BaseLayout
+  title="Blog | Guias de Apostillas y Documentos - Tramitia"
+  description="Informacion util sobre apostillas, legalizacion de documentos y tramites para latinoamericanos en Espana. Guias paso a paso y consejos practicos."
+  keywords={['apostilla blog', 'guias apostilla', 'documentos latinoamerica', 'legalizacion espana']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav class="text-sm text-white/70 mb-4">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Blog</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+      <p class="text-xl text-white/80 max-w-2xl">
+        Guias, consejos y noticias sobre apostillas y legalizacion de documentos para latinoamericanos en Espana.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      {posts.length === 0 ? (
+        <div class="text-center py-16">
+          <div class="w-20 h-20 mx-auto mb-6 bg-muted-light rounded-full flex items-center justify-center">
+            <svg class="w-10 h-10 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+          <h2 class="text-2xl font-semibold text-primary mb-2">Proximamente</h2>
+          <p class="text-primary/70 max-w-md mx-auto">
+            Estamos preparando contenido util sobre apostillas y documentos. Vuelve pronto para leer nuestras guias.
+          </p>
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <article class="bg-white rounded-xl border border-muted/30 overflow-hidden hover:shadow-lg transition group">
+              {post.mainImage && (
+                <a href={`/blog/${post.slug.current}`} class="block aspect-video overflow-hidden">
+                  <img
+                    src={post.mainImage}
+                    alt={post.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    loading="lazy"
+                  />
+                </a>
+              )}
+              <div class="p-6">
+                {post.category && (
+                  <span class="inline-block bg-accent/10 text-accent text-xs font-medium px-2 py-1 rounded mb-3">
+                    {categories.find(c => c.value === post.category)?.label || post.category}
+                  </span>
+                )}
+                <h2 class="text-xl font-semibold text-primary mb-2 group-hover:text-accent transition">
+                  <a href={`/blog/${post.slug.current}`}>{post.title}</a>
+                </h2>
+                <p class="text-primary/70 text-sm mb-4 line-clamp-2">
+                  {post.description}
+                </p>
+                <div class="flex items-center justify-between text-sm">
+                  <time datetime={post.publishedAt} class="text-primary/50">
+                    {new Date(post.publishedAt).toLocaleDateString('es-ES', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    })}
+                  </time>
+                  <a
+                    href={`/blog/${post.slug.current}`}
+                    class="text-accent font-medium hover:underline"
+                  >
+                    Leer mas
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-muted-light">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">
+        ¿Necesitas apostillar tus documentos?
+      </h2>
+      <p class="text-primary/70 mb-8 max-w-2xl mx-auto">
+        Gestionamos la apostilla de tus documentos latinoamericanos de forma rapida y segura, sin que tengas que volver a tu pais.
+      </p>
+      <a
+        href="/#contacto"
+        class="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent-600 transition"
+      >
+        Solicitar presupuesto gratis
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

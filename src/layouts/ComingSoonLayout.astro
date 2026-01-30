@@ -3,9 +3,16 @@ import '../styles/global.css';
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = 'Proximamente | Tramitia' } = Astro.props;
+const {
+  title = 'Proximamente | Tramitia',
+  description = 'Esta seccion estara disponible proximamente. Tramitia - Apostillas de documentos latinoamericanos desde Espana.'
+} = Astro.props;
+
+const siteUrl = 'https://tramitia.es';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +21,8 @@ const { title = 'Proximamente | Tramitia' } = Astro.props;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="theme-color" content="#ed5823" />

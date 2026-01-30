@@ -1,10 +1,214 @@
 ---
-import ComingSoonLayout from '../../layouts/ComingSoonLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllPosts, getPostBySlug } from '../../lib/sanity';
+import { toHTML } from '@portabletext/to-html';
 
-// Necesario para SSG - generar rutas vacias ya que esta bloqueado
-export function getStaticPaths() {
-  return [];
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
+    params: { slug: post.slug.current },
+  }));
 }
+
+const { slug } = Astro.params;
+const post = await getPostBySlug(slug);
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const categories: Record<string, string> = {
+  apostillas: 'Apostillas',
+  documentos: 'Documentos',
+  tramites: 'Tramites',
+  guias: 'Guias',
+  noticias: 'Noticias',
+};
+
+// Renderizar Portable Text a HTML
+const bodyHtml = post.body ? toHTML(post.body, {
+  components: {
+    types: {
+      image: ({ value }: any) => {
+        if (!value?.asset?.url) return '';
+        return `<figure class="my-8">
+          <img src="${value.asset.url}" alt="${value.alt || ''}" class="rounded-lg w-full" loading="lazy" />
+          ${value.caption ? `<figcaption class="text-center text-sm text-primary/60 mt-2">${value.caption}</figcaption>` : ''}
+        </figure>`;
+      },
+    },
+    marks: {
+      link: ({ children, value }: any) => {
+        const href = value?.href || '';
+        const rel = href.startsWith('/') ? '' : 'rel="noopener noreferrer"';
+        const target = href.startsWith('/') ? '' : 'target="_blank"';
+        return `<a href="${href}" ${rel} ${target} class="text-accent hover:underline">${children}</a>`;
+      },
+    },
+  },
+}) : '';
+
+// Schema.org Article
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  image: post.mainImage,
+  datePublished: post.publishedAt,
+  dateModified: post.updatedAt || post.publishedAt,
+  author: {
+    '@type': 'Organization',
+    name: 'Tramitia',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tramitia',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://tramitia.es/logo.svg',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://tramitia.es/blog/${slug}`,
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Inicio',
+      item: 'https://tramitia.es',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: 'https://tramitia.es/blog',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: post.title,
+      item: `https://tramitia.es/blog/${slug}`,
+    },
+  ],
+};
 ---
 
-<ComingSoonLayout title="Blog - Proximamente | Tramitia" />
+<BaseLayout
+  title={`${post.title} | Tramitia`}
+  description={post.description}
+  image={post.mainImage}
+  article={true}
+  publishedTime={post.publishedAt}
+  modifiedTime={post.updatedAt}
+  keywords={post.keywords}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-primary/60 mb-8">
+      <a href="/" class="hover:text-accent">Inicio</a>
+      <span class="mx-2">/</span>
+      <a href="/blog" class="hover:text-accent">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-primary/80">{post.title}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-10">
+      {post.category && (
+        <span class="inline-block bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full mb-4">
+          {categories[post.category] || post.category}
+        </span>
+      )}
+      <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
+        {post.title}
+      </h1>
+      <p class="text-xl text-primary/70 mb-6">
+        {post.description}
+      </p>
+      <div class="flex items-center gap-4 text-sm text-primary/60">
+        <span>Por Tramitia</span>
+        <span class="w-1 h-1 bg-primary/40 rounded-full"></span>
+        <time datetime={post.publishedAt}>
+          {new Date(post.publishedAt).toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </time>
+        {post.updatedAt && post.updatedAt !== post.publishedAt && (
+          <>
+            <span class="w-1 h-1 bg-primary/40 rounded-full"></span>
+            <span>
+              Actualizado: {new Date(post.updatedAt).toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {post.mainImage && (
+      <img
+        src={post.mainImage}
+        alt={post.title}
+        class="w-full aspect-video object-cover rounded-xl mb-10"
+        loading="eager"
+      />
+    )}
+
+    <!-- Content -->
+    <div class="prose prose-lg max-w-none
+                prose-headings:font-semibold prose-headings:text-primary
+                prose-p:text-primary/80
+                prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                prose-img:rounded-lg
+                prose-blockquote:border-l-accent prose-blockquote:bg-muted-light prose-blockquote:py-1 prose-blockquote:text-primary/70
+                prose-strong:text-primary
+                prose-ul:text-primary/80 prose-ol:text-primary/80"
+         set:html={bodyHtml}
+    />
+
+    <!-- CTA Box -->
+    <div class="mt-12 p-8 bg-accent/5 rounded-xl border border-accent/20">
+      <h3 class="text-xl font-semibold text-primary mb-2">
+        ¿Necesitas apostillar tus documentos?
+      </h3>
+      <p class="text-primary/70 mb-4">
+        Gestionamos tu apostilla de forma rapida y segura. Sin volver a tu pais.
+      </p>
+      <a
+        href="/#contacto"
+        class="inline-block bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-600 transition"
+      >
+        Solicitar presupuesto gratis
+      </a>
+    </div>
+
+    <!-- Back to blog -->
+    <div class="mt-12 pt-8 border-t border-muted">
+      <a href="/blog" class="inline-flex items-center gap-2 text-accent font-medium hover:underline">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Volver al blog
+      </a>
+    </div>
+  </article>
+</BaseLayout>
