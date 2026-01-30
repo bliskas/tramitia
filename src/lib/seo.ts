@@ -3,6 +3,26 @@
 const siteUrl = 'https://tramitia.es';
 const siteName = 'Tramitia';
 
+// Schema para WebSite (importante para sitelinks y AEO)
+export function getWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteName,
+    url: siteUrl,
+    description: 'Apostillas y tramites de documentos latinoamericanos desde Espana',
+    inLanguage: 'es',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteUrl}/blog?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
 // Schema para Organization (página principal)
 export function getOrganizationSchema() {
   return {

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getOrganizationSchema, getFAQSchema } from '../lib/seo';
+import { getOrganizationSchema, getFAQSchema, getWebSiteSchema } from '../lib/seo';
 
 // FAQs para schema (también se muestran en la página)
 const faqs = [
@@ -28,6 +28,7 @@ const faqs = [
 
 const orgSchema = getOrganizationSchema();
 const faqSchema = getFAQSchema(faqs);
+const webSiteSchema = getWebSiteSchema();
 ---
 
 <BaseLayout
@@ -36,6 +37,7 @@ const faqSchema = getFAQSchema(faqs);
   keywords={['apostilla', 'apostilla de la haya', 'apostillar documentos españa', 'partida de nacimiento apostillada', 'antecedentes penales apostilla', 'tramites latinoamericanos españa']}
 >
   <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
@@ -180,37 +182,37 @@ const faqSchema = getFAQSchema(faqs);
         {[
           {
             title: 'Partida de nacimiento',
-            description: 'Esencial para trámites de nacionalidad, residencia y matrimonio.',
-            price: 'Desde 89€',
-            href: '/apostilla-partida-nacimiento',
+            description: 'Esencial para tramites de nacionalidad, residencia y matrimonio.',
+            price: 'Desde 89',
+            href: '#contacto',
           },
           {
             title: 'Antecedentes penales',
             description: 'Requerido para visados, permisos de trabajo y residencia.',
-            price: 'Desde 99€',
-            href: '/apostilla-antecedentes-penales',
+            price: 'Desde 99',
+            href: '#contacto',
           },
           {
-            title: 'Título universitario',
-            description: 'Necesario para homologación de estudios y ejercicio profesional.',
-            price: 'Desde 119€',
-            href: '/apostilla-titulo-universitario',
+            title: 'Titulo universitario',
+            description: 'Necesario para homologacion de estudios y ejercicio profesional.',
+            price: 'Desde 119',
+            href: '#contacto',
           },
           {
             title: 'Acta de matrimonio',
-            description: 'Para trámites de reagrupación familiar y reconocimiento de unión.',
-            price: 'Desde 89€',
-            href: '/apostilla-acta-matrimonio',
+            description: 'Para tramites de reagrupacion familiar y reconocimiento de union.',
+            price: 'Desde 89',
+            href: '#contacto',
           },
           {
-            title: 'Partida de defunción',
-            description: 'Para trámites de herencia, pensiones y registros.',
-            price: 'Desde 89€',
-            href: '/apostilla-partida-defuncion',
+            title: 'Partida de defuncion',
+            description: 'Para tramites de herencia, pensiones y registros.',
+            price: 'Desde 89',
+            href: '#contacto',
           },
           {
             title: 'Otros documentos',
-            description: 'Poderes, certificados de soltería, notas certificadas, etc.',
+            description: 'Poderes, certificados de solteria, notas certificadas, etc.',
             price: 'Consultar',
             href: '#contacto',
           },

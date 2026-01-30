@@ -1,16 +1,17 @@
-# Robots.txt para Apostilla Latam
-# https://apostillalatam.com/robots.txt
+# Robots.txt para Tramitia
+# https://tramitia.es/robots.txt
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://apostillalatam.com/sitemap-index.xml
+Sitemap: https://tramitia.es/sitemap-index.xml
 
 # Bloquear rutas no relevantes para SEO
 Disallow: /api/
 Disallow: /_astro/
 Disallow: /admin/
+Disallow: /gracias
 
 # Permitir a todos los bots de IA acceder al contenido
 # (Importante para AEO - Answer Engine Optimization)
@@ -26,6 +27,9 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
@@ -35,5 +39,8 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-# Archivo de información para LLMs
-# Ubicación: https://apostillalatam.com/llms.txt
+User-agent: Cohere-ai
+Allow: /
+
+# Archivo de informacion para LLMs
+# Ubicacion: https://tramitia.es/llms.txt
