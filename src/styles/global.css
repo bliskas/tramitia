@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-primary bg-white;
+  }
+
+  /* Mejor legibilidad en móviles */
+  @media (max-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Prose customizations for blog content */
+@layer components {
+  .prose {
+    --tw-prose-links: theme('colors.accent.DEFAULT');
+  }
+
+  .prose h2 {
+    @apply scroll-mt-20 text-primary;
+  }
+
+  .prose h3 {
+    @apply scroll-mt-20 text-primary;
+  }
+
+  /* Custom blockquote style */
+  .prose blockquote {
+    @apply border-l-4 border-accent bg-accent-50 py-4 px-6 rounded-r-lg;
+  }
+
+  /* Code blocks */
+  .prose pre {
+    @apply bg-primary rounded-lg;
+  }
+
+  .prose code {
+    @apply bg-muted-light px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  /* Tables */
+  .prose table {
+    @apply w-full border-collapse;
+  }
+
+  .prose th {
+    @apply bg-muted-light font-semibold text-left p-3 border border-muted;
+  }
+
+  .prose td {
+    @apply p-3 border border-muted;
+  }
+
+  /* Images */
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+
+  /* Lists */
+  .prose ul {
+    @apply list-disc pl-6;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6;
+  }
+
+  .prose li {
+    @apply my-2;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-400;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Focus ring for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Section background */
+  .bg-section {
+    @apply bg-muted-light;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+
+  .prose {
+    max-width: 100% !important;
+  }
+}

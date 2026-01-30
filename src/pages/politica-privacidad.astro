@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getBreadcrumbSchema } from '../lib/seo';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Política de Privacidad', url: '/politica-privacidad' },
+]);
+---
+
+<BaseLayout
+  title="Política de Privacidad | Tramitia"
+  description="Política de privacidad de Tramitia. Información sobre el tratamiento de datos personales conforme al RGPD y la LOPDGDD."
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="mb-8 text-sm">
+        <ol class="flex items-center gap-2 text-primary/60">
+          <li><a href="/" class="hover:text-accent transition">Inicio</a></li>
+          <li>/</li>
+          <li class="text-primary">Política de Privacidad</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-4xl font-bold text-primary mb-8">Política de Privacidad</h1>
+
+      <div class="prose prose-lg max-w-none">
+        <p class="text-primary/70 mb-8">
+          Última actualización: Enero 2026
+        </p>
+
+        <div class="bg-accent/5 border-l-4 border-accent p-4 mb-8 rounded-r-lg">
+          <p class="text-sm text-primary/80">
+            En Tramitia nos tomamos muy en serio la protección de tus datos personales. Esta política explica cómo recogemos, usamos y protegemos tu información conforme al Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">1. Responsable del tratamiento</h2>
+        <ul class="list-none space-y-2 my-4 bg-muted-light p-4 rounded-lg">
+          <li><strong>Identidad:</strong> [NOMBRE O RAZÓN SOCIAL]</li>
+          <li><strong>NIF/CIF:</strong> [NÚMERO DE IDENTIFICACIÓN FISCAL]</li>
+          <li><strong>Dirección:</strong> [DIRECCIÓN COMPLETA], España</li>
+          <li><strong>Correo electrónico:</strong> hola@tramitia.es</li>
+          <li><strong>Teléfono:</strong> [TELÉFONO DE CONTACTO]</li>
+        </ul>
+        <p class="text-sm text-primary/60 bg-muted-light p-4 rounded-lg">
+          Nota: Los datos entre corchetes [ ] deben ser sustituidos por la información real del responsable antes de publicar esta página.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">2. Datos que recogemos</h2>
+        <p>Recogemos los siguientes tipos de datos personales:</p>
+
+        <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.1 Datos que nos proporcionas directamente</h3>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Datos de identificación:</strong> nombre completo, país de origen</li>
+          <li><strong>Datos de contacto:</strong> correo electrónico, número de teléfono/WhatsApp</li>
+          <li><strong>Datos sobre tu solicitud:</strong> tipo de documento, información adicional que compartas</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.2 Datos recogidos automáticamente</h3>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas, tiempo de visita</li>
+          <li><strong>Datos de cookies:</strong> según se detalla en nuestra <a href="/politica-cookies" class="text-accent hover:underline">Política de Cookies</a></li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">3. Finalidades del tratamiento</h2>
+        <p>Utilizamos tus datos para las siguientes finalidades:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-muted-light">
+                <th class="text-left p-3 border border-muted font-semibold">Finalidad</th>
+                <th class="text-left p-3 border border-muted font-semibold">Base legal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-muted">Responder a consultas y solicitudes de presupuesto</td>
+                <td class="p-3 border border-muted">Consentimiento del interesado (art. 6.1.a RGPD)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-muted">Gestionar la prestación de nuestros servicios</td>
+                <td class="p-3 border border-muted">Ejecución de contrato (art. 6.1.b RGPD)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-muted">Enviar comunicaciones comerciales (si has dado consentimiento)</td>
+                <td class="p-3 border border-muted">Consentimiento del interesado (art. 6.1.a RGPD)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-muted">Mejorar nuestros servicios y la experiencia de usuario</td>
+                <td class="p-3 border border-muted">Interés legítimo (art. 6.1.f RGPD)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-muted">Cumplir obligaciones legales</td>
+                <td class="p-3 border border-muted">Obligación legal (art. 6.1.c RGPD)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">4. Destinatarios de los datos</h2>
+        <p>Tus datos pueden ser comunicados a:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Colaboradores en países de origen:</strong> equipos locales en Venezuela, Argentina, Colombia y otros países para la gestión de trámites documentales</li>
+          <li><strong>Proveedores de servicios:</strong> hosting, email, herramientas de gestión (todos con acuerdos de tratamiento de datos)</li>
+          <li><strong>Autoridades públicas:</strong> cuando exista obligación legal</li>
+        </ul>
+        <p>No vendemos ni cedemos tus datos a terceros con fines comerciales.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">5. Transferencias internacionales</h2>
+        <p>Dado que gestionamos trámites en países latinoamericanos, tus datos pueden ser transferidos fuera del Espacio Económico Europeo. En estos casos:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li>Solo transferimos los datos estrictamente necesarios para la gestión del trámite solicitado</li>
+          <li>Aplicamos cláusulas contractuales tipo aprobadas por la Comisión Europea</li>
+          <li>Implementamos medidas de seguridad adicionales para proteger tus datos</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">6. Plazo de conservación</h2>
+        <p>Conservamos tus datos durante los siguientes plazos:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Datos de contacto de consultas:</strong> 2 años desde la última comunicación</li>
+          <li><strong>Datos de clientes:</strong> durante la relación contractual y 5 años adicionales (obligaciones legales)</li>
+          <li><strong>Datos de facturación:</strong> 6 años (obligaciones fiscales)</li>
+          <li><strong>Datos de cookies:</strong> según se indica en la <a href="/politica-cookies" class="text-accent hover:underline">Política de Cookies</a></li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">7. Tus derechos</h2>
+        <p>Tienes derecho a:</p>
+
+        <div class="grid gap-4 my-6">
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Acceso</h4>
+            <p class="text-sm text-primary/70">Conocer qué datos personales tenemos sobre ti</p>
+          </div>
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Rectificación</h4>
+            <p class="text-sm text-primary/70">Corregir datos inexactos o incompletos</p>
+          </div>
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Supresión</h4>
+            <p class="text-sm text-primary/70">Solicitar la eliminación de tus datos cuando ya no sean necesarios</p>
+          </div>
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Oposición</h4>
+            <p class="text-sm text-primary/70">Oponerte al tratamiento de tus datos en determinadas circunstancias</p>
+          </div>
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Limitación</h4>
+            <p class="text-sm text-primary/70">Solicitar la limitación del tratamiento en ciertos casos</p>
+          </div>
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Portabilidad</h4>
+            <p class="text-sm text-primary/70">Recibir tus datos en formato estructurado y transmitirlos a otro responsable</p>
+          </div>
+          <div class="bg-muted-light p-4 rounded-lg">
+            <h4 class="font-semibold text-primary">Retirar el consentimiento</h4>
+            <p class="text-sm text-primary/70">Retirar tu consentimiento en cualquier momento sin que afecte a la licitud del tratamiento previo</p>
+          </div>
+        </div>
+
+        <p>Para ejercer estos derechos, contacta con nosotros en <a href="mailto:hola@tramitia.es" class="text-accent hover:underline">hola@tramitia.es</a> indicando el derecho que deseas ejercer y aportando copia de tu documento de identidad.</p>
+
+        <p class="mt-4">También tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">www.aepd.es</a></p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">8. Seguridad de los datos</h2>
+        <p>Implementamos medidas técnicas y organizativas para proteger tus datos, incluyendo:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li>Cifrado SSL/TLS en todas las comunicaciones</li>
+          <li>Acceso restringido a datos personales solo al personal autorizado</li>
+          <li>Copias de seguridad periódicas</li>
+          <li>Formación del personal en protección de datos</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">9. Menores de edad</h2>
+        <p>Nuestros servicios están dirigidos a mayores de 18 años. No recogemos conscientemente datos de menores de edad. Si eres padre/madre o tutor y crees que tu hijo nos ha proporcionado datos personales, contacta con nosotros.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">10. Modificaciones</h2>
+        <p>Nos reservamos el derecho a modificar esta política para adaptarla a novedades legislativas o cambios en nuestras prácticas. Te notificaremos cualquier cambio significativo publicando la nueva política en esta página con una nueva fecha de actualización.</p>
+
+        <div class="mt-12 p-6 bg-muted-light rounded-xl">
+          <h3 class="font-semibold text-primary mb-2">¿Tienes dudas sobre tus datos?</h3>
+          <p class="text-primary/70 mb-4">Si tienes cualquier pregunta sobre el tratamiento de tus datos personales, contacta con nosotros:</p>
+          <a href="mailto:hola@tramitia.es" class="text-accent hover:underline">hola@tramitia.es</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

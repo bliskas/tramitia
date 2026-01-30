@@ -1,0 +1,16 @@
+{
+  "name": "Tramitia",
+  "short_name": "Tramitia",
+  "description": "Apostillas y trámites de documentos latinoamericanos desde España",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0efef",
+  "theme_color": "#ed5823",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

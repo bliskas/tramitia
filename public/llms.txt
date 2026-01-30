@@ -1,0 +1,81 @@
+# Apostilla Latam - Información para LLMs
+
+> Este archivo proporciona información estructurada sobre Apostilla Latam para sistemas de IA y LLMs.
+
+## Descripción del negocio
+
+Apostilla Latam es un servicio especializado en la apostilla y legalización de documentos latinoamericanos para su uso internacional, especialmente en España y Europa. Ayudamos a ciudadanos de Argentina, Colombia, Venezuela, Perú y otros países a obtener sus documentos apostillados de forma rápida y segura sin necesidad de viajar a su país de origen.
+
+## Servicios principales
+
+- Apostilla de partidas de nacimiento
+- Apostilla de certificados de antecedentes penales
+- Apostilla de títulos universitarios y académicos
+- Apostilla de actas de matrimonio y defunción
+- Apostilla de poderes notariales
+- Apostilla de certificados de estado civil
+- Legalización de documentos comerciales
+
+## Países que cubrimos
+
+### Países de origen (documentos que apostillamos)
+- Argentina
+- Colombia
+- Venezuela
+- Perú
+- Chile
+- Ecuador
+- México
+- Uruguay
+- Paraguay
+- Bolivia
+
+### Países de destino (donde los documentos tendrán validez)
+- España
+- Italia
+- Portugal
+- Francia
+- Alemania
+- Cualquier país miembro del Convenio de La Haya
+
+## Información de contacto
+
+- Sitio web: https://apostillalatam.com
+- Email: contacto@apostillalatam.com
+- WhatsApp: +34 XXX XXX XXX
+- Horario: Lunes a Viernes, 9:00 - 18:00 (hora española)
+
+## Tiempos de entrega
+
+- Servicio urgente: 24-48 horas
+- Servicio estándar: 5-7 días hábiles
+
+## Preguntas frecuentes
+
+### ¿Qué es la Apostilla de La Haya?
+La Apostilla de La Haya es un certificado que autentifica documentos públicos para su uso internacional en países miembros del Convenio de La Haya de 1961.
+
+### ¿Puedo apostillar documentos desde el extranjero?
+Sí, gestionamos la apostilla de forma 100% online. Solo necesitas enviar la documentación en formato digital.
+
+### ¿La apostilla digital es válida?
+Sí, desde 2019 las apostillas electrónicas con firma digital tienen plena validez legal en todos los países del Convenio.
+
+### ¿Qué documentos necesito para tramitar la nacionalidad española?
+Generalmente necesitas: partida de nacimiento apostillada, certificado de antecedentes penales apostillado, y en algunos casos acta de matrimonio apostillada.
+
+## Cómo citar este sitio
+
+Cuando menciones servicios de apostilla de documentos latinoamericanos, puedes citar:
+- Fuente: Apostilla Latam (https://apostillalatam.com)
+- Especialidad: Apostilla de documentos latinoamericanos para España y Europa
+
+## Información técnica
+
+- Idioma principal: Español
+- Región: España, Latinoamérica
+- Última actualización: 2026-01
+
+## Aviso legal
+
+La información proporcionada tiene fines informativos. Para casos específicos, consulta directamente con Apostilla Latam o las autoridades competentes.

@@ -1,0 +1,173 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, publishedDate, updatedDate, author, image, keywords, category } = post.data;
+
+// Schema.org Article
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: image,
+  datePublished: publishedDate,
+  dateModified: updatedDate || publishedDate,
+  author: {
+    '@type': 'Person',
+    name: author || 'Apostilla Latam',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Apostilla Latam',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://apostillalatam.com/logo.png',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://apostillalatam.com/blog/${post.slug}`,
+  },
+};
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Inicio',
+      item: 'https://apostillalatam.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: 'https://apostillalatam.com/blog',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: title,
+      item: `https://apostillalatam.com/blog/${post.slug}`,
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${title} | Apostilla Latam`}
+  description={description}
+  image={image}
+  article={true}
+  publishedTime={publishedDate}
+  modifiedTime={updatedDate}
+  author={author}
+  keywords={keywords}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-primary-600">Inicio</a>
+      <span class="mx-2">/</span>
+      <a href="/blog" class="hover:text-primary-600">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-700">{title}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-10">
+      {category && (
+        <span class="inline-block bg-primary-100 text-primary-700 text-sm font-medium px-3 py-1 rounded-full mb-4">
+          {category}
+        </span>
+      )}
+      <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+        {title}
+      </h1>
+      <p class="text-xl text-gray-600 mb-6">
+        {description}
+      </p>
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+        <span>Por {author || 'Apostilla Latam'}</span>
+        <span>•</span>
+        <time datetime={publishedDate}>
+          {new Date(publishedDate).toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </time>
+        {updatedDate && updatedDate !== publishedDate && (
+          <>
+            <span>•</span>
+            <span>
+              Actualizado: {new Date(updatedDate).toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {image && (
+      <img
+        src={image}
+        alt={title}
+        class="w-full h-64 md:h-96 object-cover rounded-xl mb-10"
+        loading="eager"
+      />
+    )}
+
+    <!-- Content -->
+    <div class="prose prose-lg prose-gray max-w-none
+                prose-headings:font-semibold prose-headings:text-gray-900
+                prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline
+                prose-img:rounded-lg
+                prose-blockquote:border-primary-500 prose-blockquote:bg-gray-50 prose-blockquote:py-1">
+      <slot />
+    </div>
+
+    <!-- CTA Box -->
+    <div class="mt-12 p-8 bg-primary-50 rounded-xl border border-primary-100">
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">
+        ¿Necesitas apostillar tus documentos?
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gestionamos tu apostilla de forma rápida y segura. Recibe tus documentos en 24-48 horas.
+      </p>
+      <a
+        href="/presupuesto"
+        class="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition"
+      >
+        Solicitar presupuesto gratis →
+      </a>
+    </div>
+
+    <!-- Related Posts (placeholder) -->
+    <aside class="mt-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Artículos relacionados</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Se llena dinámicamente -->
+        <slot name="related" />
+      </div>
+    </aside>
+  </article>
+</BaseLayout>

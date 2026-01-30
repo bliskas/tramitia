@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getBreadcrumbSchema } from '../lib/seo';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Aviso Legal', url: '/aviso-legal' },
+]);
+---
+
+<BaseLayout
+  title="Aviso Legal | Tramitia"
+  description="Aviso legal y condiciones de uso del sitio web Tramitia. Información sobre el titular, responsabilidades y propiedad intelectual."
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="mb-8 text-sm">
+        <ol class="flex items-center gap-2 text-primary/60">
+          <li><a href="/" class="hover:text-accent transition">Inicio</a></li>
+          <li>/</li>
+          <li class="text-primary">Aviso Legal</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-4xl font-bold text-primary mb-8">Aviso Legal</h1>
+
+      <div class="prose prose-lg max-w-none">
+        <p class="text-primary/70 mb-8">
+          Última actualización: Enero 2026
+        </p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">1. Datos identificativos del titular</h2>
+        <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se informa:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Titular:</strong> [NOMBRE O RAZÓN SOCIAL]</li>
+          <li><strong>NIF/CIF:</strong> [NÚMERO DE IDENTIFICACIÓN FISCAL]</li>
+          <li><strong>Domicilio:</strong> [DIRECCIÓN COMPLETA], España</li>
+          <li><strong>Correo electrónico:</strong> hola@tramitia.es</li>
+          <li><strong>Teléfono:</strong> [TELÉFONO DE CONTACTO]</li>
+          <li><strong>Sitio web:</strong> https://tramitia.es</li>
+        </ul>
+        <p class="text-sm text-primary/60 bg-muted-light p-4 rounded-lg">
+          Nota: Los datos entre corchetes [ ] deben ser sustituidos por la información real del titular antes de publicar esta página.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">2. Objeto y ámbito de aplicación</h2>
+        <p>El presente Aviso Legal regula el uso del sitio web tramitia.es, del que es titular la persona/entidad indicada en el apartado anterior.</p>
+        <p>La navegación por el sitio web atribuye la condición de usuario e implica la aceptación plena y sin reservas de todas las disposiciones incluidas en este Aviso Legal.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">3. Actividad</h2>
+        <p>Tramitia es un servicio de intermediación que facilita la gestión de trámites documentales (apostillas, legalizaciones y obtención de documentos) para ciudadanos latinoamericanos residentes en España.</p>
+        <p>Los servicios incluyen:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li>Gestión de apostillas de documentos en países de origen</li>
+          <li>Obtención de partidas de nacimiento, antecedentes penales y otros documentos</li>
+          <li>Asesoramiento sobre requisitos documentales para trámites en España</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">4. Condiciones de uso</h2>
+        <p>El usuario se compromete a utilizar el sitio web de conformidad con la ley, el presente Aviso Legal, y las buenas costumbres. El usuario se obliga a abstenerse de:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li>Utilizar el sitio web con fines ilícitos o contrarios a lo establecido en este Aviso Legal</li>
+          <li>Realizar actividades que puedan dañar, inutilizar, sobrecargar o impedir la normal utilización del sitio</li>
+          <li>Introducir virus informáticos, archivos defectuosos o cualquier otro software que pueda causar daños</li>
+          <li>Intentar acceder a áreas restringidas del sitio web o de los sistemas informáticos del titular</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">5. Propiedad intelectual e industrial</h2>
+        <p>Todos los contenidos del sitio web (incluyendo, sin limitación, textos, fotografías, gráficos, imágenes, iconos, tecnología, software, links y demás contenidos audiovisuales o sonoros, así como su diseño gráfico y códigos fuente) son propiedad intelectual del titular o de terceros, sin que puedan entenderse cedidos al usuario ninguno de los derechos de explotación sobre los mismos más allá de lo estrictamente necesario para el correcto uso del sitio web.</p>
+        <p>Las marcas, nombres comerciales o signos distintivos son titularidad del titular o de terceros, sin que el acceso al sitio web atribuya ningún derecho sobre los mismos.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">6. Exclusión de responsabilidad</h2>
+        <p>El titular no se hace responsable de:</p>
+        <ul class="list-disc pl-6 space-y-2 my-4">
+          <li>La falta de disponibilidad, continuidad o calidad del sitio web, ni de que el acceso sea ininterrumpido o libre de errores</li>
+          <li>Los daños que puedan causarse por interferencias, omisiones, interrupciones, virus informáticos, averías telefónicas o desconexiones en el funcionamiento del sistema electrónico</li>
+          <li>Los daños causados por terceros mediante intromisiones ilegítimas fuera del control del titular</li>
+          <li>La exactitud, veracidad y vigencia de los contenidos del sitio web, reservándose el derecho a modificarlos sin previo aviso</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">7. Enlaces a terceros</h2>
+        <p>El sitio web puede contener enlaces a páginas de terceros. El titular no asume ninguna responsabilidad por el contenido, informaciones o servicios que pudieran aparecer en dichos sitios, que tendrán exclusivamente carácter informativo y que en ningún caso implican relación alguna entre el titular y las personas o entidades titulares de tales contenidos.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">8. Política de privacidad y cookies</h2>
+        <p>El tratamiento de datos personales se rige por nuestra <a href="/politica-privacidad" class="text-accent hover:underline">Política de Privacidad</a>.</p>
+        <p>El uso de cookies en este sitio web se detalla en nuestra <a href="/politica-cookies" class="text-accent hover:underline">Política de Cookies</a>.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">9. Legislación aplicable y jurisdicción</h2>
+        <p>El presente Aviso Legal se rige por la legislación española. Para cualquier controversia que pudiera derivarse del acceso o uso del sitio web, las partes se someten expresamente a los Juzgados y Tribunales de [CIUDAD], España, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+
+        <h2 class="text-2xl font-semibold text-primary mt-8 mb-4">10. Modificaciones</h2>
+        <p>El titular se reserva el derecho a modificar el presente Aviso Legal para adaptarlo a novedades legislativas o jurisprudenciales, así como a prácticas de la industria. En dichos supuestos, se anunciará en esta página los cambios introducidos con razonable antelación a su puesta en práctica.</p>
+
+        <div class="mt-12 p-6 bg-muted-light rounded-xl">
+          <h3 class="font-semibold text-primary mb-2">¿Tienes dudas?</h3>
+          <p class="text-primary/70 mb-4">Si tienes cualquier pregunta sobre este Aviso Legal, puedes contactarnos en:</p>
+          <a href="mailto:hola@tramitia.es" class="text-accent hover:underline">hola@tramitia.es</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

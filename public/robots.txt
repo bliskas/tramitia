@@ -1,0 +1,39 @@
+# Robots.txt para Apostilla Latam
+# https://apostillalatam.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://apostillalatam.com/sitemap-index.xml
+
+# Bloquear rutas no relevantes para SEO
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /admin/
+
+# Permitir a todos los bots de IA acceder al contenido
+# (Importante para AEO - Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Archivo de información para LLMs
+# Ubicación: https://apostillalatam.com/llms.txt
