@@ -83,9 +83,11 @@ En Tramitia gestionamos [documento] de [pais] sin que tengas que viajar.
 - Formato: "Como [accion] [documento] de [pais]: Guia [ano]"
 
 **Meta description:**
-- 145-155 caracteres
+- MAXIMO 155 caracteres (Sanity limite: 160)
+- Contar caracteres ANTES de enviar a Sanity
 - Keyword + beneficio + CTA implicito
 - SIN mayusculas ni exclamaciones
+- Formato: "[Documento] para [tramite]. [Beneficio]. [Paises]."
 
 **Headings:**
 - 1 H1 (titulo)
@@ -238,9 +240,35 @@ Mostrar:
 
 ## CONFIGURACION SANITY
 
-**Project ID:** Obtener de `studio/sanity.config.ts`
-**Dataset:** production
+**Project ID:** `o9yf47ka`
+**Dataset:** `production`
 **Workspace:** default
+
+---
+
+## VALIDACIONES OBLIGATORIAS ANTES DE ENVIAR
+
+**ANTES de llamar a create_documents_from_markdown o patch_document:**
+
+1. **Contar caracteres de description**: DEBE ser <= 155 caracteres
+   - Si es mayor, REESCRIBIR hasta que cumpla
+   - Usar formato corto: "[Tema]. [Beneficio]. [Paises]."
+
+2. **Contar caracteres de title**: DEBE ser <= 60 caracteres
+   - Si es mayor, acortar eliminando palabras innecesarias
+
+3. **Verificar slug**: maximo 96 caracteres, solo minusculas y guiones
+
+4. **Verificar category**: solo valores validos:
+   - `apostillas`, `documentos`, `tramites`, `guias`, `noticias`
+
+5. **Verificar country**: solo valores validos:
+   - `venezuela`, `argentina`, `colombia`, `ecuador`, `peru`, `bolivia`, `general`
+
+6. **Verificar documentType**: solo valores validos:
+   - `partida-nacimiento`, `antecedentes-penales`, `titulo-universitario`, `acta-matrimonio`, `poder-notarial`, `otro`
+
+**Si alguna validacion falla, CORREGIR antes de enviar.**
 
 ---
 
