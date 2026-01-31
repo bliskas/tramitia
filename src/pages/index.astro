@@ -182,7 +182,7 @@ const webSiteSchema = getWebSiteSchema();
         {[
           {
             title: 'Partida de nacimiento',
-            description: 'Esencial para tramites de nacionalidad, residencia y matrimonio.',
+            description: 'Esencial para trámites de nacionalidad, residencia y matrimonio.',
             href: '#contacto',
           },
           {
@@ -191,23 +191,23 @@ const webSiteSchema = getWebSiteSchema();
             href: '#contacto',
           },
           {
-            title: 'Titulo universitario',
-            description: 'Necesario para homologacion de estudios y ejercicio profesional.',
+            title: 'Título universitario',
+            description: 'Necesario para homologación de estudios y ejercicio profesional.',
             href: '#contacto',
           },
           {
             title: 'Acta de matrimonio',
-            description: 'Para tramites de reagrupacion familiar y reconocimiento de union.',
+            description: 'Para trámites de reagrupación familiar y reconocimiento de unión.',
             href: '#contacto',
           },
           {
-            title: 'Partida de defuncion',
-            description: 'Para tramites de herencia, pensiones y registros.',
+            title: 'Partida de defunción',
+            description: 'Para trámites de herencia, pensiones y registros.',
             href: '#contacto',
           },
           {
             title: 'Otros documentos',
-            description: 'Poderes, certificados de solteria, notas certificadas, etc.',
+            description: 'Poderes, certificados de soltería, notas certificadas, etc.',
             href: '#contacto',
           },
         ].map((service) => (
@@ -524,11 +524,11 @@ const webSiteSchema = getWebSiteSchema();
           // Redirect to thank you page
           window.location.href = '/gracias';
         } else {
-          throw new Error('Error en el envio');
+          throw new Error('Error en el envío');
         }
       } catch (error) {
         console.error('Form submission error:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, intentalo de nuevo o contactanos por WhatsApp.');
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.');
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
       }
