@@ -103,7 +103,10 @@ const ogImage = new URL(image, siteUrl).href;
         <img src="/logo.svg" alt="Tramitia" class="h-10 w-auto" />
       </a>
       <div class="hidden md:flex items-center gap-6">
-        <a href="#contacto" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent-600 transition font-medium">
+        <a href="/blog" class="text-primary/80 hover:text-accent transition font-medium">
+          Blog
+        </a>
+        <a href="/#contacto" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent-600 transition font-medium">
           Solicitar presupuesto
         </a>
       </div>
@@ -117,7 +120,10 @@ const ogImage = new URL(image, siteUrl).href;
     <!-- Mobile menu -->
     <div class="hidden md:hidden border-t border-muted/30" id="mobile-menu">
       <div class="px-4 py-4 space-y-3">
-        <a href="#contacto" class="block bg-accent text-white px-4 py-2 rounded-lg text-center font-medium">
+        <a href="/blog" class="block text-primary/80 hover:text-accent transition font-medium text-center py-2">
+          Blog
+        </a>
+        <a href="/#contacto" class="block bg-accent text-white px-4 py-2 rounded-lg text-center font-medium">
           Solicitar presupuesto
         </a>
       </div>
@@ -130,7 +136,7 @@ const ogImage = new URL(image, siteUrl).href;
 
   <footer class="bg-primary text-white/80 mt-20">
     <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-3 gap-8">
         <div>
           <div class="mb-4">
             <img src="/logo.svg" alt="Tramitia" class="h-10 w-auto brightness-0 invert" />
@@ -139,6 +145,14 @@ const ogImage = new URL(image, siteUrl).href;
           <a href="/#contacto" class="inline-block bg-accent text-white px-6 py-2 rounded-lg font-medium hover:bg-accent-600 transition text-sm">
             Solicitar presupuesto
           </a>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Recursos</h4>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a href="/blog" class="hover:text-accent transition">Blog</a>
+            </li>
+          </ul>
         </div>
         <div>
           <h4 class="text-white font-semibold mb-4">Contacto</h4>
