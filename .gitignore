@@ -31,8 +31,8 @@ pnpm-debug.log*
 *.tsbuildinfo
 
 # claude code
-.claude/
-
+.claude/*
+!.claude/skills/
 CLAUDE.md
 
 # sanity studio
