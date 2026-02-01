@@ -13,7 +13,7 @@ keywords:
   - convalidación estudios españa
 documentType: "titulo-universitario"
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 Si deseas ejercer tu profesión o continuar estudios en España, necesitas apostillar tu título universitario como paso previo a la homologación. Esta guía te explica el proceso completo, desde la apostilla hasta los requisitos del Ministerio de Universidades.

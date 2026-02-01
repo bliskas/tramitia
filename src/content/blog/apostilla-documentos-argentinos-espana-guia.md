@@ -14,6 +14,7 @@ keywords:
   - TAD argentina
 country: "argentina"
 targetCountry: "españa"
+draft: true
 ---
 
 Si sos argentino viviendo en España y necesitás apostillar documentos, esta guía te explica todas las opciones disponibles, los tiempos reales y cómo evitar las demoras del sistema tradicional.

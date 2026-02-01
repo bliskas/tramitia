@@ -12,7 +12,7 @@ keywords:
   - equivalencia título españa
   - profesiones reguladas españa
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 Si deseas ejercer tu profesión o continuar estudios en España con un título extranjero, necesitas homologarlo o convalidarlo. Esta guía te explica todo el proceso, desde la apostilla de documentos hasta la solicitud ante el Ministerio correspondiente.

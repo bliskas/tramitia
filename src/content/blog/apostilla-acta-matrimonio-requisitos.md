@@ -13,7 +13,7 @@ keywords:
   - matrimonio españa extranjero
 documentType: "acta-matrimonio"
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 El acta de matrimonio apostillada es un documento fundamental para diversos trámites en España, especialmente para reagrupación familiar y nacionalidad. Esta guía te explica cómo apostillar tu acta de matrimonio según tu país de origen.

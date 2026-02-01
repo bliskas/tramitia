@@ -13,7 +13,7 @@ keywords:
   - partida nacimiento españa
 documentType: "partida-nacimiento"
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 La partida de nacimiento apostillada es uno de los documentos más solicitados por latinoamericanos en España. Es requisito fundamental para trámites de nacionalidad, residencia, matrimonio y muchos otros procedimientos administrativos. Esta guía te explica cómo apostillar tu partida de nacimiento según tu país de origen.

@@ -12,7 +12,7 @@ keywords:
   - nie extranjeros documentos
   - residencia no lucrativa requisitos
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 Obtener la residencia en España requiere presentar documentación de tu país de origen debidamente apostillada. Esta guía te detalla los documentos necesarios según el tipo de residencia que solicites.

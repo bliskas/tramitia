@@ -13,7 +13,7 @@ keywords:
   - antecedentes penales españa
 documentType: "antecedentes-penales"
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 El certificado de antecedentes penales apostillado es un documento esencial para trámites de nacionalidad, residencia y trabajo en España. Esta guía te explica cómo obtenerlo y apostillarlo según tu país de origen, con información actualizada sobre vigencia y requisitos.

@@ -13,7 +13,7 @@ keywords:
   - documentos colombianos españa
 country: "colombia"
 targetCountry: "espana"
-draft: false
+draft: true
 ---
 
 Si resides en España y necesitas apostillar documentos colombianos, esta guía te explica el proceso oficial a través de la Cancillería de Colombia, los requisitos actualizados y cómo realizar el trámite completamente online desde cualquier lugar del mundo.
