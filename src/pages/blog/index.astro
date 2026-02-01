@@ -1,8 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllPosts } from '../../lib/sanity';
+import { getCollection } from 'astro:content';
 
-const posts = await getAllPosts();
+// Obtener posts de Content Collections (no borradores)
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+// Ordenar por fecha de publicacion (mas recientes primero)
+const posts = allPosts.sort((a, b) =>
+  new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
+);
 
 const categories = [
   { value: 'apostillas', label: 'Apostillas' },
@@ -91,38 +96,38 @@ const breadcrumbSchema = {
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
             <article class="bg-white rounded-xl border border-muted/30 overflow-hidden hover:shadow-lg transition group">
-              {post.mainImage && (
-                <a href={`/blog/${post.slug.current}`} class="block aspect-video overflow-hidden">
+              {post.data.image && (
+                <a href={`/blog/${post.slug}`} class="block aspect-video overflow-hidden">
                   <img
-                    src={post.mainImage}
-                    alt={post.title}
+                    src={post.data.image}
+                    alt={post.data.title}
                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                     loading="lazy"
                   />
                 </a>
               )}
               <div class="p-6">
-                {post.category && (
+                {post.data.category && (
                   <span class="inline-block bg-accent/10 text-accent text-xs font-medium px-2 py-1 rounded mb-3">
-                    {categories.find(c => c.value === post.category)?.label || post.category}
+                    {categories.find(c => c.value === post.data.category)?.label || post.data.category}
                   </span>
                 )}
                 <h2 class="text-xl font-semibold text-primary mb-2 group-hover:text-accent transition">
-                  <a href={`/blog/${post.slug.current}`}>{post.title}</a>
+                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
                 </h2>
                 <p class="text-primary/70 text-sm mb-4 line-clamp-2">
-                  {post.description}
+                  {post.data.description}
                 </p>
                 <div class="flex items-center justify-between text-sm">
-                  <time datetime={post.publishedAt} class="text-primary/50">
-                    {new Date(post.publishedAt).toLocaleDateString('es-ES', {
+                  <time datetime={post.data.publishedDate} class="text-primary/50">
+                    {new Date(post.data.publishedDate).toLocaleDateString('es-ES', {
                       year: 'numeric',
                       month: 'short',
                       day: 'numeric',
                     })}
                   </time>
                   <a
-                    href={`/blog/${post.slug.current}`}
+                    href={`/blog/${post.slug}`}
                     class="text-accent font-medium hover:underline"
                   >
                     Leer mas

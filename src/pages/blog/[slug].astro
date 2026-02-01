@@ -1,21 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllPosts, getPostBySlug } from '../../lib/sanity';
-import { toHTML } from '@portabletext/to-html';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts();
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
   return posts.map((post) => ({
-    params: { slug: post.slug.current },
+    params: { slug: post.slug },
+    props: { post },
   }));
 }
 
-const { slug } = Astro.params;
-const post = await getPostBySlug(slug);
-
-if (!post) {
-  return Astro.redirect('/blog');
-}
+const { post } = Astro.props;
+const { Content } = await render(post);
 
 const categories: Record<string, string> = {
   apostillas: 'Apostillas',
@@ -25,38 +21,19 @@ const categories: Record<string, string> = {
   noticias: 'Noticias',
 };
 
-// Renderizar Portable Text a HTML
-const bodyHtml = post.body ? toHTML(post.body, {
-  components: {
-    types: {
-      image: ({ value }: any) => {
-        if (!value?.asset?.url) return '';
-        return `<figure class="my-8">
-          <img src="${value.asset.url}" alt="${value.alt || ''}" class="rounded-lg w-full" loading="lazy" />
-          ${value.caption ? `<figcaption class="text-center text-sm text-primary/60 mt-2">${value.caption}</figcaption>` : ''}
-        </figure>`;
-      },
-    },
-    marks: {
-      link: ({ children, value }: any) => {
-        const href = value?.href || '';
-        const rel = href.startsWith('/') ? '' : 'rel="noopener noreferrer"';
-        const target = href.startsWith('/') ? '' : 'target="_blank"';
-        return `<a href="${href}" ${rel} ${target} class="text-accent hover:underline">${children}</a>`;
-      },
-    },
-  },
-}) : '';
+// Convertir fechas a Date objects
+const publishedDate = new Date(post.data.publishedDate);
+const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate) : null;
 
 // Schema.org Article
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: post.title,
-  description: post.description,
-  image: post.mainImage,
-  datePublished: post.publishedAt,
-  dateModified: post.updatedAt || post.publishedAt,
+  headline: post.data.title,
+  description: post.data.description,
+  image: post.data.image,
+  datePublished: publishedDate.toISOString(),
+  dateModified: updatedDate?.toISOString() || publishedDate.toISOString(),
   author: {
     '@type': 'Organization',
     name: 'Tramitia',
@@ -71,7 +48,7 @@ const articleSchema = {
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': `https://tramitia.es/blog/${slug}`,
+    '@id': `https://tramitia.es/blog/${post.slug}`,
   },
 };
 
@@ -94,21 +71,21 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 3,
-      name: post.title,
-      item: `https://tramitia.es/blog/${slug}`,
+      name: post.data.title,
+      item: `https://tramitia.es/blog/${post.slug}`,
     },
   ],
 };
 ---
 
 <BaseLayout
-  title={`${post.title} | Tramitia`}
-  description={post.description}
-  image={post.mainImage}
+  title={`${post.data.title} | Tramitia`}
+  description={post.data.description}
+  image={post.data.image}
   article={true}
-  publishedTime={post.publishedAt}
-  modifiedTime={post.updatedAt}
-  keywords={post.keywords}
+  publishedTime={publishedDate.toISOString()}
+  modifiedTime={updatedDate?.toISOString()}
+  keywords={post.data.keywords}
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
@@ -122,37 +99,37 @@ const breadcrumbSchema = {
       <span class="mx-2">/</span>
       <a href="/blog" class="hover:text-accent">Blog</a>
       <span class="mx-2">/</span>
-      <span class="text-primary/80">{post.title}</span>
+      <span class="text-primary/80">{post.data.title}</span>
     </nav>
 
     <!-- Header -->
     <header class="mb-10">
-      {post.category && (
+      {post.data.category && (
         <span class="inline-block bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full mb-4">
-          {categories[post.category] || post.category}
+          {categories[post.data.category] || post.data.category}
         </span>
       )}
       <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
-        {post.title}
+        {post.data.title}
       </h1>
       <p class="text-xl text-primary/70 mb-6">
-        {post.description}
+        {post.data.description}
       </p>
       <div class="flex items-center gap-4 text-sm text-primary/60">
-        <span>Por Tramitia</span>
+        <span>Por {post.data.author}</span>
         <span class="w-1 h-1 bg-primary/40 rounded-full"></span>
-        <time datetime={post.publishedAt}>
-          {new Date(post.publishedAt).toLocaleDateString('es-ES', {
+        <time datetime={publishedDate.toISOString()}>
+          {publishedDate.toLocaleDateString('es-ES', {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
           })}
         </time>
-        {post.updatedAt && post.updatedAt !== post.publishedAt && (
+        {updatedDate && updatedDate.getTime() !== publishedDate.getTime() && (
           <>
             <span class="w-1 h-1 bg-primary/40 rounded-full"></span>
             <span>
-              Actualizado: {new Date(post.updatedAt).toLocaleDateString('es-ES', {
+              Actualizado: {updatedDate.toLocaleDateString('es-ES', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
@@ -164,10 +141,10 @@ const breadcrumbSchema = {
     </header>
 
     <!-- Featured Image -->
-    {post.mainImage && (
+    {post.data.image && (
       <img
-        src={post.mainImage}
-        alt={post.title}
+        src={post.data.image}
+        alt={post.data.title}
         class="w-full aspect-video object-cover rounded-xl mb-10"
         loading="eager"
       />
@@ -181,9 +158,11 @@ const breadcrumbSchema = {
                 prose-img:rounded-lg
                 prose-blockquote:border-l-accent prose-blockquote:bg-muted-light prose-blockquote:py-1 prose-blockquote:text-primary/70
                 prose-strong:text-primary
-                prose-ul:text-primary/80 prose-ol:text-primary/80"
-         set:html={bodyHtml}
-    />
+                prose-ul:text-primary/80 prose-ol:text-primary/80
+                prose-table:text-primary/80 prose-th:text-primary prose-th:font-semibold
+                prose-td:border-muted/30 prose-th:border-muted/30">
+      <Content />
+    </div>
 
     <!-- CTA Box -->
     <div class="mt-12 p-8 bg-accent/5 rounded-xl border border-accent/20">
