@@ -12,7 +12,7 @@ keywords:
   - legalización documentos internacional
   - apostilla países
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
 La Apostilla de La Haya es un certificado fundamental para validar documentos públicos en el extranjero. Si necesitas usar documentos de tu país en otro país, esta guía te explica todo lo que necesitas saber sobre la apostilla.
