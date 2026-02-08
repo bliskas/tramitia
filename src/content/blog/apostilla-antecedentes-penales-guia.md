@@ -16,14 +16,14 @@ targetCountry: "espana"
 draft: true
 ---
 
-El certificado de antecedentes penales apostillado es un documento esencial para trámites de nacionalidad, residencia y trabajo en España. Esta guía te explica cómo obtenerlo y apostillarlo según tu país de origen, con información actualizada sobre vigencia y requisitos.
+El certificado de [antecedentes penales apostillado](/blog/que-es-apostilla-haya-guia) es un documento esencial para trámites de [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola), [residencia](/blog/documentos-residencia-espana-apostilla) y trabajo en España. Esta guía te explica cómo obtenerlo y apostillarlo según tu país de origen, con información actualizada sobre vigencia y requisitos.
 
 ## Para qué necesitas los antecedentes penales apostillados
 
 En España, el certificado de antecedentes penales apostillado se requiere para:
 
-- **Nacionalidad española**: Obligatorio para mayores de edad
-- **Residencia**: Todas las modalidades (arraigo, reagrupación, trabajo)
+- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)**: Obligatorio para mayores de edad
+- **[Residencia](/blog/documentos-residencia-espana-apostilla)**: Todas las modalidades (arraigo, [reagrupación](/blog/documentos-reagrupacion-familiar-espana), trabajo)
 - **Visados**: Estudios, trabajo, emprendedor
 - **Empleos específicos**: Sector educativo, sanitario, seguridad
 - **Oposiciones y empleo público**: En determinados casos
@@ -39,6 +39,8 @@ Según la normativa española (Orden JUS/1625/2016):
 ---
 
 ## Antecedentes penales venezolanos
+
+Para una guía completa sobre apostilla de documentos venezolanos, visita nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela).
 
 ### Gran ventaja: Proceso 100% electrónico
 
@@ -187,4 +189,4 @@ Depende del tipo de delito y si los antecedentes están vigentes. Consulta con u
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus antecedentes penales de forma rápida y segura. [Solicita tu presupuesto gratuito](/contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus antecedentes penales de [Venezuela](/apostilla-venezuela), Argentina y Colombia de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).

@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-La partida de defunción apostillada es un documento necesario para trámites de herencia, pensiones y otros procedimientos legales en España cuando el fallecido era extranjero o el fallecimiento ocurrió en el extranjero. Esta guía explica el proceso de apostilla según el país de origen.
+La [partida de defunción apostillada](/blog/que-es-apostilla-haya-guia) es un documento necesario para trámites de herencia, pensiones y otros procedimientos legales en España cuando el fallecido era extranjero o el fallecimiento ocurrió en el extranjero. Esta guía explica el proceso de apostilla según el país de origen.
 
 ## Para qué necesitas la partida de defunción apostillada
 
@@ -37,6 +37,8 @@ A diferencia de otros documentos, la partida de defunción **no tiene fecha de c
 ---
 
 ## Apostilla de partida de defunción venezolana
+
+Para información completa sobre apostilla de documentos venezolanos, consulta nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela).
 
 ### Autoridad emisora
 
@@ -119,8 +121,8 @@ Para una herencia en España con un fallecido extranjero, generalmente se requie
 1. **Partida de defunción apostillada**
 2. **Certificado de últimas voluntades** (España)
 3. **Testamento** (si existe, apostillado si es extranjero)
-4. **Partidas de nacimiento apostilladas** de los herederos
-5. **Acta de matrimonio apostillada** (para cónyuge)
+4. **[Partidas de nacimiento apostilladas](/blog/apostilla-partida-nacimiento-requisitos)** de los herederos
+5. **[Acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos)** (para cónyuge)
 
 ### Certificado de últimas voluntades
 
@@ -187,4 +189,4 @@ La partida de defunción se emite y apostilla en el país donde ocurrió el fall
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de partidas de defunción. [Solicita tu presupuesto gratuito](/contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de partidas de defunción de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).

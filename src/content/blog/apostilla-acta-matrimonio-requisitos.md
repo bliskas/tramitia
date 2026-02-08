@@ -16,14 +16,14 @@ targetCountry: "espana"
 draft: true
 ---
 
-El acta de matrimonio apostillada es un documento fundamental para diversos trámites en España, especialmente para reagrupación familiar y nacionalidad. Esta guía te explica cómo apostillar tu acta de matrimonio según tu país de origen.
+El acta de matrimonio [apostillada](/blog/que-es-apostilla-haya-guia) es un documento fundamental para diversos trámites en España, especialmente para [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana) y [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola). Esta guía te explica cómo apostillar tu acta de matrimonio según tu país de origen.
 
 ## Para qué necesitas el acta de matrimonio apostillada
 
 El acta de matrimonio apostillada se requiere en España para:
 
-- **Reagrupación familiar**: Traer a tu cónyuge a España
-- **Nacionalidad española**: Por matrimonio con ciudadano español (1 año de residencia)
+- **[Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana)**: Traer a tu cónyuge a España
+- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)**: Por matrimonio con ciudadano español (1 año de residencia)
 - **Inscripción de matrimonio**: En el Registro Civil español
 - **Trámites de herencia**: Acreditar vínculo conyugal
 - **Seguros y pensiones**: Beneficiarios conyugales
@@ -42,6 +42,8 @@ Aunque el acta no caduca si está apostillada, se recomienda presentar un docume
 ---
 
 ## Apostilla de acta de matrimonio venezolana
+
+Para información completa sobre apostilla de documentos venezolanos, visita nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela).
 
 ### Autoridad emisora
 
@@ -191,4 +193,4 @@ Sí, el trámite de apostilla no requiere la presencia de ambos cónyuges.
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu acta de matrimonio. [Solicita tu presupuesto gratuito](/contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu acta de matrimonio de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).

@@ -10,37 +10,28 @@
   aria-describedby="cookie-banner-description"
   aria-modal="true"
 >
-  <div class="bg-white border-t border-muted shadow-2xl">
-    <div class="max-w-6xl mx-auto px-4 py-6">
+  <div class="bg-white border-t border-muted/20 shadow-2xl">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 md:py-6">
       <!-- Main banner content -->
-      <div id="cookie-main" class="flex flex-col lg:flex-row lg:items-center gap-6">
+      <div id="cookie-main" class="flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-6">
         <div class="flex-1">
-          <h2 id="cookie-banner-title" class="text-lg font-semibold text-primary mb-2">
+          <h2 id="cookie-banner-title" class="text-base md:text-lg font-semibold text-primary mb-2">
             Utilizamos cookies
           </h2>
-          <p id="cookie-banner-description" class="text-sm text-primary/70">
-            Usamos cookies propias y de terceros para analizar el tráfico y mejorar tu experiencia.
+          <p id="cookie-banner-description" class="text-sm text-primary/70 leading-relaxed">
+            Usamos cookies propias y de terceros para analizar el trafico y mejorar tu experiencia.
             Puedes aceptarlas, rechazar las no esenciales o configurar tus preferencias.
-            <a href="/politica-cookies" class="text-accent hover:underline">Más información</a>
+            <a href="/politica-cookies" class="text-accent hover:underline font-medium">Mas informacion</a>
           </p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <button
-            id="cookie-reject"
-            class="px-6 py-3 border border-muted rounded-lg text-primary font-medium hover:bg-muted-light transition text-sm"
-          >
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 flex-shrink-0">
+          <button id="cookie-reject" class="btn btn-outline btn-sm whitespace-nowrap">
             Rechazar no esenciales
           </button>
-          <button
-            id="cookie-configure"
-            class="px-6 py-3 border border-muted rounded-lg text-primary font-medium hover:bg-muted-light transition text-sm"
-          >
+          <button id="cookie-configure" class="btn btn-outline btn-sm whitespace-nowrap">
             Configurar
           </button>
-          <button
-            id="cookie-accept"
-            class="px-6 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent-600 transition text-sm"
-          >
+          <button id="cookie-accept" class="btn btn-primary btn-sm whitespace-nowrap">
             Aceptar todas
           </button>
         </div>
@@ -48,17 +39,17 @@
 
       <!-- Configuration panel (hidden by default) -->
       <div id="cookie-config" class="hidden">
-        <div class="border-b border-muted pb-4 mb-4">
-          <h2 class="text-lg font-semibold text-primary mb-2">Configurar cookies</h2>
-          <p class="text-sm text-primary/70">Elige qué tipos de cookies aceptas.</p>
+        <div class="border-b border-muted/30 pb-4 mb-5">
+          <h2 class="text-base md:text-lg font-semibold text-primary mb-2">Configurar cookies</h2>
+          <p class="text-sm text-primary/70">Elige que tipos de cookies aceptas.</p>
         </div>
 
         <div class="space-y-4 mb-6">
           <!-- Essential cookies -->
-          <div class="flex items-start justify-between p-4 bg-muted-light rounded-lg">
+          <div class="flex items-start justify-between p-4 bg-muted-light rounded-xl">
             <div class="flex-1 pr-4">
               <h3 class="font-medium text-primary">Cookies esenciales</h3>
-              <p class="text-sm text-primary/70 mt-1">
+              <p class="text-sm text-primary/70 mt-1 leading-relaxed">
                 Necesarias para el funcionamiento del sitio. No se pueden desactivar.
               </p>
             </div>
@@ -68,31 +59,25 @@
           </div>
 
           <!-- Analytics cookies -->
-          <div class="flex items-start justify-between p-4 bg-muted-light rounded-lg">
+          <div class="flex items-start justify-between p-4 bg-muted-light rounded-xl">
             <div class="flex-1 pr-4">
-              <h3 class="font-medium text-primary">Cookies analíticas</h3>
-              <p class="text-sm text-primary/70 mt-1">
-                Nos ayudan a entender cómo usas el sitio para mejorarlo. Utilizamos Google Analytics.
+              <h3 class="font-medium text-primary">Cookies analiticas</h3>
+              <p class="text-sm text-primary/70 mt-1 leading-relaxed">
+                Nos ayudan a entender como usas el sitio para mejorarlo. Utilizamos Google Analytics.
               </p>
             </div>
-            <label class="relative inline-flex items-center cursor-pointer">
+            <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
               <input type="checkbox" id="cookie-analytics" class="sr-only peer" />
-              <div class="w-11 h-6 bg-muted rounded-full peer peer-checked:bg-accent peer-focus:ring-2 peer-focus:ring-accent/50 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+              <div class="w-12 h-7 bg-muted rounded-full peer peer-checked:bg-accent peer-focus:ring-2 peer-focus:ring-accent/30 after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:bg-white after:rounded-full after:h-[22px] after:w-[22px] after:transition-all after:shadow-sm peer-checked:after:translate-x-5"></div>
             </label>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3 justify-end">
-          <button
-            id="cookie-config-back"
-            class="px-6 py-3 border border-muted rounded-lg text-primary font-medium hover:bg-muted-light transition text-sm"
-          >
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-end">
+          <button id="cookie-config-back" class="btn btn-outline btn-sm">
             Volver
           </button>
-          <button
-            id="cookie-config-save"
-            class="px-6 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent-600 transition text-sm"
-          >
+          <button id="cookie-config-save" class="btn btn-primary btn-sm">
             Guardar preferencias
           </button>
         </div>

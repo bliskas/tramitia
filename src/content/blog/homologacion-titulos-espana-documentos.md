@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-Si deseas ejercer tu profesión o continuar estudios en España con un título extranjero, necesitas homologarlo o convalidarlo. Esta guía te explica todo el proceso, desde la apostilla de documentos hasta la solicitud ante el Ministerio correspondiente.
+Si deseas ejercer tu profesión o continuar estudios en España con un título extranjero, necesitas homologarlo o convalidarlo. Necesitarás [apostillar tu título universitario](/blog/apostilla-titulo-universitario-homologacion) como primer paso. Esta guía te explica todo el proceso, desde la [apostilla de documentos](/blog/que-es-apostilla-haya-guia) hasta la solicitud ante el Ministerio correspondiente.
 
 ## Diferencia entre homologación y equivalencia
 
@@ -83,6 +83,8 @@ Las siguientes profesiones requieren homologación obligatoria:
 ## Proceso de apostilla por país
 
 ### Venezuela
+
+Para más detalles sobre el proceso venezolano, consulta nuestra [guía de apostilla de documentos venezolanos desde España](/apostilla-venezuela).
 
 1. **Título universitario**:
    - Legalizar en el Consejo Universitario
@@ -238,4 +240,4 @@ Generalmente 10-15 días hábiles. Revisa la notificación específica.
 
 ---
 
-**¿Necesitas apostillar tus títulos?** En Tramitia te ayudamos a preparar toda la documentación para tu homologación. [Solicita tu presupuesto gratuito](/contacto).
+**¿Necesitas apostillar tus títulos?** En Tramitia te ayudamos a preparar toda la documentación para tu homologación. Gestionamos apostillas de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).

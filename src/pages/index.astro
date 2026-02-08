@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getOrganizationSchema, getFAQSchema, getWebSiteSchema } from '../lib/seo';
+import { getOrganizationSchema, getFAQSchema, getWebSiteSchema, getLocalBusinessSchema, getServiceSchema, getHowToSchema } from '../lib/seo';
 
 // FAQs para schema (también se muestran en la página)
 const faqs = [
@@ -29,6 +29,36 @@ const faqs = [
 const orgSchema = getOrganizationSchema();
 const faqSchema = getFAQSchema(faqs);
 const webSiteSchema = getWebSiteSchema();
+const localBusinessSchema = getLocalBusinessSchema();
+const serviceSchema = getServiceSchema({
+  name: 'Apostilla de Documentos Latinoamericanos',
+  description: 'Servicio de apostilla y legalizacion de documentos publicos latinoamericanos para su uso legal en Espana. Partidas de nacimiento, antecedentes penales, titulos universitarios y mas.',
+  deliveryTime: 'P15D',
+  slug: 'apostilla',
+});
+const howToSchema = getHowToSchema({
+  name: 'Como apostillar tus documentos desde Espana',
+  description: 'Proceso paso a paso para apostillar documentos latinoamericanos sin volver a tu pais de origen.',
+  totalTime: 'P15D',
+  steps: [
+    {
+      name: 'Cuentanos que necesitas',
+      text: 'Rellena el formulario o escribenos por WhatsApp con los documentos que necesitas apostillar.',
+    },
+    {
+      name: 'Recibe tu presupuesto',
+      text: 'Te enviamos un presupuesto detallado sin compromiso en menos de 24 horas.',
+    },
+    {
+      name: 'Gestionamos todo',
+      text: 'Nuestro equipo en tu pais se encarga de obtener y apostillar tus documentos.',
+    },
+    {
+      name: 'Recibe tus documentos',
+      text: 'Te enviamos los documentos apostillados en formato digital y/o fisico.',
+    },
+  ],
+});
 ---
 
 <BaseLayout
@@ -39,6 +69,9 @@ const webSiteSchema = getWebSiteSchema();
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
 
@@ -48,31 +81,27 @@ const webSiteSchema = getWebSiteSchema();
       <div class="absolute inset-0" style="background-image: url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
     </div>
 
-    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
       <div class="max-w-3xl">
-        <p class="text-accent-300 font-medium mb-4 text-lg">Para latinoamericanos en España</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para latinoamericanos en Espana</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
           Tus documentos apostillados,
-          <span class="text-accent">sin volver a tu país</span>
+          <span class="text-accent">sin volver a tu pais</span>
         </h1>
-        <p class="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
-          Gestionamos la apostilla de partidas de nacimiento, antecedentes penales y títulos universitarios para tu residencia o nacionalidad española. 100% online.
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Gestionamos la apostilla de partidas de nacimiento, antecedentes penales y titulos universitarios para tu residencia o nacionalidad espanola. 100% online.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a
-            href="#contacto"
-            class="inline-flex items-center justify-center bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent-600 transition text-lg shadow-lg shadow-accent/30"
-          >
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
             Solicitar presupuesto gratis
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <a
-            href="https://wa.me/34XXXXXXXXX"
-            class="inline-flex items-center justify-center bg-white/10 backdrop-blur text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition text-lg border border-white/20"
-          >
-            <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/34XXXXXXXXX" class="btn btn-secondary btn-lg">
+            <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
             WhatsApp
           </a>
         </div>
@@ -81,108 +110,108 @@ const webSiteSchema = getWebSiteSchema();
   </section>
 
   <!-- Trust indicators -->
-  <section class="py-6 border-b border-muted/30 bg-muted-light">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-primary/70 text-sm">
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span>Gestión 100% online</span>
+          <span class="text-sm font-medium">Gestion 100% online</span>
         </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
           </svg>
-          <span>Datos protegidos (RGPD)</span>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
         </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
           </svg>
-          <span>Equipos locales en origen</span>
+          <span class="text-sm font-medium">Equipos locales en origen</span>
         </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <span>Seguimiento en tiempo real</span>
+          <span class="text-sm font-medium">Seguimiento en tiempo real</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Para qué necesitas apostillar -->
-  <section class="py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          ¿Para qué necesitas apostillar tus documentos?
+  <!-- Para que necesitas apostillar -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Para que necesitas apostillar tus documentos?
         </h2>
-        <p class="text-xl text-primary/70 max-w-2xl mx-auto">
-          La apostilla es obligatoria para que tus documentos tengan validez legal en España
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          La apostilla es obligatoria para que tus documentos tengan validez legal en Espana
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="text-center p-6 bg-muted-light rounded-xl">
-          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+        <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Residencia</h3>
-          <p class="text-primary/70 text-sm">Arraigo, reagrupación familiar, residencia no lucrativa</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Arraigo, reagrupacion familiar, residencia no lucrativa</p>
         </div>
-        <div class="text-center p-6 bg-muted-light rounded-xl">
-          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Nacionalidad</h3>
-          <p class="text-primary/70 text-sm">Nacionalidad española por residencia o por origen</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad espanola por residencia o por origen</p>
         </div>
-        <div class="text-center p-6 bg-muted-light rounded-xl">
-          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Trabajo</h3>
-          <p class="text-primary/70 text-sm">Homologación de títulos, ejercicio profesional</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Homologacion de titulos, ejercicio profesional</p>
         </div>
-        <div class="text-center p-6 bg-muted-light rounded-xl">
-          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Estudios</h3>
-          <p class="text-primary/70 text-sm">Convalidación de estudios, acceso a universidad</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Convalidacion de estudios, acceso a universidad</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Documentos que apostillamos -->
-  <section class="py-16 md:py-20 bg-muted-light">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
           Documentos que apostillamos
         </h2>
-        <p class="text-xl text-primary/70 max-w-2xl mx-auto">
-          Gestionamos la apostilla de cualquier documento público de tu país de origen
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Gestionamos la apostilla de cualquier documento publico de tu pais de origen
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         {[
           {
             title: 'Partida de nacimiento',
-            description: 'Esencial para trámites de nacionalidad, residencia y matrimonio.',
+            description: 'Esencial para tramites de nacionalidad, residencia y matrimonio.',
             href: '#contacto',
           },
           {
@@ -191,96 +220,99 @@ const webSiteSchema = getWebSiteSchema();
             href: '#contacto',
           },
           {
-            title: 'Título universitario',
-            description: 'Necesario para homologación de estudios y ejercicio profesional.',
+            title: 'Titulo universitario',
+            description: 'Necesario para homologacion de estudios y ejercicio profesional.',
             href: '#contacto',
           },
           {
             title: 'Acta de matrimonio',
-            description: 'Para trámites de reagrupación familiar y reconocimiento de unión.',
+            description: 'Para tramites de reagrupacion familiar y reconocimiento de union.',
             href: '#contacto',
           },
           {
-            title: 'Partida de defunción',
-            description: 'Para trámites de herencia, pensiones y registros.',
+            title: 'Partida de defuncion',
+            description: 'Para tramites de herencia, pensiones y registros.',
             href: '#contacto',
           },
           {
             title: 'Otros documentos',
-            description: 'Poderes, certificados de soltería, notas certificadas, etc.',
+            description: 'Poderes, certificados de solteria, notas certificadas, etc.',
             href: '#contacto',
           },
         ].map((service) => (
           <a
             href={service.href}
-            class="block p-6 bg-white border border-muted/50 rounded-xl card-hover group"
+            class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group"
           >
-            <h3 class="text-xl font-semibold text-primary group-hover:text-accent transition mb-3">{service.title}</h3>
-            <p class="text-primary/70">{service.description}</p>
+            <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-3">{service.title}</h3>
+            <p class="text-primary/70 text-sm md:text-base leading-relaxed">{service.description}</p>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Países -->
-  <section class="py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          Países que cubrimos
+  <!-- Paises -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Paises que cubrimos
         </h2>
-        <p class="text-xl text-primary/70 max-w-2xl mx-auto">
-          Tenemos equipos en varios países latinoamericanos
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Tenemos equipos en varios paises latinoamericanos
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
         {[
           { name: 'Venezuela', code: 'VE', href: '/apostilla-venezuela', active: true },
           { name: 'Argentina', code: 'AR', href: '/apostilla-argentina', active: true },
           { name: 'Colombia', code: 'CO', href: '/apostilla-colombia', active: true },
           { name: 'Ecuador', code: 'EC', href: '/apostilla-ecuador', active: false },
-          { name: 'Perú', code: 'PE', href: '/apostilla-peru', active: false },
+          { name: 'Peru', code: 'PE', href: '/apostilla-peru', active: false },
           { name: 'Bolivia', code: 'BO', href: '/apostilla-bolivia', active: false },
         ].map((country) => (
           <a
             href={country.active ? country.href : '#'}
-            class={`flex flex-col items-center gap-2 p-4 rounded-xl border transition ${
+            class={`flex flex-col items-center gap-3 p-5 md:p-6 rounded-2xl border-2 transition-all duration-200 ${
               country.active
-                ? 'bg-white border-accent/30 hover:border-accent hover:shadow-md cursor-pointer'
-                : 'bg-muted-light border-muted/30 opacity-60 cursor-not-allowed'
+                ? 'bg-white border-accent/20 hover:border-accent hover:shadow-lg cursor-pointer'
+                : 'bg-muted-light/50 border-muted/20 opacity-50 cursor-not-allowed'
             }`}
+            aria-disabled={!country.active}
           >
-            <div class="w-12 h-12 rounded-full bg-muted-light flex items-center justify-center text-lg font-bold text-primary/70">
+            <div class={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold ${
+              country.active ? 'bg-accent/10 text-accent' : 'bg-muted/20 text-primary/40'
+            }`}>
               {country.code}
             </div>
-            <span class="font-medium text-primary text-sm">{country.name}</span>
-            {!country.active && <span class="text-xs text-primary/50">Próximamente</span>}
+            <span class="font-semibold text-primary text-sm md:text-base">{country.name}</span>
+            {!country.active && <span class="text-xs text-primary/40">Proximamente</span>}
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Cómo funciona -->
-  <section class="py-16 md:py-20 bg-primary text-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Cómo funciona
+  <!-- Como funciona -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          Como funciona
         </h2>
-        <p class="text-xl text-white/70 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
           Un proceso simple para que no tengas que preocuparte de nada
         </p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
         {[
           {
             step: '1',
-            title: 'Cuéntanos qué necesitas',
-            description: 'Rellena el formulario o escríbenos por WhatsApp con los documentos que necesitas apostillar.',
+            title: 'Cuentanos que necesitas',
+            description: 'Rellena el formulario o escribenos por WhatsApp con los documentos que necesitas apostillar.',
           },
           {
             step: '2',
@@ -290,20 +322,20 @@ const webSiteSchema = getWebSiteSchema();
           {
             step: '3',
             title: 'Gestionamos todo',
-            description: 'Nuestro equipo en tu país se encarga de obtener y apostillar tus documentos.',
+            description: 'Nuestro equipo en tu pais se encarga de obtener y apostillar tus documentos.',
           },
           {
             step: '4',
             title: 'Recibe tus documentos',
-            description: 'Te enviamos los documentos apostillados en formato digital y/o físico.',
+            description: 'Te enviamos los documentos apostillados en formato digital y/o fisico.',
           },
         ].map((item) => (
           <div class="text-center relative">
-            <div class="w-14 h-14 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
               {item.step}
             </div>
-            <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
-            <p class="text-white/70 text-sm">{item.description}</p>
+            <h3 class="text-lg md:text-xl font-semibold mb-3">{item.title}</h3>
+            <p class="text-white/70 text-sm md:text-base leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>
@@ -311,30 +343,31 @@ const webSiteSchema = getWebSiteSchema();
   </section>
 
   <!-- FAQ -->
-  <section class="py-16 md:py-20">
-    <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
           Preguntas frecuentes
         </h2>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-3 md:space-y-4">
         {faqs.map((faq) => (
-          <details class="group bg-white rounded-xl border border-muted/50 overflow-hidden">
-            <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
-              <h3 class="text-lg font-medium text-primary pr-4">{faq.question}</h3>
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
               <svg
                 class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-            <div class="px-6 pb-6 text-primary/70">
-              <p>{faq.answer}</p>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
             </div>
           </details>
         ))}
@@ -343,20 +376,20 @@ const webSiteSchema = getWebSiteSchema();
   </section>
 
   <!-- Contact Form CTA -->
-  <section id="contacto" class="py-16 md:py-20 bg-muted-light">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-        <div class="text-center mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+  <section id="contacto" class="py-16 md:py-24 bg-muted-light scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
             Solicita tu presupuesto gratis
           </h2>
-          <p class="text-xl text-primary/70">
+          <p class="text-lg md:text-xl text-primary/70">
             Te respondemos en menos de 24 horas
           </p>
         </div>
 
-        <form class="space-y-6" id="contact-form">
-          <div class="grid md:grid-cols-2 gap-6">
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
             <div>
               <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
               <input
@@ -364,7 +397,8 @@ const webSiteSchema = getWebSiteSchema();
                 id="nombre"
                 name="nombre"
                 required
-                class="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition"
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
                 placeholder="Tu nombre"
               />
             </div>
@@ -375,71 +409,75 @@ const webSiteSchema = getWebSiteSchema();
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition"
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
                 placeholder="tu@email.com"
               />
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-6">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
             <div>
-              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono / WhatsApp *</label>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Telefono / WhatsApp *</label>
               <input
                 type="tel"
                 id="telefono"
                 name="telefono"
                 required
-                class="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition"
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
                 placeholder="+34 600 000 000"
               />
             </div>
             <div>
-              <label for="pais" class="block text-sm font-medium text-primary mb-2">País del documento *</label>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">Pais del documento *</label>
               <select
                 id="pais"
                 name="pais"
                 required
-                class="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition bg-white"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\"); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
               >
-                <option value="">Selecciona un país</option>
+                <option value="">Selecciona un pais</option>
                 <option value="venezuela">Venezuela</option>
                 <option value="argentina">Argentina</option>
                 <option value="colombia">Colombia</option>
                 <option value="ecuador">Ecuador</option>
-                <option value="peru">Perú</option>
+                <option value="peru">Peru</option>
                 <option value="bolivia">Bolivia</option>
-                <option value="otro">Otro país</option>
+                <option value="otro">Otro pais</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label for="documento" class="block text-sm font-medium text-primary mb-2">¿Qué documento necesitas apostillar? *</label>
+            <label for="documento" class="block text-sm font-medium text-primary mb-2">Que documento necesitas apostillar? *</label>
             <select
               id="documento"
               name="documento"
               required
-              class="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition bg-white"
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\"); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
             >
               <option value="">Selecciona un documento</option>
               <option value="partida-nacimiento">Partida de nacimiento</option>
               <option value="antecedentes-penales">Antecedentes penales</option>
-              <option value="titulo-universitario">Título universitario</option>
+              <option value="titulo-universitario">Titulo universitario</option>
               <option value="acta-matrimonio">Acta de matrimonio</option>
-              <option value="partida-defuncion">Partida de defunción</option>
+              <option value="partida-defuncion">Partida de defuncion</option>
               <option value="varios">Varios documentos</option>
               <option value="otro">Otro documento</option>
             </select>
           </div>
 
           <div>
-            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Información adicional</label>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Informacion adicional</label>
             <textarea
               id="mensaje"
               name="mensaje"
               rows="3"
-              class="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition resize-none"
-              placeholder="Cuéntanos más detalles sobre tu caso (opcional)"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuentanos mas detalles sobre tu caso (opcional)"
             ></textarea>
           </div>
 
@@ -449,17 +487,14 @@ const webSiteSchema = getWebSiteSchema();
               id="privacidad"
               name="privacidad"
               required
-              class="mt-1 w-4 h-4 text-accent border-muted rounded focus:ring-accent"
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
             />
-            <label for="privacidad" class="text-sm text-primary/70">
-              He leído y acepto la <a href="/politica-privacidad" class="text-accent hover:underline">política de privacidad</a> *
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leido y acepto la <a href="/politica-privacidad" class="text-accent hover:underline font-medium">politica de privacidad</a> *
             </label>
           </div>
 
-          <button
-            type="submit"
-            class="w-full bg-accent text-white py-4 px-8 rounded-lg font-semibold hover:bg-accent-600 transition text-lg shadow-lg shadow-accent/30"
-          >
+          <button type="submit" class="btn btn-primary btn-lg w-full">
             Solicitar presupuesto gratis
           </button>
 
@@ -471,15 +506,15 @@ const webSiteSchema = getWebSiteSchema();
     </div>
   </section>
 
-  <!-- WhatsApp floating button -->
+  <!-- WhatsApp floating button - 56px for easy touch -->
   <a
-    href="https://wa.me/34XXXXXXXXX?text=Hola,%20necesito%20información%20sobre%20apostillas"
+    href="https://wa.me/34XXXXXXXXX?text=Hola,%20necesito%20informacion%20sobre%20apostillas"
     target="_blank"
     rel="noopener noreferrer"
-    class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform"
+    class="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-lg shadow-black/20 hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center"
     aria-label="Contactar por WhatsApp"
   >
-    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
