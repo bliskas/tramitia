@@ -1,7 +1,7 @@
 ---
 title: "Cómo apostillar documentos venezolanos desde España: Guía completa 2026"
 description: "Guía oficial para apostillar partidas de nacimiento, antecedentes penales y otros documentos venezolanos desde España. Proceso SLAE, requisitos y alternativas."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-12"
 author: "Tramitia"
 category: "guias"
 keywords:

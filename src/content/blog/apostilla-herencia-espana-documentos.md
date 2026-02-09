@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de documentos para herencia en España desde Latinoamérica"
 description: "Documentos apostillados necesarios para herencias internacionales en España. Guía para latinoamericanos que heredan bienes en España o gestionan sucesiones."
-publishedDate: "2026-02-08"
+publishedDate: "2026-03-29"
 author: "Tramitia"
 category: "tramites"
 keywords:

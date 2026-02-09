@@ -34,7 +34,17 @@ pnpm-debug.log*
 .claude/*
 !.claude/skills/
 CLAUDE.md
+studio/.claude/
+
+# docs (internal, not part of site)
+docs/
+
+# drafts (unpublished blog posts)
+src/drafts/
 
 # sanity studio
 studio/node_modules/
 studio/dist/
+
+# windows artifacts
+nul

@@ -1,7 +1,7 @@
 ---
 title: "Cuánto cuesta apostillar documentos en 2026: Precios por país"
 description: "Precios actualizados de apostilla de documentos por país en 2026. Costos en Venezuela, Argentina, Colombia, Ecuador, Perú, Bolivia y España. Guía completa de tarifas."
-publishedDate: "2026-02-08"
+publishedDate: "2026-03-26"
 author: "Tramitia"
 category: "guias"
 keywords:

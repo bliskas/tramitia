@@ -1,7 +1,7 @@
 ---
 title: "Apostilla electrónica vs apostilla física: Ventajas y validez en España"
 description: "Guía completa sobre la apostilla electrónica (e-Apostilla) y la apostilla física. Diferencias, ventajas, validez en España y cómo verificar cada formato."
-publishedDate: "2026-02-08"
+publishedDate: "2026-03-20"
 author: "Tramitia"
 category: "guias"
 keywords:

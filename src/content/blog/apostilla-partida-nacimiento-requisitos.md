@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de partida de nacimiento: Requisitos por país (Venezuela, Argentina, Colombia)"
 description: "Guía completa para apostillar tu partida de nacimiento de Venezuela, Argentina o Colombia. Requisitos, proceso y tiempos por país."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-15"
 author: "Tramitia"
 category: "documentos"
 keywords:

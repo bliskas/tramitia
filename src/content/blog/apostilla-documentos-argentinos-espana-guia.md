@@ -1,7 +1,7 @@
 ---
 title: "Cómo apostillar documentos argentinos desde España en 2026: Guía completa"
 description: "Guía paso a paso para apostillar partidas de nacimiento, antecedentes penales y otros documentos argentinos estando en España. Incluye tiempos, costes y alternativas."
-publishedDate: "2026-01-15"
+publishedDate: "2026-03-11"
 updatedDate: "2026-01-28"
 author: "Apostilla Latam"
 image: "/images/blog/apostilla-argentina-espana.jpg"

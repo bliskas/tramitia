@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de partida de defunción: Guía para trámites en España"
 description: "Cómo apostillar una partida de defunción de Venezuela, Argentina o Colombia. Requisitos para herencias, pensiones y trámites legales en España."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-27"
 author: "Tramitia"
 category: "documentos"
 keywords:

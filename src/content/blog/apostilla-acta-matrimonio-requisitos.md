@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de acta de matrimonio: Requisitos y proceso por país"
 description: "Cómo apostillar tu acta de matrimonio de Venezuela, Argentina o Colombia para trámites en España. Reagrupación familiar, nacionalidad y más."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-24"
 author: "Tramitia"
 category: "documentos"
 keywords:

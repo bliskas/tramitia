@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de título universitario para homologación en España"
 description: "Guía para apostillar tu título universitario de Venezuela, Argentina o Colombia para homologarlo en España. Requisitos del Ministerio de Universidades."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-21"
 author: "Tramitia"
 category: "guias"
 keywords:

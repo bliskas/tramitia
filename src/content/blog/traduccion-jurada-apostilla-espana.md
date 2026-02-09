@@ -1,7 +1,7 @@
 ---
 title: "Traduccion jurada y apostilla: Diferencias y cuando necesitas cada una"
 description: "Guia completa sobre traduccion jurada y apostilla en Espana. Cuando necesitas cada una, costos, como encontrar un traductor jurado y errores comunes."
-publishedDate: "2026-02-08"
+publishedDate: "2026-03-14"
 author: "Tramitia"
 category: "guias"
 keywords:
