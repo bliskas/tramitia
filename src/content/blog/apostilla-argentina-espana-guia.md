@@ -13,7 +13,7 @@ keywords:
   - cancillería argentina apostilla
 country: "argentina"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
 Si resides en España y necesitas apostillar documentos argentinos, esta guía te explica el proceso oficial a través de la plataforma TAD, los requisitos actualizados y las diferentes alternativas disponibles. Consulta también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) para entender el marco legal.
