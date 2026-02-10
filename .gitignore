@@ -33,7 +33,6 @@ pnpm-debug.log*
 # claude code
 .claude/*
 !.claude/skills/
-CLAUDE.md
 studio/.claude/
 
 # docs (internal, not part of site)
