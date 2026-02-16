@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: false
 ---
 
-Solicitar la nacionalidad española requiere presentar diversos documentos debidamente [apostillados](/blog/que-es-apostilla-haya-guia). Esta guía te detalla todos los documentos necesarios, su vigencia y cómo prepararlos correctamente según la normativa del Ministerio de Justicia.
+Solicitar la nacionalidad española requiere presentar diversos documentos debidamente [apostillados](/blog/que-es-apostilla-haya-guia/). Esta guía te detalla todos los documentos necesarios, su vigencia y cómo prepararlos correctamente según la normativa del Ministerio de Justicia.
 
 ## Vías para obtener la nacionalidad española
 
@@ -41,7 +41,7 @@ Antes de conocer los documentos, es importante entender las diferentes vías:
 
 ### 1. Partida de nacimiento
 
-Consulta nuestra [guía completa sobre apostilla de partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) para requisitos detallados por país.
+Consulta nuestra guía completa sobre apostilla de partida de nacimiento para requisitos detallados por país.
 
 **Requisitos**:
 - Original o copia certificada del Registro Civil de tu país
@@ -58,7 +58,7 @@ Consulta nuestra [guía completa sobre apostilla de partida de nacimiento](/blog
 
 ### 2. Certificado de antecedentes penales del país de origen
 
-Para más detalles sobre este trámite, lee nuestra [guía de apostilla de antecedentes penales](/blog/apostilla-antecedentes-penales-guia).
+Para más detalles sobre este trámite, lee nuestra [guía de apostilla de antecedentes penales](/blog/apostilla-antecedentes-penales-guia/).
 
 **Requisitos**:
 - Emitido por la autoridad competente de tu país
@@ -107,7 +107,7 @@ Los siguientes documentos se obtienen en España y no necesitan apostilla:
 
 ### Venezuela
 
-Si eres venezolano, consulta nuestra página dedicada a la [apostilla de documentos venezolanos desde España](/apostilla-venezuela) con información detallada sobre el proceso ante el SAREN.
+Si eres venezolano, consulta nuestra página dedicada a la [apostilla de documentos venezolanos desde España](/apostilla-venezuela/) con información detallada sobre el proceso ante el SAREN.
 
 | Documento | Autoridad | Legalización previa | Apostilla |
 |-----------|-----------|---------------------|-----------|

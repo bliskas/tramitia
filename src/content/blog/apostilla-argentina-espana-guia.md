@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: false
 ---
 
-Si resides en España y necesitas apostillar documentos argentinos, esta guía te explica el proceso oficial a través de la plataforma TAD, los requisitos actualizados y las diferentes alternativas disponibles. Consulta también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) para entender el marco legal.
+Si resides en España y necesitas apostillar documentos argentinos, esta guía te explica el proceso oficial a través de la plataforma TAD, los requisitos actualizados y las diferentes alternativas disponibles. Consulta también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia/) para entender el marco legal.
 
 ## Qué es la Apostilla de La Haya
 
@@ -28,10 +28,10 @@ La **Cancillería Argentina** es el organismo encargado de emitir apostillas a t
 
 ### Documentos que se pueden apostillar
 
-- [Partidas del Registro Civil](/blog/apostilla-partida-nacimiento-requisitos) (nacimiento, [matrimonio](/blog/apostilla-acta-matrimonio-requisitos), [defunción](/blog/apostilla-partida-defuncion-guia))
-- Documentación de estudios ([universitarios](/blog/apostilla-titulo-universitario-homologacion), terciarios, secundarios)
+- Partidas del Registro Civil (nacimiento, matrimonio, defunción)
+- Documentación de estudios (universitarios, terciarios, secundarios)
 - Documentos notariales con firma digital
-- [Certificados de antecedentes penales](/blog/apostilla-antecedentes-penales-guia) del RNR
+- [Certificados de antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) del RNR
 - Certificados de la Cámara Electoral
 - Traducciones públicas
 - Documentos judiciales

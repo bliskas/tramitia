@@ -1,7 +1,7 @@
 ---
 title: "Documentos para residencia en España: Qué apostillar y cómo"
 description: "Guía de documentos apostillados necesarios para obtener la residencia en España. Arraigo, reagrupación familiar, residencia no lucrativa y más."
-publishedDate: "2026-03-02"
+publishedDate: "2026-02-13"
 author: "Tramitia"
 category: "guias"
 keywords:
@@ -12,10 +12,10 @@ keywords:
   - nie extranjeros documentos
   - residencia no lucrativa requisitos
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
-Obtener la residencia en España requiere presentar documentación de tu país de origen debidamente [apostillada](/blog/que-es-apostilla-haya-guia). Necesitarás [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) y en algunos casos [actas de matrimonio](/blog/apostilla-acta-matrimonio-requisitos) apostilladas. Esta guía te detalla los documentos necesarios según el tipo de residencia que solicites.
+Obtener la residencia en España requiere presentar documentación de tu país de origen debidamente [apostillada](/blog/que-es-apostilla-haya-guia/). Necesitarás partidas de nacimiento, [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) y en algunos casos actas de matrimonio apostilladas. Esta guía te detalla los documentos necesarios según el tipo de residencia que solicites.
 
 ## Tipos de residencia y sus documentos
 
@@ -192,7 +192,7 @@ Cada vía de residencia tiene requisitos documentales específicos:
 
 ### Venezuela
 
-Para más detalles sobre el proceso venezolano, consulta nuestra [guía de apostilla de documentos venezolanos desde España](/apostilla-venezuela).
+Para más detalles sobre el proceso venezolano, consulta nuestra [guía de apostilla de documentos venezolanos desde España](/apostilla-venezuela/).
 
 | Documento | Proceso |
 |-----------|---------|
@@ -241,4 +241,4 @@ Si están en español, no. Si están en otro idioma, sí (traducción jurada).
 
 ---
 
-**¿Necesitas apostillar tus documentos?** En Tramitia te ayudamos a preparar toda la documentación para tu residencia en España. Gestionamos apostillas de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas apostillar tus documentos?** En Tramitia te ayudamos a preparar toda la documentación para tu residencia en España. Gestionamos apostillas de [Venezuela](/apostilla-venezuela/), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).

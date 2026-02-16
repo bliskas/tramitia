@@ -6,37 +6,34 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://tramitia.es',
+  trailingSlash: 'always',
   integrations: [
     mdx(),
     sitemap({
       filter: (page) =>
         !page.includes('/gracias') &&
-        !page.includes('/apostilla-argentina') &&
-        !page.includes('/apostilla-colombia'),
+        !/\/apostilla-argentina\/?$/.test(page) &&
+        !/\/apostilla-colombia\/?$/.test(page),
       serialize(item) {
         // Homepage - highest priority
         if (item.url === 'https://tramitia.es/' || item.url === 'https://tramitia.es') {
           item.priority = 1.0;
           item.changefreq = 'weekly';
-          item.lastmod = new Date().toISOString();
-        }
-        // Country landing pages - high priority money pages
-        else if (item.url.includes('/apostilla-')) {
-          item.priority = 0.9;
-          item.changefreq = 'weekly';
-          item.lastmod = new Date().toISOString();
         }
         // Blog index
         else if (item.url.endsWith('/blog/') || item.url.endsWith('/blog')) {
           item.priority = 0.8;
           item.changefreq = 'daily';
-          item.lastmod = new Date().toISOString();
         }
-        // Blog posts
+        // Blog posts (check BEFORE /apostilla- to avoid misclassification)
         else if (item.url.includes('/blog/')) {
           item.priority = 0.7;
           item.changefreq = 'monthly';
-          item.lastmod = item.lastmod || new Date().toISOString();
+        }
+        // Country landing pages - high priority money pages
+        else if (item.url.includes('/apostilla-')) {
+          item.priority = 0.9;
+          item.changefreq = 'weekly';
         }
         // Legal pages - lowest priority
         else if (item.url.includes('politica-') || item.url.includes('aviso-')) {
@@ -48,7 +45,6 @@ export default defineConfig({
         else {
           item.priority = 0.7;
           item.changefreq = 'weekly';
-          item.lastmod = new Date().toISOString();
         }
         return item;
       },

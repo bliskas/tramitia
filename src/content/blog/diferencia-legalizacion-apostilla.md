@@ -47,7 +47,7 @@ Entre los países latinoamericanos que **no** son miembros del Convenio de La Ha
 
 ## Qué es la apostilla de La Haya
 
-La [apostilla de La Haya](/blog/que-es-apostilla-haya-guia) es un certificado estandarizado que sustituye todo el proceso de legalización en cadena. Fue creada por el **Convenio de La Haya de 1961** (Convenio Suprimiendo la Exigencia de Legalización de los Documentos Públicos Extranjeros) y simplifica radicalmente el uso internacional de documentos.
+La [apostilla de La Haya](/blog/que-es-apostilla-haya-guia/) es un certificado estandarizado que sustituye todo el proceso de legalización en cadena. Fue creada por el **Convenio de La Haya de 1961** (Convenio Suprimiendo la Exigencia de Legalización de los Documentos Públicos Extranjeros) y simplifica radicalmente el uso internacional de documentos.
 
 ### Cómo funciona la apostilla
 
@@ -108,9 +108,9 @@ Si tu país de origen es miembro del Convenio de La Haya (que es el caso de la m
 1. Obtener el documento original en tu país
 2. Apostillar el documento ante la autoridad competente
 3. Presentar el documento apostillado en España
-4. Si el documento no está en español, añadir [traducción jurada](/blog/homologacion-titulos-espana-documentos)
+4. Si el documento no está en español, añadir traducción jurada
 
-Para venezolanos, consulta nuestra [guía completa sobre apostilla de documentos venezolanos](/apostilla-venezuela). Para argentinos, tenemos una [guía específica sobre el proceso TAD](/blog/apostilla-argentina-espana-guia).
+Para venezolanos, consulta nuestra [guía completa sobre apostilla de documentos venezolanos](/apostilla-venezuela/). Para argentinos, tenemos una [guía específica sobre el proceso TAD](/blog/apostilla-argentina-espana-guia/).
 
 ### Si vienes de un país no miembro del Convenio
 
@@ -125,14 +125,14 @@ Si tu país no forma parte del Convenio, necesitas **legalización consular**. L
 
 Independientemente del sistema, los documentos que habitualmente requieren validación para trámites en España son:
 
-- [Partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos)
-- [Actas de matrimonio](/blog/apostilla-acta-matrimonio-requisitos)
-- [Antecedentes penales](/blog/apostilla-antecedentes-penales-guia)
-- [Títulos universitarios](/blog/apostilla-titulo-universitario-homologacion) para [homologación](/blog/homologacion-titulos-espana-documentos)
-- [Partidas de defunción](/blog/apostilla-partida-defuncion-guia)
+- Partidas de nacimiento
+- Actas de matrimonio
+- [Antecedentes penales](/blog/apostilla-antecedentes-penales-guia/)
+- Títulos universitarios para homologación
+- Partidas de defunción
 - Sentencias judiciales (divorcio, custodia)
 
-Estos documentos son imprescindibles para trámites como la [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana), la [solicitud de residencia](/blog/documentos-residencia-espana-apostilla) y la [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola).
+Estos documentos son imprescindibles para trámites como la [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/), la solicitud de residencia y la [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/).
 
 ## Errores comunes al elegir entre legalización y apostilla
 
@@ -158,7 +158,7 @@ Aunque la apostilla en sí misma no caduca, muchos documentos tienen **vigencia 
 
 ## Cómo Tramitia puede ayudarte
 
-En [Tramitia](/#contacto) nos especializamos en la gestión de apostillas para documentos latinoamericanos. Nos encargamos de todo el proceso para que no tengas que viajar ni gestionar trámites complicados en tu país de origen. Trabajamos con documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia, Ecuador, Perú y Bolivia. Solicita tu [presupuesto personalizado](/#contacto) sin compromiso.
+En [Tramitia](/#contacto) nos especializamos en la gestión de apostillas para documentos latinoamericanos. Nos encargamos de todo el proceso para que no tengas que viajar ni gestionar trámites complicados en tu país de origen. Trabajamos con documentos de [Venezuela](/apostilla-venezuela/), Argentina, Colombia, Ecuador, Perú y Bolivia. Solicita tu [presupuesto personalizado](/#contacto) sin compromiso.
 
 ## Preguntas frecuentes
 
@@ -184,7 +184,7 @@ Si el documento está en español, no necesitas traducción, solo la apostilla. 
 
 ### Venezuela necesita apostilla o legalización para España
 
-Venezuela es miembro del Convenio de La Haya desde 1999. Los documentos venezolanos para uso en España requieren **apostilla**, no legalización consular. El organismo responsable es el MPPRE a través del sistema [SLAE](/apostilla-venezuela).
+Venezuela es miembro del Convenio de La Haya desde 1999. Los documentos venezolanos para uso en España requieren **apostilla**, no legalización consular. El organismo responsable es el MPPRE a través del sistema [SLAE](/apostilla-venezuela/).
 
 ### Cuánto cuesta apostillar vs legalizar un documento
 

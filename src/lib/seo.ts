@@ -94,7 +94,7 @@ export function getServiceSchema(service: {
       name: 'Spain',
     },
     serviceType: 'Document Legalization',
-    url: `${siteUrl}/servicios/${service.slug}`,
+    url: `${siteUrl}/${service.slug}/`,
     ...(service.price && {
       offers: {
         '@type': 'Offer',
@@ -168,7 +168,7 @@ export function getBreadcrumbSchema(
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
+      item: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url.endsWith('/') ? item.url : item.url + '/'}`,
     })),
   };
 }
@@ -188,7 +188,7 @@ export function getArticleSchema(article: {
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    url: `${siteUrl}/blog/${article.slug}`,
+    url: `${siteUrl}/blog/${article.slug}/`,
     datePublished: article.publishedDate,
     dateModified: article.updatedDate || article.publishedDate,
     author: {
@@ -211,7 +211,7 @@ export function getArticleSchema(article: {
     }),
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${siteUrl}/blog/${article.slug}`,
+      '@id': `${siteUrl}/blog/${article.slug}/`,
     },
   };
 }

@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: false
 ---
 
-La reagrupación familiar en España requiere presentar documentos [apostillados](/blog/que-es-apostilla-haya-guia) del país de origen. El proceso tarda entre 3 y 6 meses y exige un expediente completo con [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [matrimonio](/blog/apostilla-acta-matrimonio-requisitos) y [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) debidamente apostillados.
+La reagrupación familiar en España requiere presentar documentos [apostillados](/blog/que-es-apostilla-haya-guia/) del país de origen. El proceso tarda entre 3 y 6 meses y exige un expediente completo con partidas de nacimiento, matrimonio y [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) debidamente apostillados.
 
 ## Qué es la reagrupación familiar
 
@@ -90,7 +90,7 @@ Obligatorio para **mayores de edad criminal** (varía según el país):
 
 ### Venezuela
 
-El Ministerio del Poder Popular para Relaciones Exteriores (MPPRE) emite las apostillas a través del sistema SLAE. Consulta nuestra [guía completa de apostilla de documentos venezolanos](/apostilla-venezuela) para más detalles.
+El Ministerio del Poder Popular para Relaciones Exteriores (MPPRE) emite las apostillas a través del sistema SLAE. Consulta nuestra [guía completa de apostilla de documentos venezolanos](/apostilla-venezuela/) para más detalles.
 
 - **Tiempo**: 5-15 días hábiles
 - **Costo**: Gratuito en Venezuela
@@ -184,7 +184,7 @@ Presenta los documentos ordenados y con copias. Facilita el trabajo del funciona
 
 ## Necesitas ayuda con tus apostillas
 
-En Tramitia gestionamos la apostilla de documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia y otros países latinoamericanos sin que tengas que viajar. [Solicita tu presupuesto gratis](/#contacto).
+En Tramitia gestionamos la apostilla de documentos de [Venezuela](/apostilla-venezuela/), Argentina, Colombia y otros países latinoamericanos sin que tengas que viajar. [Solicita tu presupuesto gratis](/#contacto).
 
 ## Preguntas frecuentes
 

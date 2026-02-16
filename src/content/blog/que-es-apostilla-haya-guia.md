@@ -86,12 +86,12 @@ Puedes consultar la lista actualizada de países miembros en el sitio oficial de
 
 ### Documentos públicos apostillables
 
-- **Registros civiles**: [Partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [matrimonio](/blog/apostilla-acta-matrimonio-requisitos), [defunción](/blog/apostilla-partida-defuncion-guia)
+- **Registros civiles**: Partidas de nacimiento, matrimonio, defunción
 - **Documentos judiciales**: Sentencias, autos, certificaciones
 - **Documentos administrativos**: Certificados, permisos, licencias
 - **Documentos notariales**: Escrituras, poderes, testamentos
-- **Documentos educativos**: [Títulos](/blog/apostilla-titulo-universitario-homologacion), certificados de notas
-- **Documentos de antecedentes**: [Certificados de antecedentes penales](/blog/apostilla-antecedentes-penales-guia)
+- **Documentos educativos**: Títulos, certificados de notas
+- **Documentos de antecedentes**: [Certificados de antecedentes penales](/blog/apostilla-antecedentes-penales-guia/)
 
 ### Documentos que NO se apostillan
 
@@ -132,7 +132,7 @@ Muchos países, incluyendo Venezuela, Argentina y Colombia, emiten apostillas en
 
 | País | Autoridad de apostilla |
 |------|------------------------|
-| [Venezuela](/apostilla-venezuela) | MPPRE (Ministerio de Relaciones Exteriores) |
+| [Venezuela](/apostilla-venezuela/) | MPPRE (Ministerio de Relaciones Exteriores) |
 | Argentina | Cancillería (vía TAD) |
 | Colombia | Cancillería (Ministerio de Relaciones Exteriores) |
 | España | Ministerio de Justicia, Tribunales Superiores de Justicia |
@@ -213,4 +213,4 @@ Deberás realizar el proceso de legalización consular tradicional en lugar de l
 
 ---
 
-**¿Necesitas apostillar tus documentos?** En Tramitia gestionamos la apostilla de tus documentos de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas apostillar tus documentos?** En Tramitia gestionamos la apostilla de tus documentos de [Venezuela](/apostilla-venezuela/), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).

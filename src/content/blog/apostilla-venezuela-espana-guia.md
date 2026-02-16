@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: false
 ---
 
-Si resides en España y necesitas apostillar documentos venezolanos, esta guía te explica el proceso oficial, los requisitos actualizados y las diferentes opciones disponibles para obtener tus documentos apostillados sin necesidad de viajar a Venezuela. Visita nuestra página dedicada a la [apostilla de documentos venezolanos desde España](/apostilla-venezuela) para solicitar presupuesto.
+Si resides en España y necesitas apostillar documentos venezolanos, esta guía te explica el proceso oficial, los requisitos actualizados y las diferentes opciones disponibles para obtener tus documentos apostillados sin necesidad de viajar a Venezuela. Visita nuestra página dedicada a la [apostilla de documentos venezolanos desde España](/apostilla-venezuela/) para solicitar presupuesto.
 
 ## Qué es la Apostilla de La Haya
 
@@ -96,16 +96,16 @@ Si no puedes realizar el trámite personalmente, puedes designar un representant
 
 ## Documentos venezolanos más solicitados
 
-### Para [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)
-- [Partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos) (no caduca si está apostillada)
-- [Certificado de antecedentes penales apostillado](/blog/apostilla-antecedentes-penales-guia) (vigencia 6 meses)
+### Para [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/)
+- Partida de nacimiento apostillada (no caduca si está apostillada)
+- [Certificado de antecedentes penales apostillado](/blog/apostilla-antecedentes-penales-guia/) (vigencia 6 meses)
 
-### Para [residencia en España](/blog/documentos-residencia-espana-apostilla)
+### Para residencia en España
 - Partida de nacimiento apostillada
 - Antecedentes penales apostillados (según tipo de residencia)
 
-### Para [homologación de títulos](/blog/homologacion-titulos-espana-documentos)
-- [Título universitario apostillado](/blog/apostilla-titulo-universitario-homologacion)
+### Para homologación de títulos
+- Título universitario apostillado
 - Certificado de notas apostillado
 - Programas de estudio apostillados
 
@@ -154,4 +154,4 @@ No, ya que están en español. Solo necesitas la apostilla para que tengan valid
 
 ---
 
-**¿Necesitas ayuda con tu apostilla?** En Tramitia gestionamos la [apostilla de tus documentos venezolanos](/apostilla-venezuela) de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda con tu apostilla?** En Tramitia gestionamos la [apostilla de tus documentos venezolanos](/apostilla-venezuela/) de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).

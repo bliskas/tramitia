@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de antecedentes penales: Guía completa Venezuela, Argentina y Colombia"
 description: "Cómo apostillar tu certificado de antecedentes penales de Venezuela, Argentina o Colombia. Requisitos, proceso y vigencia para trámites en España."
-publishedDate: "2026-02-18"
+publishedDate: "2026-02-13"
 author: "Tramitia"
 category: "documentos"
 keywords:
@@ -13,17 +13,17 @@ keywords:
   - antecedentes penales españa
 documentType: "antecedentes-penales"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
-El certificado de [antecedentes penales apostillado](/blog/que-es-apostilla-haya-guia) es un documento esencial para trámites de [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola), [residencia](/blog/documentos-residencia-espana-apostilla) y trabajo en España. Esta guía te explica cómo obtenerlo y apostillarlo según tu país de origen, con información actualizada sobre vigencia y requisitos.
+El certificado de [antecedentes penales apostillado](/blog/que-es-apostilla-haya-guia/) es un documento esencial para trámites de [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola/), residencia y trabajo en España. Esta guía te explica cómo obtenerlo y apostillarlo según tu país de origen, con información actualizada sobre vigencia y requisitos.
 
 ## Para qué necesitas los antecedentes penales apostillados
 
 En España, el certificado de antecedentes penales apostillado se requiere para:
 
-- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)**: Obligatorio para mayores de edad
-- **[Residencia](/blog/documentos-residencia-espana-apostilla)**: Todas las modalidades (arraigo, [reagrupación](/blog/documentos-reagrupacion-familiar-espana), trabajo)
+- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/)**: Obligatorio para mayores de edad
+- **Residencia**: Todas las modalidades (arraigo, [reagrupación](/blog/documentos-reagrupacion-familiar-espana/), trabajo)
 - **Visados**: Estudios, trabajo, emprendedor
 - **Empleos específicos**: Sector educativo, sanitario, seguridad
 - **Oposiciones y empleo público**: En determinados casos
@@ -40,7 +40,7 @@ Según la normativa española (Orden JUS/1625/2016):
 
 ## Antecedentes penales venezolanos
 
-Para una guía completa sobre apostilla de documentos venezolanos, visita nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela).
+Para una guía completa sobre apostilla de documentos venezolanos, visita nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela/).
 
 ### Gran ventaja: Proceso 100% electrónico
 
@@ -189,4 +189,4 @@ Depende del tipo de delito y si los antecedentes están vigentes. Consulta con u
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus antecedentes penales de [Venezuela](/apostilla-venezuela), Argentina y Colombia de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus antecedentes penales de [Venezuela](/apostilla-venezuela/), Argentina y Colombia de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).

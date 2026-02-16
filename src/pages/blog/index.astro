@@ -23,7 +23,7 @@ const blogSchema = {
   '@type': 'Blog',
   name: 'Blog de Tramitia',
   description: 'Guias, consejos y noticias sobre apostillas y legalizacion de documentos latinoamericanos en Espana',
-  url: 'https://tramitia.es/blog',
+  url: 'https://tramitia.es/blog/',
   publisher: {
     '@type': 'Organization',
     name: 'Tramitia',
@@ -42,13 +42,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Inicio',
-      item: 'https://tramitia.es',
+      item: 'https://tramitia.es/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://tramitia.es/blog',
+      item: 'https://tramitia.es/blog/',
     },
   ],
 };
@@ -97,7 +97,7 @@ const breadcrumbSchema = {
           {posts.map((post) => (
             <article class="bg-white rounded-xl border border-muted/20 overflow-hidden hover:shadow-lg transition-all duration-200 group">
               {post.data.image && (
-                <a href={`/blog/${post.slug}`} class="block aspect-video overflow-hidden">
+                <a href={`/blog/${post.slug}/`} class="block aspect-video overflow-hidden">
                   <img
                     src={post.data.image}
                     alt={post.data.title}
@@ -113,7 +113,7 @@ const breadcrumbSchema = {
                   </span>
                 )}
                 <h2 class="text-lg md:text-xl font-semibold text-primary mb-2 group-hover:text-accent transition line-clamp-2">
-                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                  <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
                 </h2>
                 <p class="text-primary/70 text-sm mb-4 line-clamp-2 leading-relaxed">
                   {post.data.description}
@@ -127,7 +127,7 @@ const breadcrumbSchema = {
                     })}
                   </time>
                   <a
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.slug}/`}
                     class="text-accent font-medium hover:underline inline-flex items-center gap-1"
                   >
                     Leer mas
