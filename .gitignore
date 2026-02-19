@@ -45,5 +45,8 @@ src/drafts/
 studio/node_modules/
 studio/dist/
 
+# indexnow cache
+.astro-indexnow-cache.json
+
 # windows artifacts
 nul

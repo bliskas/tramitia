@@ -32,18 +32,18 @@ const webSiteSchema = getWebSiteSchema();
 const localBusinessSchema = getLocalBusinessSchema();
 const serviceSchema = getServiceSchema({
   name: 'Apostilla de Documentos Latinoamericanos',
-  description: 'Servicio de apostilla y legalizacion de documentos publicos latinoamericanos para su uso legal en Espana. Partidas de nacimiento, antecedentes penales, titulos universitarios y mas.',
+  description: 'Servicio de apostilla y legalización de documentos públicos latinoamericanos para su uso legal en España. Partidas de nacimiento, antecedentes penales, títulos universitarios y más.',
   deliveryTime: 'P15D',
   slug: 'apostilla',
 });
 const howToSchema = getHowToSchema({
-  name: 'Como apostillar tus documentos desde Espana',
-  description: 'Proceso paso a paso para apostillar documentos latinoamericanos sin volver a tu pais de origen.',
+  name: 'Cómo apostillar tus documentos desde España',
+  description: 'Proceso paso a paso para apostillar documentos latinoamericanos sin volver a tu país de origen.',
   totalTime: 'P15D',
   steps: [
     {
-      name: 'Cuentanos que necesitas',
-      text: 'Rellena el formulario o escribenos por WhatsApp con los documentos que necesitas apostillar.',
+      name: 'Cuéntanos qué necesitas',
+      text: 'Rellena el formulario o escríbenos por WhatsApp con los documentos que necesitas apostillar.',
     },
     {
       name: 'Recibe tu presupuesto',
@@ -51,11 +51,11 @@ const howToSchema = getHowToSchema({
     },
     {
       name: 'Gestionamos todo',
-      text: 'Nuestro equipo en tu pais se encarga de obtener y apostillar tus documentos.',
+      text: 'Nuestro equipo en tu país se encarga de obtener y apostillar tus documentos.',
     },
     {
       name: 'Recibe tus documentos',
-      text: 'Te enviamos los documentos apostillados en formato digital y/o fisico.',
+      text: 'Te enviamos los documentos apostillados en formato digital y/o físico.',
     },
   ],
 });
@@ -64,7 +64,7 @@ const howToSchema = getHowToSchema({
 <BaseLayout
   title="Apostilla de Documentos Latinoamericanos desde España | Tramitia"
   description="Apostillamos tus documentos sin que vuelvas a tu país. Partidas de nacimiento, antecedentes penales, títulos universitarios. Gestión 100% online para tu residencia en España."
-  keywords={['apostilla', 'apostilla de la haya', 'apostillar documentos españa', 'partida de nacimiento apostillada', 'antecedentes penales apostilla', 'tramites latinoamericanos españa']}
+  keywords={['apostilla', 'apostilla de la haya', 'apostillar documentos españa', 'partida de nacimiento apostillada', 'antecedentes penales apostilla', 'trámites latinoamericanos españa']}
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
@@ -83,13 +83,13 @@ const howToSchema = getHowToSchema({
 
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
       <div class="max-w-3xl">
-        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para latinoamericanos en Espana</p>
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para latinoamericanos en España</p>
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
           Tus documentos apostillados,
-          <span class="text-accent">sin volver a tu pais</span>
+          <span class="text-accent">sin volver a tu país</span>
         </h1>
         <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
-          Gestionamos la apostilla de partidas de nacimiento, antecedentes penales y titulos universitarios para tu residencia o nacionalidad espanola. 100% online.
+          Gestionamos la apostilla de partidas de nacimiento, antecedentes penales y títulos universitarios para tu residencia o nacionalidad española. 100% online.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a href="#contacto" class="btn btn-primary btn-lg">
@@ -117,7 +117,7 @@ const howToSchema = getHowToSchema({
           <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span class="text-sm font-medium">Gestion 100% online</span>
+          <span class="text-sm font-medium">Gestión 100% online</span>
         </div>
         <div class="flex items-center gap-2.5">
           <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -142,15 +142,15 @@ const howToSchema = getHowToSchema({
     </div>
   </section>
 
-  <!-- Para que necesitas apostillar -->
+  <!-- Para qué necesitas apostillar -->
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Para que necesitas apostillar tus documentos?
+          ¿Para qué necesitas apostillar tus documentos?
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          La apostilla es obligatoria para que tus documentos tengan validez legal en Espana
+          La apostilla es obligatoria para que tus documentos tengan validez legal en España
         </p>
       </div>
 
@@ -162,7 +162,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Residencia</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Arraigo, reagrupacion familiar, residencia no lucrativa</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Arraigo, reagrupación familiar, residencia no lucrativa</p>
         </div>
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
           <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
@@ -171,7 +171,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Nacionalidad</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad espanola por residencia o por origen</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad española por residencia o por origen</p>
         </div>
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
           <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
@@ -180,7 +180,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Trabajo</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Homologacion de titulos, ejercicio profesional</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Homologación de títulos, ejercicio profesional</p>
         </div>
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
           <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
@@ -189,7 +189,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Estudios</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Convalidacion de estudios, acceso a universidad</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Convalidación de estudios, acceso a universidad</p>
         </div>
       </div>
     </div>
@@ -203,7 +203,7 @@ const howToSchema = getHowToSchema({
           Documentos que apostillamos
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Gestionamos la apostilla de cualquier documento publico de tu pais de origen
+          Gestionamos la apostilla de cualquier documento público de tu país de origen
         </p>
       </div>
 
@@ -211,7 +211,7 @@ const howToSchema = getHowToSchema({
         {[
           {
             title: 'Partida de nacimiento',
-            description: 'Esencial para tramites de nacionalidad, residencia y matrimonio.',
+            description: 'Esencial para trámites de nacionalidad, residencia y matrimonio.',
             href: '#contacto',
           },
           {
@@ -220,23 +220,23 @@ const howToSchema = getHowToSchema({
             href: '#contacto',
           },
           {
-            title: 'Titulo universitario',
-            description: 'Necesario para homologacion de estudios y ejercicio profesional.',
+            title: 'Título universitario',
+            description: 'Necesario para homologación de estudios y ejercicio profesional.',
             href: '#contacto',
           },
           {
             title: 'Acta de matrimonio',
-            description: 'Para tramites de reagrupacion familiar y reconocimiento de union.',
+            description: 'Para trámites de reagrupación familiar y reconocimiento de unión.',
             href: '#contacto',
           },
           {
-            title: 'Partida de defuncion',
-            description: 'Para tramites de herencia, pensiones y registros.',
+            title: 'Partida de defunción',
+            description: 'Para trámites de herencia, pensiones y registros.',
             href: '#contacto',
           },
           {
             title: 'Otros documentos',
-            description: 'Poderes, certificados de solteria, notas certificadas, etc.',
+            description: 'Poderes, certificados de soltería, notas certificadas, etc.',
             href: '#contacto',
           },
         ].map((service) => (
@@ -252,25 +252,25 @@ const howToSchema = getHowToSchema({
     </div>
   </section>
 
-  <!-- Paises -->
+  <!-- Países -->
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Paises que cubrimos
+          Países que cubrimos
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Tenemos equipos en varios paises latinoamericanos
+          Tenemos equipos en varios países latinoamericanos
         </p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
         {[
           { name: 'Venezuela', code: 'VE', href: '/apostilla-venezuela/', active: true },
-          { name: 'Argentina', code: 'AR', href: '/apostilla-argentina/', active: false },
-          { name: 'Colombia', code: 'CO', href: '/apostilla-colombia/', active: false },
+          { name: 'Argentina', code: 'AR', href: '/apostilla-argentina/', active: true },
+          { name: 'Colombia', code: 'CO', href: '/apostilla-colombia/', active: true },
           { name: 'Ecuador', code: 'EC', href: '/apostilla-ecuador', active: false },
-          { name: 'Peru', code: 'PE', href: '/apostilla-peru', active: false },
+          { name: 'Perú', code: 'PE', href: '/apostilla-peru', active: false },
           { name: 'Bolivia', code: 'BO', href: '/apostilla-bolivia', active: false },
         ].map((country) => (
           <a
@@ -288,19 +288,19 @@ const howToSchema = getHowToSchema({
               {country.code}
             </div>
             <span class="font-semibold text-primary text-sm md:text-base">{country.name}</span>
-            {!country.active && <span class="text-xs text-primary/40">Proximamente</span>}
+            {!country.active && <span class="text-xs text-primary/40">Próximamente</span>}
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Como funciona -->
+  <!-- Cómo funciona -->
   <section class="py-16 md:py-24 bg-primary text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
-          Como funciona
+          Cómo funciona
         </h2>
         <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
           Un proceso simple para que no tengas que preocuparte de nada
@@ -311,8 +311,8 @@ const howToSchema = getHowToSchema({
         {[
           {
             step: '1',
-            title: 'Cuentanos que necesitas',
-            description: 'Rellena el formulario o escribenos por WhatsApp con los documentos que necesitas apostillar.',
+            title: 'Cuéntanos qué necesitas',
+            description: 'Rellena el formulario o escríbenos por WhatsApp con los documentos que necesitas apostillar.',
           },
           {
             step: '2',
@@ -322,12 +322,12 @@ const howToSchema = getHowToSchema({
           {
             step: '3',
             title: 'Gestionamos todo',
-            description: 'Nuestro equipo en tu pais se encarga de obtener y apostillar tus documentos.',
+            description: 'Nuestro equipo en tu país se encarga de obtener y apostillar tus documentos.',
           },
           {
             step: '4',
             title: 'Recibe tus documentos',
-            description: 'Te enviamos los documentos apostillados en formato digital y/o fisico.',
+            description: 'Te enviamos los documentos apostillados en formato digital y/o físico.',
           },
         ].map((item) => (
           <div class="text-center relative">
@@ -418,7 +418,7 @@ const howToSchema = getHowToSchema({
 
           <div class="grid md:grid-cols-2 gap-5 md:gap-6">
             <div>
-              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Telefono / WhatsApp *</label>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono / WhatsApp *</label>
               <input
                 type="tel"
                 id="telefono"
@@ -430,7 +430,7 @@ const howToSchema = getHowToSchema({
               />
             </div>
             <div>
-              <label for="pais" class="block text-sm font-medium text-primary mb-2">Pais del documento *</label>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País del documento *</label>
               <select
                 id="pais"
                 name="pais"
@@ -438,20 +438,20 @@ const howToSchema = getHowToSchema({
                 class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
                 style="background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\"); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
               >
-                <option value="">Selecciona un pais</option>
+                <option value="">Selecciona un país</option>
                 <option value="venezuela">Venezuela</option>
                 <option value="argentina">Argentina</option>
                 <option value="colombia">Colombia</option>
                 <option value="ecuador">Ecuador</option>
-                <option value="peru">Peru</option>
+                <option value="peru">Perú</option>
                 <option value="bolivia">Bolivia</option>
-                <option value="otro">Otro pais</option>
+                <option value="otro">Otro país</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label for="documento" class="block text-sm font-medium text-primary mb-2">Que documento necesitas apostillar? *</label>
+            <label for="documento" class="block text-sm font-medium text-primary mb-2">¿Qué documento necesitas apostillar? *</label>
             <select
               id="documento"
               name="documento"
@@ -462,22 +462,22 @@ const howToSchema = getHowToSchema({
               <option value="">Selecciona un documento</option>
               <option value="partida-nacimiento">Partida de nacimiento</option>
               <option value="antecedentes-penales">Antecedentes penales</option>
-              <option value="titulo-universitario">Titulo universitario</option>
+              <option value="titulo-universitario">Título universitario</option>
               <option value="acta-matrimonio">Acta de matrimonio</option>
-              <option value="partida-defuncion">Partida de defuncion</option>
+              <option value="partida-defuncion">Partida de defunción</option>
               <option value="varios">Varios documentos</option>
               <option value="otro">Otro documento</option>
             </select>
           </div>
 
           <div>
-            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Informacion adicional</label>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Información adicional</label>
             <textarea
               id="mensaje"
               name="mensaje"
               rows="3"
               class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
-              placeholder="Cuentanos mas detalles sobre tu caso (opcional)"
+              placeholder="Cuéntanos más detalles sobre tu caso (opcional)"
             ></textarea>
           </div>
 
@@ -490,7 +490,7 @@ const howToSchema = getHowToSchema({
               class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
             />
             <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
-              He leido y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">politica de privacidad</a> *
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
             </label>
           </div>
 
@@ -508,7 +508,7 @@ const howToSchema = getHowToSchema({
 
   <!-- WhatsApp floating button - 56px for easy touch -->
   <a
-    href="https://wa.me/34XXXXXXXXX?text=Hola,%20necesito%20informacion%20sobre%20apostillas"
+    href="https://wa.me/34XXXXXXXXX?text=Hola,%20necesito%20información%20sobre%20apostillas"
     target="_blank"
     rel="noopener noreferrer"
     class="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-lg shadow-black/20 hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center"

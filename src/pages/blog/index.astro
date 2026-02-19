@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 
 // Obtener posts de Content Collections (no borradores)
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-// Ordenar por fecha de publicacion (mas recientes primero)
+// Ordenar por fecha de publicación (más recientes primero)
 const posts = allPosts.sort((a, b) =>
   new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
@@ -12,24 +12,24 @@ const posts = allPosts.sort((a, b) =>
 const categories = [
   { value: 'apostillas', label: 'Apostillas' },
   { value: 'documentos', label: 'Documentos' },
-  { value: 'tramites', label: 'Tramites' },
-  { value: 'guias', label: 'Guias' },
+  { value: 'tramites', label: 'Trámites' },
+  { value: 'guias', label: 'Guías' },
   { value: 'noticias', label: 'Noticias' },
 ];
 
-// Schema.org para la pagina del blog
+// Schema.org para la página del blog
 const blogSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
   name: 'Blog de Tramitia',
-  description: 'Guias, consejos y noticias sobre apostillas y legalizacion de documentos latinoamericanos en Espana',
+  description: 'Guías, consejos y noticias sobre apostillas y legalización de documentos latinoamericanos en España',
   url: 'https://tramitia.es/blog/',
   publisher: {
     '@type': 'Organization',
     name: 'Tramitia',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://tramitia.es/logo.svg',
+      url: 'https://tramitia.es/logo.png',
     },
   },
 };
@@ -55,9 +55,9 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Blog | Guias de Apostillas y Documentos - Tramitia"
-  description="Informacion util sobre apostillas, legalizacion de documentos y tramites para latinoamericanos en Espana. Guias paso a paso y consejos practicos."
-  keywords={['apostilla blog', 'guias apostilla', 'documentos latinoamerica', 'legalizacion espana']}
+  title="Blog | Guías de Apostillas y Documentos - Tramitia"
+  description="Información útil sobre apostillas, legalización de documentos y trámites para latinoamericanos en España. Guías paso a paso y consejos prácticos."
+  keywords={['apostilla blog', 'guías apostilla', 'documentos latinoamerica', 'legalización españa']}
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
@@ -73,7 +73,7 @@ const breadcrumbSchema = {
       </nav>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Blog</h1>
       <p class="text-lg md:text-xl text-white/80 max-w-2xl">
-        Guias, consejos y noticias sobre apostillas y legalizacion de documentos para latinoamericanos en Espana.
+        Guías, consejos y noticias sobre apostillas y legalización de documentos para latinoamericanos en España.
       </p>
     </div>
   </section>
@@ -87,9 +87,9 @@ const breadcrumbSchema = {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
             </svg>
           </div>
-          <h2 class="text-xl md:text-2xl font-semibold text-primary mb-2">Proximamente</h2>
+          <h2 class="text-xl md:text-2xl font-semibold text-primary mb-2">Próximamente</h2>
           <p class="text-primary/70 max-w-md mx-auto">
-            Estamos preparando contenido util sobre apostillas y documentos. Vuelve pronto para leer nuestras guias.
+            Estamos preparando contenido útil sobre apostillas y documentos. Vuelve pronto para leer nuestras guías.
           </p>
         </div>
       ) : (
@@ -130,7 +130,7 @@ const breadcrumbSchema = {
                     href={`/blog/${post.slug}/`}
                     class="text-accent font-medium hover:underline inline-flex items-center gap-1"
                   >
-                    Leer mas
+                    Leer más
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
@@ -148,10 +148,10 @@ const breadcrumbSchema = {
   <section class="py-12 md:py-16 bg-muted-light">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4">
-        Necesitas apostillar tus documentos?
+        ¿Necesitas apostillar tus documentos?
       </h2>
       <p class="text-primary/70 mb-6 md:mb-8 max-w-2xl mx-auto">
-        Gestionamos la apostilla de tus documentos latinoamericanos de forma rapida y segura, sin que tengas que volver a tu pais.
+        Gestionamos la apostilla de tus documentos latinoamericanos de forma rápida y segura, sin que tengas que volver a tu país.
       </p>
       <a href="/#contacto" class="btn btn-primary btn-lg">
         Solicitar presupuesto gratis

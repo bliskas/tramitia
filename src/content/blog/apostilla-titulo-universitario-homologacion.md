@@ -1,7 +1,7 @@
 ---
 title: "Apostilla de título universitario para homologación en España"
 description: "Guía para apostillar tu título universitario de Venezuela, Argentina o Colombia para homologarlo en España. Requisitos del Ministerio de Universidades."
-publishedDate: "2026-02-21"
+publishedDate: "2026-02-20"
 author: "Tramitia"
 category: "guias"
 keywords:
@@ -13,10 +13,10 @@ keywords:
   - convalidación estudios españa
 documentType: "titulo-universitario"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
-Si deseas ejercer tu profesión o continuar estudios en España, necesitas [apostillar](/blog/que-es-apostilla-haya-guia) tu título universitario como paso previo a la [homologación](/blog/homologacion-titulos-espana-documentos). Esta guía te explica el proceso completo, desde la apostilla hasta los requisitos del Ministerio de Universidades.
+Si deseas ejercer tu profesión o continuar estudios en España, necesitas [apostillar](/blog/que-es-apostilla-haya-guia/) tu título universitario como paso previo a la homologación. Esta guía te explica el proceso completo, desde la apostilla hasta los requisitos del Ministerio de Universidades.
 
 ## Por qué necesitas apostillar tu título universitario
 
@@ -40,7 +40,7 @@ Para la homologación completa, generalmente necesitas apostillar:
 
 ## Apostilla de título venezolano
 
-Si eres venezolano, consulta nuestra [guía completa de apostilla de documentos venezolanos desde España](/apostilla-venezuela) para más información sobre el proceso SLAE y los consulados.
+Si eres venezolano, consulta nuestra [guía completa de apostilla de documentos venezolanos desde España](/apostilla-venezuela/) para más información sobre el proceso SLAE y los consulados.
 
 ### Legalización previa obligatoria
 
@@ -199,4 +199,4 @@ Debes obtener un certificado del Ministerio de Educación de tu país que acredi
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus títulos universitarios de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus títulos universitarios de [Venezuela](/apostilla-venezuela/), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).

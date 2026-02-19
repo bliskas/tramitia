@@ -1,7 +1,7 @@
 ---
 title: "Documentos para residencia en España: Qué apostillar y cómo"
 description: "Guía de documentos apostillados necesarios para obtener la residencia en España. Arraigo, reagrupación familiar, residencia no lucrativa y más."
-publishedDate: "2026-02-13"
+publishedDate: "2026-02-16"
 author: "Tramitia"
 category: "guias"
 keywords:

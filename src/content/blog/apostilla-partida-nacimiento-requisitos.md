@@ -1,7 +1,7 @@
 ---
-title: "Apostilla de partida de nacimiento: Requisitos por país (Venezuela, Argentina, Colombia)"
+title: "Apostilla de partida de nacimiento: Requisitos por país"
 description: "Guía completa para apostillar tu partida de nacimiento de Venezuela, Argentina o Colombia. Requisitos, proceso y tiempos por país."
-publishedDate: "2026-02-15"
+publishedDate: "2026-02-17"
 author: "Tramitia"
 category: "documentos"
 keywords:
@@ -13,17 +13,17 @@ keywords:
   - partida nacimiento españa
 documentType: "partida-nacimiento"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
-La [partida de nacimiento apostillada](/blog/que-es-apostilla-haya-guia) es uno de los documentos más solicitados por latinoamericanos en España. Es requisito fundamental para trámites de [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola), [residencia](/blog/documentos-residencia-espana-apostilla), matrimonio y muchos otros procedimientos administrativos. Esta guía te explica cómo apostillar tu partida de nacimiento según tu país de origen.
+La [partida de nacimiento apostillada](/blog/que-es-apostilla-haya-guia/) es uno de los documentos más solicitados por latinoamericanos en España. Es requisito fundamental para trámites de [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola/), [residencia](/blog/documentos-residencia-espana-apostilla/), matrimonio y muchos otros procedimientos administrativos. Esta guía te explica cómo apostillar tu partida de nacimiento según tu país de origen.
 
 ## Para qué necesitas la partida de nacimiento apostillada
 
 La partida de nacimiento apostillada es requerida en España para:
 
-- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)**: Documento obligatorio en todas las vías
-- **[Residencia](/blog/documentos-residencia-espana-apostilla)**: Arraigo, [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana), residencia no lucrativa
+- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/)**: Documento obligatorio en todas las vías
+- **[Residencia](/blog/documentos-residencia-espana-apostilla/)**: Arraigo, [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/), residencia no lucrativa
 - **Matrimonio en España**: Para inscripción en el Registro Civil
 - **Empadronamiento de menores**: En algunos municipios
 - **Trámites de herencia**: Acreditar parentesco
@@ -45,7 +45,7 @@ Para residencia y otros trámites, la partida generalmente debe tener una **anti
 
 ## Apostilla de partida de nacimiento venezolana
 
-Para una guía completa sobre todos los documentos venezolanos, visita nuestra página de [apostilla de documentos venezolanos desde España](/apostilla-venezuela).
+Para una guía completa sobre todos los documentos venezolanos, visita nuestra página de [apostilla de documentos venezolanos desde España](/apostilla-venezuela/).
 
 ### Autoridad emisora
 
@@ -189,4 +189,4 @@ Debes corregir los errores en el Registro Civil de tu país antes de apostillar.
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu partida de nacimiento de [Venezuela](/apostilla-venezuela), Argentina y Colombia sin que tengas que viajar. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu partida de nacimiento de [Venezuela](/apostilla-venezuela/), Argentina y Colombia sin que tengas que viajar. [Solicita tu presupuesto gratuito](/#contacto).

@@ -1,7 +1,7 @@
 ---
 title: "Documentos apostillados para la nacionalidad española: Guía completa"
 description: "Lista completa de documentos apostillados necesarios para solicitar la nacionalidad española. Requisitos actualizados del Ministerio de Justicia."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-01"
 author: "Tramitia"
 category: "guias"
 keywords:

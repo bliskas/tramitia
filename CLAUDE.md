@@ -98,14 +98,17 @@ WHATSAPP_NUMBER=34XXXXXXXXX
 GOOGLE_SHEETS_ID=
 ```
 
-## Content Language Rules
+## Content Language Rules (CRITICAL - ZERO TOLERANCE)
 
 - **ALL content MUST be written in European Spanish (español de España), orthographically correct**
 - Every tilde/accent is mandatory: á, é, í, ó, ú, ñ, ü
 - Use Spain vocabulary: coste (not costo), móvil (not celular), ordenador (not computadora)
-- This applies to: titles, descriptions, keywords, body content, FAQs
-- Before saving any content file, verify ALL accents are correct
+- This applies to: **titles, meta descriptions, Schema.org data, aria-labels, alt text, keywords, body content, FAQs, comments in HTML, button text, placeholder text — EVERYTHING visible or indexable**
+- **BEFORE saving ANY file** (.astro, .ts, .md, .json), run a mental spell-check for missing tildes
 - Never omit a tilde — it is a critical SEO and credibility issue
+- **Common words that MUST have tildes**: información, trámites, guía, guías, más, también, aquí, página, útil, rápida, electrónica, gestión, legalizació, atención, próximamente, menú, navegación, España, país, están, será, está, estás, dónde, cómo, qué, cuál, cuánto, teléfono
+- **Opening question marks ¿ and exclamation marks ¡ are MANDATORY** in Spanish
+- **SEO titles must be <60 characters** (Google truncates longer titles in SERPs)
 
 ## Blog Workflow
 
@@ -114,6 +117,12 @@ GOOGLE_SHEETS_ID=
 - **New posts**: Create in `src/drafts/blog/` first, move to `src/content/blog/` when approved
 - **Skill**: Use `/create-blog-post <tipo> <pais> <documento>` to generate new posts
 - **Dates**: Each post should have a unique `publishedDate`, spaced 3+ days apart
+
+## SEO Audit & Roadmap
+
+- Full SEO audit (18 Feb 2026) saved in memory: `memory/seo-audit-feb2026.md`
+- Contains: all issues found, priority classification, and 6-phase improvement roadmap
+- Key issues: tildes in blog/index.astro, title lengths, author schema type, missing lastmod in sitemap
 
 ## Important Notes
 

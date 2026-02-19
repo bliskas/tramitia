@@ -2,54 +2,54 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } from '../lib/seo';
 
-// FAQs para schema y seccion visible
+// FAQs para schema y sección visible
 const faqs = [
   {
-    question: '¿Como apostillar documentos venezolanos desde Espana?',
-    answer: 'Con Tramitia puedes apostillar tus documentos venezolanos sin viajar a Venezuela. Nuestro equipo en Venezuela gestiona todo el proceso ante las oficinas del SAREN (Servicio Autonomo de Registros y Notarias). Tu solo nos envias la informacion necesaria y nosotros nos encargamos de la solicitud, el seguimiento y la entrega del documento apostillado.',
+    question: '¿Cómo apostillar documentos venezolanos desde España?',
+    answer: 'Con Tramitia puedes apostillar tus documentos venezolanos sin viajar a Venezuela. Nuestro equipo en Venezuela gestiona todo el proceso ante las oficinas del SAREN (Servicio Autónomo de Registros y Notarías). Tú solo nos envías la información necesaria y nosotros nos encargamos de la solicitud, el seguimiento y la entrega del documento apostillado.',
   },
   {
-    question: '¿Cuanto tarda apostillar un documento venezolano?',
-    answer: 'El tiempo promedio para apostillar un documento venezolano es de 15 a 30 dias habiles, dependiendo del tipo de documento y la carga de trabajo del SAREN. Para partidas de nacimiento y antecedentes penales el proceso suele ser mas rapido. Ofrecemos seguimiento en tiempo real para que conozcas el estado de tu tramite en todo momento.',
+    question: '¿Cuánto tarda apostillar un documento venezolano?',
+    answer: 'El tiempo promedio para apostillar un documento venezolano es de 15 a 30 días hábiles, dependiendo del tipo de documento y la carga de trabajo del SAREN. Para partidas de nacimiento y antecedentes penales el proceso suele ser más rápido. Ofrecemos seguimiento en tiempo real para que conozcas el estado de tu trámite en todo momento.',
   },
   {
-    question: '¿Que documentos venezolanos se pueden apostillar?',
-    answer: 'Se pueden apostillar todos los documentos publicos emitidos por autoridades venezolanas: partidas de nacimiento, actas de matrimonio, antecedentes penales, titulos universitarios, notas certificadas, actas de defuncion, certificados de solteria, poderes notariales y cualquier otro documento emitido por instituciones publicas venezolanas.',
+    question: '¿Qué documentos venezolanos se pueden apostillar?',
+    answer: 'Se pueden apostillar todos los documentos públicos emitidos por autoridades venezolanas: partidas de nacimiento, actas de matrimonio, antecedentes penales, títulos universitarios, notas certificadas, actas de defunción, certificados de soltería, poderes notariales y cualquier otro documento emitido por instituciones públicas venezolanas.',
   },
   {
-    question: '¿Necesito ir al consulado venezolano en Espana?',
-    answer: 'No. La apostilla se gestiona directamente en Venezuela ante el SAREN, no a traves del consulado. El consulado venezolano en Espana ofrece servicios distintos como legalizaciones consulares, pero la Apostilla de La Haya debe tramitarse en territorio venezolano. Con Tramitia, nuestro equipo local se encarga de todo sin que tu tengas que acudir a ninguna oficina.',
+    question: '¿Necesito ir al consulado venezolano en España?',
+    answer: 'No. La apostilla se gestiona directamente en Venezuela ante el SAREN, no a través del consulado. El consulado venezolano en España ofrece servicios distintos como legalizaciones consulares, pero la Apostilla de La Haya debe tramitarse en territorio venezolano. Con Tramitia, nuestro equipo local se encarga de todo sin que tú tengas que acudir a ninguna oficina.',
   },
   {
-    question: '¿Cual es el costo de apostillar documentos venezolanos?',
-    answer: 'El costo varia segun el tipo de documento, la cantidad y si necesitas servicio express. Ofrecemos presupuestos personalizados y sin compromiso. Nuestros precios incluyen la gestion completa: solicitud ante el SAREN, seguimiento, y envio del documento apostillado. Solicita tu presupuesto gratuito a traves de nuestro formulario o WhatsApp.',
+    question: '¿Cuál es el coste de apostillar documentos venezolanos?',
+    answer: 'El coste varía según el tipo de documento, la cantidad y si necesitas servicio express. Ofrecemos presupuestos personalizados y sin compromiso. Nuestros precios incluyen la gestión completa: solicitud ante el SAREN, seguimiento, y envío del documento apostillado. Solicita tu presupuesto gratuito a través de nuestro formulario o WhatsApp.',
   },
   {
-    question: '¿La apostilla venezolana es valida en toda Espana?',
-    answer: 'Si. La Apostilla de La Haya es un certificado de validez internacional reconocido en los 124 paises miembros del Convenio de La Haya de 1961, incluida Espana. Un documento venezolano apostillado es valido en todas las comunidades autonomas espanolas y ante cualquier autoridad publica o privada del pais.',
+    question: '¿La apostilla venezolana es válida en toda España?',
+    answer: 'Sí. La Apostilla de La Haya es un certificado de validez internacional reconocido en los 124 países miembros del Convenio de La Haya de 1961, incluida España. Un documento venezolano apostillado es válido en todas las comunidades autónomas españolas y ante cualquier autoridad pública o privada del país.',
   },
   {
-    question: '¿Que pasa si mi documento venezolano esta danado o es muy antiguo?',
-    answer: 'Si tu documento original esta deteriorado o es demasiado antiguo, puede ser necesario solicitar una nueva copia certificada antes de apostillarlo. Nuestro equipo en Venezuela puede gestionar la emision de nuevas copias de partidas de nacimiento, matrimonio y otros documentos ante los registros civiles correspondientes, y luego proceder con la apostilla.',
+    question: '¿Qué pasa si mi documento venezolano está dañado o es muy antiguo?',
+    answer: 'Si tu documento original está deteriorado o es demasiado antiguo, puede ser necesario solicitar una nueva copia certificada antes de apostillarlo. Nuestro equipo en Venezuela puede gestionar la emisión de nuevas copias de partidas de nacimiento, matrimonio y otros documentos ante los registros civiles correspondientes, y luego proceder con la apostilla.',
   },
   {
     question: '¿Puedo apostillar documentos digitales venezolanos?',
-    answer: 'Venezuela ha implementado el sistema SLAE (Sistema de Legalizaciones y Apostillas Electronicas) que permite gestionar apostillas de forma electronica para ciertos documentos. Sin embargo, no todos los documentos son elegibles para apostilla electronica. Nuestro equipo evalua cada caso y utiliza la via mas rapida y conveniente disponible.',
+    answer: 'Venezuela ha implementado el sistema SLAE (Sistema de Legalizaciones y Apostillas Electrónicas) que permite gestionar apostillas de forma electrónica para ciertos documentos. Sin embargo, no todos los documentos son elegibles para apostilla electrónica. Nuestro equipo evalúa cada caso y utiliza la vía más rápida y conveniente disponible.',
   },
   {
-    question: '¿Necesito traducir mis documentos venezolanos para usarlos en Espana?',
-    answer: 'Como los documentos venezolanos estan en espanol, generalmente no necesitan traduccion para su uso en Espana. Sin embargo, la apostilla es obligatoria para que tengan validez legal. En algunos casos especificos, las autoridades espanolas pueden solicitar una traduccion jurada si el documento contiene terminologia legal especifica de Venezuela.',
+    question: '¿Necesito traducir mis documentos venezolanos para usarlos en España?',
+    answer: 'Como los documentos venezolanos están en español, generalmente no necesitan traducción para su uso en España. Sin embargo, la apostilla es obligatoria para que tengan validez legal. En algunos casos específicos, las autoridades españolas pueden solicitar una traducción jurada si el documento contiene terminología legal específica de Venezuela.',
   },
   {
-    question: '¿Que es el SAREN y que relacion tiene con la apostilla?',
-    answer: 'El SAREN (Servicio Autonomo de Registros y Notarias) es el organismo venezolano encargado de emitir las apostillas. Es la unica entidad autorizada para apostillar documentos publicos venezolanos bajo el Convenio de La Haya. Todas las apostillas de documentos venezolanos deben tramitarse a traves del SAREN en Venezuela.',
+    question: '¿Qué es el SAREN y qué relación tiene con la apostilla?',
+    answer: 'El SAREN (Servicio Autónomo de Registros y Notarías) es el organismo venezolano encargado de emitir las apostillas. Es la única entidad autorizada para apostillar documentos públicos venezolanos bajo el Convenio de La Haya. Todas las apostillas de documentos venezolanos deben tramitarse a través del SAREN en Venezuela.',
   },
 ];
 
 // Schema.org
 const serviceSchema = getServiceSchema({
-  name: 'Apostilla de Documentos Venezolanos desde Espana',
-  description: 'Servicio profesional de apostilla de documentos venezolanos gestionado desde Espana. Partidas de nacimiento, antecedentes penales, titulos universitarios y mas. Gestion 100% online sin necesidad de viajar a Venezuela.',
+  name: 'Apostilla de Documentos Venezolanos desde España',
+  description: 'Servicio profesional de apostilla de documentos venezolanos gestionado desde España. Partidas de nacimiento, antecedentes penales, títulos universitarios y más. Gestión 100% online sin necesidad de viajar a Venezuela.',
   deliveryTime: 'P15D/P30D',
   slug: 'apostilla-venezuela',
 });
@@ -62,33 +62,33 @@ const breadcrumbSchema = getBreadcrumbSchema([
 ]);
 
 const howToSchema = getHowToSchema({
-  name: 'Como apostillar documentos venezolanos desde Espana',
-  description: 'Guia paso a paso para apostillar tus documentos venezolanos sin viajar a Venezuela. Proceso gestionado por Tramitia con equipo local en Venezuela.',
+  name: 'Cómo apostillar documentos venezolanos desde España',
+  description: 'Guía paso a paso para apostillar tus documentos venezolanos sin viajar a Venezuela. Proceso gestionado por Tramitia con equipo local en Venezuela.',
   totalTime: 'P30D',
   steps: [
     {
       name: 'Enviar solicitud con tus documentos',
-      text: 'Rellena nuestro formulario de contacto o escribenos por WhatsApp indicando que documentos venezolanos necesitas apostillar. Adjunta copias escaneadas o fotografias de los documentos originales para que podamos evaluar tu caso.',
+      text: 'Rellena nuestro formulario de contacto o escríbenos por WhatsApp indicando qué documentos venezolanos necesitas apostillar. Adjunta copias escaneadas o fotografías de los documentos originales para que podamos evaluar tu caso.',
     },
     {
       name: 'Recibir presupuesto personalizado',
-      text: 'En menos de 24 horas recibiras un presupuesto detallado con el costo, el tiempo estimado y los requisitos especificos para tu caso. El presupuesto es gratuito y sin compromiso.',
+      text: 'En menos de 24 horas recibirás un presupuesto detallado con el coste, el tiempo estimado y los requisitos específicos para tu caso. El presupuesto es gratuito y sin compromiso.',
     },
     {
       name: 'Confirmar y procesar la apostilla',
-      text: 'Una vez aceptado el presupuesto, nuestro equipo en Venezuela inicia la gestion ante el SAREN. Te mantenemos informado del progreso en cada etapa del proceso con actualizaciones regulares.',
+      text: 'Una vez aceptado el presupuesto, nuestro equipo en Venezuela inicia la gestión ante el SAREN. Te mantenemos informado del progreso en cada etapa del proceso con actualizaciones regulares.',
     },
     {
       name: 'Recibir documentos apostillados',
-      text: 'Cuando el SAREN emite la apostilla, te enviamos el documento apostillado en formato digital inmediatamente y, si lo necesitas, el documento fisico por mensajeria segura con seguimiento hasta tu direccion en Espana.',
+      text: 'Cuando el SAREN emite la apostilla, te enviamos el documento apostillado en formato digital inmediatamente y, si lo necesitas, el documento físico por mensajería segura con seguimiento hasta tu dirección en España.',
     },
   ],
 });
 ---
 
 <BaseLayout
-  title="Apostilla de Documentos Venezolanos desde Espana | Tramitia"
-  description="Apostilla tus documentos venezolanos sin volver a Venezuela. Partidas de nacimiento, antecedentes penales, titulos universitarios. Gestion 100% online desde Espana."
+  title="Apostilla de Documentos Venezolanos desde España | Tramitia"
+  description="Apostilla tus documentos venezolanos sin volver a Venezuela. Partidas de nacimiento, antecedentes penales, títulos universitarios. Gestión 100% online desde España."
   keywords={['apostilla venezuela desde espana', 'apostillar documentos venezolanos', 'apostilla de la haya venezuela', 'documentos venezolanos espana', 'apostilla partida nacimiento venezuela', 'antecedentes penales venezuela apostilla', 'SAREN apostilla', 'apostilla venezuela online']}
 >
   <Fragment slot="schema">
@@ -125,13 +125,13 @@ const howToSchema = getHowToSchema({
 
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
       <div class="max-w-3xl">
-        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para venezolanos en Espana</p>
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para venezolanos en España</p>
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
           Apostilla tus documentos venezolanos
           <span class="text-accent">sin volver a Venezuela</span>
         </h1>
         <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
-          Nuestro equipo en Venezuela gestiona la apostilla de tus partidas de nacimiento, antecedentes penales y titulos universitarios ante el SAREN. Tu solo esperas el resultado. 100% online.
+          Nuestro equipo en Venezuela gestiona la apostilla de tus partidas de nacimiento, antecedentes penales y títulos universitarios ante el SAREN. Tú solo esperas el resultado. 100% online.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a href="#contacto" class="btn btn-primary btn-lg">
@@ -159,7 +159,7 @@ const howToSchema = getHowToSchema({
           <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span class="text-sm font-medium">Gestion 100% online</span>
+          <span class="text-sm font-medium">Gestión 100% online</span>
         </div>
         <div class="flex items-center gap-2.5">
           <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -188,14 +188,14 @@ const howToSchema = getHowToSchema({
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
-          La comunidad venezolana en Espana necesita documentos apostillados
+          La comunidad venezolana en España necesita documentos apostillados
         </h2>
         <div class="text-base md:text-lg text-primary/70 leading-relaxed space-y-4 max-w-3xl mx-auto text-left">
           <p>
-            Venezuela es uno de los paises con mayor presencia de inmigrantes en Espana. Miles de venezolanos necesitan apostillar documentos cada ano para tramites de <strong class="text-primary">residencia</strong>, <strong class="text-primary">nacionalidad espanola</strong>, <strong class="text-primary">homologacion de titulos</strong> y otros procedimientos legales.
+            Venezuela es uno de los países con mayor presencia de inmigrantes en España. Miles de venezolanos necesitan apostillar documentos cada año para trámites de <strong class="text-primary">residencia</strong>, <strong class="text-primary">nacionalidad española</strong>, <strong class="text-primary">homologación de títulos</strong> y otros procedimientos legales.
           </p>
           <p>
-            El problema es que la apostilla debe tramitarse en Venezuela ante el <strong class="text-primary">SAREN</strong> (Servicio Autonomo de Registros y Notarias), lo que obliga a muchos a depender de familiares, conocidos o intermediarios poco confiables. Con Tramitia, tienes un equipo profesional en Venezuela que gestiona todo el proceso por ti, con seguimiento transparente y garantia de resultado.
+            El problema es que la apostilla debe tramitarse en Venezuela ante el <strong class="text-primary">SAREN</strong> (Servicio Autónomo de Registros y Notarías), lo que obliga a muchos a depender de familiares, conocidos o intermediarios poco confiables. Con Tramitia, tienes un equipo profesional en Venezuela que gestiona todo el proceso por ti, con seguimiento transparente y garantía de resultado.
           </p>
         </div>
       </div>
@@ -210,7 +210,7 @@ const howToSchema = getHowToSchema({
           Documentos venezolanos que apostillamos
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Gestionamos la apostilla ante el SAREN de cualquier documento publico venezolano
+          Gestionamos la apostilla ante el SAREN de cualquier documento público venezolano
         </p>
       </div>
 
@@ -222,7 +222,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Partida de nacimiento</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Documento mas solicitado. Imprescindible para tramites de <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="text-accent hover:underline">nacionalidad espanola</a>, residencia y registro civil en Espana.</p>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Documento más solicitado. Imprescindible para trámites de <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="text-accent hover:underline">nacionalidad española</a>, residencia y registro civil en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -232,7 +232,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Antecedentes penales</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificado emitido por el Ministerio de Interior. Necesario para visados, permisos de residencia y trabajo en Espana.</p>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificado emitido por el Ministerio de Interior. Necesario para visados, permisos de residencia y trabajo en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -241,8 +241,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Titulo universitario</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Titulos de universidades venezolanas. Requisito para la homologacion de estudios y ejercicio profesional en Espana.</p>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Título universitario</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Títulos de universidades venezolanas. Requisito para la homologación de estudios y ejercicio profesional en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -252,7 +252,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Acta de matrimonio</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para tramites de <a href="/blog/documentos-reagrupacion-familiar-espana/" class="text-accent hover:underline">reagrupacion familiar</a>, inscripcion de matrimonio en el registro civil espanol y residencia por familiar comunitario.</p>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para trámites de <a href="/blog/documentos-reagrupacion-familiar-espana/" class="text-accent hover:underline">reagrupación familiar</a>, inscripción de matrimonio en el registro civil español y residencia por familiar comunitario.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -261,8 +261,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Acta de defuncion</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Necesaria para tramites de herencia, pensiones de viudedad y procedimientos legales en Espana.</p>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Acta de defunción</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Necesaria para trámites de herencia, pensiones de viudedad y procedimientos legales en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -272,21 +272,21 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Notas certificadas y otros</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificados de calificaciones, poderes notariales, certificados de solteria y cualquier documento publico venezolano.</p>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificados de calificaciones, poderes notariales, certificados de soltería y cualquier documento público venezolano.</p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Por que necesitas apostillar (casos de uso) -->
+  <!-- Por qué necesitas apostillar (casos de uso) -->
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Para que necesitas apostillar tus documentos venezolanos?
+          ¿Para qué necesitas apostillar tus documentos venezolanos?
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          La <a href="/blog/que-es-apostilla-haya-guia/" class="text-accent hover:underline">Apostilla de La Haya</a> es obligatoria para que tus documentos venezolanos tengan validez legal en Espana
+          La <a href="/blog/que-es-apostilla-haya-guia/" class="text-accent hover:underline">Apostilla de La Haya</a> es obligatoria para que tus documentos venezolanos tengan validez legal en España
         </p>
       </div>
 
@@ -297,8 +297,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-primary mb-2">Residencia en Espana</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Arraigo social, arraigo laboral, reagrupacion familiar, residencia no lucrativa y otros permisos de residencia</p>
+          <h3 class="text-lg font-semibold text-primary mb-2">Residencia en España</h3>
+          <p class="text-primary/70 text-sm leading-relaxed">Arraigo social, arraigo laboral, reagrupación familiar, residencia no lucrativa y otros permisos de residencia</p>
         </div>
 
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
@@ -307,8 +307,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-primary mb-2">Nacionalidad espanola</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad por residencia (2 anos para venezolanos con pasaporte iberoamericano), por origen sefardi o por carta de naturaleza</p>
+          <h3 class="text-lg font-semibold text-primary mb-2">Nacionalidad española</h3>
+          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad por residencia (2 años para venezolanos con pasaporte iberoamericano), por origen sefardí o por carta de naturaleza</p>
         </div>
 
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
@@ -317,8 +317,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-primary mb-2">Trabajo y profesion</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Homologacion de titulos universitarios, convalidacion de estudios, permisos de trabajo y ejercicio profesional regulado</p>
+          <h3 class="text-lg font-semibold text-primary mb-2">Trabajo y profesión</h3>
+          <p class="text-primary/70 text-sm leading-relaxed">Homologación de títulos universitarios, convalidación de estudios, permisos de trabajo y ejercicio profesional regulado</p>
         </div>
 
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
@@ -328,21 +328,21 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Estudios</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Convalidacion de bachillerato, acceso a universidad, credenciales academicas y becas para estudiantes venezolanos</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Convalidación de bachillerato, acceso a universidad, credenciales académicas y becas para estudiantes venezolanos</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Como funciona (Venezuela-specific) -->
+  <!-- Cómo funciona (Venezuela-specific) -->
   <section class="py-16 md:py-24 bg-primary text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
-          Como apostillamos tus documentos venezolanos
+          Cómo apostillamos tus documentos venezolanos
         </h2>
         <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
-          Un proceso simple para que no tengas que preocuparte de nada. Nuestro equipo en Venezuela se encarga de todo el tramite ante el SAREN.
+          Un proceso simple para que no tengas que preocuparte de nada. Nuestro equipo en Venezuela se encarga de todo el trámite ante el SAREN.
         </p>
       </div>
 
@@ -351,8 +351,8 @@ const howToSchema = getHowToSchema({
           <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
             1
           </div>
-          <h3 class="text-lg md:text-xl font-semibold mb-3">Cuentanos que necesitas</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Rellena el formulario o escribenos por WhatsApp con los documentos venezolanos que necesitas apostillar. Adjunta copias escaneadas.</p>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Cuéntanos qué necesitas</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Rellena el formulario o escríbenos por WhatsApp con los documentos venezolanos que necesitas apostillar. Adjunta copias escaneadas.</p>
         </div>
 
         <div class="text-center relative">
@@ -360,7 +360,7 @@ const howToSchema = getHowToSchema({
             2
           </div>
           <h3 class="text-lg md:text-xl font-semibold mb-3">Recibe tu presupuesto</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">En menos de 24 horas recibiras un presupuesto detallado y sin compromiso con el costo y tiempo estimado para tu caso especifico.</p>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">En menos de 24 horas recibirás un presupuesto detallado y sin compromiso con el coste y tiempo estimado para tu caso específico.</p>
         </div>
 
         <div class="text-center relative">
@@ -376,18 +376,18 @@ const howToSchema = getHowToSchema({
             4
           </div>
           <h3 class="text-lg md:text-xl font-semibold mb-3">Recibe tus documentos</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Te enviamos los documentos apostillados en formato digital y, si lo necesitas, el original por mensajeria segura hasta tu direccion en Espana.</p>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Te enviamos los documentos apostillados en formato digital y, si lo necesitas, el original por mensajería segura hasta tu dirección en España.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Por que Tramitia -->
+  <!-- Por qué Tramitia -->
   <section class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Por que elegir Tramitia para apostillar tus documentos venezolanos?
+          ¿Por qué elegir Tramitia para apostillar tus documentos venezolanos?
         </h2>
       </div>
 
@@ -401,7 +401,7 @@ const howToSchema = getHowToSchema({
           </div>
           <div>
             <h3 class="text-lg font-semibold text-primary mb-1">Equipo local en Venezuela</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Contamos con personal en Venezuela que gestiona presencialmente los tramites ante el SAREN y los registros civiles.</p>
+            <p class="text-primary/70 text-sm leading-relaxed">Contamos con personal en Venezuela que gestiona presencialmente los trámites ante el SAREN y los registros civiles.</p>
           </div>
         </div>
 
@@ -414,7 +414,7 @@ const howToSchema = getHowToSchema({
           </div>
           <div>
             <h3 class="text-lg font-semibold text-primary mb-1">Seguimiento transparente</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Te mantenemos informado del estado de tu tramite en cada etapa. Siempre sabras donde estan tus documentos.</p>
+            <p class="text-primary/70 text-sm leading-relaxed">Te mantenemos informado del estado de tu trámite en cada etapa. Siempre sabrás dónde están tus documentos.</p>
           </div>
         </div>
 
@@ -426,7 +426,7 @@ const howToSchema = getHowToSchema({
           </div>
           <div>
             <h3 class="text-lg font-semibold text-primary mb-1">Seguridad garantizada</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Tus documentos estan protegidos. Cumplimos con el RGPD y utilizamos mensajeria segura con seguimiento para envios fisicos.</p>
+            <p class="text-primary/70 text-sm leading-relaxed">Tus documentos están protegidos. Cumplimos con el RGPD y utilizamos mensajería segura con seguimiento para envíos físicos.</p>
           </div>
         </div>
 
@@ -437,8 +437,8 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-primary mb-1">Respuesta rapida</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Presupuesto en menos de 24 horas. Atencion al cliente por WhatsApp y correo electronico para resolver tus dudas al instante.</p>
+            <h3 class="text-lg font-semibold text-primary mb-1">Respuesta rápida</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Presupuesto en menos de 24 horas. Atención al cliente por WhatsApp y correo electrónico para resolver tus dudas al instante.</p>
           </div>
         </div>
 
@@ -450,7 +450,7 @@ const howToSchema = getHowToSchema({
           </div>
           <div>
             <h3 class="text-lg font-semibold text-primary mb-1">100% online</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">No necesitas desplazarte a ningun sitio. Todo el proceso se gestiona de forma remota desde la comodidad de tu hogar en Espana.</p>
+            <p class="text-primary/70 text-sm leading-relaxed">No necesitas desplazarte a ningún sitio. Todo el proceso se gestiona de forma remota desde la comodidad de tu hogar en España.</p>
           </div>
         </div>
 
@@ -482,7 +482,7 @@ const howToSchema = getHowToSchema({
           Solicita tu presupuesto personalizado
         </h2>
         <p class="text-lg md:text-xl text-primary/70 mb-6 max-w-2xl mx-auto">
-          Cada caso es diferente. Cuentanos que documentos venezolanos necesitas apostillar y te enviamos un presupuesto detallado, gratuito y sin compromiso.
+          Cada caso es diferente. Cuéntanos qué documentos venezolanos necesitas apostillar y te enviamos un presupuesto detallado, gratuito y sin compromiso.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a href="#contacto" class="btn btn-primary btn-lg">
@@ -510,7 +510,7 @@ const howToSchema = getHowToSchema({
           Preguntas frecuentes sobre apostilla de documentos venezolanos
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Resolvemos las dudas mas comunes sobre el proceso de apostilla de documentos de Venezuela desde Espana
+          Resolvemos las dudas más comunes sobre el proceso de apostilla de documentos de Venezuela desde España
         </p>
       </div>
 
@@ -543,42 +543,42 @@ const howToSchema = getHowToSchema({
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Guias utiles para venezolanos en Espana
+          Guías útiles para venezolanos en España
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Articulos con informacion practica sobre apostillas y tramites documentales
+          Artículos con información práctica sobre apostillas y trámites documentales
         </p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         <a href="/blog/que-es-apostilla-haya-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
-            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guia</span>
-            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Que es la Apostilla de La Haya</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Todo lo que necesitas saber sobre la Apostilla de La Haya: que es, para que sirve y como funciona el convenio internacional.</p>
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Qué es la Apostilla de La Haya</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo lo que necesitas saber sobre la Apostilla de La Haya: qué es, para qué sirve y cómo funciona el convenio internacional.</p>
           </div>
         </a>
 
         <a href="/blog/diferencia-legalizacion-apostilla/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
-            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guia</span>
-            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Diferencia entre legalizacion y apostilla</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Conoce las diferencias clave entre legalizar y apostillar documentos para usarlos en Espana.</p>
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Diferencia entre legalización y apostilla</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Conoce las diferencias clave entre legalizar y apostillar documentos para usarlos en España.</p>
           </div>
         </a>
 
         <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
-            <span class="text-xs font-medium text-accent uppercase tracking-wide">Tramites</span>
-            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad espanola</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Que documentos apostillados necesitas para solicitar la nacionalidad espanola.</p>
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad española</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española.</p>
           </div>
         </a>
       </div>
 
       <div class="text-center mt-8">
         <a href="/blog/" class="btn btn-outline btn-md">
-          Ver todos los articulos
+          Ver todos los artículos
           <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -630,7 +630,7 @@ const howToSchema = getHowToSchema({
 
           <div class="grid md:grid-cols-2 gap-5 md:gap-6">
             <div>
-              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Telefono / WhatsApp *</label>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono / WhatsApp *</label>
               <input
                 type="tel"
                 id="telefono"
@@ -642,7 +642,7 @@ const howToSchema = getHowToSchema({
               />
             </div>
             <div>
-              <label for="pais" class="block text-sm font-medium text-primary mb-2">Pais del documento *</label>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País del documento *</label>
               <select
                 id="pais"
                 name="pais"
@@ -654,15 +654,15 @@ const howToSchema = getHowToSchema({
                 <option value="argentina">Argentina</option>
                 <option value="colombia">Colombia</option>
                 <option value="ecuador">Ecuador</option>
-                <option value="peru">Peru</option>
+                <option value="peru">Perú</option>
                 <option value="bolivia">Bolivia</option>
-                <option value="otro">Otro pais</option>
+                <option value="otro">Otro país</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label for="documento" class="block text-sm font-medium text-primary mb-2">Que documento necesitas apostillar? *</label>
+            <label for="documento" class="block text-sm font-medium text-primary mb-2">¿Qué documento necesitas apostillar? *</label>
             <select
               id="documento"
               name="documento"
@@ -673,11 +673,11 @@ const howToSchema = getHowToSchema({
               <option value="">Selecciona un documento</option>
               <option value="partida-nacimiento">Partida de nacimiento</option>
               <option value="antecedentes-penales">Antecedentes penales</option>
-              <option value="titulo-universitario">Titulo universitario</option>
+              <option value="titulo-universitario">Título universitario</option>
               <option value="acta-matrimonio">Acta de matrimonio</option>
-              <option value="partida-defuncion">Partida de defuncion</option>
+              <option value="partida-defuncion">Partida de defunción</option>
               <option value="notas-certificadas">Notas certificadas / Calificaciones</option>
-              <option value="certificado-solteria">Certificado de solteria</option>
+              <option value="certificado-solteria">Certificado de soltería</option>
               <option value="poder-notarial">Poder notarial</option>
               <option value="varios">Varios documentos</option>
               <option value="otro">Otro documento</option>
@@ -685,13 +685,13 @@ const howToSchema = getHowToSchema({
           </div>
 
           <div>
-            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Informacion adicional</label>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Información adicional</label>
             <textarea
               id="mensaje"
               name="mensaje"
               rows="3"
               class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
-              placeholder="Cuentanos mas detalles: para que tramite necesitas la apostilla, si tienes el documento original, etc."
+              placeholder="Cuéntanos más detalles: para qué trámite necesitas la apostilla, si tienes el documento original, etc."
             ></textarea>
           </div>
 
@@ -704,7 +704,7 @@ const howToSchema = getHowToSchema({
               class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
             />
             <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
-              He leido y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">politica de privacidad</a> *
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
             </label>
           </div>
 
@@ -768,11 +768,11 @@ const howToSchema = getHowToSchema({
         if (response.ok) {
           window.location.href = '/gracias';
         } else {
-          throw new Error('Error en el envio');
+          throw new Error('Error en el envío');
         }
       } catch (error) {
         console.error('Form submission error:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, intentalo de nuevo o contactanos por WhatsApp.');
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.');
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
       }

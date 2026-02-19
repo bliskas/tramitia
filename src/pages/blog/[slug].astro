@@ -13,11 +13,27 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
+// Related posts: match by country, category, or documentType
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const relatedPosts = allPosts
+  .filter((p) => p.slug !== post.slug)
+  .map((p) => {
+    let score = 0;
+    if (post.data.country && p.data.country === post.data.country) score += 3;
+    if (post.data.documentType && p.data.documentType === post.data.documentType) score += 2;
+    if (p.data.category === post.data.category) score += 1;
+    return { post: p, score };
+  })
+  .filter((r) => r.score > 0)
+  .sort((a, b) => b.score - a.score || new Date(b.post.data.publishedDate).getTime() - new Date(a.post.data.publishedDate).getTime())
+  .slice(0, 3)
+  .map((r) => r.post);
+
 const categories: Record<string, string> = {
   apostillas: 'Apostillas',
   documentos: 'Documentos',
-  tramites: 'Tramites',
-  guias: 'Guias',
+  tramites: 'Trámites',
+  guias: 'Guías',
   noticias: 'Noticias',
 };
 
@@ -43,7 +59,7 @@ const articleSchema = {
     name: 'Tramitia',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://tramitia.es/logo.svg',
+      url: 'https://tramitia.es/logo.png',
     },
   },
   mainEntityOfPage: {
@@ -170,7 +186,7 @@ const breadcrumbSchema = {
         ¿Necesitas apostillar tus documentos?
       </h3>
       <p class="text-primary/70 mb-4">
-        Gestionamos tu apostilla de forma rapida y segura. Sin volver a tu pais.
+        Gestionamos tu apostilla de forma rápida y segura. Sin volver a tu país.
       </p>
       <a
         href="/#contacto"
@@ -179,6 +195,39 @@ const breadcrumbSchema = {
         Solicitar presupuesto gratis
       </a>
     </div>
+
+    <!-- Related Posts -->
+    {relatedPosts.length > 0 && (
+      <aside class="mt-12">
+        <h2 class="text-2xl font-bold text-primary mb-6">Artículos relacionados</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {relatedPosts.map((related) => (
+            <a href={`/blog/${related.slug}/`} class="block bg-white rounded-xl border border-muted/20 overflow-hidden hover:shadow-lg transition-all duration-200 group">
+              {related.data.image && (
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    src={related.data.image}
+                    alt={related.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div class="p-4">
+                {related.data.category && (
+                  <span class="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-0.5 rounded-md mb-2">
+                    {categories[related.data.category] || related.data.category}
+                  </span>
+                )}
+                <h3 class="text-base font-semibold text-primary group-hover:text-accent transition line-clamp-2">
+                  {related.data.title}
+                </h3>
+              </div>
+            </a>
+          ))}
+        </div>
+      </aside>
+    )}
 
     <!-- Back to blog -->
     <div class="mt-12 pt-8 border-t border-muted">

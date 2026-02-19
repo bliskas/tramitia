@@ -1,5 +1,5 @@
 ---
-title: "Apostilla de antecedentes penales: Guía completa Venezuela, Argentina y Colombia"
+title: "Apostilla de antecedentes penales: Guía por país"
 description: "Cómo apostillar tu certificado de antecedentes penales de Venezuela, Argentina o Colombia. Requisitos, proceso y vigencia para trámites en España."
 publishedDate: "2026-02-13"
 author: "Tramitia"

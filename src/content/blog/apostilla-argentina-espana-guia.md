@@ -1,7 +1,7 @@
 ---
-title: "Cómo apostillar documentos argentinos desde España: Guía completa 2026"
+title: "Cómo apostillar documentos argentinos desde España"
 description: "Guía oficial para apostillar partidas de nacimiento, antecedentes penales y títulos argentinos desde España. Proceso TAD, requisitos y tiempos reales."
-publishedDate: "2026-01-30"
+publishedDate: "2026-02-03"
 author: "Tramitia"
 category: "guias"
 keywords:

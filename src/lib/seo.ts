@@ -10,16 +10,8 @@ export function getWebSiteSchema() {
     '@type': 'WebSite',
     name: siteName,
     url: siteUrl,
-    description: 'Apostillas y tramites de documentos latinoamericanos desde Espana',
+    description: 'Apostillas y trámites de documentos latinoamericanos desde España',
     inLanguage: 'es',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl}/blog?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 
@@ -38,7 +30,7 @@ export function getOrganizationSchema() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+34-XXX-XXX-XXX',
+      telephone: '+34-611-222-333',
       contactType: 'customer service',
       availableLanguage: ['Spanish'],
     },
@@ -55,7 +47,7 @@ export function getLocalBusinessSchema() {
     '@type': 'LocalBusiness',
     name: siteName,
     url: siteUrl,
-    telephone: '+34-XXX-XXX-XXX',
+    telephone: '+34-611-222-333',
     email: 'hola@tramitia.es',
     priceRange: '€€',
     address: {
@@ -192,7 +184,7 @@ export function getArticleSchema(article: {
     datePublished: article.publishedDate,
     dateModified: article.updatedDate || article.publishedDate,
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: article.author || siteName,
     },
     publisher: {

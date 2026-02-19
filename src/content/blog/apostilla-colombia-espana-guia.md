@@ -1,7 +1,7 @@
 ---
 title: "Cómo apostillar documentos colombianos desde España: Guía completa 2026"
 description: "Guía oficial para apostillar partidas de nacimiento, antecedentes penales y títulos colombianos desde España. Proceso Cancillería Colombia online."
-publishedDate: "2026-03-08"
+publishedDate: "2026-02-19"
 author: "Tramitia"
 category: "guias"
 keywords:
@@ -13,7 +13,7 @@ keywords:
   - documentos colombianos españa
 country: "colombia"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
 Si resides en España y necesitas apostillar documentos colombianos, esta guía te explica el proceso oficial a través de la Cancillería de Colombia, los requisitos actualizados y cómo realizar el trámite completamente online desde cualquier lugar del mundo. Consulta también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) para entender el marco legal.
