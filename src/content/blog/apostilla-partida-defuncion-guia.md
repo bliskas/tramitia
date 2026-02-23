@@ -38,7 +38,7 @@ A diferencia de otros documentos, la partida de defunción **no tiene fecha de c
 
 ## Apostilla de partida de defunción venezolana
 
-Para información completa sobre apostilla de documentos venezolanos, consulta nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela).
+Para información completa sobre apostilla de documentos venezolanos, consulta nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela/).
 
 ### Autoridad emisora
 
@@ -189,4 +189,4 @@ La partida de defunción se emite y apostilla en el país donde ocurrió el fall
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de partidas de defunción de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de partidas de defunción de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). [Solicita tu presupuesto gratuito](/#contacto).

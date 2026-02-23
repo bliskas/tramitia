@@ -189,4 +189,4 @@ Depende del tipo de delito y si los antecedentes están vigentes. Consulta con u
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus antecedentes penales de [Venezuela](/apostilla-venezuela/), Argentina y Colombia de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus antecedentes penales de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/) de forma rápida y segura. [Solicita tu presupuesto gratuito](/#contacto).

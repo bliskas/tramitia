@@ -13,7 +13,7 @@ keywords:
   - matrimonio españa extranjero
 documentType: "acta-matrimonio"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
 El acta de matrimonio [apostillada](/blog/que-es-apostilla-haya-guia) es un documento fundamental para diversos trámites en España, especialmente para [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana) y [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola). Esta guía te explica cómo apostillar tu acta de matrimonio según tu país de origen.
@@ -43,7 +43,7 @@ Aunque el acta no caduca si está apostillada, se recomienda presentar un docume
 
 ## Apostilla de acta de matrimonio venezolana
 
-Para información completa sobre apostilla de documentos venezolanos, visita nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela).
+Para información completa sobre apostilla de documentos venezolanos, visita nuestra página de [apostilla Venezuela desde España](/apostilla-venezuela/).
 
 ### Autoridad emisora
 
@@ -193,4 +193,4 @@ Sí, el trámite de apostilla no requiere la presencia de ambos cónyuges.
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu acta de matrimonio de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu acta de matrimonio de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). [Solicita tu presupuesto gratuito](/#contacto).

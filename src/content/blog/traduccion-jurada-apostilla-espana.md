@@ -218,7 +218,7 @@ Recuerda que la traducción jurada no tiene caducidad, pero el **documento origi
 
 ## Necesitas ayuda con tus apostillas
 
-Si necesitas apostillar documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia u otros países latinoamericanos, en Tramitia nos encargamos de todo el proceso sin que tengas que viajar a tu país. Gestionamos la obtención y apostilla de tus documentos para que puedas completar tu traducción jurada en España sin contratiempos. [Solicita tu presupuesto gratis](/#contacto).
+Si necesitas apostillar documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) u otros países latinoamericanos, en Tramitia nos encargamos de todo el proceso sin que tengas que viajar a tu país. Gestionamos la obtención y apostilla de tus documentos para que puedas completar tu traducción jurada en España sin contratiempos. [Solicita tu presupuesto gratis](/#contacto).
 
 ## Preguntas frecuentes
 

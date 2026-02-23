@@ -21,7 +21,7 @@ Una de las primeras preguntas que surge cuando necesitas [apostillar documentos]
 
 ### Venezuela
 
-Venezuela ofrece el proceso de apostilla a través del **Sistema de Legalización y Apostilla Electrónica (SLAE)** del Ministerio del Poder Popular para Relaciones Exteriores (MPPRE). Consulta nuestra [guía completa sobre apostilla de documentos venezolanos](/apostilla-venezuela) para conocer el proceso detallado.
+Venezuela ofrece el proceso de apostilla a través del **Sistema de Legalización y Apostilla Electrónica (SLAE)** del Ministerio del Poder Popular para Relaciones Exteriores (MPPRE). Consulta nuestra [guía completa sobre apostilla de documentos venezolanos](/apostilla-venezuela/) para conocer el proceso detallado.
 
 #### Apostilla directa en Venezuela (SLAE)
 
@@ -267,7 +267,7 @@ No hay sorpresas ni cargos adicionales una vez aprobado el presupuesto.
 3. Recibe un presupuesto detallado en 24-48 horas
 4. Si lo apruebas, nos encargamos de todo
 
-Trabajamos con documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia, Ecuador, Perú y Bolivia.
+Trabajamos con documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/), Ecuador, Perú y Bolivia.
 
 ## Preguntas frecuentes
 

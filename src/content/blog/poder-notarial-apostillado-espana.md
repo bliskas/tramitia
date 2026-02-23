@@ -164,7 +164,7 @@ El Consulado de Venezuela en España ofrece servicios notariales, aunque los tie
 - **Coste**: Variable según el tipo de poder y la tasa consular vigente
 - **Ventaja**: El poder tiene validez directa en Venezuela sin apostilla
 
-**Recomendación**: Dada la dificultad para obtener cita en los consulados venezolanos, la vía del notario español con apostilla suele ser más práctica. Consulta nuestra [guía de apostilla para documentos venezolanos](/apostilla-venezuela) para más información.
+**Recomendación**: Dada la dificultad para obtener cita en los consulados venezolanos, la vía del notario español con apostilla suele ser más práctica. Consulta nuestra [guía de apostilla para documentos venezolanos](/apostilla-venezuela/) para más información.
 
 ### Argentina
 
@@ -295,7 +295,7 @@ El poder debe contener:
 
 ## Necesitas ayuda con tus apostillas
 
-Si necesitas apostillar un poder notarial otorgado en España o gestionar la apostilla de documentos en tu país de origen para preparar un poder, en Tramitia podemos ayudarte. Gestionamos apostillas de documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia y otros países latinoamericanos. También te orientamos sobre el proceso más adecuado para tu caso concreto. [Solicita tu presupuesto gratis](/#contacto).
+Si necesitas apostillar un poder notarial otorgado en España o gestionar la apostilla de documentos en tu país de origen para preparar un poder, en Tramitia podemos ayudarte. Gestionamos apostillas de documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y otros países latinoamericanos. También te orientamos sobre el proceso más adecuado para tu caso concreto. [Solicita tu presupuesto gratis](/#contacto).
 
 ## Preguntas frecuentes
 

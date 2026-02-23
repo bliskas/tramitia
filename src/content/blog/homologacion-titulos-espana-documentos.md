@@ -84,7 +84,7 @@ Las siguientes profesiones requieren homologación obligatoria:
 
 ### Venezuela
 
-Para más detalles sobre el proceso venezolano, consulta nuestra [guía de apostilla de documentos venezolanos desde España](/apostilla-venezuela).
+Para más detalles sobre el proceso venezolano, consulta nuestra [guía de apostilla de documentos venezolanos desde España](/apostilla-venezuela/).
 
 1. **Título universitario**:
    - Legalizar en el Consejo Universitario
@@ -240,4 +240,4 @@ Generalmente 10-15 días hábiles. Revisa la notificación específica.
 
 ---
 
-**¿Necesitas apostillar tus títulos?** En Tramitia te ayudamos a preparar toda la documentación para tu homologación. Gestionamos apostillas de [Venezuela](/apostilla-venezuela), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas apostillar tus títulos?** En Tramitia te ayudamos a preparar toda la documentación para tu homologación. Gestionamos apostillas de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). [Solicita tu presupuesto gratuito](/#contacto).

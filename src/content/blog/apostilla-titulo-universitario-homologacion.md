@@ -199,4 +199,4 @@ Debes obtener un certificado del Ministerio de Educación de tu país que acredi
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus títulos universitarios de [Venezuela](/apostilla-venezuela/), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tus títulos universitarios de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). [Solicita tu presupuesto gratuito](/#contacto).

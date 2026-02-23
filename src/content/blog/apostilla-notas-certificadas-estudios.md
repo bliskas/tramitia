@@ -109,7 +109,7 @@ Las universidades españolas solicitan notas certificadas apostilladas para:
 
 ### Venezuela
 
-Los documentos académicos venezolanos requieren un proceso de legalización previo antes de la apostilla. Para más información, consulta nuestra [guía de apostilla de documentos venezolanos](/apostilla-venezuela).
+Los documentos académicos venezolanos requieren un proceso de legalización previo antes de la apostilla. Para más información, consulta nuestra [guía de apostilla de documentos venezolanos](/apostilla-venezuela/).
 
 **Legalización previa obligatoria**:
 
@@ -337,4 +337,4 @@ No. El Ministerio de Universidades no admite solicitudes sin la documentación c
 
 ## Necesitas apostillar tus documentos académicos
 
-En [Tramitia](/#contacto) gestionamos la apostilla de notas certificadas, certificados de estudio, programas de estudio y otros documentos académicos de [Venezuela](/apostilla-venezuela), Argentina, Colombia y Ecuador. Nos encargamos de todo el proceso para que puedas iniciar tu [homologación de títulos](/blog/homologacion-titulos-espana-documentos) sin demoras. [Solicita tu presupuesto gratuito](/#contacto) y empieza hoy.
+En [Tramitia](/#contacto) gestionamos la apostilla de notas certificadas, certificados de estudio, programas de estudio y otros documentos académicos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador. Nos encargamos de todo el proceso para que puedas iniciar tu [homologación de títulos](/blog/homologacion-titulos-espana-documentos) sin demoras. [Solicita tu presupuesto gratuito](/#contacto) y empieza hoy.

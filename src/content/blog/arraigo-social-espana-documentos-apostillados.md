@@ -168,7 +168,7 @@ Los venezolanos son uno de los colectivos más numerosos que solicitan el arraig
 - **Partida de nacimiento**: Se solicita en el Registro Civil correspondiente o a través del CNE
 - **Tiempo de apostilla**: 5-15 días hábiles
 
-Consulta nuestra [guía completa de apostilla de documentos venezolanos](/apostilla-venezuela) para más detalles.
+Consulta nuestra [guía completa de apostilla de documentos venezolanos](/apostilla-venezuela/) para más detalles.
 
 ### Argentina
 
@@ -265,7 +265,7 @@ Para conocer más sobre los documentos necesarios para cada tipo de [residencia 
 
 ## Necesitas ayuda con tus apostillas
 
-Gestionar la obtención y apostilla de documentos desde España puede ser un proceso largo y complicado, especialmente si no tienes quien te ayude en tu país de origen. En Tramitia nos encargamos de obtener y apostillar tu [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) y otros documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia y demás países latinoamericanos. [Solicita tu presupuesto gratis](/#contacto) y deja que nos encarguemos de tus apostillas mientras tú preparas el resto del expediente.
+Gestionar la obtención y apostilla de documentos desde España puede ser un proceso largo y complicado, especialmente si no tienes quien te ayude en tu país de origen. En Tramitia nos encargamos de obtener y apostillar tu [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) y otros documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y demás países latinoamericanos. [Solicita tu presupuesto gratis](/#contacto) y deja que nos encarguemos de tus apostillas mientras tú preparas el resto del expediente.
 
 ## Preguntas frecuentes
 

@@ -91,7 +91,7 @@ Venezuela fue uno de los países pioneros en la adopción de la apostilla electr
 - **Verificación**: Código QR y número de trámite verificable en el portal
 - **Costo**: Gratuito (en Venezuela)
 
-Consulta nuestra [guía completa de apostilla de documentos venezolanos](/apostilla-venezuela) para conocer el proceso paso a paso.
+Consulta nuestra [guía completa de apostilla de documentos venezolanos](/apostilla-venezuela/) para conocer el proceso paso a paso.
 
 ### Argentina: Sistema TAD y Cancillería
 
@@ -215,7 +215,7 @@ Aunque la apostilla electrónica es plenamente válida, te recomendamos:
 
 ## Cómo Tramitia gestiona tus apostillas
 
-En [Tramitia](/#contacto) trabajamos con todos los formatos de apostilla. Nos encargamos de gestionar la apostilla de tus documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia y otros países latinoamericanos, ya sea en formato electrónico o físico según lo que emita la autoridad de tu país. Recibirás tus documentos apostillados listos para presentar en España. [Solicita tu presupuesto sin compromiso](/#contacto).
+En [Tramitia](/#contacto) trabajamos con todos los formatos de apostilla. Nos encargamos de gestionar la apostilla de tus documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y otros países latinoamericanos, ya sea en formato electrónico o físico según lo que emita la autoridad de tu país. Recibirás tus documentos apostillados listos para presentar en España. [Solicita tu presupuesto sin compromiso](/#contacto).
 
 ## Preguntas frecuentes
 

@@ -190,7 +190,7 @@ Ecuador sigue emitiendo apostillas en formato físico para la mayoría de los do
 
 ### Avances hacia la apostilla electrónica
 
-Ecuador ha comenzado a implementar sistemas digitales para algunos trámites, aunque el avance ha sido más lento que en otros países de la región como [Venezuela](/apostilla-venezuela) (sistema SLAE) o Argentina (sistema TAD).
+Ecuador ha comenzado a implementar sistemas digitales para algunos trámites, aunque el avance ha sido más lento que en otros países de la región como [Venezuela](/apostilla-venezuela/) (sistema SLAE) o Argentina (sistema TAD).
 
 | Característica | Ecuador | Venezuela | Argentina | Colombia |
 |----------------|---------|-----------|-----------|----------|

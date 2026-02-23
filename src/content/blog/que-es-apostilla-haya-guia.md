@@ -213,4 +213,4 @@ Deberás realizar el proceso de legalización consular tradicional en lugar de l
 
 ---
 
-**¿Necesitas apostillar tus documentos?** En Tramitia gestionamos la apostilla de tus documentos de [Venezuela](/apostilla-venezuela/), Argentina y Colombia. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas apostillar tus documentos?** En Tramitia gestionamos la apostilla de tus documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). [Solicita tu presupuesto gratuito](/#contacto).

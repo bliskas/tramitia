@@ -209,7 +209,7 @@ Algunos países latinoamericanos permiten el matrimonio por poderes (sin presenc
 
 ### Matrimonios celebrados en Venezuela
 
-Los matrimonios venezolanos requieren especial atención por las particularidades del sistema de apostilla ([SLAE](/apostilla-venezuela)):
+Los matrimonios venezolanos requieren especial atención por las particularidades del sistema de apostilla ([SLAE](/apostilla-venezuela/)):
 
 - El acta de matrimonio debe obtenerse en el Registro Civil venezolano
 - La apostilla se tramita a través del MPPRE o consulados
@@ -253,7 +253,7 @@ No necesariamente. La solicitud puede presentarla uno solo de los cónyuges. Sin
 
 ### Me casé en Venezuela y ahora vivo en España, qué necesito para inscribir mi matrimonio
 
-Necesitas el acta de matrimonio apostillada por el [MPPRE](/apostilla-venezuela), las partidas de nacimiento apostilladas de ambos cónyuges, pasaportes y NIE vigentes, certificado de empadronamiento y, si hubo matrimonios anteriores, la sentencia de divorcio apostillada.
+Necesitas el acta de matrimonio apostillada por el [MPPRE](/apostilla-venezuela/), las partidas de nacimiento apostilladas de ambos cónyuges, pasaportes y NIE vigentes, certificado de empadronamiento y, si hubo matrimonios anteriores, la sentencia de divorcio apostillada.
 
 ### Puedo solicitar la nacionalidad española sin inscribir mi matrimonio
 
@@ -269,4 +269,4 @@ No. Los errores en el acta de matrimonio deben corregirse **antes** de la inscri
 
 ## Necesitas apostillar tu acta de matrimonio
 
-En [Tramitia](/#contacto) gestionamos la apostilla de actas de matrimonio de [Venezuela](/apostilla-venezuela), Argentina, Colombia y Ecuador para su inscripción en el Registro Civil español. También apostillamos [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) y otros documentos necesarios para completar el expediente. [Solicita tu presupuesto gratuito](/#contacto) y te guiamos en todo el proceso.
+En [Tramitia](/#contacto) gestionamos la apostilla de actas de matrimonio de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador para su inscripción en el Registro Civil español. También apostillamos [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) y otros documentos necesarios para completar el expediente. [Solicita tu presupuesto gratuito](/#contacto) y te guiamos en todo el proceso.

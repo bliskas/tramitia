@@ -189,4 +189,4 @@ Debes corregir los errores en el Registro Civil de tu país antes de apostillar.
 
 ---
 
-**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu partida de nacimiento de [Venezuela](/apostilla-venezuela/), Argentina y Colombia sin que tengas que viajar. [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas ayuda?** En Tramitia gestionamos la apostilla de tu partida de nacimiento de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/) sin que tengas que viajar. [Solicita tu presupuesto gratuito](/#contacto).

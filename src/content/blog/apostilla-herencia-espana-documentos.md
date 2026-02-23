@@ -122,7 +122,7 @@ Cada documento público extranjero debe llevar su apostilla. El proceso varía s
 | Colombia | Cancillería (portal online) | 3-15 días |
 | Ecuador | Registro Civil / Cancillería | 3-10 días |
 
-Consulta nuestras guías específicas para [Venezuela](/apostilla-venezuela), [Argentina](/blog/apostilla-argentina-espana-guia) y [Colombia](/blog/apostilla-colombia-espana-guia).
+Consulta nuestras guías específicas para [Venezuela](/apostilla-venezuela/), [Argentina](/blog/apostilla-argentina-espana-guia/) y [Colombia](/blog/apostilla-colombia-espana-guia/).
 
 ### Paso 4: Declaración de herederos o apertura del testamento
 
@@ -249,4 +249,4 @@ El tiempo varía según la complejidad del caso. Un proceso típico puede tardar
 
 ## Necesitas gestionar documentos apostillados para una herencia
 
-En [Tramitia](/#contacto) gestionamos la apostilla de todos los documentos necesarios para herencias internacionales en España: [partidas de defunción](/blog/apostilla-partida-defuncion-guia), [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [actas de matrimonio](/blog/apostilla-acta-matrimonio-requisitos) y poderes notariales. Trabajamos con documentos de [Venezuela](/apostilla-venezuela), Argentina, Colombia y Ecuador. [Solicita tu presupuesto gratuito](/#contacto) y te asesoramos sin compromiso.
+En [Tramitia](/#contacto) gestionamos la apostilla de todos los documentos necesarios para herencias internacionales en España: [partidas de defunción](/blog/apostilla-partida-defuncion-guia), [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [actas de matrimonio](/blog/apostilla-acta-matrimonio-requisitos) y poderes notariales. Trabajamos con documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador. [Solicita tu presupuesto gratuito](/#contacto) y te asesoramos sin compromiso.
