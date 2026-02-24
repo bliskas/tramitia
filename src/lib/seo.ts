@@ -10,7 +10,7 @@ export function getWebSiteSchema() {
     '@type': 'WebSite',
     name: siteName,
     url: siteUrl,
-    description: 'Apostillas y trámites de documentos latinoamericanos desde España',
+    description: 'Apostillas, residencia, nacionalidad y asesoría fiscal para latinoamericanos en España',
     inLanguage: 'es',
   };
 }
@@ -23,7 +23,7 @@ export function getOrganizationSchema() {
     name: siteName,
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    description: 'Servicios de apostilla y legalización de documentos latinoamericanos para uso internacional.',
+    description: 'Servicios de apostilla, residencia, nacionalidad y asesoría fiscal para latinoamericanos en España.',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'ES',
@@ -70,6 +70,7 @@ export function getServiceSchema(service: {
   price?: string;
   deliveryTime: string;
   slug: string;
+  serviceType?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -85,7 +86,7 @@ export function getServiceSchema(service: {
       '@type': 'Country',
       name: 'Spain',
     },
-    serviceType: 'Document Legalization',
+    serviceType: service.serviceType || 'Document Legalization',
     url: `${siteUrl}/${service.slug}/`,
     ...(service.price && {
       offers: {

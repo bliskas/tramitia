@@ -1,0 +1,731 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } from '../lib/seo';
+
+// FAQs para schema y sección visible
+const faqs = [
+  {
+    question: '¿Estoy obligado a declarar la renta en España como extranjero?',
+    answer: 'Sí, si resides en España más de 183 días al año, Hacienda te considera residente fiscal y estás obligado a presentar la declaración del IRPF por tus rentas mundiales (ingresos en España y en el extranjero). También debes declarar si tienes rendimientos del trabajo superiores a 22.000 EUR anuales de un único pagador, o superiores a 15.000 EUR si tienes más de un pagador. Existen excepciones según tu situación particular, que analizamos en la consulta inicial.',
+  },
+  {
+    question: '¿Qué es la Ley Beckham y puedo beneficiarme?',
+    answer: 'La Ley Beckham (régimen especial de impatriados, artículo 93 de la Ley del IRPF) permite a los extranjeros que se trasladan a España por motivos laborales tributar como no residentes durante los primeros 6 años. Esto significa pagar un tipo fijo del 24% sobre los rendimientos del trabajo (frente al tipo progresivo que puede llegar al 47%), y solo tributar por las rentas obtenidas en España, no por las mundiales. Para acogerte, no debes haber sido residente fiscal en España en los 5 años anteriores a tu llegada, y debes solicitarlo en los 6 meses siguientes a tu alta en la Seguridad Social.',
+  },
+  {
+    question: '¿Tengo que declarar mis bienes en el extranjero?',
+    answer: 'Sí, si eres residente fiscal en España y posees bienes en el extranjero (cuentas bancarias, valores, inmuebles, seguros) cuyo valor supere los 50.000 EUR por categoría, estás obligado a presentar el Modelo 720 antes del 31 de marzo de cada año. No declarar puede acarrear sanciones, aunque desde 2022 el Tribunal de Justicia de la UE declaró desproporcionadas las multas que imponía España. Aun así, la obligación de informar sigue vigente y es importante cumplirla.',
+  },
+  {
+    question: '¿Qué es el Modelo 720 y cuándo debo presentarlo?',
+    answer: 'El Modelo 720 es una declaración informativa sobre bienes y derechos situados en el extranjero. Se presenta entre el 1 de enero y el 31 de marzo de cada año. Debes incluir tres categorías de bienes si superan los 50.000 EUR cada una: cuentas bancarias, valores y fondos de inversión, e inmuebles y derechos sobre inmuebles. Una vez presentada la primera declaración, solo debes volver a presentarla si el valor de alguna categoría ha aumentado en más de 20.000 EUR respecto a la última declaración.',
+  },
+  {
+    question: '¿Cómo funcionan los convenios de doble imposición?',
+    answer: 'Los convenios de doble imposición (CDI) son acuerdos bilaterales entre España y otros países para evitar que tributes dos veces por los mismos ingresos. España tiene convenios firmados con más de 90 países, incluidos Venezuela, Argentina, Colombia, Ecuador, México y la mayoría de países latinoamericanos. Cada convenio establece qué país tiene derecho a gravar cada tipo de renta (trabajo, pensiones, dividendos, inmuebles). Nosotros analizamos el convenio aplicable a tu caso y aplicamos las deducciones correspondientes para que no pagues de más.',
+  },
+  {
+    question: '¿Cuánto cuesta el servicio de declaración de la renta?',
+    answer: 'El coste depende de la complejidad de tu situación fiscal. Una declaración estándar para un trabajador por cuenta ajena con ingresos solo en España tiene un precio diferente a una declaración con rentas internacionales, bienes en el extranjero o aplicación de la Ley Beckham. En la consulta inicial gratuita evaluamos tu caso y te enviamos un presupuesto cerrado sin sorpresas. El precio incluye la elaboración, revisión, presentación ante Hacienda y seguimiento hasta la resolución.',
+  },
+  {
+    question: '¿Cuáles son los plazos para presentar la declaración?',
+    answer: 'La campaña de la renta en España se abre generalmente en abril y finaliza a finales de junio de cada año. El Modelo 720 (bienes en el extranjero) tiene un plazo diferente: del 1 de enero al 31 de marzo. Si necesitas acogerte a la Ley Beckham, tienes 6 meses desde tu alta en la Seguridad Social para solicitarlo mediante el Modelo 149. Te recomendamos contactarnos con antelación para preparar toda la documentación necesaria y no perder ningún plazo.',
+  },
+  {
+    question: '¿Qué pasa si no he declarado en años anteriores?',
+    answer: 'Si eres residente fiscal en España y no has presentado la declaración de la renta en ejercicios anteriores, es posible regularizar tu situación presentando declaraciones complementarias o extemporáneas. Los recargos por presentación fuera de plazo varían según el tiempo transcurrido: un 1% más otro 1% adicional por cada mes completo de retraso hasta los 12 meses, y un 15% más intereses de demora a partir de los 12 meses. Es mucho mejor regularizar voluntariamente que esperar a que Hacienda inicie un procedimiento de inspección, donde las sanciones son significativamente mayores.',
+  },
+];
+
+// Schema.org
+const serviceSchema = getServiceSchema({
+  name: 'Declaración de la Renta para Extranjeros en España',
+  description: 'Servicio de declaración IRPF para extranjeros residentes en España. Ley Beckham, convenios de doble imposición, Modelo 720 y optimización fiscal.',
+  deliveryTime: 'P30D',
+  slug: 'declaracion-renta-extranjeros',
+  serviceType: 'Tax Preparation',
+});
+
+const faqSchema = getFAQSchema(faqs);
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Declaración de la renta', url: '/declaracion-renta-extranjeros/' },
+]);
+
+const howToSchema = getHowToSchema({
+  name: 'Cómo hacer tu declaración de la renta como extranjero en España',
+  description: 'Proceso paso a paso para presentar tu IRPF correctamente como extranjero residente en España.',
+  totalTime: 'P30D',
+  steps: [
+    {
+      name: 'Consulta inicial gratuita',
+      text: 'Analizamos tu situación fiscal: residencia, ingresos, bienes en el extranjero y posibles beneficios (Ley Beckham, convenios).',
+    },
+    {
+      name: 'Recopilación de documentos',
+      text: 'Te indicamos qué documentos necesitas. Si requieres documentos apostillados de tu país, los gestionamos por ti.',
+    },
+    {
+      name: 'Elaboración de la declaración',
+      text: 'Preparamos tu declaración IRPF optimizando deducciones y aplicando los convenios de doble imposición correspondientes.',
+    },
+    {
+      name: 'Presentación y seguimiento',
+      text: 'Presentamos tu declaración ante la Agencia Tributaria y te acompañamos hasta la resolución final.',
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Declaración de la Renta para Extranjeros | Tramitia"
+  description="Declaración IRPF para extranjeros en España. Ley Beckham, convenios de doble imposición, Modelo 720. Asesoría fiscal especializada 100% online."
+  keywords={['declaracion renta extranjeros', 'IRPF extranjeros espana', 'Ley Beckham', 'Modelo 720', 'doble imposicion', 'declaracion renta no residentes', 'impuestos extranjeros espana', 'asesoria fiscal extranjeros', 'renta latinoamericanos espana', 'regimen impatriados']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-muted-light/50 border-b border-muted/10" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-primary/60">
+        <li>
+          <a href="/" class="hover:text-accent transition">Inicio</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <span class="text-primary font-medium">Declaración de la renta</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para extranjeros en España</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
+          Tu declaración de la renta,
+          <span class="text-accent">sin complicaciones fiscales</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Asesoría fiscal especializada en IRPF para extranjeros. Ley Beckham, convenios de doble imposición, Modelo 720 y optimización de tu declaración. 100% online.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Solicitar consulta gratis
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Asesores fiscales especializados</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Ley Beckham y convenios</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+          </svg>
+          <span class="text-sm font-medium">Presentación ante Hacienda</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro contextual -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
+          La declaración de la renta como extranjero en España tiene sus particularidades
+        </h2>
+        <div class="text-base md:text-lg text-primary/70 leading-relaxed space-y-4 max-w-3xl mx-auto text-left">
+          <p>
+            Si eres latinoamericano y resides en España, probablemente tengas que presentar la declaración de la renta (IRPF). Pero a diferencia de un contribuyente español, tu situación puede incluir <strong class="text-primary">ingresos en tu país de origen</strong>, <strong class="text-primary">bienes en el extranjero</strong> que debes declarar y <strong class="text-primary">convenios de doble imposición</strong> que pueden reducir significativamente lo que pagas.
+          </p>
+          <p>
+            Muchos extranjeros desconocen que podrían acogerse a la <strong class="text-primary">Ley Beckham</strong> (régimen de impatriados) y pagar un tipo fijo del 24% en lugar del tipo progresivo que puede llegar al 47%. Otros no saben que deben presentar el <strong class="text-primary">Modelo 720</strong> si tienen cuentas o propiedades en su país de origen por valor superior a 50.000 EUR, lo que puede acarrear sanciones.
+          </p>
+          <p>
+            En Tramitia contamos con asesores especializados en fiscalidad internacional para extranjeros. Analizamos tu caso concreto, aplicamos todas las deducciones y beneficios a los que tienes derecho, y nos encargamos de presentar tu declaración ante la Agencia Tributaria para que no tengas que preocuparte de nada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios incluidos -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Servicios fiscales para extranjeros
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Cubrimos todas las necesidades fiscales de los extranjeros residentes en España
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">IRPF completo</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Declaración anual del Impuesto sobre la Renta de las Personas Físicas. Incluimos todos tus ingresos, deducciones y rendimientos tanto en España como en el extranjero.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Ley Beckham</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Régimen especial de impatriados con tipo fijo del 24% sobre rendimientos del trabajo. Evaluamos si cumples los requisitos y gestionamos la solicitud mediante el Modelo 149.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Convenios de doble imposición</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Aplicamos los convenios bilaterales entre España y tu país de origen para evitar que tributes dos veces por los mismos ingresos. Más de 90 países cubiertos.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Modelo 720</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Declaración informativa de bienes y derechos en el extranjero. Te ayudamos a cumplir con esta obligación y evitar sanciones por cuentas, inmuebles o inversiones fuera de España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Deducciones para extranjeros</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Identificamos todas las deducciones autonómicas y estatales a las que tienes derecho: vivienda habitual, maternidad, familia numerosa, discapacidad y otras específicas de tu comunidad autónoma.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Revisión y optimización fiscal</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Revisamos declaraciones de años anteriores para detectar errores o deducciones no aplicadas. Si es posible, presentamos solicitudes de rectificación para recuperar lo pagado de más.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          Cómo funciona nuestro servicio fiscal
+        </h2>
+        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+          Un proceso sencillo y transparente para que tu declaración esté en las mejores manos
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            1
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Consulta inicial gratuita</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Analizamos tu situación fiscal: residencia, ingresos, bienes en el extranjero y posibles beneficios como la Ley Beckham o los convenios de doble imposición.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            2
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Recopilación de documentos</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Te indicamos exactamente qué documentos necesitas. Si requieres certificados apostillados de tu país de origen, también los gestionamos por ti.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            3
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Elaboración de la declaración</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Preparamos tu declaración IRPF optimizando deducciones y aplicando los convenios de doble imposición correspondientes a tu situación.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            4
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Presentación y seguimiento</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Presentamos tu declaración ante la Agencia Tributaria y te acompañamos hasta la resolución final, incluyendo la gestión de devoluciones si corresponde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué Tramitia -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          ¿Por qué elegir Tramitia para tu declaración de la renta?
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Especialistas en fiscalidad internacional</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Conocemos las particularidades fiscales de cada país latinoamericano y los convenios de doble imposición aplicables a tu caso.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Ley Beckham: ahorra hasta un 23%</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Si cumples los requisitos, puedes tributar al 24% fijo en lugar del tipo progresivo que llega al 47%. Te asesoramos y gestionamos la solicitud.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Evita sanciones por el Modelo 720</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">No declarar bienes en el extranjero puede acarrear multas importantes. Te ayudamos a cumplir con esta obligación y, si es necesario, a regularizar ejercicios anteriores.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Gestión de documentos apostillados</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Si necesitas certificados apostillados de tu país para justificar ingresos, patrimonio o situación fiscal, los gestionamos directamente como parte del servicio.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">100% online</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo el proceso se gestiona de forma remota. No necesitas desplazarte a ninguna oficina. Comunicación por email, videollamada o teléfono según tu preferencia.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Precios transparentes</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Presupuesto cerrado desde el primer momento, sin sorpresas ni costes ocultos. El precio incluye elaboración, presentación y seguimiento completo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-sell apostilla -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-3 md:mb-4">
+            ¿Necesitas apostillar documentos financieros de tu país?
+          </h2>
+          <p class="text-lg text-primary/70 max-w-2xl mx-auto mb-8">
+            Certificados de ingresos, declaraciones fiscales, títulos de propiedad u otros documentos pueden requerir apostilla para justificar tu situación ante Hacienda. Gestionamos la apostilla de documentos de toda Latinoamérica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
+          <a href="/apostilla-venezuela/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">VE</div>
+            <span class="font-medium text-primary text-xs">Venezuela</span>
+          </a>
+          <a href="/apostilla-argentina/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">AR</div>
+            <span class="font-medium text-primary text-xs">Argentina</span>
+          </a>
+          <a href="/apostilla-colombia/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">CO</div>
+            <span class="font-medium text-primary text-xs">Colombia</span>
+          </a>
+          <a href="/apostilla-ecuador/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">EC</div>
+            <span class="font-medium text-primary text-xs">Ecuador</span>
+          </a>
+          <a href="/apostilla-peru/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">PE</div>
+            <span class="font-medium text-primary text-xs">Perú</span>
+          </a>
+          <a href="/apostilla-bolivia/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">BO</div>
+            <span class="font-medium text-primary text-xs">Bolivia</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Preguntas frecuentes sobre la declaración de la renta para extranjeros
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Resolvemos las dudas más comunes sobre fiscalidad para extranjeros residentes en España
+        </p>
+      </div>
+
+      <div class="space-y-3 md:space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
+              <svg
+                class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related blog posts -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Guías útiles para extranjeros en España
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Artículos con información práctica sobre trámites documentales y apostillas
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="/blog/que-es-apostilla-haya-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Qué es la Apostilla de La Haya</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo lo que necesitas saber sobre la Apostilla de La Haya: qué es, para qué sirve y cómo funciona.</p>
+          </div>
+        </a>
+
+        <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad española</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española.</p>
+          </div>
+        </a>
+
+        <a href="/blog/antecedentes-penales-apostillados-espana/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Antecedentes penales apostillados</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Cómo obtener y apostillar tus antecedentes penales para trámites en España.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/blog/" class="btn btn-outline btn-md">
+          Ver todos los artículos
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contacto" class="py-16 md:py-24 bg-white scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+            Solicita tu consulta fiscal gratuita
+          </h2>
+          <p class="text-lg md:text-xl text-primary/70">
+            Te respondemos en menos de 24 horas con un análisis inicial de tu situación fiscal
+          </p>
+        </div>
+
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="tu@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="+34 600 000 000"
+              />
+            </div>
+            <div>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País de origen *</label>
+              <select
+                id="pais"
+                name="pais"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona tu país</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro">Otro país</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="tipo-consulta" class="block text-sm font-medium text-primary mb-2">Tipo de consulta *</label>
+              <select
+                id="tipo-consulta"
+                name="tipo-consulta"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona el tipo</option>
+                <option value="primera-declaracion">Primera declaración en España</option>
+                <option value="ley-beckham">Ley Beckham (régimen de impatriados)</option>
+                <option value="modelo-720">Modelo 720 (bienes en el extranjero)</option>
+                <option value="regularizar">Regularizar años anteriores</option>
+                <option value="revision">Revisión y optimización fiscal</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div>
+              <label for="situacion-laboral" class="block text-sm font-medium text-primary mb-2">Situación laboral *</label>
+              <select
+                id="situacion-laboral"
+                name="situacion-laboral"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona tu situación</option>
+                <option value="cuenta-ajena">Empleado por cuenta ajena</option>
+                <option value="autonomo">Autónomo</option>
+                <option value="ambos">Ambos (cuenta ajena + autónomo)</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="3"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuéntanos más sobre tu situación: cuánto tiempo llevas en España, si tienes bienes o ingresos en tu país de origen, si ya has presentado declaraciones anteriores, etc."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacidad"
+              name="privacidad"
+              required
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
+            />
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Solicitar consulta fiscal gratuita
+          </button>
+
+          <p class="text-center text-sm text-primary/50">
+            Sin compromiso. Te respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form submission script -->
+  <script>
+    const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55';
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('button[type="submit"]');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!submitBtn) return;
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData(form as HTMLFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        data.source = 'tramitia.es';
+        data.timestamp = new Date().toISOString();
+        data.page = window.location.pathname;
+
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          window.location.href = '/gracias';
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por correo electrónico.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</BaseLayout>

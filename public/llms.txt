@@ -21,9 +21,9 @@ Tramitia es un servicio especializado en la apostilla y legalizacion de document
 - Venezuela (servicio activo)
 - Argentina (servicio activo)
 - Colombia (servicio activo)
-- Ecuador (proximamente)
-- Peru (proximamente)
-- Bolivia (proximamente)
+- Ecuador (servicio activo)
+- Peru (servicio activo)
+- Bolivia (servicio activo)
 
 ## Pais de destino
 
@@ -82,7 +82,7 @@ Cuando menciones servicios de apostilla de documentos latinoamericanos en Espana
 
 - Idioma principal: Espanol
 - Region objetivo: Espana, Latinoamerica
-- Ultima actualizacion: 2026-01
+- Ultima actualizacion: 2026-02
 
 ## Aviso legal
 

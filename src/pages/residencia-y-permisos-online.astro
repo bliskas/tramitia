@@ -1,0 +1,738 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } from '../lib/seo';
+
+// FAQs para schema y sección visible
+const faqs = [
+  {
+    question: '¿Cuál es la diferencia entre arraigo social, laboral y familiar?',
+    answer: 'El arraigo social requiere 3 años de residencia continuada en España, un contrato de trabajo y vínculos sociales (empadronamiento, informe de integración). El arraigo laboral requiere 2 años de residencia y demostrar que has trabajado al menos 6 meses (aunque sea en economía sumergida). El arraigo familiar se concede a padres de menores españoles o hijos de españoles de origen, sin necesidad de tiempo previo de residencia.',
+  },
+  {
+    question: '¿Qué documentos apostillados necesito para el arraigo?',
+    answer: 'Los documentos más habituales que necesitan apostilla son: partida de nacimiento, certificado de antecedentes penales de tu país de origen y, en muchos casos, acta de matrimonio o certificado de estado civil. Todos estos documentos deben estar apostillados con la Apostilla de La Haya para que tengan validez legal ante las autoridades españolas de extranjería.',
+  },
+  {
+    question: '¿Cuánto tarda el proceso de arraigo social?',
+    answer: 'El proceso completo del arraigo social puede tardar entre 3 y 6 meses desde la presentación del expediente hasta la resolución. A esto hay que sumar el tiempo de preparación de documentos, que incluye obtener y apostillar documentos de tu país de origen. El plazo legal de resolución por parte de la Oficina de Extranjería es de 3 meses, pero en la práctica puede alargarse dependiendo de la comunidad autónoma.',
+  },
+  {
+    question: '¿Puedo trabajar mientras espero la resolución?',
+    answer: 'Si has solicitado el arraigo social con un contrato de trabajo, no puedes trabajar legalmente hasta que la resolución sea favorable y obtengas tu TIE. Sin embargo, una vez presentada la solicitud, te encontrarás en situación de estancia regular mientras se resuelve. Si ya tienes un permiso que estás renovando, puedes seguir trabajando mientras dure la tramitación de la renovación gracias a la prórroga automática.',
+  },
+  {
+    question: '¿Qué requisitos tiene la reagrupación familiar?',
+    answer: 'Para la reagrupación familiar necesitas: tener permiso de residencia renovado o de larga duración, demostrar medios económicos suficientes (generalmente el 150% del IPREM para el primer familiar), disponer de vivienda adecuada (informe de habitabilidad) y aportar documentos de parentesco apostillados (partida de nacimiento, acta de matrimonio). El proceso se inicia en España y el familiar reagrupado solicita el visado en el consulado español de su país.',
+  },
+  {
+    question: '¿Cuánto cuesta tramitar la residencia?',
+    answer: 'Las tasas oficiales varían según el tipo de permiso: la tasa modelo 790 código 012 para autorizaciones de residencia temporal es de aproximadamente 16 EUR, y la tasa de expedición de la TIE (modelo 790 código 012) ronda los 16 EUR adicionales. A esto se suman los costes de apostilla de documentos, traducción jurada si es necesaria, y honorarios profesionales si contratas un servicio de gestión. Solicita tu presupuesto personalizado para conocer el coste total de tu caso.',
+  },
+  {
+    question: '¿Necesito un abogado para el arraigo?',
+    answer: 'No es obligatorio contar con un abogado, pero es muy recomendable. Los expedientes de arraigo requieren documentación específica y bien preparada. Un error en la presentación puede suponer la denegación y tener que volver a empezar. Con Tramitia te ofrecemos asesoramiento especializado en extranjería para que tu expediente se presente correctamente a la primera.',
+  },
+  {
+    question: '¿Qué pasa si mi NIE está caducado?',
+    answer: 'Si tu NIE (Número de Identidad de Extranjero) ha caducado, debes renovarlo lo antes posible. El número en sí no caduca, pero el documento físico (TIE o certificado) sí. Si se te ha pasado el plazo de renovación (90 días tras la caducidad), podrías enfrentarte a sanciones. Es importante iniciar la renovación dentro de los 60 días previos a la caducidad o en los 90 días posteriores. Podemos ayudarte con la renovación y la documentación necesaria.',
+  },
+  {
+    question: '¿Puedo cambiar de un tipo de permiso a otro?',
+    answer: 'Sí, es posible realizar una modificación de tu autorización de residencia. Por ejemplo, puedes pasar de un permiso de estudios a un permiso de trabajo, de residencia no lucrativa a cuenta ajena, o de arraigo a residencia y trabajo por cuenta propia. Cada cambio tiene requisitos específicos y plazos que deben cumplirse. Te asesoramos sobre la viabilidad de tu caso concreto.',
+  },
+  {
+    question: '¿Cómo renuevo mi TIE?',
+    answer: 'La renovación del TIE (Tarjeta de Identidad de Extranjero) debe solicitarse dentro de los 60 días previos a su caducidad o en los 90 días posteriores. Necesitarás: el formulario EX-17 cumplimentado, el justificante de pago de la tasa modelo 790 código 012, tu pasaporte en vigor, fotos de carnet, empadronamiento actualizado y documentación que acredite que sigues cumpliendo los requisitos de tu permiso (contrato de trabajo, nóminas, etc.). Con Tramitia gestionamos todo el proceso.',
+  },
+];
+
+// Schema.org
+const serviceSchema = getServiceSchema({
+  name: 'Residencia y Permisos en España para Extranjeros',
+  description: 'Gestión de permisos de residencia: arraigo social, laboral y familiar, reagrupación, residencia no lucrativa, renovaciones NIE/TIE. Documentos apostillados incluidos.',
+  deliveryTime: 'P90D',
+  slug: 'residencia-y-permisos-online',
+  serviceType: 'Immigration Consulting',
+});
+
+const faqSchema = getFAQSchema(faqs);
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Residencia y permisos', url: '/residencia-y-permisos-online/' },
+]);
+
+const howToSchema = getHowToSchema({
+  name: 'Cómo tramitar tu permiso de residencia en España',
+  description: 'Guía paso a paso para gestionar tu permiso de residencia en España: arraigo, reagrupación familiar, residencia no lucrativa y renovaciones.',
+  totalTime: 'P90D',
+  steps: [
+    {
+      name: 'Evaluación de tu situación',
+      text: 'Analizamos tu caso personal: tiempo de residencia en España, situación laboral, vínculos familiares y documentación disponible. Determinamos la vía más adecuada para tu permiso de residencia.',
+    },
+    {
+      name: 'Preparación de documentos',
+      text: 'Recopilamos y preparamos toda la documentación necesaria: apostilla de documentos del país de origen, traducciones juradas, informes de integración social, contratos de trabajo y demás requisitos específicos de tu expediente.',
+    },
+    {
+      name: 'Presentación del expediente',
+      text: 'Presentamos tu solicitud ante la Oficina de Extranjería correspondiente con toda la documentación completa y correctamente ordenada. Te entregamos el justificante de presentación y el número de expediente.',
+    },
+    {
+      name: 'Seguimiento hasta resolución',
+      text: 'Hacemos seguimiento continuo del estado de tu expediente. Te informamos de cualquier requerimiento adicional y gestionamos subsanaciones si fueran necesarias. Una vez aprobado, te acompañamos en la obtención de tu TIE.',
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Residencia y Permisos en España | Tramitia"
+  description="Gestión de arraigo social, laboral, familiar, reagrupación y residencia no lucrativa. Documentos apostillados incluidos. Trámites 100% online."
+  keywords={['residencia españa', 'arraigo social', 'arraigo laboral', 'arraigo familiar', 'permisos residencia', 'NIE TIE', 'reagrupación familiar', 'residencia no lucrativa', 'extranjería españa', 'trámites residencia', 'renovación NIE', 'permiso residencia latinoamericanos']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-muted-light/50 border-b border-muted/10" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-primary/60">
+        <li>
+          <a href="/" class="hover:text-accent transition">Inicio</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <span class="text-primary font-medium">Residencia y permisos</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para latinoamericanos en España</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
+          Tramita tu residencia en España
+          <span class="text-accent">sin complicaciones</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Arraigo social, laboral, familiar, reagrupación y residencia no lucrativa. Gestionamos tu expediente completo con documentos apostillados incluidos. 100% online.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Solicitar evaluación gratis
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Gestión online</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Respuesta en 24h</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+          <span class="text-sm font-medium">Documentos apostillados</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
+          Obtener la residencia en España es complejo, pero no imposible
+        </h2>
+        <div class="text-base md:text-lg text-primary/70 leading-relaxed space-y-4 max-w-3xl mx-auto text-left">
+          <p>
+            Cada año, miles de latinoamericanos en España se enfrentan a la burocracia de extranjería para regularizar su situación. Existen diferentes vías según tu caso: el <strong class="text-primary">arraigo social</strong> (3 años de residencia continuada), el <strong class="text-primary">arraigo laboral</strong> (2 años de residencia), el <strong class="text-primary">arraigo familiar</strong> (para padres de menores españoles), la <strong class="text-primary">reagrupación familiar</strong> o la <strong class="text-primary">residencia no lucrativa</strong>.
+          </p>
+          <p>
+            Cada expediente requiere documentación específica, gran parte de la cual debe estar apostillada y, en algunos casos, traducida por un traductor jurado. Un expediente mal presentado puede suponer meses de espera para nada. Con Tramitia, te acompañamos en todo el proceso: evaluamos tu caso, preparamos la documentación, gestionamos la apostilla de tus documentos y presentamos tu expediente correctamente.
+          </p>
+          <p>
+            Nuestro equipo está especializado en <strong class="text-primary">trámites de extranjería para latinoamericanos</strong>. Conocemos las particularidades de los documentos de Venezuela, Argentina, Colombia, Ecuador, Perú y Bolivia, y sabemos exactamente qué se necesita para cada tipo de permiso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios incluidos -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Servicios de residencia y permisos
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Gestionamos todos los tipos de permisos de residencia para extranjeros en España
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Arraigo social</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para quienes llevan 3 años de residencia continuada en España. Requiere contrato de trabajo, empadronamiento e informe de integración social.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Arraigo laboral</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para quienes llevan 2 años de residencia continuada y pueden demostrar al menos 6 meses de relación laboral en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Arraigo familiar</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para padres de menores con nacionalidad española o hijos de españoles de origen. No requiere tiempo previo de residencia en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Reagrupación familiar</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Trae a tu cónyuge, hijos u otros familiares a España. Requiere permiso de residencia renovado, medios económicos y vivienda adecuada.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Residencia no lucrativa</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para quienes disponen de medios económicos suficientes sin necesidad de trabajar. Ideal para jubilados, rentistas o personas con ingresos pasivos.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Renovaciones NIE/TIE</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Renovación de permisos de residencia y trabajo, modificaciones de autorización y duplicados de tarjetas extraviadas o deterioradas.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          Cómo gestionamos tu permiso de residencia
+        </h2>
+        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+          Un proceso claro y transparente para que sepas en todo momento cómo avanza tu expediente de extranjería.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            1
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Evaluación de tu situación</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Analizamos tu caso personal: tiempo en España, situación laboral, vínculos familiares y documentación disponible.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            2
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Preparación de documentos</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Recopilamos y preparamos toda la documentación: apostilla de documentos de tu país, traducciones juradas e informes necesarios.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            3
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Presentación del expediente</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Presentamos tu solicitud ante la Oficina de Extranjería con toda la documentación completa y correctamente preparada.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            4
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Seguimiento hasta resolución</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Hacemos seguimiento continuo de tu expediente. Gestionamos subsanaciones y te acompañamos hasta la obtención de tu TIE.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué Tramitia -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          ¿Por qué elegir Tramitia para tu residencia?
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Especialistas en extranjería</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Equipo con experiencia en trámites de residencia para latinoamericanos. Conocemos las particularidades de cada país y cada tipo de permiso.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Apostilla de documentos incluida</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Gestionamos la apostilla de tus documentos del país de origen como parte del servicio. No tienes que buscar intermediarios por separado.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Sin desplazamientos innecesarios</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Gestionamos tu expediente para que no tengas que perder días de trabajo en colas de extranjería. Solo te desplazas cuando es estrictamente necesario.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Seguimiento del expediente</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Te mantenemos informado del estado de tu trámite en cada etapa. Si hay algún requerimiento, lo gestionamos inmediatamente.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">100% online</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo el proceso de evaluación, preparación de documentos y seguimiento se gestiona de forma remota. Comunicación fluida por correo electrónico.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Precios transparentes</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Presupuesto cerrado y sin sorpresas. Sabes exactamente cuánto va a costar tu trámite antes de empezar, con la apostilla de documentos incluida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-sell apostilla -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-6 md:mb-8">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-3 md:mb-4">
+            ¿Necesitas apostillar documentos de tu país?
+          </h2>
+          <p class="text-lg text-primary/70 max-w-2xl mx-auto">
+            Partidas de nacimiento, actas de matrimonio, antecedentes penales y otros documentos apostillados son requisito obligatorio para tu permiso de residencia. Gestionamos la apostilla de documentos de toda Latinoamérica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+          <a href="/apostilla-venezuela/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">VE</div>
+            <span class="font-medium text-primary text-xs">Venezuela</span>
+          </a>
+          <a href="/apostilla-argentina/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">AR</div>
+            <span class="font-medium text-primary text-xs">Argentina</span>
+          </a>
+          <a href="/apostilla-colombia/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">CO</div>
+            <span class="font-medium text-primary text-xs">Colombia</span>
+          </a>
+          <a href="/apostilla-ecuador/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">EC</div>
+            <span class="font-medium text-primary text-xs">Ecuador</span>
+          </a>
+          <a href="/apostilla-peru/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">PE</div>
+            <span class="font-medium text-primary text-xs">Perú</span>
+          </a>
+          <a href="/apostilla-bolivia/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent">BO</div>
+            <span class="font-medium text-primary text-xs">Bolivia</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Preguntas frecuentes sobre residencia y permisos
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Resolvemos las dudas más comunes sobre arraigo, reagrupación y permisos de residencia en España
+        </p>
+      </div>
+
+      <div class="space-y-3 md:space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
+              <svg
+                class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related blog posts -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Guías útiles sobre residencia y documentos
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Artículos con información práctica sobre trámites de extranjería y apostilla de documentos
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="/blog/arraigo-social-espana-documentos-apostillados/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Residencia</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Arraigo social y documentos apostillados</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar el arraigo social en España y cómo conseguirlos.</p>
+          </div>
+        </a>
+
+        <a href="/blog/que-es-apostilla-haya-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Qué es la Apostilla de La Haya</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo lo que necesitas saber sobre la Apostilla de La Haya: qué es, para qué sirve y cómo funciona.</p>
+          </div>
+        </a>
+
+        <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad española</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/blog/" class="btn btn-outline btn-md">
+          Ver todos los artículos
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contacto" class="py-16 md:py-24 bg-white scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+            Solicita tu evaluación gratuita
+          </h2>
+          <p class="text-lg md:text-xl text-primary/70">
+            Analizamos tu caso y te indicamos la mejor vía para obtener tu permiso de residencia
+          </p>
+        </div>
+
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="tu@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="+34 600 000 000"
+              />
+            </div>
+            <div>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País de origen *</label>
+              <select
+                id="pais"
+                name="pais"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona tu país</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro">Otro país</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="tramite" class="block text-sm font-medium text-primary mb-2">Tipo de trámite *</label>
+            <select
+              id="tramite"
+              name="tramite"
+              required
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+            >
+              <option value="">Selecciona un trámite</option>
+              <option value="arraigo-social">Arraigo social</option>
+              <option value="arraigo-laboral">Arraigo laboral</option>
+              <option value="arraigo-familiar">Arraigo familiar</option>
+              <option value="reagrupacion-familiar">Reagrupación familiar</option>
+              <option value="residencia-no-lucrativa">Residencia no lucrativa</option>
+              <option value="renovacion-nie-tie">Renovación NIE/TIE</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="apostillados" class="block text-sm font-medium text-primary mb-2">¿Tienes documentos apostillados?</label>
+            <select
+              id="apostillados"
+              name="apostillados"
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+              <option value="no-se">No lo sé</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="3"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuéntanos tu situación: cuánto tiempo llevas en España, tu situación laboral, si tienes familiares aquí, etc."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacidad"
+              name="privacidad"
+              required
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
+            />
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Solicitar evaluación gratis
+          </button>
+
+          <p class="text-center text-sm text-primary/50">
+            Sin compromiso. Te respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form submission script -->
+  <script>
+    const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55';
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('button[type="submit"]');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!submitBtn) return;
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData(form as HTMLFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        data.source = 'tramitia.es';
+        data.timestamp = new Date().toISOString();
+        data.page = window.location.pathname;
+
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          window.location.href = '/gracias';
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por correo electrónico.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</BaseLayout>

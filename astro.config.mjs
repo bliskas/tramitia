@@ -55,6 +55,17 @@ export default defineConfig({
           item.priority = 0.9;
           item.changefreq = 'weekly';
         }
+        // Service landing pages - high priority money pages
+        else if (
+          item.url.includes('/nacionalidad-espanola-tramites') ||
+          item.url.includes('/residencia-y-permisos-online') ||
+          item.url.includes('/declaracion-renta-extranjeros') ||
+          item.url.includes('/gestoria-tributaria') ||
+          item.url.includes('/asesoria-contable-autonomos')
+        ) {
+          item.priority = 0.9;
+          item.changefreq = 'weekly';
+        }
         // Legal pages - lowest priority
         else if (item.url.includes('politica-') || item.url.includes('aviso-')) {
           item.priority = 0.3;

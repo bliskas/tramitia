@@ -1,0 +1,723 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } from '../lib/seo';
+
+// FAQs para schema y sección visible
+const faqs = [
+  {
+    question: '¿Cuánto tiempo se tarda en obtener la nacionalidad española?',
+    answer: 'El proceso completo de nacionalidad española por residencia suele tardar entre 1 y 3 años desde la presentación del expediente hasta la resolución. Los plazos varían según la carga de trabajo del Registro Civil y la complejidad del caso. Sin embargo, la fase de preparación de documentos (apostillas, exámenes, etc.) puede completarse en 2-4 meses con asistencia profesional.',
+  },
+  {
+    question: '¿Cuántos años de residencia necesito como latinoamericano?',
+    answer: 'Los ciudadanos iberoamericanos (Venezuela, Argentina, Colombia, Ecuador, Perú, Bolivia, México, Chile, etc.) solo necesitan 2 años de residencia legal y continuada en España para solicitar la nacionalidad, frente a los 10 años que se exigen a la mayoría de extranjeros. Este es uno de los mayores beneficios del Convenio de Doble Nacionalidad que España mantiene con estos países.',
+  },
+  {
+    question: '¿Qué documentos apostillados necesito?',
+    answer: 'Para solicitar la nacionalidad española necesitas, como mínimo, tu partida de nacimiento apostillada y el certificado de antecedentes penales de tu país de origen apostillado. Dependiendo de tu situación, también podrían pedirte el acta de matrimonio apostillada, partidas de nacimiento de hijos, o certificados de divorcio. Todos los documentos deben estar apostillados con la Apostilla de La Haya.',
+  },
+  {
+    question: '¿Qué es el examen CCSE y cómo me preparo?',
+    answer: 'El CCSE (Conocimientos Constitucionales y Socioculturales de España) es un examen obligatorio del Instituto Cervantes que evalúa tus conocimientos sobre la sociedad española, su constitución, cultura y gobierno. Consta de 25 preguntas tipo test (se necesitan 15 correctas para aprobar). En Tramitia te proporcionamos material de estudio actualizado y simulacros de examen para maximizar tus posibilidades de éxito.',
+  },
+  {
+    question: '¿Necesito el examen DELE de idioma si soy latinoamericano?',
+    answer: 'No. Los ciudadanos de países hispanohablantes (Venezuela, Argentina, Colombia, Ecuador, Perú, Bolivia, etc.) están exentos del examen DELE A2 de español, ya que el castellano es su lengua materna. Solo necesitas aprobar el examen CCSE de conocimientos constitucionales y socioculturales.',
+  },
+  {
+    question: '¿Cuánto cuesta el proceso de nacionalidad?',
+    answer: 'El coste total del proceso de nacionalidad española incluye varias partidas: tasas del Ministerio de Justicia (alrededor de 104 EUR), tasa del examen CCSE (85 EUR), apostilla de documentos (variable según el país y número de documentos), y honorarios profesionales si contratas un servicio de gestión. En Tramitia ofrecemos presupuestos personalizados que incluyen todos los gastos de gestión y apostilla.',
+  },
+  {
+    question: '¿Puedo tener doble nacionalidad?',
+    answer: 'Sí, pero depende de tu país de origen. España tiene convenios de doble nacionalidad con la mayoría de países iberoamericanos: Venezuela, Argentina, Colombia, Ecuador, Perú, Bolivia, Chile, Honduras, Costa Rica, Nicaragua, Guatemala, Paraguay, República Dominicana y Brasil. Los ciudadanos de estos países pueden conservar su nacionalidad original al adquirir la española.',
+  },
+  {
+    question: '¿Qué pasa si me deniegan la nacionalidad?',
+    answer: 'Si tu solicitud es denegada, puedes presentar un recurso de reposición ante la Dirección General de Seguridad Jurídica y Fe Pública en el plazo de un mes, o un recurso contencioso-administrativo ante el Tribunal Superior de Justicia en el plazo de dos meses. Las causas más frecuentes de denegación son ausencias prolongadas de España, antecedentes penales o falta de documentación. Con asesoramiento profesional, la mayoría de estos problemas se detectan y corrigen antes de presentar el expediente.',
+  },
+  {
+    question: '¿Puedo solicitar si tengo viajes fuera de España?',
+    answer: 'Sí, puedes haber viajado fuera de España, pero debes demostrar residencia continuada. Se acepta que hayas salido por vacaciones o viajes cortos, siempre que no sean ausencias prolongadas que rompan la continuidad de tu residencia. Como norma general, no debes haber estado fuera de España más de 3 meses seguidos ni más de 6 meses acumulados en un año durante los 2 años de residencia requeridos.',
+  },
+  {
+    question: '¿Cuáles son los plazos actuales de resolución?',
+    answer: 'Actualmente, el plazo medio de resolución desde la presentación del expediente es de 12 a 18 meses, aunque puede variar significativamente según el Registro Civil encargado de tu caso. El Ministerio de Justicia tiene un plazo legal de un año para resolver, pero en la práctica los tiempos suelen ser mayores. Con la digitalización progresiva del sistema, se espera una mejora gradual de estos plazos.',
+  },
+];
+
+// Schema.org
+const serviceSchema = getServiceSchema({
+  name: 'Nacionalidad Española para Extranjeros',
+  description: 'Gestión integral del expediente de nacionalidad española: evaluación de elegibilidad, documentos apostillados, preparación CCSE, acreditación de idioma y presentación del expediente.',
+  deliveryTime: 'P180D',
+  slug: 'nacionalidad-espanola-tramites',
+  serviceType: 'Immigration Consulting',
+});
+
+const faqSchema = getFAQSchema(faqs);
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Nacionalidad española', url: '/nacionalidad-espanola-tramites/' },
+]);
+
+const howToSchema = getHowToSchema({
+  name: 'Cómo obtener la nacionalidad española siendo latinoamericano',
+  description: 'Guía paso a paso para conseguir la nacionalidad española con solo 2 años de residencia. Proceso gestionado por Tramitia con documentos apostillados, preparación CCSE y presentación del expediente.',
+  totalTime: 'P180D',
+  steps: [
+    {
+      name: 'Evaluación gratuita de tu caso',
+      text: 'Analizamos tu situación personal: tiempo de residencia legal en España, documentación disponible, país de origen y circunstancias específicas. Verificamos que cumples todos los requisitos antes de iniciar el proceso.',
+    },
+    {
+      name: 'Preparación de documentos apostillados',
+      text: 'Gestionamos la apostilla de todos los documentos necesarios: partida de nacimiento, antecedentes penales y cualquier otro certificado requerido. Nos encargamos de obtenerlos desde tu país de origen sin que tengas que viajar.',
+    },
+    {
+      name: 'Examen CCSE y acreditación de idioma',
+      text: 'Te preparamos para el examen CCSE del Instituto Cervantes con material actualizado y simulacros. Si no eres hispanohablante, también te orientamos para la acreditación DELE A2.',
+    },
+    {
+      name: 'Presentación del expediente y seguimiento',
+      text: 'Preparamos y presentamos tu expediente completo ante el Registro Civil. Hacemos seguimiento del estado de tu solicitud y te informamos de cada avance hasta que obtengas la resolución favorable.',
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Nacionalidad Española para Extranjeros | Tramitia"
+  description="Gestión integral de tu nacionalidad española. Documentos apostillados, preparación CCSE y presentación del expediente. 2 años de residencia para iberoamericanos."
+  keywords={['nacionalidad española', 'trámites nacionalidad española', 'CCSE examen', 'nacionalidad iberoamericanos', 'nacionalidad española latinoamericanos', 'doble nacionalidad españa', 'documentos nacionalidad española', 'apostilla nacionalidad', 'residencia 2 años nacionalidad', 'nacionalidad por residencia españa']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-muted-light/50 border-b border-muted/10" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-primary/60">
+        <li>
+          <a href="/" class="hover:text-accent transition">Inicio</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <span class="text-primary font-medium">Nacionalidad española</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para latinoamericanos en España</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
+          Consigue tu nacionalidad española
+          <span class="text-accent">con ayuda profesional</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Como ciudadano iberoamericano, solo necesitas 2 años de residencia legal en España. Te ayudamos con los documentos apostillados, la preparación del examen CCSE y la presentación de tu expediente completo.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Solicitar evaluación gratis
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Gestión integral</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Solo 2 años iberoamericanos</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+          <span class="text-sm font-medium">Documentos apostillados incluidos</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro contextual -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
+          La ventaja de ser iberoamericano para obtener la nacionalidad española
+        </h2>
+        <div class="text-base md:text-lg text-primary/70 leading-relaxed space-y-4 max-w-3xl mx-auto text-left">
+          <p>
+            España mantiene convenios de doble nacionalidad con la mayoría de países latinoamericanos, lo que permite a sus ciudadanos solicitar la nacionalidad española tras solo <strong class="text-primary">2 años de residencia legal y continuada</strong>, frente a los 10 años que se exigen al resto de extranjeros. Este privilegio beneficia a venezolanos, argentinos, colombianos, ecuatorianos, peruanos, bolivianos y ciudadanos de otros países iberoamericanos.
+          </p>
+          <p>
+            Sin embargo, el proceso no es sencillo. Requiere reunir documentación apostillada de tu país de origen, aprobar el <strong class="text-primary">examen CCSE</strong> del Instituto Cervantes, acreditar tu nivel de español (si procede) y presentar un expediente completo ante el Registro Civil. Cualquier error o documento faltante puede retrasar tu solicitud meses o incluso provocar una denegación.
+          </p>
+          <p>
+            En <strong class="text-primary">Tramitia</strong> nos encargamos de todo el proceso: evaluamos tu elegibilidad, gestionamos la apostilla de tus documentos desde tu país de origen, te preparamos para el examen CCSE y presentamos tu expediente. Todo de forma online, sin que tengas que desplazarte ni preocuparte por la burocracia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios incluidos -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Servicios incluidos en la gestión de nacionalidad
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Un servicio integral para que no tengas que preocuparte por ningún paso del proceso
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Evaluación de elegibilidad</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Analizamos tu caso personal y verificamos que cumples los requisitos: 2 años de residencia para iberoamericanos, documentación disponible y situación legal en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Documentos apostillados</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Gestionamos la apostilla de tu partida de nacimiento, antecedentes penales y cualquier otro certificado necesario desde tu país de origen. Sin que tengas que viajar.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Preparación examen CCSE</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Material de estudio actualizado, simulacros de examen y orientación personalizada para que apruebes el examen CCSE del Instituto Cervantes a la primera.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Acreditación de idioma</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Si eres hispanohablante, estás exento del DELE. Para otros casos, te orientamos sobre la acreditación DELE A2 y los centros de examen disponibles en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Presentación del expediente</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Preparamos toda la documentación, cumplimentamos los formularios oficiales y presentamos tu expediente completo ante el Registro Civil correspondiente.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Seguimiento hasta resolución</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Hacemos seguimiento del estado de tu expediente desde la presentación hasta la resolución favorable. Te informamos de cada avance y respondemos a cualquier requerimiento.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          Cómo funciona el proceso de nacionalidad con Tramitia
+        </h2>
+        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+          Cuatro pasos claros para conseguir tu nacionalidad española con asesoramiento profesional en cada etapa
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            1
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Evaluación gratuita de tu caso</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Analizamos tu situación: tiempo de residencia, país de origen, documentación disponible y circunstancias personales. Te confirmamos si cumples los requisitos.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            2
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Preparación de documentos</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Gestionamos la apostilla de tus documentos desde tu país de origen: partida de nacimiento, antecedentes penales y cualquier certificado adicional necesario.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            3
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Examen CCSE y acreditación</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Te preparamos con material actualizado y simulacros para aprobar el examen CCSE. Si no eres hispanohablante, también te orientamos con el DELE A2.</p>
+        </div>
+
+        <div class="text-center relative">
+          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
+            4
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Presentación y seguimiento</h3>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Presentamos tu expediente completo ante el Registro Civil y hacemos seguimiento hasta que obtengas la resolución favorable de tu nacionalidad española.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué Tramitia -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          ¿Por qué elegir Tramitia para tu nacionalidad española?
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Experiencia con iberoamericanos</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Conocemos las particularidades de cada país latinoamericano y los requisitos específicos de documentación para la nacionalidad española.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Apostilla incluida en el servicio</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Nos encargamos de apostillar todos tus documentos (partida de nacimiento, antecedentes penales, etc.) sin que tengas que volver a tu país.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Preparación CCSE con material actualizado</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Te proporcionamos material de estudio al día, simulacros de examen y orientación personalizada para aprobar el CCSE a la primera.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Seguimiento del expediente</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Te mantenemos informado del estado de tu solicitud en cada fase. Respondemos a requerimientos del Registro Civil y te avisamos de cada avance.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">100% online</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo el proceso se gestiona de forma remota. No necesitas desplazarte ni hacer colas. Nos comunicamos contigo por email, teléfono o videollamada.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Precios transparentes</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Presupuesto cerrado sin sorpresas. Sabes exactamente lo que incluye el servicio y cuánto vas a pagar antes de empezar. Sin costes ocultos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-sell apostilla -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border-l-4 border-accent p-6 sm:p-8 md:p-12">
+        <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mb-8">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-3">
+              ¿Necesitas apostillar documentos de tu país?
+            </h2>
+            <p class="text-base md:text-lg text-primary/70 leading-relaxed">
+              La apostilla de documentos es un requisito imprescindible para la nacionalidad española. Tu partida de nacimiento y antecedentes penales deben tener la <strong class="text-primary">Apostilla de La Haya</strong> para ser válidos en España. Nosotros gestionamos la apostilla como parte del servicio de nacionalidad, o de forma independiente si ya tienes otros trámites en marcha.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+          <a href="/apostilla-venezuela/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200 group">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition">VE</div>
+            <span class="font-medium text-primary text-xs">Venezuela</span>
+          </a>
+          <a href="/apostilla-argentina/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200 group">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition">AR</div>
+            <span class="font-medium text-primary text-xs">Argentina</span>
+          </a>
+          <a href="/apostilla-colombia/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200 group">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition">CO</div>
+            <span class="font-medium text-primary text-xs">Colombia</span>
+          </a>
+          <a href="/apostilla-ecuador/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200 group">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition">EC</div>
+            <span class="font-medium text-primary text-xs">Ecuador</span>
+          </a>
+          <a href="/apostilla-peru/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200 group">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition">PE</div>
+            <span class="font-medium text-primary text-xs">Perú</span>
+          </a>
+          <a href="/apostilla-bolivia/" class="flex flex-col items-center gap-2 p-4 rounded-xl border border-muted/30 hover:border-accent hover:shadow-md transition-all duration-200 group">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition">BO</div>
+            <span class="font-medium text-primary text-xs">Bolivia</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Preguntas frecuentes sobre la nacionalidad española
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Resolvemos las dudas más comunes sobre el proceso de nacionalidad española para latinoamericanos
+        </p>
+      </div>
+
+      <div class="space-y-3 md:space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
+              <svg
+                class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related blog posts -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Guías útiles para tu proceso de nacionalidad
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Artículos con información práctica sobre los documentos y trámites que necesitas
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Nacionalidad</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad española</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española y cómo obtenerlos.</p>
+          </div>
+        </a>
+
+        <a href="/blog/que-es-apostilla-haya-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Qué es la Apostilla de La Haya</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Todo lo que necesitas saber sobre la Apostilla de La Haya: qué es, para qué sirve y cómo funciona.</p>
+          </div>
+        </a>
+
+        <a href="/blog/apostilla-antecedentes-penales-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Antecedentes penales apostillados</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Cómo obtener y apostillar el certificado de antecedentes penales para trámites en España.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/blog/" class="btn btn-outline btn-md">
+          Ver todos los artículos
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contacto" class="py-16 md:py-24 bg-white scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+            Solicita tu evaluación gratuita
+          </h2>
+          <p class="text-lg md:text-xl text-primary/70">
+            Analizamos tu caso sin compromiso y te indicamos los pasos a seguir para obtener tu nacionalidad española
+          </p>
+        </div>
+
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="tu@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="+34 600 000 000"
+              />
+            </div>
+            <div>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País de origen *</label>
+              <select
+                id="pais"
+                name="pais"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona tu país</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro">Otro país</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="servicio" class="block text-sm font-medium text-primary mb-2">¿Qué servicio necesitas? *</label>
+            <select
+              id="servicio"
+              name="servicio"
+              required
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+            >
+              <option value="">Selecciona un servicio</option>
+              <option value="evaluacion-elegibilidad">Evaluación de elegibilidad</option>
+              <option value="gestion-completa">Gestión completa de nacionalidad</option>
+              <option value="solo-apostilla">Solo apostilla de documentos</option>
+              <option value="preparacion-ccse">Preparación examen CCSE</option>
+              <option value="consulta-general">Consulta general</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="3"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuéntanos tu situación: tiempo de residencia en España, documentos que tienes, si ya has aprobado el CCSE, etc."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacidad"
+              name="privacidad"
+              required
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
+            />
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Solicitar evaluación gratuita
+          </button>
+
+          <p class="text-center text-sm text-primary/50">
+            Sin compromiso. Te respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form submission script -->
+  <script>
+    const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55';
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('button[type="submit"]');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!submitBtn) return;
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData(form as HTMLFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        data.source = 'tramitia.es';
+        data.timestamp = new Date().toISOString();
+        data.page = window.location.pathname;
+
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          window.location.href = '/gracias';
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por correo electrónico.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</BaseLayout>

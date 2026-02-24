@@ -5,70 +5,70 @@ import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } f
 // FAQs para schema y sección visible
 const faqs = [
   {
-    question: '¿Cómo apostillar documentos colombianos desde España?',
-    answer: 'El proceso de apostilla colombiano es 100% online a través del portal de la Cancillería de Colombia. Puedes realizarlo desde cualquier parte del mundo, las 24 horas del día, los 7 días de la semana. Si prefieres que lo gestionemos por ti, Tramitia se encarga de todo el proceso.',
+    question: '¿Cómo apostillar documentos ecuatorianos desde España?',
+    answer: 'Tienes dos opciones: la más rápida es el portal digital de la Cancillería de Ecuador (cancilleria.gob.ec), que permite apostillar documentos 100% online en aproximadamente 24 horas. También puedes acudir a cualquiera de los 14 consulados ecuatorianos en España (Madrid, Barcelona, Valencia, Murcia, Bilbao, entre otros). Si prefieres que lo gestionemos por ti, Tramitia se encarga de todo el proceso.',
   },
   {
-    question: '¿Cuánto tarda apostillar un documento colombiano?',
-    answer: 'El tiempo varía según el tipo de documento. Documentos generales: 3 días hábiles. Registros civiles de la Registraduría Nacional: 15 días hábiles debido al proceso de verificación adicional. Con Tramitia gestionamos el trámite completo para que no tengas que preocuparte de nada.',
+    question: '¿Cuánto tarda apostillar un documento ecuatoriano?',
+    answer: 'A través del portal digital de la Cancillería, la apostilla se emite en aproximadamente 24 horas, siendo el sistema más rápido de Latinoamérica. Si se tramita presencialmente en un consulado ecuatoriano en España, el plazo es de 3 a 4 días hábiles. Con Tramitia gestionamos el trámite completo para que no tengas que preocuparte de nada.',
   },
   {
-    question: '¿Qué documentos colombianos se pueden apostillar?',
-    answer: 'Se pueden apostillar todos los documentos públicos colombianos: registros civiles (nacimiento, matrimonio, defunción), documentos notariales (poderes, escrituras), títulos académicos y certificados de estudios, antecedentes judiciales de la Policía Nacional, certificados de la Registraduría Nacional y traducciones oficiales (con proceso especial ante notario).',
+    question: '¿Qué documentos ecuatorianos se pueden apostillar?',
+    answer: 'Se pueden apostillar todos los documentos públicos ecuatorianos: certificados de nacimiento, matrimonio y defunción del Registro Civil, antecedentes penales, títulos académicos registrados en SENESCYT, documentos notariales (con reconocimiento de firma previo), certificados de estudios y cualquier documento emitido por una autoridad pública ecuatoriana.',
   },
   {
-    question: '¿Cuál es el organismo que emite apostillas en Colombia?',
-    answer: 'El Ministerio de Relaciones Exteriores de Colombia (Cancillería) es el único organismo autorizado para emitir apostillas en Colombia. El trámite se realiza a través de su portal en línea en cancilleria.gov.co.',
+    question: '¿Puedo apostillar en un consulado ecuatoriano en España?',
+    answer: 'Sí. Ecuador cuenta con una de las redes consulares más amplias de Latinoamérica en España, con más de 14 consulados: Madrid, Barcelona, Valencia, Murcia, Alicante, Bilbao, Málaga, Palma de Mallorca, Pamplona, Tenerife, Santander, Sevilla, Vigo y Zaragoza. El trámite presencial tarda entre 3 y 4 días hábiles.',
   },
   {
-    question: '¿La apostilla colombiana es válida en España?',
-    answer: 'Sí. Colombia y España son miembros del Convenio de La Haya de 1961, por lo que las apostillas colombianas tienen validez legal directa en España sin necesidad de legalización consular adicional. La apostilla electrónica colombiana es plenamente reconocida por las autoridades españolas.',
+    question: '¿Es válida la apostilla digital ecuatoriana en España?',
+    answer: 'Sí, la apostilla electrónica ecuatoriana es plenamente válida en España y en todos los países miembros del Convenio de La Haya. Incluye un código QR para verificación en línea de su autenticidad. España reconoce las apostillas digitales emitidas por la Cancillería de Ecuador desde su implementación en julio de 2024.',
   },
   {
-    question: '¿Por qué mi registro civil tarda 15 días en apostillarse?',
-    answer: 'Los registros civiles expedidos por la Registraduría Nacional del Estado Civil tienen un plazo de 15 días hábiles para ser apostillados, mayor que otros documentos. Esto se debe al proceso de verificación adicional que realiza la Cancillería con la Registraduría para confirmar la autenticidad del documento.',
+    question: '¿Qué es SENESCYT y qué papel tiene en la apostilla de títulos?',
+    answer: 'La Secretaría de Educación Superior, Ciencia, Tecnología e Innovación (SENESCYT) es el organismo que registra y valida los títulos universitarios ecuatorianos. Para apostillar un título universitario, primero debe estar registrado en SENESCYT. Desde 2018, el proceso de registro se ha simplificado considerablemente. Los títulos de educación primaria y secundaria requieren certificación previa del Ministerio de Educación.',
   },
   {
-    question: '¿Puedo apostillar traducciones oficiales colombianas?',
-    answer: 'Desde diciembre de 2020, las traducciones oficiales no se apostillan directamente. Primero el traductor oficial elabora la traducción, luego se realiza el reconocimiento de firma del traductor ante un Notario Público, y finalmente la Cancillería apostilla la firma del Notario, no la del traductor.',
+    question: '¿Cuánto cuesta apostillar un documento ecuatoriano?',
+    answer: 'El coste de la apostilla ecuatoriana es de 30 USD más IVA (aproximadamente 28 EUR al cambio actual). Existen descuentos: las personas mayores tienen un 50% de descuento, y las personas con un grado de discapacidad del 30% o superior están exentas del pago. Se aceptan tarjetas internacionales en el portal digital.',
   },
   {
-    question: '¿Qué pasa si hay un error en la apostilla colombiana?',
-    answer: 'Según la Resolución 1959 de 2020, si se presenta algún error en el texto de la apostilla después de efectuado el pago, no se puede reclamar corrección ni hay devolución del dinero. Por eso es fundamental verificar toda la información antes de completar el pago. En Tramitia revisamos cada detalle para evitar errores.',
+    question: '¿Qué es el reconocimiento de firma para documentos notariales?',
+    answer: 'Los documentos notariales ecuatorianos requieren un paso previo llamado "reconocimiento de firma" antes de poder ser apostillados. Este trámite consiste en que la Cancillería verifique la firma del notario que emitió el documento. Sin este paso previo, la Cancillería no puede emitir la apostilla sobre documentos notariales.',
   },
   {
-    question: '¿Necesito firma digital en mis documentos colombianos?',
-    answer: 'Sí, para que un documento pueda ser apostillado, debe estar firmado digitalmente por el servidor público competente y la firma debe estar registrada en la base de datos de la Cancillería. Para documentos notariales, es fundamental informar al notario que el documento será apostillado para que cumpla con estos requisitos.',
+    question: '¿Necesito traducir mis documentos ecuatorianos para usarlos en España?',
+    answer: 'Como los documentos ecuatorianos están en español, generalmente no necesitan traducción para su uso en España. Sin embargo, la apostilla es obligatoria para que tengan validez legal. Solo en casos muy específicos de terminología legal ecuatoriana, las autoridades españolas podrían solicitar una traducción jurada.',
   },
   {
-    question: '¿Necesito traducir mis documentos colombianos para usarlos en España?',
-    answer: 'Como los documentos colombianos están en español, generalmente no necesitan traducción para su uso en España. Sin embargo, la apostilla es obligatoria para que tengan validez legal. Solo en casos muy específicos de terminología legal colombiana, las autoridades españolas podrían solicitar una traducción jurada.',
+    question: '¿La apostilla ecuatoriana es válida en toda España y en otros países?',
+    answer: 'Sí. Ecuador es miembro del Convenio de La Haya desde el 2 de abril de 2005, por lo que las apostillas ecuatorianas tienen validez legal directa en España y en los más de 120 países miembros del convenio, sin necesidad de legalización consular adicional. La apostilla se reconoce en todas las comunidades autónomas de España.',
   },
 ];
 
 // Schema.org
 const serviceSchema = getServiceSchema({
-  name: 'Apostilla de Documentos Colombianos desde España',
-  description: 'Servicio profesional de apostilla de documentos colombianos gestionado desde España. Registros civiles, antecedentes judiciales, títulos académicos y más. Gestión ante la Cancillería de Colombia.',
-  deliveryTime: 'P3D/P15D',
-  slug: 'apostilla-colombia',
+  name: 'Apostilla de Documentos Ecuatorianos desde España',
+  description: 'Servicio profesional de apostilla de documentos ecuatorianos gestionado desde España. Certificados de nacimiento, antecedentes penales, títulos SENESCYT y más. Gestión ante la Cancillería de Ecuador, sistema 100% digital.',
+  deliveryTime: 'P1D/P4D',
+  slug: 'apostilla-ecuador',
 });
 
 const faqSchema = getFAQSchema(faqs);
 
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Inicio', url: '/' },
-  { name: 'Apostilla Colombia', url: '/apostilla-colombia/' },
+  { name: 'Apostilla Ecuador', url: '/apostilla-ecuador/' },
 ]);
 
 const howToSchema = getHowToSchema({
-  name: 'Cómo apostillar documentos colombianos desde España',
-  description: 'Guía paso a paso para apostillar tus documentos colombianos a través de la Cancillería de Colombia. Proceso 100% online disponible desde cualquier parte del mundo.',
-  totalTime: 'P15D',
+  name: 'Cómo apostillar documentos ecuatorianos desde España',
+  description: 'Guía paso a paso para apostillar tus documentos ecuatorianos a través de la Cancillería de Ecuador. Sistema 100% digital con apostilla en 24 horas o gestión en consulados en España.',
+  totalTime: 'P4D',
   steps: [
     {
       name: 'Enviar solicitud con tus documentos',
-      text: 'Rellena nuestro formulario de contacto indicando qué documentos colombianos necesitas apostillar. Adjunta copias escaneadas o fotografías de los documentos originales para que podamos evaluar tu caso.',
+      text: 'Rellena nuestro formulario de contacto indicando qué documentos ecuatorianos necesitas apostillar. Adjunta copias escaneadas o fotografías de los documentos originales para que podamos evaluar tu caso.',
     },
     {
       name: 'Recibir presupuesto personalizado',
@@ -76,20 +76,20 @@ const howToSchema = getHowToSchema({
     },
     {
       name: 'Confirmar y procesar la apostilla',
-      text: 'Una vez aceptado el presupuesto, gestionamos la apostilla a través de la Cancillería de Colombia. Verificamos que todos los documentos cumplan los requisitos de firma digital antes de iniciar el trámite.',
+      text: 'Una vez aceptado el presupuesto, gestionamos la apostilla a través del portal digital de la Cancillería de Ecuador o mediante el consulado correspondiente. Verificamos que todos los documentos cumplan los requisitos previos (registro SENESCYT, reconocimiento de firma, etc.).',
     },
     {
       name: 'Recibir documentos apostillados',
-      text: 'Recibes la apostilla electrónica en formato digital, válida en España y cualquier país del Convenio de La Haya. La apostilla colombiana es 100% digital y se descarga directamente del portal de la Cancillería.',
+      text: 'Recibes la apostilla electrónica con código QR de verificación, válida en España y cualquier país del Convenio de La Haya. La apostilla digital ecuatoriana se descarga directamente del portal de la Cancillería.',
     },
   ],
 });
 ---
 
 <BaseLayout
-  title="Apostilla de Documentos Colombianos desde España | Tramitia"
-  description="Apostilla tus documentos colombianos desde España. Registros civiles, antecedentes judiciales, títulos académicos. Gestión ante la Cancillería de Colombia 100% online."
-  keywords={['apostilla colombia desde espana', 'apostillar documentos colombianos', 'apostilla de la haya colombia', 'documentos colombianos espana', 'cancilleria colombia apostilla', 'antecedentes judiciales colombia apostilla', 'apostilla colombia online']}
+  title="Apostilla Documentos Ecuatorianos en España | Tramitia"
+  description="Apostilla tus documentos ecuatorianos desde España. Sistema 100% digital de la Cancillería o en 14 consulados en España. Registros civiles, títulos SENESCYT."
+  keywords={['apostilla ecuador desde espana', 'apostillar documentos ecuatorianos', 'apostilla de la haya ecuador', 'documentos ecuatorianos espana', 'cancilleria ecuador apostilla', 'antecedentes penales ecuador apostilla', 'apostilla ecuador online', 'senescyt apostilla']}
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
@@ -111,7 +111,7 @@ const howToSchema = getHowToSchema({
           </svg>
         </li>
         <li>
-          <span class="text-primary font-medium">Apostilla Colombia</span>
+          <span class="text-primary font-medium">Apostilla Ecuador</span>
         </li>
       </ol>
     </div>
@@ -125,13 +125,13 @@ const howToSchema = getHowToSchema({
 
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
       <div class="max-w-3xl">
-        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para colombianos en España</p>
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para ecuatorianos en España</p>
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
-          Apostilla tus documentos colombianos
+          Apostilla tus documentos ecuatorianos
           <span class="text-accent">desde España</span>
         </h1>
         <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
-          Gestionamos la apostilla de tus registros civiles, antecedentes judiciales y títulos académicos ante la Cancillería de Colombia. Proceso 100% online.
+          Gestionamos la apostilla de tus certificados de nacimiento, antecedentes penales y títulos SENESCYT ante la Cancillería de Ecuador. Sistema 100% digital o en 14 consulados en España.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a href="#contacto" class="btn btn-primary btn-lg">
@@ -165,7 +165,7 @@ const howToSchema = getHowToSchema({
           <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
           </svg>
-          <span class="text-sm font-medium">Gestión ante Cancillería</span>
+          <span class="text-sm font-medium">14 consulados en España</span>
         </div>
         <div class="flex items-center gap-2.5">
           <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -177,34 +177,34 @@ const howToSchema = getHowToSchema({
     </div>
   </section>
 
-  <!-- Intro contextual para colombianos -->
+  <!-- Intro contextual para ecuatorianos -->
   <section class="py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
-          La comunidad colombiana en España necesita documentos apostillados
+          La comunidad ecuatoriana en España necesita documentos apostillados
         </h2>
         <div class="text-base md:text-lg text-primary/70 leading-relaxed space-y-4 max-w-3xl mx-auto text-left">
           <p>
-            Colombia es una de las nacionalidades con mayor presencia en España. Miles de colombianos necesitan apostillar documentos cada año para trámites de <strong class="text-primary">residencia</strong>, <strong class="text-primary">nacionalidad española</strong>, <strong class="text-primary">homologación de títulos</strong> y otros procedimientos legales.
+            La comunidad ecuatoriana es una de las más numerosas de Latinoamérica en España. Miles de ecuatorianos necesitan apostillar documentos cada año para trámites de <strong class="text-primary">residencia</strong>, <strong class="text-primary">nacionalidad española</strong>, <strong class="text-primary">homologación de títulos</strong> y otros procedimientos legales.
           </p>
           <p>
-            La buena noticia es que Colombia tiene uno de los sistemas de apostilla más eficientes de Latinoamérica: la <strong class="text-primary">Cancillería</strong> ofrece un proceso 100% online, disponible 24/7. Sin embargo, los requisitos de firma digital y los tiempos de procesamiento de registros civiles (15 días) pueden complicar el trámite. Con Tramitia, nos encargamos de todo para que no tengas que preocuparte.
+            La buena noticia es que Ecuador cuenta con el <strong class="text-primary">sistema de apostilla digital más avanzado de Latinoamérica</strong>, lanzado en julio de 2024: apostilla electrónica en aproximadamente 24 horas, 100% online y con aceptación de tarjetas internacionales. Además, Ecuador tiene la red consular más amplia de la región en España, con más de 14 consulados. Con Tramitia, nos encargamos de todo para que no tengas que preocuparte.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Documentos colombianos que apostillamos -->
+  <!-- Documentos ecuatorianos que apostillamos -->
   <section class="py-16 md:py-24 bg-muted-light">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Documentos colombianos que apostillamos
+          Documentos ecuatorianos que apostillamos
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Gestionamos la apostilla ante la Cancillería de Colombia de cualquier documento público colombiano
+          Gestionamos la apostilla ante la Cancillería de Ecuador de cualquier documento público ecuatoriano
         </p>
       </div>
 
@@ -215,8 +215,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Registro civil de nacimiento</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Expedido por la Registraduría Nacional. Imprescindible para trámites de nacionalidad española y registro civil en España.</p>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Certificado de nacimiento</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Expedido por el Registro Civil de Ecuador. Imprescindible para trámites de nacionalidad española y registro civil en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -225,8 +225,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Antecedentes judiciales</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificado emitido por la Policía Nacional de Colombia. Necesario para visados, permisos de residencia y trabajo en España.</p>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Antecedentes penales</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificado emitido por el Ministerio del Interior de Ecuador. Necesario para visados, permisos de residencia y trabajo en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -235,8 +235,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Título académico</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Títulos de universidades colombianas y certificados de estudios. Requisito para la homologación y ejercicio profesional en España.</p>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Título universitario (SENESCYT)</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Títulos de universidades ecuatorianas registrados en SENESCYT. Requisito para la homologación y ejercicio profesional en España.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -245,7 +245,7 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Registro civil de matrimonio</h3>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Certificado de matrimonio</h3>
           <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para inscripción de matrimonio en el registro civil español, reagrupación familiar y residencia por familiar comunitario.</p>
         </a>
 
@@ -256,7 +256,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Documentos notariales</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Poderes notariales, escrituras, autenticaciones y cualquier documento firmado digitalmente ante notario público colombiano.</p>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Poderes notariales, escrituras y autenticaciones. Requieren reconocimiento de firma previo ante la Cancillería antes de apostillar.</p>
         </a>
 
         <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
@@ -265,8 +265,8 @@ const howToSchema = getHowToSchema({
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
             </svg>
           </div>
-          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Registro de defunción y otros</h3>
-          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificados de la Registraduría Nacional, registros de defunción y cualquier documento público colombiano con firma digital.</p>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Certificado de defunción y otros</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificados del Registro Civil, registros de defunción y cualquier documento público ecuatoriano emitido por autoridad competente.</p>
         </a>
       </div>
     </div>
@@ -277,10 +277,10 @@ const howToSchema = getHowToSchema({
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          ¿Para qué necesitas apostillar tus documentos colombianos?
+          ¿Para qué necesitas apostillar tus documentos ecuatorianos?
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          La <a href="/blog/que-es-apostilla-haya-guia/" class="text-accent hover:underline">Apostilla de La Haya</a> es obligatoria para que tus documentos colombianos tengan validez legal en España
+          La <a href="/blog/que-es-apostilla-haya-guia/" class="text-accent hover:underline">Apostilla de La Haya</a> es obligatoria para que tus documentos ecuatorianos tengan validez legal en España
         </p>
       </div>
 
@@ -302,7 +302,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mb-2">Nacionalidad española</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad por residencia (2 años para colombianos con pasaporte iberoamericano), por descendencia o Ley de Memoria Democrática</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Nacionalidad por residencia (2 años para ecuatorianos con pasaporte iberoamericano), por descendencia o Ley de Memoria Democrática</p>
         </a>
 
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
@@ -312,7 +312,7 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Trabajo y profesión</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Homologación de títulos universitarios, convalidación de estudios, permisos de trabajo y ejercicio profesional regulado</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Homologación de títulos universitarios registrados en SENESCYT, convalidación de estudios y ejercicio profesional regulado</p>
         </div>
 
         <div class="text-center p-7 md:p-8 bg-muted-light rounded-2xl">
@@ -322,39 +322,39 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-primary mb-2">Estudios</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Convalidación de bachillerato, acceso a universidad, credenciales académicas y becas para estudiantes colombianos</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Convalidación de bachillerato, acceso a universidad, credenciales académicas y becas para estudiantes ecuatorianos</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ventaja del sistema colombiano -->
+  <!-- Ventaja del sistema ecuatoriano -->
   <section class="py-16 md:py-24 bg-muted-light">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Tiempos de apostilla en Colombia
+          Tiempos de apostilla en Ecuador
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Colombia tiene uno de los sistemas de apostilla más eficientes de Latinoamérica
+          Ecuador tiene el sistema de apostilla digital más avanzado de Latinoamérica
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-5 md:gap-6">
         <div class="bg-white border border-muted/30 rounded-2xl p-6 md:p-8 text-center">
           <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <span class="text-2xl font-bold text-accent">3</span>
+            <span class="text-2xl font-bold text-accent">24h</span>
           </div>
-          <h3 class="text-lg font-bold text-primary mb-2">Días hábiles</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Para documentos generales: títulos académicos, antecedentes judiciales, documentos notariales y otros con firma digital registrada</p>
+          <h3 class="text-lg font-bold text-primary mb-2">Apostilla digital</h3>
+          <p class="text-primary/70 text-sm leading-relaxed">A través del portal en línea de la Cancillería. Sistema 100% digital, disponible 24/7, con código QR de verificación. Se aceptan tarjetas internacionales.</p>
         </div>
 
         <div class="bg-white border border-muted/30 rounded-2xl p-6 md:p-8 text-center">
           <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <span class="text-2xl font-bold text-accent">15</span>
+            <span class="text-2xl font-bold text-accent">3-4</span>
           </div>
-          <h3 class="text-lg font-bold text-primary mb-2">Días hábiles</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Para registros civiles de la Registraduría Nacional (nacimiento, matrimonio, defunción) por el proceso de verificación adicional</p>
+          <h3 class="text-lg font-bold text-primary mb-2">Días en consulado</h3>
+          <p class="text-primary/70 text-sm leading-relaxed">Trámite presencial en cualquiera de los 14 consulados ecuatorianos en España: Madrid, Barcelona, Valencia, Murcia, Bilbao y más.</p>
         </div>
 
         <div class="bg-white border-2 border-accent rounded-2xl p-6 md:p-8 text-center">
@@ -364,22 +364,22 @@ const howToSchema = getHowToSchema({
             </svg>
           </div>
           <h3 class="text-lg font-bold text-primary mb-2">Tramitia gestiona todo</h3>
-          <p class="text-primary/70 text-sm leading-relaxed">Verificamos requisitos de firma digital, completamos el formulario correctamente y evitamos errores que generan pérdida de dinero</p>
+          <p class="text-primary/70 text-sm leading-relaxed">Verificamos requisitos previos (SENESCYT, reconocimiento de firma), elegimos la vía más rápida y gestionamos el trámite completo por ti</p>
           <a href="#contacto" class="btn btn-primary btn-sm mt-4">Solicitar presupuesto</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cómo funciona (Colombia-specific) -->
+  <!-- Cómo funciona (Ecuador-specific) -->
   <section class="py-16 md:py-24 bg-primary text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
-          Cómo apostillamos tus documentos colombianos
+          Cómo apostillamos tus documentos ecuatorianos
         </h2>
         <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
-          Un proceso simple para que no tengas que preocuparte de nada. Gestionamos todo ante la Cancillería de Colombia.
+          Un proceso simple para que no tengas que preocuparte de nada. Gestionamos todo ante la Cancillería de Ecuador.
         </p>
       </div>
 
@@ -389,7 +389,7 @@ const howToSchema = getHowToSchema({
             1
           </div>
           <h3 class="text-lg md:text-xl font-semibold mb-3">Cuéntanos qué necesitas</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Rellena el formulario con los documentos colombianos que necesitas apostillar. Adjunta copias escaneadas.</p>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Rellena el formulario con los documentos ecuatorianos que necesitas apostillar. Adjunta copias escaneadas.</p>
         </div>
 
         <div class="text-center relative">
@@ -405,7 +405,7 @@ const howToSchema = getHowToSchema({
             3
           </div>
           <h3 class="text-lg md:text-xl font-semibold mb-3">Gestionamos ante Cancillería</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Verificamos los requisitos de firma digital, completamos el trámite en el portal de la Cancillería y te informamos del avance en cada etapa.</p>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Verificamos requisitos previos (SENESCYT, reconocimiento de firma), completamos el trámite en el portal digital y te informamos del avance.</p>
         </div>
 
         <div class="text-center relative">
@@ -413,7 +413,7 @@ const howToSchema = getHowToSchema({
             4
           </div>
           <h3 class="text-lg md:text-xl font-semibold mb-3">Recibe tus documentos</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Te enviamos la apostilla electrónica en formato digital, válida en España y cualquier país del Convenio de La Haya. 100% digital.</p>
+          <p class="text-white/70 text-sm md:text-base leading-relaxed">Te enviamos la apostilla electrónica con código QR de verificación, válida en España y cualquier país del Convenio de La Haya.</p>
         </div>
       </div>
     </div>
@@ -424,7 +424,7 @@ const howToSchema = getHowToSchema({
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          ¿Por qué elegir Tramitia para apostillar tus documentos colombianos?
+          ¿Por qué elegir Tramitia para apostillar tus documentos ecuatorianos?
         </h2>
       </div>
 
@@ -432,37 +432,36 @@ const howToSchema = getHowToSchema({
         <div class="flex gap-4">
           <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
             <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
             </svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-primary mb-1">Evita errores costosos</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Un error en la apostilla colombiana no tiene corrección ni devolución. Verificamos cada detalle antes de enviar el trámite.</p>
+            <h3 class="text-lg font-semibold text-primary mb-1">Expertos en apostilla digital</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Dominamos el portal digital de la Cancillería ecuatoriana, el más avanzado de Latinoamérica. Apostilla en 24 horas.</p>
           </div>
         </div>
 
         <div class="flex gap-4">
           <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
             <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
             </svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-primary mb-1">Seguimiento transparente</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Te mantenemos informado del estado de tu trámite en cada etapa. Siempre sabrás dónde están tus documentos.</p>
+            <h3 class="text-lg font-semibold text-primary mb-1">Red consular amplia</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Conocemos los 14 consulados ecuatorianos en España y sus procedimientos. Elegimos la vía más conveniente para tu caso.</p>
           </div>
         </div>
 
         <div class="flex gap-4">
           <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
             <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
             </svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-primary mb-1">Requisitos de firma digital</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Verificamos que tus documentos cumplan con los requisitos de firma digital antes de iniciar el trámite ante la Cancillería.</p>
+            <h3 class="text-lg font-semibold text-primary mb-1">Asesoría SENESCYT</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Te orientamos sobre el registro de títulos en SENESCYT y la certificación del Ministerio de Educación para documentos académicos.</p>
           </div>
         </div>
 
@@ -518,7 +517,7 @@ const howToSchema = getHowToSchema({
           Solicita tu presupuesto personalizado
         </h2>
         <p class="text-lg md:text-xl text-primary/70 mb-6 max-w-2xl mx-auto">
-          Cada caso es diferente. Cuéntanos qué documentos colombianos necesitas apostillar y te enviamos un presupuesto detallado, gratuito y sin compromiso.
+          Cada caso es diferente. Cuéntanos qué documentos ecuatorianos necesitas apostillar y te enviamos un presupuesto detallado, gratuito y sin compromiso.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a href="#contacto" class="btn btn-primary btn-lg">
@@ -537,10 +536,10 @@ const howToSchema = getHowToSchema({
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Preguntas frecuentes sobre apostilla de documentos colombianos
+          Preguntas frecuentes sobre apostilla de documentos ecuatorianos
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
-          Resolvemos las dudas más comunes sobre el proceso de apostilla de documentos de Colombia desde España
+          Resolvemos las dudas más comunes sobre el proceso de apostilla de documentos de Ecuador desde España
         </p>
       </div>
 
@@ -573,7 +572,7 @@ const howToSchema = getHowToSchema({
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-          Guías útiles para colombianos en España
+          Guías útiles para ecuatorianos en España
         </h2>
         <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
           Artículos con información práctica sobre apostillas y trámites documentales
@@ -581,14 +580,6 @@ const howToSchema = getHowToSchema({
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-        <a href="/blog/apostilla-colombia-espana-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
-          <div class="p-6">
-            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía Colombia</span>
-            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Apostillar documentos colombianos</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Guía completa del proceso de apostilla ante la Cancillería de Colombia. Requisitos, tiempos y costes.</p>
-          </div>
-        </a>
-
         <a href="/blog/que-es-apostilla-haya-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
             <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
@@ -602,6 +593,14 @@ const howToSchema = getHowToSchema({
             <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
             <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad española</h3>
             <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española.</p>
+          </div>
+        </a>
+
+        <a href="/blog/documentos-residencia-espana-apostilla/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la residencia en España</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Guía completa sobre los documentos apostillados necesarios para solicitar la residencia en España.</p>
           </div>
         </a>
       </div>
@@ -638,9 +637,9 @@ const howToSchema = getHowToSchema({
           <div class="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold bg-accent/10 text-accent">AR</div>
           <span class="font-semibold text-primary text-sm">Argentina</span>
         </a>
-        <a href="/apostilla-ecuador/" class="flex flex-col items-center gap-3 p-5 md:p-6 rounded-2xl border-2 bg-white border-accent/20 hover:border-accent hover:shadow-lg transition-all duration-200">
-          <div class="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold bg-accent/10 text-accent">EC</div>
-          <span class="font-semibold text-primary text-sm">Ecuador</span>
+        <a href="/apostilla-colombia/" class="flex flex-col items-center gap-3 p-5 md:p-6 rounded-2xl border-2 bg-white border-accent/20 hover:border-accent hover:shadow-lg transition-all duration-200">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold bg-accent/10 text-accent">CO</div>
+          <span class="font-semibold text-primary text-sm">Colombia</span>
         </a>
         <a href="/apostilla-peru/" class="flex flex-col items-center gap-3 p-5 md:p-6 rounded-2xl border-2 bg-white border-accent/20 hover:border-accent hover:shadow-lg transition-all duration-200">
           <div class="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold bg-accent/10 text-accent">PE</div>
@@ -663,7 +662,7 @@ const howToSchema = getHowToSchema({
             Solicita tu presupuesto gratis
           </h2>
           <p class="text-lg md:text-xl text-primary/70">
-            Te respondemos en menos de 24 horas con un presupuesto personalizado para tus documentos colombianos
+            Te respondemos en menos de 24 horas con un presupuesto personalizado para tus documentos ecuatorianos
           </p>
         </div>
 
@@ -717,10 +716,10 @@ const howToSchema = getHowToSchema({
                 class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
                 style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
               >
-                <option value="colombia" selected>Colombia</option>
+                <option value="ecuador" selected>Ecuador</option>
                 <option value="venezuela">Venezuela</option>
                 <option value="argentina">Argentina</option>
-                <option value="ecuador">Ecuador</option>
+                <option value="colombia">Colombia</option>
                 <option value="peru">Perú</option>
                 <option value="bolivia">Bolivia</option>
                 <option value="otro">Otro país</option>
@@ -738,11 +737,11 @@ const howToSchema = getHowToSchema({
               style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
             >
               <option value="">Selecciona un documento</option>
-              <option value="registro-nacimiento">Registro civil de nacimiento</option>
-              <option value="antecedentes-judiciales">Antecedentes judiciales</option>
-              <option value="titulo-universitario">Título académico</option>
-              <option value="registro-matrimonio">Registro civil de matrimonio</option>
-              <option value="registro-defuncion">Registro civil de defunción</option>
+              <option value="certificado-nacimiento">Certificado de nacimiento</option>
+              <option value="antecedentes-penales">Antecedentes penales</option>
+              <option value="titulo-universitario">Título universitario (SENESCYT)</option>
+              <option value="certificado-matrimonio">Certificado de matrimonio</option>
+              <option value="certificado-defuncion">Certificado de defunción</option>
               <option value="documento-notarial">Documento notarial</option>
               <option value="notas-certificadas">Notas certificadas / Calificaciones</option>
               <option value="varios">Varios documentos</option>
@@ -757,7 +756,7 @@ const howToSchema = getHowToSchema({
               name="mensaje"
               rows="3"
               class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
-              placeholder="Cuéntanos más detalles: para qué trámite necesitas la apostilla, si el documento tiene firma digital, etc."
+              placeholder="Cuéntanos más detalles: para qué trámite necesitas la apostilla, si el título está registrado en SENESCYT, etc."
             ></textarea>
           </div>
 
