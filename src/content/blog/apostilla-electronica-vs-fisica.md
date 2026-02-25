@@ -19,7 +19,7 @@ La transformación digital ha llegado al proceso de apostilla de documentos. Cad
 
 ## Qué es la apostilla física (formato tradicional)
 
-La apostilla física es el formato original establecido por el [Convenio de La Haya de 1961](/blog/que-es-apostilla-haya-guia). Consiste en un certificado impreso que se adhiere, estampa o anexa directamente al documento original.
+La apostilla física es el formato original establecido por el [Convenio de La Haya de 1961](/blog/que-es-apostilla-haya-guia/). Consiste en un certificado impreso que se adhiere, estampa o anexa directamente al documento original.
 
 ### Características de la apostilla física
 
@@ -102,7 +102,7 @@ Argentina gestiona las apostillas a través del sistema **TAD (Trámites a Dista
 - **Verificación**: Código de verificación único
 - **Costo**: Variable según el tipo de documento
 
-Consulta nuestra [guía de apostilla de documentos argentinos](/blog/apostilla-argentina-espana-guia) para más información.
+Consulta nuestra [guía de apostilla de documentos argentinos](/blog/apostilla-argentina-espana-guia/) para más información.
 
 ### Colombia: Cancillería en línea
 
@@ -113,7 +113,7 @@ La Cancillería de Colombia ofrece un sistema de apostilla completamente en lín
 - **Verificación**: Número de trámite y código de barras en el portal oficial
 - **Costo**: Según tarifas vigentes
 
-Consulta nuestra [guía de apostilla de documentos colombianos](/blog/apostilla-colombia-espana-guia).
+Consulta nuestra [guía de apostilla de documentos colombianos](/blog/apostilla-colombia-espana-guia/).
 
 ### España
 
@@ -183,9 +183,9 @@ La Conferencia de La Haya mantiene un **directorio de registros electrónicos** 
 
 Las apostillas electrónicas son aceptadas sin problema ante:
 
-- **Oficinas de Extranjería**: Para trámites de [residencia](/blog/documentos-residencia-espana-apostilla), [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana) y [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola)
+- **Oficinas de Extranjería**: Para trámites de [residencia](/blog/documentos-residencia-espana-apostilla/), [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/) y [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola/)
 - **Registros Civiles**: Para inscripciones de nacimiento, matrimonio y defunción
-- **Universidades**: Para [homologación de títulos](/blog/homologacion-titulos-espana-documentos)
+- **Universidades**: Para [homologación de títulos](/blog/homologacion-titulos-espana-documentos/)
 - **Juzgados y tribunales**: Para procedimientos judiciales
 - **Notarías**: Para actos notariales que requieran documentos extranjeros
 
@@ -249,7 +249,7 @@ Venezuela emite apostillas en formato **exclusivamente electrónico** a través 
 
 ### Necesito apostilla electrónica o física para la reagrupación familiar
 
-Cualquiera de los dos formatos es válido para la [reagrupación familiar en España](/blog/documentos-reagrupacion-familiar-espana). Las oficinas de extranjería aceptan ambos formatos. Lo importante es que la apostilla haya sido emitida por la autoridad competente de tu país.
+Cualquiera de los dos formatos es válido para la [reagrupación familiar en España](/blog/documentos-reagrupacion-familiar-espana/). Las oficinas de extranjería aceptan ambos formatos. Lo importante es que la apostilla haya sido emitida por la autoridad competente de tu país.
 
 ### Cuánto cuesta una apostilla electrónica comparada con una física
 

@@ -58,7 +58,7 @@ Cuando un familiar fallece en tu país de origen y necesitas participar en la tr
 
 ### Autorizar la apostilla de documentos
 
-Si necesitas que alguien en tu país de origen [apostille documentos](/blog/que-es-apostilla-haya-guia) en tu nombre, puedes otorgar un poder especial para que esa persona:
+Si necesitas que alguien en tu país de origen [apostille documentos](/blog/que-es-apostilla-haya-guia/) en tu nombre, puedes otorgar un poder especial para que esa persona:
 
 - Solicite copias certificadas en registros civiles
 - Tramite la apostilla ante la autoridad competente

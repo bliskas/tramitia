@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-Una de las primeras preguntas que surge cuando necesitas [apostillar documentos](/blog/que-es-apostilla-haya-guia) es cuánto va a costar. La respuesta varía considerablemente según el país emisor, el tipo de documento, si gestionas el trámite en persona o desde el extranjero, y si necesitas servicios adicionales como traducciones juradas o envíos. En esta guía desglosamos los precios actualizados para 2026 de los principales países latinoamericanos y España.
+Una de las primeras preguntas que surge cuando necesitas [apostillar documentos](/blog/que-es-apostilla-haya-guia/) es cuánto va a costar. La respuesta varía considerablemente según el país emisor, el tipo de documento, si gestionas el trámite en persona o desde el extranjero, y si necesitas servicios adicionales como traducciones juradas o envíos. En esta guía desglosamos los precios actualizados para 2026 de los principales países latinoamericanos y España.
 
 ## Costo de apostilla por país
 
@@ -45,7 +45,7 @@ Cuando gestionas la apostilla de documentos venezolanos desde España, los costo
 
 ### Argentina
 
-Argentina procesa las apostillas a través del sistema **TAD (Trámites a Distancia)** y la Cancillería. Puedes consultar nuestra [guía de apostilla de documentos argentinos](/blog/apostilla-argentina-espana-guia) para más detalles.
+Argentina procesa las apostillas a través del sistema **TAD (Trámites a Distancia)** y la Cancillería. Puedes consultar nuestra [guía de apostilla de documentos argentinos](/blog/apostilla-argentina-espana-guia/) para más detalles.
 
 #### Apostilla directa en Argentina
 
@@ -68,7 +68,7 @@ El consulado argentino en España puede tramitar apostillas de ciertos documento
 
 ### Colombia
 
-La Cancillería de Colombia ofrece un sistema de apostilla **completamente en línea** que facilita la gestión desde cualquier lugar del mundo. Consulta nuestra [guía de apostilla de documentos colombianos](/blog/apostilla-colombia-espana-guia).
+La Cancillería de Colombia ofrece un sistema de apostilla **completamente en línea** que facilita la gestión desde cualquier lugar del mundo. Consulta nuestra [guía de apostilla de documentos colombianos](/blog/apostilla-colombia-espana-guia/).
 
 #### Apostilla directa en Colombia
 
@@ -156,11 +156,11 @@ Antes de apostillar, necesitas el documento original o una copia certificada rec
 
 | Documento | Costo aproximado (varía por país) |
 |-----------|----------------------------------|
-| [Partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) | 5-30 EUR equivalente |
-| [Acta de matrimonio](/blog/apostilla-acta-matrimonio-requisitos) | 5-30 EUR equivalente |
-| [Antecedentes penales](/blog/apostilla-antecedentes-penales-guia) | Gratuito - 20 EUR equivalente |
-| [Título universitario](/blog/apostilla-titulo-universitario-homologacion) (copia certificada) | 10-50 EUR equivalente |
-| [Partida de defunción](/blog/apostilla-partida-defuncion-guia) | 5-30 EUR equivalente |
+| [Partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) | 5-30 EUR equivalente |
+| [Acta de matrimonio](/blog/apostilla-acta-matrimonio-requisitos/) | 5-30 EUR equivalente |
+| [Antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) | Gratuito - 20 EUR equivalente |
+| [Título universitario](/blog/apostilla-titulo-universitario-homologacion/) (copia certificada) | 10-50 EUR equivalente |
+| [Partida de defunción](/blog/apostilla-partida-defuncion-guia/) | 5-30 EUR equivalente |
 
 ### Legalizaciones previas
 
@@ -273,7 +273,7 @@ Trabajamos con documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/ap
 
 ### Cuánto cuesta apostillar una partida de nacimiento venezolana
 
-La apostilla de una [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) venezolana es **gratuita** cuando se gestiona directamente a través del sistema SLAE en Venezuela. Si se tramita desde España vía consulado o gestor autorizado, el costo oscila entre 60 y 100 EUR dependiendo del servicio.
+La apostilla de una [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) venezolana es **gratuita** cuando se gestiona directamente a través del sistema SLAE en Venezuela. Si se tramita desde España vía consulado o gestor autorizado, el costo oscila entre 60 y 100 EUR dependiendo del servicio.
 
 ### Es más barato apostillar en el país de origen o desde España
 
@@ -293,7 +293,7 @@ Si. El formato (electrónico o físico) no afecta al costo de la apostilla en s�
 
 ### Cuánto cuesta apostillar documentos para la reagrupación familiar
 
-El costo total depende de la cantidad de documentos y el país de origen. Para una [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana) típica necesitas apostillar entre 2 y 5 documentos (partida de nacimiento, acta de matrimonio, antecedentes penales). Calcula entre 60 y 300 EUR en total si gestionas desde España, o significativamente menos si puedes tramitar directamente en tu país.
+El costo total depende de la cantidad de documentos y el país de origen. Para una [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/) típica necesitas apostillar entre 2 y 5 documentos (partida de nacimiento, acta de matrimonio, antecedentes penales). Calcula entre 60 y 300 EUR en total si gestionas desde España, o significativamente menos si puedes tramitar directamente en tu país.
 
 ### Hay descuentos si apostillo muchos documentos
 

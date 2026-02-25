@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-Si deseas ejercer tu profesión o continuar estudios en España con un título extranjero, necesitas homologarlo o convalidarlo. Necesitarás [apostillar tu título universitario](/blog/apostilla-titulo-universitario-homologacion) como primer paso. Esta guía te explica todo el proceso, desde la [apostilla de documentos](/blog/que-es-apostilla-haya-guia) hasta la solicitud ante el Ministerio correspondiente.
+Si deseas ejercer tu profesión o continuar estudios en España con un título extranjero, necesitas homologarlo o convalidarlo. Necesitarás [apostillar tu título universitario](/blog/apostilla-titulo-universitario-homologacion/) como primer paso. Esta guía te explica todo el proceso, desde la [apostilla de documentos](/blog/que-es-apostilla-haya-guia/) hasta la solicitud ante el Ministerio correspondiente.
 
 ## Diferencia entre homologación y equivalencia
 

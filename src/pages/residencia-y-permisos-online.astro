@@ -178,24 +178,420 @@ const howToSchema = getHowToSchema({
     </div>
   </section>
 
-  <!-- Intro -->
+  <!-- Intro contextual -->
   <section class="py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
-          Obtener la residencia en España es complejo, pero no imposible
+          Vías legales para obtener la residencia en España
         </h2>
         <div class="text-base md:text-lg text-primary/70 leading-relaxed space-y-4 max-w-3xl mx-auto text-left">
           <p>
-            Cada año, miles de latinoamericanos en España se enfrentan a la burocracia de extranjería para regularizar su situación. Existen diferentes vías según tu caso: el <strong class="text-primary">arraigo social</strong> (3 años de residencia continuada), el <strong class="text-primary">arraigo laboral</strong> (2 años de residencia), el <strong class="text-primary">arraigo familiar</strong> (para padres de menores españoles), la <strong class="text-primary">reagrupación familiar</strong> o la <strong class="text-primary">residencia no lucrativa</strong>.
+            La legislación española de extranjería contempla <strong class="text-primary">múltiples vías para obtener un permiso de residencia</strong>, cada una con requisitos, plazos y documentación distintos. Para los ciudadanos latinoamericanos, las más habituales son el arraigo (social, laboral o familiar), la reagrupación familiar y la residencia no lucrativa.
           </p>
           <p>
-            Cada expediente requiere documentación específica, gran parte de la cual debe estar apostillada y, en algunos casos, traducida por un traductor jurado. Un expediente mal presentado puede suponer meses de espera para nada. Con Tramitia, te acompañamos en todo el proceso: evaluamos tu caso, preparamos la documentación, gestionamos la apostilla de tus documentos y presentamos tu expediente correctamente.
+            La clave está en identificar cuál es la vía que mejor se ajusta a tu situación personal y, sobre todo, en <strong class="text-primary">presentar un expediente completo y bien documentado</strong>. Gran parte de la documentación requerida debe proceder de tu país de origen y estar apostillada con la Apostilla de La Haya, además de traducida por un traductor jurado cuando el idioma no sea el castellano.
           </p>
           <p>
-            Nuestro equipo está especializado en <strong class="text-primary">trámites de extranjería para latinoamericanos</strong>. Conocemos las particularidades de los documentos de Venezuela, Argentina, Colombia, Ecuador, Perú y Bolivia, y sabemos exactamente qué se necesita para cada tipo de permiso.
+            En esta guía te explicamos los principales tipos de permisos, qué documentos apostillados necesitas para cada uno, los plazos y costes oficiales, y el proceso paso a paso ante las autoridades españolas de extranjería.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de permisos de residencia -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Tipos de permisos de residencia en España
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-3xl mx-auto">
+          Cada vía tiene requisitos distintos. Conocer cuál se ajusta a tu situación es el primer paso para regularizarte.
+        </p>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="hidden lg:block overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl border border-muted/30 shadow-sm overflow-hidden">
+          <thead>
+            <tr class="bg-primary text-white text-left">
+              <th class="px-5 py-4 font-semibold text-sm">Tipo de permiso</th>
+              <th class="px-5 py-4 font-semibold text-sm">Requisitos principales</th>
+              <th class="px-5 py-4 font-semibold text-sm">Tiempo previo</th>
+              <th class="px-5 py-4 font-semibold text-sm text-center">Permite trabajar</th>
+              <th class="px-5 py-4 font-semibold text-sm">Duración</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-muted/20">
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Arraigo social</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">3 años de residencia + contrato de trabajo + vínculos sociales</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">3 años</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center gap-1 text-sm font-medium text-green-700"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Sí</span></td>
+              <td class="px-5 py-4 text-primary/70 text-sm">1 año (renovable)</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Arraigo laboral</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">2 años de residencia + 6 meses de trabajo demostrable</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">2 años</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center gap-1 text-sm font-medium text-green-700"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Sí</span></td>
+              <td class="px-5 py-4 text-primary/70 text-sm">1 año (renovable)</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Arraigo familiar</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Padre/madre de menor español o hijo de español de origen</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">No necesario</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center gap-1 text-sm font-medium text-green-700"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Sí</span></td>
+              <td class="px-5 py-4 text-primary/70 text-sm">1 año (renovable)</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Reagrupación familiar</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Familiar de residente legal con medios económicos suficientes</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">No necesario</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center gap-1 text-sm font-medium text-primary/50 text-xs">Según caso</span></td>
+              <td class="px-5 py-4 text-primary/70 text-sm">1 año (renovable)</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Residencia no lucrativa</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Medios económicos suficientes sin necesidad de trabajar</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">No necesario</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center gap-1 text-sm font-medium text-red-600"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg> No</span></td>
+              <td class="px-5 py-4 text-primary/70 text-sm">1 año (renovable)</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Trabajo por cuenta ajena</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Oferta de empleo + visado de trabajo desde país de origen</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">No necesario</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center gap-1 text-sm font-medium text-green-700"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Sí</span></td>
+              <td class="px-5 py-4 text-primary/70 text-sm">1 año (renovable)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile stacked cards -->
+      <div class="lg:hidden space-y-4">
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Arraigo social</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Requisitos</dt><dd class="text-primary/70 text-right">3 años residencia + contrato + vínculos</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo previo</dt><dd class="text-primary/70">3 años</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Permite trabajar</dt><dd class="text-green-700 font-medium">Sí</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Duración</dt><dd class="text-primary/70">1 año (renovable)</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Arraigo laboral</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Requisitos</dt><dd class="text-primary/70 text-right">2 años residencia + 6 meses trabajo</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo previo</dt><dd class="text-primary/70">2 años</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Permite trabajar</dt><dd class="text-green-700 font-medium">Sí</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Duración</dt><dd class="text-primary/70">1 año (renovable)</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Arraigo familiar</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Requisitos</dt><dd class="text-primary/70 text-right">Padre/madre de menor español o hijo de español</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo previo</dt><dd class="text-primary/70">No necesario</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Permite trabajar</dt><dd class="text-green-700 font-medium">Sí</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Duración</dt><dd class="text-primary/70">1 año (renovable)</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Reagrupación familiar</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Requisitos</dt><dd class="text-primary/70 text-right">Familiar de residente legal + medios económicos</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo previo</dt><dd class="text-primary/70">No necesario</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Permite trabajar</dt><dd class="text-primary/50">Según caso</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Duración</dt><dd class="text-primary/70">1 año (renovable)</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Residencia no lucrativa</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Requisitos</dt><dd class="text-primary/70 text-right">Medios económicos suficientes</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo previo</dt><dd class="text-primary/70">No necesario</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Permite trabajar</dt><dd class="text-red-600 font-medium">No</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Duración</dt><dd class="text-primary/70">1 año (renovable)</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Trabajo por cuenta ajena</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Requisitos</dt><dd class="text-primary/70 text-right">Oferta de empleo + visado</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo previo</dt><dd class="text-primary/70">No necesario</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Permite trabajar</dt><dd class="text-green-700 font-medium">Sí</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Duración</dt><dd class="text-primary/70">1 año (renovable)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentos apostillados que necesitas -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Documentos apostillados que necesitas
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-3xl mx-auto">
+          Cada tipo de permiso exige documentos específicos de tu país de origen. Todos deben estar apostillados con la Apostilla de La Haya.
+        </p>
+      </div>
+
+      <!-- Desktop matrix table -->
+      <div class="hidden md:block overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl border border-muted/30 shadow-sm overflow-hidden">
+          <thead>
+            <tr class="bg-primary text-white text-left">
+              <th class="px-5 py-4 font-semibold text-sm">Documento</th>
+              <th class="px-5 py-4 font-semibold text-sm text-center">Arraigo social</th>
+              <th class="px-5 py-4 font-semibold text-sm text-center">Arraigo laboral</th>
+              <th class="px-5 py-4 font-semibold text-sm text-center">Arraigo familiar</th>
+              <th class="px-5 py-4 font-semibold text-sm text-center">Reagrupación</th>
+              <th class="px-5 py-4 font-semibold text-sm text-center">No lucrativa</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-muted/20">
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Partida de nacimiento apostillada</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Antecedentes penales apostillados</td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Acta de matrimonio apostillada</td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si casado</span></td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si casado</span></td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si casado</span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si casado</span></td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Partida de nacimiento de hijos</td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si aplica</span></td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si aplica</span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Si aplica</span></td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Certificado de soltería</td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Según caso</span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-muted-light"><svg class="w-4 h-4 text-primary/30" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-muted-light"><svg class="w-4 h-4 text-primary/30" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></span></td>
+              <td class="px-5 py-4 text-center"><span class="text-xs font-medium text-primary/50">Según caso</span></td>
+              <td class="px-5 py-4 text-center"><span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-muted-light"><svg class="w-4 h-4 text-primary/30" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile: simplified list -->
+      <div class="md:hidden space-y-4">
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span>
+            <div>
+              <h3 class="font-semibold text-primary text-base">Partida de nacimiento apostillada</h3>
+              <p class="text-primary/50 text-sm mt-1">Obligatoria para todos los tipos de permiso</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span>
+            <div>
+              <h3 class="font-semibold text-primary text-base">Antecedentes penales apostillados</h3>
+              <p class="text-primary/50 text-sm mt-1">Obligatorios para todos los tipos de permiso</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span>
+            <div>
+              <h3 class="font-semibold text-primary text-base">Acta de matrimonio apostillada</h3>
+              <p class="text-primary/50 text-sm mt-1">Obligatoria en reagrupación. En arraigo, solo si estás casado</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></span>
+            <div>
+              <h3 class="font-semibold text-primary text-base">Partida de nacimiento de hijos</h3>
+              <p class="text-primary/50 text-sm mt-1">Obligatoria en arraigo familiar y reagrupación</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-muted-light flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-primary/40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/></svg></span>
+            <div>
+              <h3 class="font-semibold text-primary text-base">Certificado de soltería</h3>
+              <p class="text-primary/50 text-sm mt-1">Según caso en arraigo social y reagrupación</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="#contacto" class="btn btn-primary btn-md">
+          Consulta qué documentos necesitas
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plazos y costes -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Plazos y costes oficiales
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-3xl mx-auto">
+          Tasas administrativas y plazos de resolución establecidos por la normativa española de extranjería
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7 text-center">
+          <div class="text-3xl md:text-4xl font-bold text-accent mb-2">~16 EUR</div>
+          <h3 class="font-semibold text-primary text-base mb-1">Tasa de residencia</h3>
+          <p class="text-primary/50 text-sm">Modelo 790, código 052. Autorización de residencia temporal.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7 text-center">
+          <div class="text-3xl md:text-4xl font-bold text-accent mb-2">~12 EUR</div>
+          <h3 class="font-semibold text-primary text-base mb-1">Tasa de TIE</h3>
+          <p class="text-primary/50 text-sm">Modelo 790, código 012. Expedición de la Tarjeta de Identidad de Extranjero.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7 text-center">
+          <div class="text-3xl md:text-4xl font-bold text-accent mb-2">3-6 meses</div>
+          <h3 class="font-semibold text-primary text-base mb-1">Plazo de arraigo</h3>
+          <p class="text-primary/50 text-sm">Plazo legal de 3 meses con silencio positivo. En la práctica puede alargarse.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7 text-center">
+          <div class="text-3xl md:text-4xl font-bold text-accent mb-2">2-3 meses</div>
+          <h3 class="font-semibold text-primary text-base mb-1">Plazo de reagrupación</h3>
+          <p class="text-primary/50 text-sm">Resolución más rápida que el arraigo. El familiar solicita visado en consulado.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7 text-center">
+          <div class="text-3xl md:text-4xl font-bold text-accent mb-2">60 días</div>
+          <h3 class="font-semibold text-primary text-base mb-1">Plazo de renovación</h3>
+          <p class="text-primary/50 text-sm">Solicitar la renovación dentro de los 60 días previos al vencimiento del permiso.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7 text-center">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-primary text-base mb-1">Informe de integración</h3>
+          <p class="text-primary/50 text-sm">Solo arraigo social. Se solicita en la Comunidad Autónoma de residencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso general de solicitud -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          Proceso general de solicitud
+        </h2>
+        <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
+          Estos son los pasos que sigue cualquier expediente de residencia ante las autoridades españolas de extranjería
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line (desktop) -->
+        <div class="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-white/20"></div>
+
+        <div class="space-y-8 md:space-y-10">
+          <!-- Step 1 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">1</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Reunir documentación</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Apostillar documentos de tu país de origen (partida de nacimiento, antecedentes penales, acta de matrimonio). Si el idioma no es castellano, será necesaria una traducción jurada.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">2</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Solicitar informe de integración (solo arraigo social)</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">El informe de integración social se solicita en tu Comunidad Autónoma. Acredita tus vínculos con España: empadronamiento, conocimiento del idioma, escolarización de hijos, etc.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">3</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Presentar solicitud</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">La solicitud se presenta en la Oficina de Extranjería de tu provincia o por sede electrónica (requiere certificado digital o Cl@ve). Se abona la tasa correspondiente (modelo 790).</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">4</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Esperar resolución</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">El plazo legal de resolución es de 3 meses. En el caso del arraigo, el silencio administrativo es positivo: si no recibes respuesta en plazo, la solicitud se entiende estimada. Si hay deficiencias, la Oficina de Extranjería emitirá un requerimiento de subsanación.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">5</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Obtener la TIE</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Una vez concedida la autorización, dispones de un mes para solicitar cita y obtener tu Tarjeta de Identidad de Extranjero (TIE) en la comisaría de Policía correspondiente. Necesitarás fotos de carnet y el justificante de pago de la tasa del TIE.</p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">6</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Renovar a tiempo</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Los permisos iniciales tienen una duración de 1 año. Es fundamental solicitar la renovación dentro de los 60 días previos al vencimiento (o en los 90 días posteriores, con posible sanción). En la renovación deberás acreditar que sigues cumpliendo los requisitos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 md:mt-14 text-center">
+        <a href="#contacto" class="btn btn-primary btn-lg bg-accent hover:bg-accent/90 border-0">
+          Solicitar evaluación gratis
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -272,54 +668,6 @@ const howToSchema = getHowToSchema({
           <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Renovaciones NIE/TIE</h3>
           <p class="text-primary/70 text-sm md:text-base leading-relaxed">Renovación de permisos de residencia y trabajo, modificaciones de autorización y duplicados de tarjetas extraviadas o deterioradas.</p>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cómo funciona -->
-  <section class="py-16 md:py-24 bg-primary text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-10 md:mb-14">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
-          Cómo gestionamos tu permiso de residencia
-        </h2>
-        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
-          Un proceso claro y transparente para que sepas en todo momento cómo avanza tu expediente de extranjería.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
-        <div class="text-center relative">
-          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
-            1
-          </div>
-          <h3 class="text-lg md:text-xl font-semibold mb-3">Evaluación de tu situación</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Analizamos tu caso personal: tiempo en España, situación laboral, vínculos familiares y documentación disponible.</p>
-        </div>
-
-        <div class="text-center relative">
-          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
-            2
-          </div>
-          <h3 class="text-lg md:text-xl font-semibold mb-3">Preparación de documentos</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Recopilamos y preparamos toda la documentación: apostilla de documentos de tu país, traducciones juradas e informes necesarios.</p>
-        </div>
-
-        <div class="text-center relative">
-          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
-            3
-          </div>
-          <h3 class="text-lg md:text-xl font-semibold mb-3">Presentación del expediente</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Presentamos tu solicitud ante la Oficina de Extranjería con toda la documentación completa y correctamente preparada.</p>
-        </div>
-
-        <div class="text-center relative">
-          <div class="w-16 h-16 md:w-[72px] md:h-[72px] bg-accent text-white rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-5 md:mb-6 shadow-lg shadow-accent/30">
-            4
-          </div>
-          <h3 class="text-lg md:text-xl font-semibold mb-3">Seguimiento hasta resolución</h3>
-          <p class="text-white/70 text-sm md:text-base leading-relaxed">Hacemos seguimiento continuo de tu expediente. Gestionamos subsanaciones y te acompañamos hasta la obtención de tu TIE.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -508,27 +856,27 @@ const howToSchema = getHowToSchema({
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-        <a href="/blog/arraigo-social-espana-documentos-apostillados/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+        <a href="/blog/documentos-residencia-espana-apostilla/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
             <span class="text-xs font-medium text-accent uppercase tracking-wide">Residencia</span>
-            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Arraigo social y documentos apostillados</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar el arraigo social en España y cómo conseguirlos.</p>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos apostillados para la residencia en España</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Guía completa sobre qué documentos apostillados necesitas para solicitar tu permiso de residencia en España.</p>
           </div>
         </a>
 
-        <a href="/blog/que-es-apostilla-haya-guia/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+        <a href="/blog/documentos-reagrupacion-familiar-espana/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
-            <span class="text-xs font-medium text-accent uppercase tracking-wide">Guía</span>
-            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Qué es la Apostilla de La Haya</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Todo lo que necesitas saber sobre la Apostilla de La Haya: qué es, para qué sirve y cómo funciona.</p>
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Reagrupación</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la reagrupación familiar</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para reagrupar a tu familia en España y cómo conseguirlos.</p>
           </div>
         </a>
 
         <a href="/blog/documentos-apostillados-nacionalidad-espanola/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
           <div class="p-6">
-            <span class="text-xs font-medium text-accent uppercase tracking-wide">Trámites</span>
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Nacionalidad</span>
             <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la nacionalidad española</h3>
-            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española.</p>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar la nacionalidad española por residencia.</p>
           </div>
         </a>
       </div>

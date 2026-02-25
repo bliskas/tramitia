@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: false
 ---
 
-Si resides en España y necesitas apostillar documentos colombianos, esta guía te explica el proceso oficial a través de la Cancillería de Colombia, los requisitos actualizados y cómo realizar el trámite completamente online desde cualquier lugar del mundo. Consulta también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) para entender el marco legal.
+Si resides en España y necesitas apostillar documentos colombianos, esta guía te explica el proceso oficial a través de la Cancillería de Colombia, los requisitos actualizados y cómo realizar el trámite completamente online desde cualquier lugar del mundo. Consulta también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia/) para entender el marco legal.
 
 ## Qué es la Apostilla de La Haya
 
@@ -37,10 +37,10 @@ Colombia tiene uno de los sistemas de apostilla más eficientes de Latinoaméric
 
 ## Documentos que se pueden apostillar
 
-- Registros civiles ([nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [matrimonio](/blog/apostilla-acta-matrimonio-requisitos), [defunción](/blog/apostilla-partida-defuncion-guia))
+- Registros civiles ([nacimiento](/blog/apostilla-partida-nacimiento-requisitos/), [matrimonio](/blog/apostilla-acta-matrimonio-requisitos/), defunción)
 - Documentos notariales (poderes, escrituras, autenticaciones)
-- [Títulos académicos](/blog/apostilla-titulo-universitario-homologacion) y certificados de estudios
-- [Antecedentes judiciales](/blog/apostilla-antecedentes-penales-guia) (Policía Nacional)
+- [Títulos académicos](/blog/apostilla-titulo-universitario-homologacion/) y certificados de estudios
+- [Antecedentes judiciales](/blog/apostilla-antecedentes-penales-guia/) (Policía Nacional)
 - Certificados de la Registraduría Nacional
 - Traducciones oficiales (con requisitos especiales)
 
@@ -132,9 +132,9 @@ Por esto, es fundamental verificar toda la información antes de completar el pa
 
 Los documentos colombianos apostillados tienen plena validez en España. La apostilla electrónica colombiana es reconocida por las autoridades españolas para trámites de:
 
-- [Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)
-- [Residencia](/blog/documentos-residencia-espana-apostilla)
-- [Homologación de títulos](/blog/homologacion-titulos-espana-documentos)
+- [Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/)
+- [Residencia](/blog/documentos-residencia-espana-apostilla/)
+- Homologación de títulos
 - Matrimonio
 - Otros trámites administrativos
 

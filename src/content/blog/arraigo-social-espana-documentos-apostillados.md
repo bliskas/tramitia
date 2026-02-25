@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-El arraigo social es una de las principales vías para que los extranjeros en situación irregular puedan **regularizar su estancia en España**. Este procedimiento exige documentos del país de origen debidamente [apostillados](/blog/que-es-apostilla-haya-guia), como la [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) y los [antecedentes penales](/blog/apostilla-antecedentes-penales-guia). En esta guía te explicamos todos los requisitos actualizados, el proceso paso a paso y las particularidades según tu nacionalidad.
+El arraigo social es una de las principales vías para que los extranjeros en situación irregular puedan **regularizar su estancia en España**. Este procedimiento exige documentos del país de origen debidamente [apostillados](/blog/que-es-apostilla-haya-guia/), como la [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) y los [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/). En esta guía te explicamos todos los requisitos actualizados, el proceso paso a paso y las particularidades según tu nacionalidad.
 
 ## Qué es el arraigo social
 
@@ -75,7 +75,7 @@ La reforma del Reglamento de Extranjería ha introducido cambios relevantes para
 
 ### Partida de nacimiento apostillada
 
-La [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) es **obligatoria** para toda solicitud de arraigo social. Debe cumplir:
+La [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) es **obligatoria** para toda solicitud de arraigo social. Debe cumplir:
 
 - Ser **original o copia certificada** expedida recientemente
 - Estar apostillada por la autoridad competente del país de origen
@@ -86,7 +86,7 @@ La partida de nacimiento acredita tu identidad y filiación ante la Oficina de E
 
 ### Certificado de antecedentes penales apostillado
 
-El [certificado de antecedentes penales](/blog/apostilla-antecedentes-penales-guia) del país de origen es el segundo documento apostillado imprescindible. Requisitos:
+El [certificado de antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) del país de origen es el segundo documento apostillado imprescindible. Requisitos:
 
 - Emitido por la autoridad competente del país de origen
 - **Apostillado** antes de su presentación en España
@@ -97,7 +97,7 @@ El [certificado de antecedentes penales](/blog/apostilla-antecedentes-penales-gu
 
 ### Acta de matrimonio apostillada (si aplica)
 
-Si estás casado y tu cónyuge reside en España (con o sin papeles), presentar el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos) puede fortalecer tu solicitud. También es necesaria si tu cónyuge tiene residencia legal y esto forma parte de tu argumento de arraigo.
+Si estás casado y tu cónyuge reside en España (con o sin papeles), presentar el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/) puede fortalecer tu solicitud. También es necesaria si tu cónyuge tiene residencia legal y esto forma parte de tu argumento de arraigo.
 
 ## Proceso paso a paso para solicitar el arraigo social
 
@@ -112,11 +112,11 @@ Antes de iniciar cualquier gestión, confirma que:
 
 ### Paso 2: Solicita tus documentos del país de origen
 
-Gestiona la obtención de tu [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) y [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) actualizados en tu país. Si no puedes viajar, considera recurrir a un gestor o familiar en tu país de origen, o contacta con [Tramitia](/#contacto) para que gestionemos la obtención y apostilla de tus documentos.
+Gestiona la obtención de tu [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) y [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) actualizados en tu país. Si no puedes viajar, considera recurrir a un gestor o familiar en tu país de origen, o contacta con [Tramitia](/#contacto) para que gestionemos la obtención y apostilla de tus documentos.
 
 ### Paso 3: Apostilla tus documentos
 
-Cada documento público extranjero debe ser [apostillado](/blog/que-es-apostilla-haya-guia) en el país que lo emitió. Este es un paso que **no puedes omitir**. Sin la apostilla, Extranjería no aceptará tus documentos.
+Cada documento público extranjero debe ser [apostillado](/blog/que-es-apostilla-haya-guia/) en el país que lo emitió. Este es un paso que **no puedes omitir**. Sin la apostilla, Extranjería no aceptará tus documentos.
 
 ### Paso 4: Solicita el informe de arraigo
 
@@ -228,7 +228,7 @@ Consulta nuestra [guía completa de apostilla de documentos venezolanos](/aposti
 
 ### Documentos sin apostilla o con apostilla inválida
 
-Presentar documentos extranjeros sin [apostilla](/blog/que-es-apostilla-haya-guia) o con una apostilla que no corresponde al documento es el motivo de rechazo más frecuente. Cada documento público extranjero **debe llevar su propia apostilla**.
+Presentar documentos extranjeros sin [apostilla](/blog/que-es-apostilla-haya-guia/) o con una apostilla que no corresponde al documento es el motivo de rechazo más frecuente. Cada documento público extranjero **debe llevar su propia apostilla**.
 
 ### Empadronamiento discontinuo
 
@@ -261,11 +261,11 @@ Si tienes antecedentes penales en España, tu solicitud será denegada. Debes es
 | Documentos apostillados | Partida nacimiento, antecedentes | Partida nacimiento, antecedentes | Partida nacimiento, actas que acrediten vínculo |
 | Duración autorización | 1 año (renovable) | 1 año (renovable) | 1 año (renovable) |
 
-Para conocer más sobre los documentos necesarios para cada tipo de [residencia en España](/blog/documentos-residencia-espana-apostilla), consulta nuestra guía dedicada.
+Para conocer más sobre los documentos necesarios para cada tipo de [residencia en España](/blog/documentos-residencia-espana-apostilla/), consulta nuestra guía dedicada.
 
 ## Necesitas ayuda con tus apostillas
 
-Gestionar la obtención y apostilla de documentos desde España puede ser un proceso largo y complicado, especialmente si no tienes quien te ayude en tu país de origen. En Tramitia nos encargamos de obtener y apostillar tu [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) y otros documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y demás países latinoamericanos. [Solicita tu presupuesto gratis](/#contacto) y deja que nos encarguemos de tus apostillas mientras tú preparas el resto del expediente.
+Gestionar la obtención y apostilla de documentos desde España puede ser un proceso largo y complicado, especialmente si no tienes quien te ayude en tu país de origen. En Tramitia nos encargamos de obtener y apostillar tu [partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/), [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) y otros documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y demás países latinoamericanos. [Solicita tu presupuesto gratis](/#contacto) y deja que nos encarguemos de tus apostillas mientras tú preparas el resto del expediente.
 
 ## Preguntas frecuentes
 

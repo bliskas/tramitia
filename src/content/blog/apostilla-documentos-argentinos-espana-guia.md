@@ -3,7 +3,6 @@ title: "Cómo apostillar documentos argentinos desde España en 2026: Guía comp
 description: "Guía paso a paso para apostillar partidas de nacimiento, antecedentes penales y otros documentos argentinos estando en España. Incluye tiempos, costes y alternativas."
 publishedDate: "2026-02-19"
 author: "Tramitia"
-image: "/images/blog/apostilla-argentina-espana.jpg"
 category: "guias"
 keywords:
   - apostilla argentina
@@ -16,7 +15,7 @@ targetCountry: "españa"
 draft: false
 ---
 
-Si sos argentino viviendo en España y necesitás apostillar documentos, esta guía te explica todas las opciones disponibles, los tiempos reales y cómo evitar las demoras del sistema tradicional. Consultá también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) para entender el marco legal.
+Si sos argentino viviendo en España y necesitás apostillar documentos, esta guía te explica todas las opciones disponibles, los tiempos reales y cómo evitar las demoras del sistema tradicional. Consultá también nuestra [guía sobre la Apostilla de La Haya](/blog/que-es-apostilla-haya-guia/) para entender el marco legal.
 
 ## ¿Qué es la Apostilla de La Haya?
 
@@ -26,10 +25,10 @@ La Apostilla de La Haya es un certificado que autentifica documentos públicos p
 
 Los documentos más solicitados por argentinos en España son:
 
-- **[Partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos)**: para [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola), matrimonio, [residencia](/blog/documentos-residencia-espana-apostilla)
-- **[Certificado de antecedentes penales](/blog/apostilla-antecedentes-penales-guia)**: para visados, NIE, trabajos específicos
-- **[Acta de matrimonio](/blog/apostilla-acta-matrimonio-requisitos)**: para [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana)
-- **[Título universitario](/blog/apostilla-titulo-universitario-homologacion)**: para [homologación](/blog/homologacion-titulos-espana-documentos) y ejercicio profesional
+- **[Partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/)**: para [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/), matrimonio, [residencia](/blog/documentos-residencia-espana-apostilla/)
+- **[Certificado de antecedentes penales](/blog/apostilla-antecedentes-penales-guia/)**: para visados, NIE, trabajos específicos
+- **[Acta de matrimonio](/blog/apostilla-acta-matrimonio-requisitos/)**: para [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/)
+- **[Título universitario](/blog/apostilla-titulo-universitario-homologacion/)**: para homologación y ejercicio profesional
 - **Certificado de estado civil**: para matrimonio en España
 
 ## Opciones para apostillar desde España

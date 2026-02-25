@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-Si te casaste en Venezuela, Argentina, Colombia, Ecuador u otro país y ahora vives en España, es probable que necesites inscribir tu matrimonio en el Registro Civil español. Para ello, el documento principal que necesitas es el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos). Esta guía te explica cuándo es obligatorio, qué documentos necesitas y cómo realizar el proceso paso a paso.
+Si te casaste en Venezuela, Argentina, Colombia, Ecuador u otro país y ahora vives en España, es probable que necesites inscribir tu matrimonio en el Registro Civil español. Para ello, el documento principal que necesitas es el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/). Esta guía te explica cuándo es obligatorio, qué documentos necesitas y cómo realizar el proceso paso a paso.
 
 ## Por qué inscribir tu matrimonio extranjero en España
 
@@ -40,11 +40,11 @@ Un matrimonio celebrado en el extranjero es válido en España, pero sin la insc
 
 ### Solicitud de nacionalidad española
 
-Si deseas solicitar la [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola) por matrimonio con ciudadano español, la inscripción del matrimonio en el Registro Civil es un **requisito previo obligatorio**.
+Si deseas solicitar la [nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/) por matrimonio con ciudadano español, la inscripción del matrimonio en el Registro Civil es un **requisito previo obligatorio**.
 
 ### Reagrupación familiar
 
-Para la [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana), la inscripción del matrimonio facilita el proceso y acredita de forma fehaciente el vínculo conyugal ante la Oficina de Extranjería.
+Para la [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/), la inscripción del matrimonio facilita el proceso y acredita de forma fehaciente el vínculo conyugal ante la Oficina de Extranjería.
 
 ### Cuando al menos uno de los cónyuges es español
 
@@ -52,21 +52,21 @@ Si uno de los cónyuges es ciudadano español, la inscripción es **obligatoria 
 
 ### Herencias y sucesiones
 
-Para trámites de [herencia en España](/blog/apostilla-herencia-espana-documentos), la inscripción del matrimonio acredita los derechos del cónyuge sobreviviente de forma directa.
+Para trámites de [herencia en España](/blog/apostilla-herencia-espana-documentos/), la inscripción del matrimonio acredita los derechos del cónyuge sobreviviente de forma directa.
 
 ## Documentos necesarios para la inscripción
 
 ### Acta de matrimonio original apostillada
 
-El documento principal es el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos) del país donde se celebró el matrimonio:
+El documento principal es el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/) del país donde se celebró el matrimonio:
 
 - Debe ser el **original** o una copia certificada
-- Debe llevar la [Apostilla de La Haya](/blog/que-es-apostilla-haya-guia)
+- Debe llevar la [Apostilla de La Haya](/blog/que-es-apostilla-haya-guia/)
 - Recomendación: que tenga menos de **6 meses** de antigüedad
 
 ### Partidas de nacimiento apostilladas
 
-Se requiere la [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos) de **ambos cónyuges**:
+Se requiere la [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos/) de **ambos cónyuges**:
 
 - Original o copia certificada
 - Apostillada
@@ -237,7 +237,7 @@ Si hubo matrimonios anteriores, la omisión de la sentencia de divorcio apostill
 
 ### Es obligatorio inscribir mi matrimonio extranjero en España
 
-Si al menos uno de los cónyuges es español, sí es obligatorio. Si ambos son extranjeros, no es obligatorio pero sí muy recomendable para que el matrimonio surta plenos efectos legales en España, especialmente para trámites de [residencia](/blog/documentos-residencia-espana-apostilla), nacionalidad, herencia y Seguridad Social.
+Si al menos uno de los cónyuges es español, sí es obligatorio. Si ambos son extranjeros, no es obligatorio pero sí muy recomendable para que el matrimonio surta plenos efectos legales en España, especialmente para trámites de [residencia](/blog/documentos-residencia-espana-apostilla/), nacionalidad, herencia y Seguridad Social.
 
 ### Cuánto cuesta inscribir un matrimonio extranjero en España
 
@@ -257,7 +257,7 @@ Necesitas el acta de matrimonio apostillada por el [MPPRE](/apostilla-venezuela/
 
 ### Puedo solicitar la nacionalidad española sin inscribir mi matrimonio
 
-No. La inscripción del matrimonio en el Registro Civil español es un **requisito previo** para solicitar la [nacionalidad española por matrimonio](/blog/documentos-apostillados-nacionalidad-espanola). Sin la inscripción, no se admitirá la solicitud.
+No. La inscripción del matrimonio en el Registro Civil español es un **requisito previo** para solicitar la [nacionalidad española por matrimonio](/blog/documentos-apostillados-nacionalidad-espanola/). Sin la inscripción, no se admitirá la solicitud.
 
 ### Qué pasa si el Registro Civil deniega la inscripción
 
@@ -269,4 +269,4 @@ No. Los errores en el acta de matrimonio deben corregirse **antes** de la inscri
 
 ## Necesitas apostillar tu acta de matrimonio
 
-En [Tramitia](/#contacto) gestionamos la apostilla de actas de matrimonio de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador para su inscripción en el Registro Civil español. También apostillamos [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) y otros documentos necesarios para completar el expediente. [Solicita tu presupuesto gratuito](/#contacto) y te guiamos en todo el proceso.
+En [Tramitia](/#contacto) gestionamos la apostilla de actas de matrimonio de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador para su inscripción en el Registro Civil español. También apostillamos [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) y otros documentos necesarios para completar el expediente. [Solicita tu presupuesto gratuito](/#contacto) y te guiamos en todo el proceso.

@@ -15,7 +15,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-Cuando un latinoamericano fallece en España, o cuando un familiar en Latinoamérica debe heredar bienes ubicados en territorio español, el proceso sucesorio requiere documentos [apostillados](/blog/que-es-apostilla-haya-guia) del país de origen. La herencia internacional es uno de los trámites más complejos para las familias latinoamericanas en España, y una correcta preparación documental puede marcar la diferencia entre un proceso fluido y meses de retrasos.
+Cuando un latinoamericano fallece en España, o cuando un familiar en Latinoamérica debe heredar bienes ubicados en territorio español, el proceso sucesorio requiere documentos [apostillados](/blog/que-es-apostilla-haya-guia/) del país de origen. La herencia internacional es uno de los trámites más complejos para las familias latinoamericanas en España, y una correcta preparación documental puede marcar la diferencia entre un proceso fluido y meses de retrasos.
 
 ## Cuándo necesitas documentos apostillados para una herencia
 
@@ -39,7 +39,7 @@ Cuando el fallecido otorgó testamento en su país de origen y tiene bienes en E
 
 ### Partida de defunción apostillada
 
-La [partida de defunción](/blog/apostilla-partida-defuncion-guia) es el documento que inicia todo el proceso sucesorio:
+La [partida de defunción](/blog/apostilla-partida-defuncion-guia/) es el documento que inicia todo el proceso sucesorio:
 
 - **Si el fallecimiento ocurrió en el país de origen**: La partida se emite y apostilla en ese país
 - **Si el fallecimiento ocurrió en España**: Se inscribe en el Registro Civil español y no necesita apostilla
@@ -47,7 +47,7 @@ La [partida de defunción](/blog/apostilla-partida-defuncion-guia) es el documen
 
 ### Partida de nacimiento de los herederos
 
-La [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos) de cada heredero es obligatoria para:
+La [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos/) de cada heredero es obligatoria para:
 
 - Acreditar el parentesco con el fallecido
 - Identificar a los herederos legítimos
@@ -57,7 +57,7 @@ La [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requis
 
 ### Acta de matrimonio apostillada
 
-El [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos) se requiere cuando:
+El [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/) se requiere cuando:
 
 - El cónyuge sobreviviente es heredero
 - Se debe acreditar el régimen económico matrimonial
@@ -233,7 +233,7 @@ El Impuesto sobre Sucesiones varía significativamente según la **comunidad aut
 
 ### Qué documentos necesito apostillar si mi padre falleció en Venezuela y tenía un piso en España
 
-Necesitarás como mínimo: tu [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos) (para acreditar el parentesco), la partida de defunción de tu padre apostillada, el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos) de tus padres (si tu madre también es heredera) y un poder notarial apostillado si no puedes viajar a España. Adicionalmente, el certificado de últimas voluntades se obtiene en España.
+Necesitarás como mínimo: tu [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos/) (para acreditar el parentesco), la partida de defunción de tu padre apostillada, el [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/) de tus padres (si tu madre también es heredera) y un poder notarial apostillado si no puedes viajar a España. Adicionalmente, el certificado de últimas voluntades se obtiene en España.
 
 ### Puedo heredar en España si no tengo NIE
 
@@ -249,4 +249,4 @@ El tiempo varía según la complejidad del caso. Un proceso típico puede tardar
 
 ## Necesitas gestionar documentos apostillados para una herencia
 
-En [Tramitia](/#contacto) gestionamos la apostilla de todos los documentos necesarios para herencias internacionales en España: [partidas de defunción](/blog/apostilla-partida-defuncion-guia), [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos), [actas de matrimonio](/blog/apostilla-acta-matrimonio-requisitos) y poderes notariales. Trabajamos con documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador. [Solicita tu presupuesto gratuito](/#contacto) y te asesoramos sin compromiso.
+En [Tramitia](/#contacto) gestionamos la apostilla de todos los documentos necesarios para herencias internacionales en España: [partidas de defunción](/blog/apostilla-partida-defuncion-guia/), [partidas de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/), [actas de matrimonio](/blog/apostilla-acta-matrimonio-requisitos/) y poderes notariales. Trabajamos con documentos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador. [Solicita tu presupuesto gratuito](/#contacto) y te asesoramos sin compromiso.

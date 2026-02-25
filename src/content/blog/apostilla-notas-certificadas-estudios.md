@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-Las notas certificadas y los certificados de estudio [apostillados](/blog/que-es-apostilla-haya-guia) son documentos imprescindibles para quienes desean [homologar sus títulos](/blog/homologacion-titulos-espana-documentos), convalidar estudios o acceder a universidades en España. A diferencia del [título universitario](/blog/apostilla-titulo-universitario-homologacion), que acredita la obtención del grado, las notas certificadas detallan las asignaturas cursadas, las calificaciones obtenidas y las horas académicas completadas. Sin estos documentos apostillados, el proceso de homologación o convalidación no puede avanzar.
+Las notas certificadas y los certificados de estudio [apostillados](/blog/que-es-apostilla-haya-guia/) son documentos imprescindibles para quienes desean [homologar sus títulos](/blog/homologacion-titulos-espana-documentos/), convalidar estudios o acceder a universidades en España. A diferencia del [título universitario](/blog/apostilla-titulo-universitario-homologacion/), que acredita la obtención del grado, las notas certificadas detallan las asignaturas cursadas, las calificaciones obtenidas y las horas académicas completadas. Sin estos documentos apostillados, el proceso de homologación o convalidación no puede avanzar.
 
 ## Qué documentos académicos necesitan apostilla
 
@@ -71,7 +71,7 @@ Para carreras del área de salud (medicina, enfermería, odontología), las auto
 
 ### Homologación de título universitario
 
-El proceso de [homologación de títulos en España](/blog/homologacion-titulos-espana-documentos) exige obligatoriamente las notas certificadas apostilladas junto con el [título universitario apostillado](/blog/apostilla-titulo-universitario-homologacion). El Ministerio de Universidades necesita evaluar:
+El proceso de [homologación de títulos en España](/blog/homologacion-titulos-espana-documentos/) exige obligatoriamente las notas certificadas apostilladas junto con el [título universitario apostillado](/blog/apostilla-titulo-universitario-homologacion/). El Ministerio de Universidades necesita evaluar:
 
 - El contenido de las asignaturas cursadas
 - La carga horaria total de la carrera
@@ -283,7 +283,7 @@ Para el acceso a universidades españolas a través de la PCE:
 
 ### Apostillar solo el título y no las notas
 
-El error más frecuente es apostillar únicamente el [título universitario](/blog/apostilla-titulo-universitario-homologacion) y olvidar las notas certificadas. El Ministerio de Universidades exige **ambos documentos** apostillados para iniciar la homologación.
+El error más frecuente es apostillar únicamente el [título universitario](/blog/apostilla-titulo-universitario-homologacion/) y olvidar las notas certificadas. El Ministerio de Universidades exige **ambos documentos** apostillados para iniciar la homologación.
 
 ### No incluir los programas de estudio
 
@@ -337,4 +337,4 @@ No. El Ministerio de Universidades no admite solicitudes sin la documentación c
 
 ## Necesitas apostillar tus documentos académicos
 
-En [Tramitia](/#contacto) gestionamos la apostilla de notas certificadas, certificados de estudio, programas de estudio y otros documentos académicos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador. Nos encargamos de todo el proceso para que puedas iniciar tu [homologación de títulos](/blog/homologacion-titulos-espana-documentos) sin demoras. [Solicita tu presupuesto gratuito](/#contacto) y empieza hoy.
+En [Tramitia](/#contacto) gestionamos la apostilla de notas certificadas, certificados de estudio, programas de estudio y otros documentos académicos de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/), [Colombia](/apostilla-colombia/) y Ecuador. Nos encargamos de todo el proceso para que puedas iniciar tu [homologación de títulos](/blog/homologacion-titulos-espana-documentos/) sin demoras. [Solicita tu presupuesto gratuito](/#contacto) y empieza hoy.

@@ -16,14 +16,14 @@ targetCountry: "espana"
 draft: false
 ---
 
-El acta de matrimonio [apostillada](/blog/que-es-apostilla-haya-guia) es un documento fundamental para diversos trámites en España, especialmente para [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana) y [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola). Esta guía te explica cómo apostillar tu acta de matrimonio según tu país de origen.
+El acta de matrimonio [apostillada](/blog/que-es-apostilla-haya-guia/) es un documento fundamental para diversos trámites en España, especialmente para [reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/) y [nacionalidad](/blog/documentos-apostillados-nacionalidad-espanola/). Esta guía te explica cómo apostillar tu acta de matrimonio según tu país de origen.
 
 ## Para qué necesitas el acta de matrimonio apostillada
 
 El acta de matrimonio apostillada se requiere en España para:
 
-- **[Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana)**: Traer a tu cónyuge a España
-- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)**: Por matrimonio con ciudadano español (1 año de residencia)
+- **[Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/)**: Traer a tu cónyuge a España
+- **[Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/)**: Por matrimonio con ciudadano español (1 año de residencia)
 - **Inscripción de matrimonio**: En el Registro Civil español
 - **Trámites de herencia**: Acreditar vínculo conyugal
 - **Seguros y pensiones**: Beneficiarios conyugales

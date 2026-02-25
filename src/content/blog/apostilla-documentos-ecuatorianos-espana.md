@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-La comunidad ecuatoriana en España supera las 400.000 personas, convirtiéndose en una de las más numerosas entre los colectivos latinoamericanos. Si eres ecuatoriano y vives en España, es probable que en algún momento necesites [apostillar](/blog/que-es-apostilla-haya-guia) documentos de tu país para trámites de residencia, nacionalidad, reagrupación familiar u homologación de estudios. Esta guía te explica paso a paso cómo hacerlo sin necesidad de viajar a Ecuador.
+La comunidad ecuatoriana en España supera las 400.000 personas, convirtiéndose en una de las más numerosas entre los colectivos latinoamericanos. Si eres ecuatoriano y vives en España, es probable que en algún momento necesites [apostillar](/blog/que-es-apostilla-haya-guia/) documentos de tu país para trámites de residencia, nacionalidad, reagrupación familiar u homologación de estudios. Esta guía te explica paso a paso cómo hacerlo sin necesidad de viajar a Ecuador.
 
 ## Ecuador y el Convenio de La Haya
 
@@ -35,16 +35,16 @@ Antes del Convenio, los documentos ecuatorianos debían pasar por un proceso de 
 
 ### Partida de nacimiento
 
-La [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos) es el documento más solicitado. Se requiere para:
+La [partida de nacimiento apostillada](/blog/apostilla-partida-nacimiento-requisitos/) es el documento más solicitado. Se requiere para:
 
-- [Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana)
-- [Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola)
-- [Residencia en España](/blog/documentos-residencia-espana-apostilla)
+- [Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/)
+- [Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/)
+- [Residencia en España](/blog/documentos-residencia-espana-apostilla/)
 - Inscripción en el Registro Civil español
 
 ### Antecedentes penales
 
-El [certificado de antecedentes penales apostillado](/blog/apostilla-antecedentes-penales-guia) es obligatorio para:
+El [certificado de antecedentes penales apostillado](/blog/apostilla-antecedentes-penales-guia/) es obligatorio para:
 
 - Solicitud de visados y permisos de residencia
 - Reagrupación familiar (mayores de edad)
@@ -52,15 +52,15 @@ El [certificado de antecedentes penales apostillado](/blog/apostilla-antecedente
 
 ### Título universitario y certificados académicos
 
-El [título universitario apostillado](/blog/apostilla-titulo-universitario-homologacion) se necesita para:
+El [título universitario apostillado](/blog/apostilla-titulo-universitario-homologacion/) se necesita para:
 
-- [Homologación de títulos](/blog/homologacion-titulos-espana-documentos) en España
+- [Homologación de títulos](/blog/homologacion-titulos-espana-documentos/) en España
 - Acceso a universidades españolas
 - Oposiciones y empleo público
 
 ### Acta de matrimonio
 
-El [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos) es necesaria para:
+El [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/) es necesaria para:
 
 - Reagrupación del cónyuge
 - Inscripción de matrimonio en España
@@ -69,7 +69,7 @@ El [acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos) 
 ### Otros documentos comunes
 
 - **Certificado de soltería**: Para contraer matrimonio en España
-- **Partida de defunción**: Para trámites de [herencia](/blog/apostilla-partida-defuncion-guia) y pensiones
+- **Partida de defunción**: Para trámites de [herencia](/blog/apostilla-partida-defuncion-guia/) y pensiones
 - **Poderes notariales**: Para representación legal en Ecuador o España
 - **Sentencias de divorcio**: Para acreditar estado civil
 
@@ -265,4 +265,4 @@ La apostilla en sí no caduca. Sin embargo, el documento subyacente puede tener 
 
 ## Necesitas apostillar tus documentos ecuatorianos
 
-En [Tramitia](/#contacto) nos especializamos en la apostilla de documentos de Ecuador y otros países latinoamericanos para trámites en España. Gestionamos todo el proceso por ti, sin que tengas que viajar ni depender de terceros. Consulta nuestra guía sobre la [Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) para entender mejor el proceso o [solicita tu presupuesto gratuito](/#contacto).
+En [Tramitia](/#contacto) nos especializamos en la apostilla de documentos de Ecuador y otros países latinoamericanos para trámites en España. Gestionamos todo el proceso por ti, sin que tengas que viajar ni depender de terceros. Consulta nuestra guía sobre la [Apostilla de La Haya](/blog/que-es-apostilla-haya-guia/) para entender mejor el proceso o [solicita tu presupuesto gratuito](/#contacto).

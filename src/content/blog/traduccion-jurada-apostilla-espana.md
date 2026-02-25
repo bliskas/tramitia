@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-La confusión entre traducción jurada y [apostilla](/blog/que-es-apostilla-haya-guia) es uno de los problemas más habituales entre los latinoamericanos que tramitan documentos en España. Aunque ambos procedimientos se relacionan con la validez de documentos extranjeros, cumplen funciones completamente distintas. Esta guía te explica qué es cada uno, cuándo necesitas uno u otro, y cuándo necesitas ambos.
+La confusión entre traducción jurada y [apostilla](/blog/que-es-apostilla-haya-guia/) es uno de los problemas más habituales entre los latinoamericanos que tramitan documentos en España. Aunque ambos procedimientos se relacionan con la validez de documentos extranjeros, cumplen funciones completamente distintas. Esta guía te explica qué es cada uno, cuándo necesitas uno u otro, y cuándo necesitas ambos.
 
 ## Qué es la traducción jurada
 
@@ -41,7 +41,7 @@ Las traducciones realizadas por traductores no jurados, academias de idiomas o a
 
 ## Qué es la apostilla
 
-La [Apostilla de La Haya](/blog/que-es-apostilla-haya-guia) es un certificado de autenticación que verifica que un documento público es genuino. No traduce ni modifica el documento: simplemente certifica que la firma, el sello y la calidad del funcionario que lo emitió son auténticos.
+La [Apostilla de La Haya](/blog/que-es-apostilla-haya-guia/) es un certificado de autenticación que verifica que un documento público es genuino. No traduce ni modifica el documento: simplemente certifica que la firma, el sello y la calidad del funcionario que lo emitió son auténticos.
 
 ### Características de la apostilla
 
@@ -67,11 +67,11 @@ Si tus documentos están **redactados en español** y provienen de un país miem
 
 ### Documentos en español que solo requieren apostilla
 
-- [Partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos) de Venezuela, Argentina, Colombia, Ecuador, Perú o Bolivia
-- [Acta de matrimonio](/blog/apostilla-acta-matrimonio-requisitos) de países hispanohablantes
-- [Antecedentes penales](/blog/apostilla-antecedentes-penales-guia) emitidos en español
-- [Título universitario](/blog/apostilla-titulo-universitario-homologacion) en español para [homologación](/blog/homologacion-titulos-espana-documentos)
-- [Partida de defunción](/blog/apostilla-partida-defuncion-guia) en español
+- [Partida de nacimiento](/blog/apostilla-partida-nacimiento-requisitos/) de Venezuela, Argentina, Colombia, Ecuador, Perú o Bolivia
+- [Acta de matrimonio](/blog/apostilla-acta-matrimonio-requisitos/) de países hispanohablantes
+- [Antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) emitidos en español
+- [Título universitario](/blog/apostilla-titulo-universitario-homologacion/) en español para [homologación](/blog/homologacion-titulos-espana-documentos/)
+- [Partida de defunción](/blog/apostilla-partida-defuncion-guia/) en español
 
 **Importante**: Aunque el documento esté en español, si la apostilla está emitida en otro idioma (por ejemplo, en inglés), algunos organismos pueden solicitar la traducción jurada de la propia apostilla.
 
@@ -202,16 +202,16 @@ Cuando el documento y la apostilla están en un idioma distinto al español, **a
 
 ### Presentar documentos vencidos
 
-Recuerda que la traducción jurada no tiene caducidad, pero el **documento original** sí puede tenerla. Los [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) suelen tener una vigencia de 3 a 6 meses. Asegúrate de que el documento base está vigente antes de invertir en su traducción.
+Recuerda que la traducción jurada no tiene caducidad, pero el **documento original** sí puede tenerla. Los [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) suelen tener una vigencia de 3 a 6 meses. Asegúrate de que el documento base está vigente antes de invertir en su traducción.
 
 ## Trámites en España y sus requisitos documentales
 
 | Trámite | Apostilla | Traducción jurada (si no es español) |
 |---------|-----------|--------------------------------------|
-| [Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola) | Obligatoria | Obligatoria |
-| [Residencia](/blog/documentos-residencia-espana-apostilla) | Obligatoria | Obligatoria |
-| [Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana) | Obligatoria | Obligatoria |
-| [Homologación de título](/blog/homologacion-titulos-espana-documentos) | Obligatoria | Obligatoria |
+| [Nacionalidad española](/blog/documentos-apostillados-nacionalidad-espanola/) | Obligatoria | Obligatoria |
+| [Residencia](/blog/documentos-residencia-espana-apostilla/) | Obligatoria | Obligatoria |
+| [Reagrupación familiar](/blog/documentos-reagrupacion-familiar-espana/) | Obligatoria | Obligatoria |
+| [Homologación de título](/blog/homologacion-titulos-espana-documentos/) | Obligatoria | Obligatoria |
 | Inscripción en Registro Civil | Obligatoria | Obligatoria |
 | Convalidación de estudios | Obligatoria | Obligatoria |
 | Oposiciones | Según convocatoria | Según convocatoria |
@@ -224,7 +224,7 @@ Si necesitas apostillar documentos de [Venezuela](/apostilla-venezuela/), [Argen
 
 ### Necesito traducción jurada si mis documentos son de Venezuela, Argentina o Colombia
 
-No, si tus documentos están redactados en español. Los documentos en español de países hispanohablantes solo necesitan [apostilla](/blog/que-es-apostilla-haya-guia) para su uso en España. La traducción jurada solo es necesaria cuando el documento está en un idioma distinto al español.
+No, si tus documentos están redactados en español. Los documentos en español de países hispanohablantes solo necesitan [apostilla](/blog/que-es-apostilla-haya-guia/) para su uso en España. La traducción jurada solo es necesaria cuando el documento está en un idioma distinto al español.
 
 ### Cuánto cuesta una traducción jurada en España
 
@@ -240,7 +240,7 @@ El Ministerio de Asuntos Exteriores (MAEC) publica un listado actualizado de tra
 
 ### La traducción jurada tiene fecha de caducidad
 
-La traducción jurada en sí misma no caduca. Sin embargo, el documento original traducido puede tener vigencia limitada. Por ejemplo, los [antecedentes penales](/blog/apostilla-antecedentes-penales-guia) suelen caducar a los 3-6 meses desde su expedición.
+La traducción jurada en sí misma no caduca. Sin embargo, el documento original traducido puede tener vigencia limitada. Por ejemplo, los [antecedentes penales](/blog/apostilla-antecedentes-penales-guia/) suelen caducar a los 3-6 meses desde su expedición.
 
 ### Sirve una traducción jurada de otro país para trámites en España
 

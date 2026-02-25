@@ -16,7 +16,7 @@ targetCountry: "espana"
 draft: true
 ---
 
-La [partida de defunción apostillada](/blog/que-es-apostilla-haya-guia) es un documento necesario para trámites de herencia, pensiones y otros procedimientos legales en España cuando el fallecido era extranjero o el fallecimiento ocurrió en el extranjero. Esta guía explica el proceso de apostilla según el país de origen.
+La [partida de defunción apostillada](/blog/que-es-apostilla-haya-guia/) es un documento necesario para trámites de herencia, pensiones y otros procedimientos legales en España cuando el fallecido era extranjero o el fallecimiento ocurrió en el extranjero. Esta guía explica el proceso de apostilla según el país de origen.
 
 ## Para qué necesitas la partida de defunción apostillada
 
@@ -121,8 +121,8 @@ Para una herencia en España con un fallecido extranjero, generalmente se requie
 1. **Partida de defunción apostillada**
 2. **Certificado de últimas voluntades** (España)
 3. **Testamento** (si existe, apostillado si es extranjero)
-4. **[Partidas de nacimiento apostilladas](/blog/apostilla-partida-nacimiento-requisitos)** de los herederos
-5. **[Acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos)** (para cónyuge)
+4. **[Partidas de nacimiento apostilladas](/blog/apostilla-partida-nacimiento-requisitos/)** de los herederos
+5. **[Acta de matrimonio apostillada](/blog/apostilla-acta-matrimonio-requisitos/)** (para cónyuge)
 
 ### Certificado de últimas voluntades
 
