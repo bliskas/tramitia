@@ -88,7 +88,7 @@ const howToSchema = getHowToSchema({
 
 <BaseLayout
   title="Apostilla de Documentos Colombianos desde España | Tramitia"
-  description="Apostilla tus documentos colombianos desde España. Registros civiles, antecedentes judiciales, títulos académicos. Gestión ante la Cancillería de Colombia 100% online."
+  description="Apostilla tus documentos colombianos desde España. Registros civiles, antecedentes, títulos académicos. Gestión ante Cancillería Colombia 100% online."
   keywords={['apostilla colombia desde espana', 'apostillar documentos colombianos', 'apostilla de la haya colombia', 'documentos colombianos espana', 'cancilleria colombia apostilla', 'antecedentes judiciales colombia apostilla', 'apostilla colombia online']}
 >
   <Fragment slot="schema">
@@ -819,7 +819,7 @@ const howToSchema = getHowToSchema({
         });
 
         if (response.ok) {
-          window.location.href = '/gracias';
+          window.location.href = '/gracias/';
         } else {
           throw new Error('Error en el envío');
         }

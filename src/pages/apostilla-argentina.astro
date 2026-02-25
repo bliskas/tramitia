@@ -88,7 +88,7 @@ const howToSchema = getHowToSchema({
 
 <BaseLayout
   title="Apostilla de Documentos Argentinos desde España | Tramitia"
-  description="Apostilla tus documentos argentinos sin volver a Argentina. Partidas de nacimiento, antecedentes penales, títulos universitarios. TAD, consulado o gestión express."
+  description="Apostilla tus documentos argentinos sin volver a Argentina. Partidas de nacimiento, antecedentes penales, títulos. TAD, consulado o gestión express."
   keywords={['apostilla argentina desde espana', 'apostillar documentos argentinos', 'apostilla de la haya argentina', 'documentos argentinos espana', 'apostilla partida nacimiento argentina', 'antecedentes penales argentina apostilla', 'TAD apostilla', 'apostilla argentina online']}
 >
   <Fragment slot="schema">
@@ -869,7 +869,7 @@ const howToSchema = getHowToSchema({
         });
 
         if (response.ok) {
-          window.location.href = '/gracias';
+          window.location.href = '/gracias/';
         } else {
           throw new Error('Error en el envío');
         }

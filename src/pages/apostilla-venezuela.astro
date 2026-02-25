@@ -88,7 +88,7 @@ const howToSchema = getHowToSchema({
 
 <BaseLayout
   title="Apostilla de Documentos Venezolanos desde España | Tramitia"
-  description="Apostilla tus documentos venezolanos sin volver a Venezuela. Partidas de nacimiento, antecedentes penales, títulos universitarios. Gestión 100% online desde España."
+  description="Apostilla tus documentos venezolanos sin volver a Venezuela. Partidas de nacimiento, antecedentes penales, títulos. Gestión 100% online."
   keywords={['apostilla venezuela desde espana', 'apostillar documentos venezolanos', 'apostilla de la haya venezuela', 'documentos venezolanos espana', 'apostilla partida nacimiento venezuela', 'antecedentes penales venezuela apostilla', 'SAREN apostilla', 'apostilla venezuela online']}
 >
   <Fragment slot="schema">
@@ -778,7 +778,7 @@ const howToSchema = getHowToSchema({
         });
 
         if (response.ok) {
-          window.location.href = '/gracias';
+          window.location.href = '/gracias/';
         } else {
           throw new Error('Error en el envío');
         }

@@ -89,7 +89,7 @@ const howToSchema = getHowToSchema({
 
 <BaseLayout
   title="Nacionalidad Española para Extranjeros | Tramitia"
-  description="Gestión integral de tu nacionalidad española. Documentos apostillados, preparación CCSE y presentación del expediente. 2 años de residencia para iberoamericanos."
+  description="Gestión integral de tu nacionalidad española. Documentos apostillados, preparación CCSE y presentación del expediente. 2 años para iberoamericanos."
   keywords={['nacionalidad española', 'trámites nacionalidad española', 'CCSE examen', 'nacionalidad iberoamericanos', 'nacionalidad española latinoamericanos', 'doble nacionalidad españa', 'documentos nacionalidad española', 'apostilla nacionalidad', 'residencia 2 años nacionalidad', 'nacionalidad por residencia españa']}
 >
   <Fragment slot="schema">
@@ -1046,7 +1046,7 @@ const howToSchema = getHowToSchema({
         });
 
         if (response.ok) {
-          window.location.href = '/gracias';
+          window.location.href = '/gracias/';
         } else {
           throw new Error('Error en el envío');
         }
