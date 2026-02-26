@@ -13,6 +13,9 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
+// OG image: use custom image if set, otherwise the generated one
+const ogImage = post.data.image || `/og/${post.slug}.png`;
+
 // Related posts: match by country, category, or documentType
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const relatedPosts = allPosts
@@ -47,7 +50,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: post.data.title,
   description: post.data.description,
-  image: post.data.image,
+  image: `https://tramitia.es${ogImage}`,
   datePublished: publishedDate.toISOString(),
   dateModified: updatedDate?.toISOString() || publishedDate.toISOString(),
   author: {
@@ -97,7 +100,7 @@ const breadcrumbSchema = {
 <BaseLayout
   title={`${post.data.title} | Tramitia`}
   description={post.data.description}
-  image={post.data.image}
+  image={ogImage}
   article={true}
   publishedTime={publishedDate.toISOString()}
   modifiedTime={updatedDate?.toISOString()}
@@ -157,14 +160,12 @@ const breadcrumbSchema = {
     </header>
 
     <!-- Featured Image -->
-    {post.data.image && (
-      <img
-        src={post.data.image}
-        alt={post.data.title}
-        class="w-full aspect-video object-cover rounded-xl mb-10"
-        loading="eager"
-      />
-    )}
+    <img
+      src={ogImage}
+      alt={post.data.title}
+      class="w-full aspect-video object-cover rounded-xl mb-10"
+      loading="eager"
+    />
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none
@@ -203,16 +204,14 @@ const breadcrumbSchema = {
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {relatedPosts.map((related) => (
             <a href={`/blog/${related.slug}/`} class="block bg-white rounded-xl border border-muted/20 overflow-hidden hover:shadow-lg transition-all duration-200 group">
-              {related.data.image && (
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src={related.data.image}
-                    alt={related.data.title}
-                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                    loading="lazy"
-                  />
-                </div>
-              )}
+              <div class="aspect-video overflow-hidden">
+                <img
+                  src={related.data.image || `/og/${related.slug}.png`}
+                  alt={related.data.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  loading="lazy"
+                />
+              </div>
               <div class="p-4">
                 {related.data.category && (
                   <span class="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-0.5 rounded-md mb-2">

@@ -29,7 +29,7 @@ export default defineConfig({
     mdx(),
     sitemap({
       filter: (page) =>
-        !page.includes('/gracias'),
+        !page.includes('/gracias') && !page.includes('/og/'),
       serialize(item) {
         // Homepage - highest priority
         if (item.url === 'https://tramitia.es/' || item.url === 'https://tramitia.es') {

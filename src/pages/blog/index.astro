@@ -96,16 +96,14 @@ const breadcrumbSchema = {
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {posts.map((post) => (
             <article class="bg-white rounded-xl border border-muted/20 overflow-hidden hover:shadow-lg transition-all duration-200 group">
-              {post.data.image && (
-                <a href={`/blog/${post.slug}/`} class="block aspect-video overflow-hidden">
-                  <img
-                    src={post.data.image}
-                    alt={post.data.title}
-                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                    loading="lazy"
-                  />
-                </a>
-              )}
+              <a href={`/blog/${post.slug}/`} class="block aspect-video overflow-hidden">
+                <img
+                  src={post.data.image || `/og/${post.slug}.png`}
+                  alt={post.data.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  loading="lazy"
+                />
+              </a>
               <div class="p-5 md:p-6">
                 {post.data.category && (
                   <span class="inline-block bg-accent/10 text-accent text-xs font-semibold px-2.5 py-1 rounded-md mb-3">
