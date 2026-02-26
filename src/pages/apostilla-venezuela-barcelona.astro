@@ -1,0 +1,572 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema } from '../lib/seo';
+
+// FAQs para schema y sección visible
+const faqs = [
+  {
+    question: '¿Puedo apostillar documentos venezolanos desde Barcelona?',
+    answer: 'Sí. Con Tramitia puedes gestionar la apostilla de tus documentos venezolanos desde Barcelona sin viajar a Venezuela. Nuestro equipo en Venezuela se encarga de todo el proceso ante el SAREN (Servicio Autónomo de Registros y Notarías). Tú solo nos envías la información necesaria y nosotros gestionamos la solicitud, el seguimiento y la entrega.',
+  },
+  {
+    question: '¿Necesito ir al Consulado de Venezuela en Barcelona?',
+    answer: 'No. La apostilla se gestiona directamente en Venezuela ante el SAREN, no a través del consulado. El Consulado General de Venezuela en Barcelona (Avinguda Diagonal 514) ofrece servicios consulares como legalizaciones, pero la Apostilla de La Haya debe tramitarse en territorio venezolano. Con Tramitia nos encargamos de todo sin que tengas que acudir al consulado.',
+  },
+  {
+    question: '¿Cuánto tarda apostillar un documento venezolano desde Barcelona?',
+    answer: 'El tiempo promedio es de 15 a 30 días hábiles, dependiendo del tipo de documento y la carga de trabajo del SAREN. El proceso es el mismo tanto si resides en Barcelona como en cualquier otra ciudad de España, ya que nuestro equipo gestiona todo directamente en Venezuela.',
+  },
+  {
+    question: '¿Cuál es el coste de apostillar documentos venezolanos en Barcelona?',
+    answer: 'El coste varía según el tipo de documento, la cantidad y si necesitas servicio express. Ofrecemos presupuestos personalizados y sin compromiso. Nuestros precios incluyen la gestión completa: solicitud ante el SAREN, seguimiento y envío del documento apostillado a tu dirección en Barcelona.',
+  },
+  {
+    question: '¿Qué documentos venezolanos puedo apostillar desde Barcelona?',
+    answer: 'Se pueden apostillar todos los documentos públicos emitidos por autoridades venezolanas: partidas de nacimiento, actas de matrimonio, antecedentes penales, títulos universitarios, notas certificadas, actas de defunción, certificados de soltería, poderes notariales y cualquier otro documento emitido por instituciones públicas venezolanas.',
+  },
+];
+
+// Schema.org
+const serviceSchema = getServiceSchema({
+  name: 'Apostilla de Documentos Venezolanos en Barcelona',
+  description: 'Servicio profesional de apostilla de documentos venezolanos para residentes en Barcelona. Gestión 100% online ante el SAREN sin necesidad de viajar a Venezuela.',
+  deliveryTime: 'P15D/P30D',
+  slug: 'apostilla-venezuela-barcelona',
+});
+
+const faqSchema = getFAQSchema(faqs);
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Apostilla Venezuela', url: '/apostilla-venezuela/' },
+  { name: 'Venezuela en Barcelona', url: '/apostilla-venezuela-barcelona/' },
+]);
+---
+
+<BaseLayout
+  title="Apostilla Documentos Venezolanos Barcelona | Tramitia"
+  description="Apostilla tus documentos venezolanos desde Barcelona. Partidas de nacimiento, antecedentes penales, títulos. Gestión 100% online ante el SAREN."
+  keywords={['apostilla venezuela barcelona', 'apostillar documentos venezolanos barcelona', 'apostilla documentos venezolanos barcelona', 'SAREN apostilla barcelona', 'consulado venezuela barcelona apostilla', 'apostilla partida nacimiento venezuela barcelona']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-muted-light/50 border-b border-muted/10" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-primary/60">
+        <li>
+          <a href="/" class="hover:text-accent transition">Inicio</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <a href="/apostilla-venezuela/" class="hover:text-accent transition">Apostilla Venezuela</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <span class="text-primary font-medium">Barcelona</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Para venezolanos en Barcelona</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
+          Apostilla de documentos venezolanos
+          <span class="text-accent">en Barcelona</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Gestionamos la apostilla de tus documentos venezolanos ante el SAREN desde Barcelona. Sin desplazamientos, sin viajar a Venezuela. 100% online.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Solicitar presupuesto gratis
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Gestión 100% online</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Respuesta en 24h</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+          </svg>
+          <span class="text-sm font-medium">Equipo local</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulado info section -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-10">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-primary">Consulado General de Venezuela en Barcelona</h2>
+            <p class="text-primary/60 text-sm mt-1">Información de referencia para venezolanos en Barcelona</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+            <div>
+              <p class="text-sm font-medium text-primary">Dirección</p>
+              <p class="text-sm text-primary/70">Avinguda Diagonal 514, 1.ª planta, 08006 Barcelona</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H6.375c-.621 0-1.125-.504-1.125-1.125V14.25m17.25 0V7.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 6.75 3 7.254 3 7.875v6.375m18 0h-1.5m-15 0H3" />
+            </svg>
+            <div>
+              <p class="text-sm font-medium text-primary">Metro</p>
+              <p class="text-sm text-primary/70">Diagonal (L3/L5)</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+              <p class="text-sm font-medium text-primary">Horario</p>
+              <p class="text-sm text-primary/70">Lunes a viernes de 9:00 a 13:00</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+            <div>
+              <p class="text-sm font-medium text-primary">Coste</p>
+              <p class="text-sm text-primary/70">60 EUR por documento</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-accent/5 rounded-xl border border-accent/10">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+            </svg>
+            <p class="text-sm text-primary/70"><strong class="text-primary">Importante:</strong> El consulado no gestiona apostillas. La apostilla debe tramitarse directamente en Venezuela ante el SAREN. Con Tramitia, nuestro equipo en Venezuela se encarga de todo el proceso por ti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          ¿Por qué gestionar tu apostilla desde Barcelona?
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Sin viajar a Venezuela</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Nuestro equipo en Venezuela gestiona presencialmente todo el trámite ante el SAREN. Tú sigues con tu vida en Barcelona sin interrupciones.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Seguimiento en tiempo real</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Te informamos de cada avance en tu trámite. Siempre sabrás en qué etapa está tu apostilla y cuándo la recibirás en Barcelona.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-primary mb-1">Envío seguro a Barcelona</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Recibe tus documentos apostillados en formato digital y, si lo necesitas, el original por mensajería certificada hasta tu dirección en Barcelona.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents grid -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Documentos venezolanos que apostillamos
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Gestionamos la apostilla ante el SAREN de cualquier documento público venezolano
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Partida de nacimiento</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Imprescindible para trámites de nacionalidad española, residencia y registro civil en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Antecedentes penales</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Necesario para visados, permisos de residencia y trabajo en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Título universitario</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Requisito para la homologación de estudios y ejercicio profesional en España.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Acta de matrimonio</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Para reagrupación familiar, inscripción de matrimonio y residencia por familiar comunitario.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Acta de defunción</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Necesaria para trámites de herencia, pensiones de viudedad y procedimientos legales.</p>
+        </a>
+
+        <a href="#contacto" class="block p-6 md:p-7 bg-white border border-muted/30 rounded-2xl card-hover group">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary group-hover:text-accent transition mb-2">Notas certificadas y otros</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Certificados de calificaciones, poderes notariales, certificados de soltería y otros documentos públicos.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA banner linking to main country page -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-primary rounded-2xl p-8 md:p-12 text-center text-white">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+          Conoce todo sobre la apostilla de documentos venezolanos
+        </h2>
+        <p class="text-white/70 text-lg mb-6 max-w-2xl mx-auto">
+          Visita nuestra página principal con información completa sobre el proceso, tiempos, costes y preguntas frecuentes.
+        </p>
+        <a href="/apostilla-venezuela/" class="btn btn-primary btn-lg bg-accent hover:bg-accent/90 border-0">
+          Ver guía completa de Venezuela
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Preguntas frecuentes sobre apostilla venezolana en Barcelona
+        </h2>
+      </div>
+
+      <div class="space-y-3 md:space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
+              <svg
+                class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contacto" class="py-16 md:py-24 bg-white scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+            Solicita tu presupuesto gratis
+          </h2>
+          <p class="text-lg md:text-xl text-primary/70">
+            Te respondemos en menos de 24 horas con un presupuesto personalizado para tus documentos venezolanos
+          </p>
+        </div>
+
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="tu@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="+34 600 000 000"
+              />
+            </div>
+            <div>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País del documento *</label>
+              <select
+                id="pais"
+                name="pais"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="venezuela" selected>Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro">Otro país</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="documento" class="block text-sm font-medium text-primary mb-2">¿Qué documento necesitas apostillar? *</label>
+            <select
+              id="documento"
+              name="documento"
+              required
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+            >
+              <option value="">Selecciona un documento</option>
+              <option value="partida-nacimiento">Partida de nacimiento</option>
+              <option value="antecedentes-penales">Antecedentes penales</option>
+              <option value="titulo-universitario">Título universitario</option>
+              <option value="acta-matrimonio">Acta de matrimonio</option>
+              <option value="partida-defuncion">Partida de defunción</option>
+              <option value="notas-certificadas">Notas certificadas / Calificaciones</option>
+              <option value="certificado-solteria">Certificado de soltería</option>
+              <option value="poder-notarial">Poder notarial</option>
+              <option value="varios">Varios documentos</option>
+              <option value="otro">Otro documento</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Información adicional</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="3"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuéntanos más detalles: para qué trámite necesitas la apostilla, si tienes el documento original, etc."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacidad"
+              name="privacidad"
+              required
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
+            />
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Solicitar presupuesto gratis
+          </button>
+
+          <p class="text-center text-sm text-primary/50">
+            Sin compromiso. Te respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form submission script -->
+  <script>
+    const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55';
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('button[type="submit"]');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!submitBtn) return;
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData(form as HTMLFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        data.source = 'tramitia.es';
+        data.timestamp = new Date().toISOString();
+        data.page = window.location.pathname;
+
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          window.location.href = '/gracias/';
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por correo electrónico.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</BaseLayout>
