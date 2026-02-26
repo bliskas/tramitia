@@ -26,11 +26,16 @@ export function getOrganizationSchema() {
     description: 'Servicios de apostilla, residencia, nacionalidad y asesoría fiscal para latinoamericanos en España.',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'C/ Gaztambide, 80',
+      postalCode: '28003',
+      addressLocality: 'Madrid',
       addressCountry: 'ES',
     },
+    email: 'hola@tramitia.es',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+34-611-222-333',
+      email: 'hola@tramitia.es',
       contactType: 'customer service',
       availableLanguage: ['Spanish'],
     },
@@ -52,6 +57,9 @@ export function getLocalBusinessSchema() {
     priceRange: '€€',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'C/ Gaztambide, 80',
+      postalCode: '28003',
+      addressLocality: 'Madrid',
       addressCountry: 'ES',
     },
     openingHoursSpecification: {
