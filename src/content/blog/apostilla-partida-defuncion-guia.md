@@ -13,7 +13,7 @@ keywords:
   - herencia españa extranjero
 documentType: "partida-defuncion"
 targetCountry: "espana"
-draft: true
+draft: false
 ---
 
 La [partida de defunción apostillada](/blog/que-es-apostilla-haya-guia/) es un documento necesario para trámites de herencia, pensiones y otros procedimientos legales en España cuando el fallecido era extranjero o el fallecimiento ocurrió en el extranjero. Esta guía explica el proceso de apostilla según el país de origen.
