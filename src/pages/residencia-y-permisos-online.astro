@@ -1037,50 +1037,7 @@ const howToSchema = getHowToSchema({
       </div>
     </div>
   </section>
-
-  <!-- Form submission script -->
   <script>
-    const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55';
-
-    const form = document.getElementById('contact-form');
-    const submitBtn = form?.querySelector('button[type="submit"]');
-
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      if (!submitBtn) return;
-
-      const originalText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando...';
-
-      try {
-        const formData = new FormData(form as HTMLFormElement);
-        const data = Object.fromEntries(formData.entries());
-
-        data.source = 'tramitia.es';
-        data.timestamp = new Date().toISOString();
-        data.page = window.location.pathname;
-
-        const response = await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-          window.location.href = '/gracias/';
-        } else {
-          throw new Error('Error en el envío');
-        }
-      } catch (error) {
-        console.error('Form submission error:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por correo electrónico.');
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }
-    });
+    import '../scripts/contact-form';
   </script>
 </BaseLayout>
