@@ -196,4 +196,4 @@ La tasa es de aproximadamente 104 euros.
 
 ---
 
-**¿Necesitas apostillar tus documentos?** En Tramitia te ayudamos a preparar toda la documentación para tu nacionalidad española. Gestionamos apostillas de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). [Solicita tu presupuesto gratuito](/#contacto).
+**¿Necesitas apostillar tus documentos?** En Tramitia te ayudamos a preparar toda la documentación para tu [nacionalidad española](/nacionalidad-espanola-tramites/). Gestionamos apostillas de [Venezuela](/apostilla-venezuela/), [Argentina](/apostilla-argentina/) y [Colombia](/apostilla-colombia/). También ofrecemos [trámites de residencia](/residencia-y-permisos-online/). [Solicita tu presupuesto gratuito](/#contacto).
