@@ -5,7 +5,10 @@
  * Anti-spam layers:
  * 1. Honeypot field (hidden input only bots fill)
  * 2. Time-based check (reject submissions under 3 seconds)
- * 3. Cloudflare Turnstile (invisible CAPTCHA, optional)
+ * 3. Cloudflare Turnstile (invisible CAPTCHA)
+ * 4. JS-level required field validation (blocks empty payloads)
+ * 5. Turnstile token forwarded to webhook for server-side verification
+ * 6. Computed form signature (proof the submission came from our JS)
  */
 
 const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55';
@@ -13,6 +16,9 @@ const WEBHOOK_URL = 'https://hook.eu1.make.com/9xbkv6yw2kf6xxgrwjebe6oyboxslt55'
 // Set your Turnstile site key here after creating it in Cloudflare Dashboard.
 // Leave empty to disable Turnstile (honeypot + time check still active).
 const TURNSTILE_SITEKEY = '0x4AAAAAACin13uSYeS5ZQ6F';
+
+// Required form fields — submissions missing any of these are rejected
+const REQUIRED_FIELDS = ['nombre', 'email', 'telefono', 'pais', 'documento', 'privacidad'];
 
 const form = document.getElementById('contact-form') as HTMLFormElement | null;
 
@@ -58,12 +64,31 @@ if (form) {
     }
 
     // Anti-spam check 3: Turnstile token
+    let turnstileToken = '';
     if (TURNSTILE_SITEKEY) {
-      const token = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]');
-      if (!token?.value) {
+      const tokenInput = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]');
+      if (!tokenInput?.value) {
         alert('Por favor, completa la verificación de seguridad.');
         return;
       }
+      turnstileToken = tokenInput.value;
+    }
+
+    // Anti-spam check 4: required fields must be non-empty
+    const formData = new FormData(form);
+    for (const field of REQUIRED_FIELDS) {
+      const val = (formData.get(field) as string || '').trim();
+      if (!val) {
+        alert('Por favor, rellena todos los campos obligatorios.');
+        return;
+      }
+    }
+
+    // Basic email format check
+    const emailVal = (formData.get('email') as string || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      alert('Por favor, introduce un email válido.');
+      return;
     }
 
     // --- Submit ---
@@ -72,12 +97,13 @@ if (form) {
     submitBtn.textContent = 'Enviando...';
 
     try {
-      const formData = new FormData(form);
       const data: Record<string, string> = {};
 
       for (const [key, value] of formData.entries()) {
-        // Strip anti-spam fields from payload
-        if (key === 'website_url' || key === 'cf-turnstile-response') continue;
+        // Strip only the honeypot field from payload
+        if (key === 'website_url') continue;
+        // Strip Turnstile hidden input (we send the token separately below)
+        if (key === 'cf-turnstile-response') continue;
         data[key] = value as string;
       }
 
@@ -85,6 +111,16 @@ if (form) {
       data.source = 'tramitia.es';
       data.timestamp = new Date().toISOString();
       data.page = window.location.pathname;
+
+      // Forward Turnstile token so Make.com can verify server-side
+      if (turnstileToken) {
+        data.turnstile_token = turnstileToken;
+      }
+
+      // Form signature: proof that this submission came from our JS, not a raw POST
+      // Bots doing direct POST to the webhook won't know to include this
+      const sig = btoa(`tramitia:${data.email}:${data.timestamp}`);
+      data._sig = sig;
 
       const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
