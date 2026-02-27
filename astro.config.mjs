@@ -66,6 +66,19 @@ export default defineConfig({
           item.priority = 0.9;
           item.changefreq = 'weekly';
         }
+        // Document service pages
+        else if (
+          item.url.includes('/gestion-documentos') ||
+          item.url.includes('/partida-nacimiento') ||
+          item.url.includes('/antecedentes-penales') ||
+          item.url.includes('/acta-matrimonio') ||
+          item.url.includes('/certificado-solteria') ||
+          item.url.includes('/certificado-bautismo') ||
+          item.url.includes('/partida-defuncion')
+        ) {
+          item.priority = 0.9;
+          item.changefreq = 'weekly';
+        }
         // Legal pages - lowest priority
         else if (item.url.includes('politica-') || item.url.includes('aviso-')) {
           item.priority = 0.3;
