@@ -35,13 +35,23 @@ if (form) {
     '<input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">';
   form.prepend(hpWrapper);
 
-  // --- Turnstile widget injection (if configured) ---
+  // --- Turnstile widget (explicit render to avoid race condition) ---
   if (TURNSTILE_SITEKEY && submitBtn) {
     const turnstileDiv = document.createElement('div');
-    turnstileDiv.className = 'cf-turnstile';
-    turnstileDiv.dataset.sitekey = TURNSTILE_SITEKEY;
-    turnstileDiv.dataset.theme = 'light';
+    turnstileDiv.id = 'turnstile-widget';
     submitBtn.parentElement?.insertBefore(turnstileDiv, submitBtn);
+
+    const renderWidget = () => {
+      if ((window as any).turnstile) {
+        (window as any).turnstile.render('#turnstile-widget', {
+          sitekey: TURNSTILE_SITEKEY,
+          theme: 'light',
+        });
+      } else {
+        setTimeout(renderWidget, 200);
+      }
+    };
+    renderWidget();
   }
 
   // --- Form submission handler ---

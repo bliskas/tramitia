@@ -92,8 +92,8 @@ const ogImage = new URL(image, siteUrl).href;
   <!-- Schema.org JSON-LD (se inyecta desde cada página) -->
   <slot name="schema" />
 
-  <!-- Cloudflare Turnstile (anti-spam para formularios) -->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <!-- Cloudflare Turnstile (anti-spam, render=explicit para evitar race condition) -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body class="bg-white text-primary antialiased">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-muted/20 shadow-sm">
@@ -140,6 +140,26 @@ const ogImage = new URL(image, siteUrl).href;
             </div>
           </div>
         </div>
+        <div class="relative group">
+          <button class="btn btn-ghost btn-sm inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
+            Documentos
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 mt-1 w-64 bg-white border border-muted/20 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="py-2">
+              <a href="/gestion-documentos/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Todos los documentos</a>
+              <div class="border-t border-muted/10 my-1"></div>
+              <a href="/partida-nacimiento/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Partida de nacimiento</a>
+              <a href="/antecedentes-penales/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Antecedentes penales</a>
+              <a href="/acta-matrimonio/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Acta de matrimonio</a>
+              <a href="/certificado-solteria/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Certificado de soltería</a>
+              <a href="/certificado-bautismo/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Certificado de bautismo</a>
+              <a href="/partida-defuncion/" class="block px-4 py-2.5 text-sm text-primary hover:bg-muted-light hover:text-accent transition">Partida de defunción</a>
+            </div>
+          </div>
+        </div>
         <a href="/blog/" class="btn btn-ghost btn-sm">
           Blog
         </a>
@@ -182,6 +202,16 @@ const ogImage = new URL(image, siteUrl).href;
           <a href="/gestoria-tributaria/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Gestoría tributaria</a>
           <a href="/asesoria-contable-autonomos/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Asesoría contable</a>
         </div>
+        <p class="text-xs font-semibold text-primary/50 uppercase tracking-wide px-3 pt-2">Documentos</p>
+        <div class="space-y-1">
+          <a href="/gestion-documentos/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Todos los documentos</a>
+          <a href="/partida-nacimiento/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Partida de nacimiento</a>
+          <a href="/antecedentes-penales/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Antecedentes penales</a>
+          <a href="/acta-matrimonio/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Acta de matrimonio</a>
+          <a href="/certificado-solteria/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Certificado de soltería</a>
+          <a href="/certificado-bautismo/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Certificado de bautismo</a>
+          <a href="/partida-defuncion/" class="btn btn-ghost btn-sm w-full justify-start text-sm">Partida de defunción</a>
+        </div>
         <a href="/blog/" class="btn btn-ghost btn-md w-full justify-center">
           Blog
         </a>
@@ -198,7 +228,7 @@ const ogImage = new URL(image, siteUrl).href;
 
   <footer class="bg-primary text-white/80 mt-16 md:mt-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-      <div class="grid md:grid-cols-4 gap-10 md:gap-8">
+      <div class="grid md:grid-cols-5 gap-10 md:gap-8">
         <!-- Brand column -->
         <div>
           <div class="mb-6">
@@ -234,6 +264,20 @@ const ogImage = new URL(image, siteUrl).href;
             <li><a href="/declaracion-renta-extranjeros/" class="text-sm hover:text-accent transition py-1 inline-block">Declaración de la renta</a></li>
             <li><a href="/gestoria-tributaria/" class="text-sm hover:text-accent transition py-1 inline-block">Gestoría tributaria</a></li>
             <li><a href="/asesoria-contable-autonomos/" class="text-sm hover:text-accent transition py-1 inline-block">Asesoría contable</a></li>
+          </ul>
+        </div>
+
+        <!-- Documentos column -->
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Documentos</h4>
+          <ul class="space-y-3">
+            <li><a href="/gestion-documentos/" class="text-sm hover:text-accent transition py-1 inline-block">Todos los documentos</a></li>
+            <li><a href="/partida-nacimiento/" class="text-sm hover:text-accent transition py-1 inline-block">Partida de nacimiento</a></li>
+            <li><a href="/antecedentes-penales/" class="text-sm hover:text-accent transition py-1 inline-block">Antecedentes penales</a></li>
+            <li><a href="/acta-matrimonio/" class="text-sm hover:text-accent transition py-1 inline-block">Acta de matrimonio</a></li>
+            <li><a href="/certificado-solteria/" class="text-sm hover:text-accent transition py-1 inline-block">Certificado de soltería</a></li>
+            <li><a href="/certificado-bautismo/" class="text-sm hover:text-accent transition py-1 inline-block">Certificado de bautismo</a></li>
+            <li><a href="/partida-defuncion/" class="text-sm hover:text-accent transition py-1 inline-block">Partida de defunción</a></li>
           </ul>
         </div>
 
