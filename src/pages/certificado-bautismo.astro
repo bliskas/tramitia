@@ -1,0 +1,588 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } from '../lib/seo';
+
+// FAQs para schema y sección visible
+const faqs = [
+  {
+    question: '¿Para qué necesito el certificado de bautismo en España?',
+    answer: 'El certificado de bautismo se requiere principalmente para contraer matrimonio católico en España. La parroquia exige la partida de bautismo reciente como parte del expediente canónico matrimonial. También puede ser necesario para algunos trámites de nacionalidad española, especialmente cuando se necesita acreditar datos complementarios de identidad.',
+  },
+  {
+    question: '¿El certificado de bautismo es un documento público?',
+    answer: 'No en todos los países. El certificado de bautismo es un documento eclesiástico emitido por la parroquia o diócesis donde se celebró el sacramento. En algunos países latinoamericanos requiere una legalización eclesiástica previa (por parte del obispado o la nunciatura apostólica) antes de poder apostillarse. Nosotros gestionamos todo el proceso.',
+  },
+  {
+    question: '¿Dónde se solicita el certificado de bautismo?',
+    answer: 'El certificado de bautismo se solicita en la parroquia donde fuiste bautizado/a. Si la parroquia ha cerrado, los registros suelen transferirse a la diócesis o arquidiócesis correspondiente. Nuestro equipo en tu país de origen localiza la parroquia correcta y gestiona la solicitud.',
+  },
+  {
+    question: '¿El certificado de bautismo tiene caducidad?',
+    answer: 'Para trámites eclesiásticos como el matrimonio católico, las parroquias en España suelen exigir que la partida de bautismo tenga una antigüedad máxima de 6 meses. Para otros trámites civiles, no suele haber un requisito de antigüedad, pero es recomendable presentar un documento reciente.',
+  },
+  {
+    question: '¿Necesito apostillar el certificado de bautismo?',
+    answer: 'Si vas a utilizar el certificado de bautismo para un trámite civil en España (como parte de un expediente de nacionalidad), sí necesita Apostilla de La Haya. Para trámites eclesiásticos (matrimonio católico), la apostilla puede no ser necesaria, pero sí la legalización eclesiástica. Te asesoramos según tu caso.',
+  },
+  {
+    question: '¿Puedo obtener el certificado de bautismo si no recuerdo la parroquia?',
+    answer: 'Sí. Si no recuerdas la parroquia exacta, podemos ayudarte a localizarla. Necesitamos la ciudad o localidad donde fuiste bautizado/a y una fecha aproximada. Nuestro equipo contacta con las parroquias y diócesis del área para localizar tu registro bautismal.',
+  },
+];
+
+// Schema.org
+const serviceSchema = getServiceSchema({
+  name: 'Certificado de Bautismo Apostillado',
+  description: 'Gestión y obtención de certificados de bautismo apostillados desde Venezuela, Argentina, Colombia, Ecuador, Perú y Bolivia. Para matrimonio católico, nacionalidad y otros trámites en España.',
+  deliveryTime: 'P30D',
+  slug: 'certificado-bautismo',
+  serviceType: 'Document Legalization',
+});
+
+const faqSchema = getFAQSchema(faqs);
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Gestión de documentos', url: '/gestion-documentos/' },
+  { name: 'Certificado de bautismo', url: '/certificado-bautismo/' },
+]);
+
+const howToSchema = getHowToSchema({
+  name: 'Cómo obtener tu certificado de bautismo apostillado desde España',
+  description: 'Guía paso a paso para obtener el certificado de bautismo apostillado de tu país de origen estando en España.',
+  totalTime: 'P30D',
+  steps: [
+    {
+      name: 'Cuéntanos tu caso',
+      text: 'Indícanos la ciudad y parroquia (si la recuerdas) donde fuiste bautizado/a, y para qué trámite necesitas el certificado. Presupuesto en 24 horas.',
+    },
+    {
+      name: 'Localizamos y obtenemos',
+      text: 'Nuestro equipo localiza la parroquia, solicita la partida de bautismo, gestiona la legalización eclesiástica (si es necesaria) y tramita la Apostilla de La Haya.',
+    },
+    {
+      name: 'Entrega en tu domicilio',
+      text: 'Recibes el certificado de bautismo apostillado en tu domicilio en España por mensajería segura con seguimiento.',
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Certificado de Bautismo Apostillado | Tramitia"
+  description="Certificado de bautismo apostillado desde Venezuela, Argentina, Colombia, Ecuador, Perú o Bolivia. Para matrimonio católico y nacionalidad española."
+  keywords={['certificado bautismo apostillado', 'partida bautismo apostillada', 'partida bautismo Venezuela España', 'certificado bautismo matrimonio católico', 'certificado bautismo apostilla', 'partida bautismo apostilla latinoamérica']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-muted-light/50 border-b border-muted/10" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-primary/60">
+        <li>
+          <a href="/" class="hover:text-accent transition">Inicio</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <a href="/gestion-documentos/" class="hover:text-accent transition">Gestión de documentos</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <span class="text-primary font-medium">Certificado de bautismo</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Servicio de gestión documental para latinoamericanos</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
+          Certificado de bautismo apostillado
+          <span class="text-accent">desde España</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Obtenemos tu certificado de bautismo en la parroquia de tu país de origen y lo entregamos apostillado en España. Para matrimonio católico, trámites de nacionalidad y más.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Solicitar presupuesto
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm text-white/60 mt-6 flex items-center gap-2">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <time datetime="2026-02">Actualizado en febrero de 2026</time>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Gestión online</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Respuesta en 24h</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+          <span class="text-sm font-medium">Documentos apostillados</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Para qué necesitas -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          ¿Para qué necesitas el certificado de bautismo apostillado?
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary mb-2">Matrimonio católico en España</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Documento obligatorio en el expediente canónico matrimonial de la parroquia</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary mb-2">Algunos trámites de nacionalidad española</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Puede solicitarse como documentación complementaria de identidad</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-6 md:p-7">
+          <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-primary mb-2">Confirmación y otros sacramentos</h3>
+          <p class="text-primary/70 text-sm md:text-base leading-relaxed">Necesario para recibir otros sacramentos en España</p>
+        </div>
+      </div>
+
+      <!-- Important note -->
+      <div class="mt-8 md:mt-10 bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl">
+        <div class="flex gap-3">
+          <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+          <div>
+            <h3 class="font-semibold text-primary mb-1">Información importante</h3>
+            <p class="text-primary/70 text-sm md:text-base leading-relaxed">
+              El certificado de bautismo es un documento eclesiástico, no civil. En muchos países latinoamericanos requiere una legalización eclesiástica previa (por parte del obispado o la nunciatura apostólica) antes de poder recibir la Apostilla de La Haya. Este paso adicional puede alargar los plazos. En Tramitia gestionamos todo el proceso, incluida la legalización eclesiástica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona (3 pasos) -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          ¿Cómo funciona el servicio?
+        </h2>
+        <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
+          Tres pasos sencillos para obtener tu certificado de bautismo apostillado sin moverte de España
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line (desktop) -->
+        <div class="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-white/20"></div>
+
+        <div class="space-y-8 md:space-y-10">
+          <!-- Step 1 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">1</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Cuéntanos tu caso</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Indícanos la ciudad y parroquia (si la recuerdas) donde fuiste bautizado/a, y para qué trámite necesitas el certificado. Presupuesto en 24 horas.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">2</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Localizamos y obtenemos</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Nuestro equipo localiza la parroquia, solicita la partida de bautismo, gestiona la legalización eclesiástica (si es necesaria) y tramita la Apostilla de La Haya.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">3</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Entrega en tu domicilio</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Recibes el certificado de bautismo apostillado en tu domicilio en España por mensajería segura con seguimiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 md:mt-14 text-center">
+        <a href="#contacto" class="btn btn-primary btn-lg bg-accent hover:bg-accent/90 border-0">
+          Solicitar presupuesto
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Country table -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Plazos por país
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-3xl mx-auto">
+          El proceso varía según el país de origen y los requisitos de legalización eclesiástica
+        </p>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="hidden lg:block overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl border border-muted/30 shadow-sm overflow-hidden">
+          <thead>
+            <tr class="bg-primary text-white text-left">
+              <th class="px-5 py-4 font-semibold text-sm">País</th>
+              <th class="px-5 py-4 font-semibold text-sm">Emisor</th>
+              <th class="px-5 py-4 font-semibold text-sm">Legalización previa</th>
+              <th class="px-5 py-4 font-semibold text-sm">Apostilla</th>
+              <th class="px-5 py-4 font-semibold text-sm">Tiempo estimado</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-muted/20">
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Venezuela</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Parroquia/Diócesis</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Arquidiócesis + MPPRE</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">25-45 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Argentina</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Parroquia/Diócesis</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Obispado</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla TAD</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">20-35 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Colombia</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Parroquia/Diócesis</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Arquidiócesis + Cancillería</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla electrónica</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">20-35 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Ecuador</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Parroquia/Diócesis</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Nunciatura Apostólica</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">25-40 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Perú</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Parroquia/Diócesis</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Arzobispado</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">25-40 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Bolivia</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Parroquia/Diócesis</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Conferencia Episcopal</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">30-50 días hábiles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile stacked cards -->
+      <div class="lg:hidden space-y-4">
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Venezuela</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Emisor</dt><dd class="text-primary/70 text-right">Parroquia/Diócesis</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Legalización previa</dt><dd class="text-primary/70 text-right">Arquidiócesis + MPPRE</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">25-45 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Argentina</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Emisor</dt><dd class="text-primary/70 text-right">Parroquia/Diócesis</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Legalización previa</dt><dd class="text-primary/70 text-right">Obispado</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla TAD</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">20-35 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Colombia</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Emisor</dt><dd class="text-primary/70 text-right">Parroquia/Diócesis</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Legalización previa</dt><dd class="text-primary/70 text-right">Arquidiócesis + Cancillería</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla electrónica</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">20-35 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Ecuador</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Emisor</dt><dd class="text-primary/70 text-right">Parroquia/Diócesis</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Legalización previa</dt><dd class="text-primary/70 text-right">Nunciatura Apostólica</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">25-40 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Perú</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Emisor</dt><dd class="text-primary/70 text-right">Parroquia/Diócesis</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Legalización previa</dt><dd class="text-primary/70 text-right">Arzobispado</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">25-40 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Bolivia</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Emisor</dt><dd class="text-primary/70 text-right">Parroquia/Diócesis</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Legalización previa</dt><dd class="text-primary/70 text-right">Conferencia Episcopal</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">30-50 días hábiles</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Preguntas frecuentes sobre el certificado de bautismo
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Resolvemos las dudas más comunes sobre la obtención y apostilla del certificado de bautismo
+        </p>
+      </div>
+
+      <div class="space-y-3 md:space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
+              <svg
+                class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contacto" class="py-16 md:py-24 bg-white scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+            Solicita tu certificado de bautismo apostillado
+          </h2>
+          <p class="text-lg md:text-xl text-primary/70">
+            Cuéntanos dónde fuiste bautizado/a y para qué lo necesitas
+          </p>
+        </div>
+
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="tu@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="+34 600 000 000"
+              />
+            </div>
+            <div>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País de origen *</label>
+              <select
+                id="pais"
+                name="pais"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona tu país</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro">Otro país</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="documento" class="block text-sm font-medium text-primary mb-2">Tipo de trámite *</label>
+            <select
+              id="documento"
+              name="documento"
+              required
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+            >
+              <option value="">Selecciona un trámite</option>
+              <option value="bautismo-matrimonio-catolico">Certificado de bautismo (para matrimonio católico)</option>
+              <option value="bautismo-nacionalidad">Certificado de bautismo (para nacionalidad)</option>
+              <option value="bautismo-confirmacion">Certificado de bautismo (para confirmación)</option>
+              <option value="bautismo-otro">Certificado de bautismo (otro trámite)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="3"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuéntanos la ciudad o localidad donde fuiste bautizado/a, la parroquia (si la recuerdas) y para qué necesitas el certificado."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacidad"
+              name="privacidad"
+              required
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
+            />
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Solicitar presupuesto
+          </button>
+
+          <p class="text-center text-sm text-primary/50">
+            Sin compromiso. Te respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+    import '../scripts/contact-form';
+  </script>
+</BaseLayout>

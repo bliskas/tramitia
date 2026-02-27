@@ -1,0 +1,651 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServiceSchema, getFAQSchema, getBreadcrumbSchema, getHowToSchema } from '../lib/seo';
+
+// FAQs para schema y sección visible
+const faqs = [
+  {
+    question: '¿Para qué necesito la partida de nacimiento apostillada en España?',
+    answer: 'La partida de nacimiento apostillada es uno de los documentos más solicitados por las autoridades españolas. Se requiere para: solicitar la nacionalidad española, tramitar permisos de residencia (arraigo social, familiar), reagrupación familiar, inscripción en el Registro Civil español y empadronamiento. Sin la Apostilla de La Haya, el documento no tiene validez legal en España.',
+  },
+  {
+    question: '¿Puedo obtener mi partida de nacimiento sin volver a mi país?',
+    answer: 'Sí. En Tramitia gestionamos la obtención de tu partida de nacimiento directamente ante el Registro Civil de tu país de origen. Solo necesitamos tus datos personales y una autorización. Nuestro equipo local se encarga de solicitar el documento y tramitar la apostilla.',
+  },
+  {
+    question: '¿Cuánto tarda obtener una partida de nacimiento apostillada?',
+    answer: 'El tiempo varía según el país: en Venezuela entre 20 y 40 días hábiles (SAREN + MPPRE), en Argentina entre 15 y 30 días (Registro Civil + TAD), en Colombia entre 15 y 25 días (Registraduría + Cancillería). Te informamos del plazo exacto antes de iniciar tu gestión.',
+  },
+  {
+    question: '¿La partida de nacimiento tiene fecha de caducidad?',
+    answer: 'En la mayoría de países latinoamericanos, la partida de nacimiento no caduca como documento. Sin embargo, muchas autoridades españolas exigen que la partida tenga una antigüedad máxima de 3 a 6 meses desde su emisión. Por eso recomendamos solicitar una partida actualizada.',
+  },
+  {
+    question: '¿Necesito traducción jurada de la partida de nacimiento?',
+    answer: 'Si la partida está en castellano, normalmente no necesitas traducción jurada para trámites en España. Sin embargo, si contiene anotaciones en otros idiomas o si la autoridad española lo requiere expresamente, sí será necesaria. Te asesoramos en cada caso.',
+  },
+  {
+    question: '¿Qué datos debe contener la partida de nacimiento?',
+    answer: 'La partida de nacimiento debe incluir: nombre completo, fecha y lugar de nacimiento, nombres de los padres, número de registro y sello de la autoridad emisora. Es fundamental que los datos coincidan exactamente con tu pasaporte y documentación en España. Si hay discrepancias, gestionamos la corrección antes de apostillar.',
+  },
+];
+
+// Schema.org
+const serviceSchema = getServiceSchema({
+  name: 'Partida de Nacimiento Apostillada',
+  description: 'Obtenemos tu partida de nacimiento apostillada desde Venezuela, Argentina, Colombia, Ecuador, Perú o Bolivia. Entrega en España sin viajar.',
+  deliveryTime: 'P30D',
+  slug: 'partida-nacimiento',
+  serviceType: 'Document Legalization',
+});
+
+const faqSchema = getFAQSchema(faqs);
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Inicio', url: '/' },
+  { name: 'Gestión de documentos', url: '/gestion-documentos/' },
+  { name: 'Partida de nacimiento', url: '/partida-nacimiento/' },
+]);
+
+const howToSchema = getHowToSchema({
+  name: 'Cómo obtener tu partida de nacimiento apostillada desde España',
+  description: 'Guía paso a paso para obtener tu partida de nacimiento apostillada sin viajar a tu país de origen. Gestión completa desde España.',
+  totalTime: 'P30D',
+  steps: [
+    {
+      name: 'Cuéntanos tu caso',
+      text: 'Indícanos tu país de origen, ciudad de nacimiento y para qué trámite necesitas la partida. Te enviamos presupuesto en 24 horas.',
+    },
+    {
+      name: 'Obtenemos y apostillamos',
+      text: 'Nuestro equipo solicita tu partida de nacimiento ante el Registro Civil correspondiente y tramita la Apostilla de La Haya.',
+    },
+    {
+      name: 'Entrega en tu domicilio',
+      text: 'Recibes la partida original apostillada en tu dirección en España por mensajería segura con seguimiento.',
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Partida de Nacimiento Apostillada | Tramitia"
+  description="Obtenemos tu partida de nacimiento apostillada desde Venezuela, Argentina, Colombia, Ecuador, Perú o Bolivia. Entrega en España sin viajar."
+  keywords={['partida nacimiento apostillada', 'certificado nacimiento apostillado', 'partida nacimiento Venezuela España', 'partida nacimiento Argentina apostillada', 'partida nacimiento apostilla', 'partida nacimiento Colombia apostillada', 'partida nacimiento Ecuador apostillada', 'obtener partida nacimiento desde España']}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-muted-light/50 border-b border-muted/10" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-primary/60">
+        <li>
+          <a href="/" class="hover:text-accent transition">Inicio</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <a href="/gestion-documentos/" class="hover:text-accent transition">Gestión de documentos</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li>
+          <span class="text-primary font-medium">Partida de nacimiento</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent-300 font-medium mb-3 md:mb-4 text-base md:text-lg">Servicio de gestión documental para latinoamericanos</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">
+          Partida de nacimiento desde España
+          <span class="text-accent">apostillada y lista para usar</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-10 leading-relaxed">
+          Obtenemos tu partida de nacimiento directamente del Registro Civil de tu país de origen y la entregamos con Apostilla de La Haya en tu domicilio en España. Sin viajar, sin complicaciones.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Solicitar presupuesto
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm text-white/60 mt-6 flex items-center gap-2">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <time datetime="2026-02">Actualizado en febrero de 2026</time>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-5 md:py-6 border-b border-muted/20 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10 text-primary/70">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Gestión 100% online</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">Presupuesto en 24h</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.142-.504 1.125-1.125a17.902 17.902 0 00-3.213-9.174L21 4.875H15.75L14.25 3H9.75L8.25 4.875H3l.938 1.077A17.902 17.902 0 00.725 15.125C.708 15.746 1.229 16.25 1.85 16.25" />
+          </svg>
+          <span class="text-sm font-medium">Entrega a domicilio</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <span class="text-sm font-medium">Datos protegidos (RGPD)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Para qué necesitas este certificado -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
+          ¿Para qué necesitas la partida de nacimiento apostillada?
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-3xl mx-auto">
+          La partida de nacimiento apostillada es uno de los documentos más solicitados para trámites de extranjería e inmigración en España.
+        </p>
+      </div>
+
+      <div class="space-y-4 md:space-y-5">
+        <div class="flex items-start gap-4 bg-white rounded-xl border border-muted/30 p-5 md:p-6 shadow-sm">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </span>
+          <div>
+            <h3 class="font-semibold text-primary text-base md:text-lg">Nacionalidad española</h3>
+            <p class="text-primary/70 text-sm md:text-base mt-1">Documento obligatorio para solicitar la nacionalidad española por residencia</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white rounded-xl border border-muted/30 p-5 md:p-6 shadow-sm">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </span>
+          <div>
+            <h3 class="font-semibold text-primary text-base md:text-lg">Permisos de residencia</h3>
+            <p class="text-primary/70 text-sm md:text-base mt-1">Necesario para arraigo social, arraigo familiar y primera autorización</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white rounded-xl border border-muted/30 p-5 md:p-6 shadow-sm">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </span>
+          <div>
+            <h3 class="font-semibold text-primary text-base md:text-lg">Reagrupación familiar</h3>
+            <p class="text-primary/70 text-sm md:text-base mt-1">Imprescindible para demostrar el vínculo familiar</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white rounded-xl border border-muted/30 p-5 md:p-6 shadow-sm">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </span>
+          <div>
+            <h3 class="font-semibold text-primary text-base md:text-lg">Inscripción en el Registro Civil</h3>
+            <p class="text-primary/70 text-sm md:text-base mt-1">Para registrar tu nacimiento en España como ciudadano extranjero</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white rounded-xl border border-muted/30 p-5 md:p-6 shadow-sm">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </span>
+          <div>
+            <h3 class="font-semibold text-primary text-base md:text-lg">Empadronamiento y otros trámites</h3>
+            <p class="text-primary/70 text-sm md:text-base mt-1">Requerido por algunos ayuntamientos y administraciones</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="#contacto" class="btn btn-primary btn-md">
+          Solicitar presupuesto
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo lo gestionamos -->
+  <section class="py-16 md:py-24 bg-primary text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+          Cómo lo gestionamos
+        </h2>
+        <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
+          Un proceso sencillo en 3 pasos para que recibas tu partida de nacimiento apostillada sin moverte de España
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line (desktop) -->
+        <div class="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-white/20"></div>
+
+        <div class="space-y-8 md:space-y-10">
+          <!-- Step 1 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">1</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Cuéntanos tu caso</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Indícanos tu país de origen, ciudad de nacimiento y para qué trámite necesitas la partida. Te enviamos presupuesto en 24 horas.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">2</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Obtenemos y apostillamos</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Nuestro equipo solicita tu partida de nacimiento ante el Registro Civil correspondiente y tramita la Apostilla de La Haya.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-accent/30 z-10">3</div>
+            <div class="pt-2">
+              <h3 class="text-lg md:text-xl font-semibold mb-2">Entrega en tu domicilio</h3>
+              <p class="text-white/70 text-sm md:text-base leading-relaxed">Recibes la partida original apostillada en tu dirección en España por mensajería segura con seguimiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 md:mt-14 text-center">
+        <a href="#contacto" class="btn btn-primary btn-lg bg-accent hover:bg-accent/90 border-0">
+          Solicitar presupuesto
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso por país -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Proceso por país
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-3xl mx-auto">
+          El proceso de obtención y apostilla varía según tu país de origen. Estos son los plazos y autoridades para cada uno.
+        </p>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="hidden lg:block overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl border border-muted/30 shadow-sm overflow-hidden">
+          <thead>
+            <tr class="bg-primary text-white text-left">
+              <th class="px-5 py-4 font-semibold text-sm">País</th>
+              <th class="px-5 py-4 font-semibold text-sm">Autoridad emisora</th>
+              <th class="px-5 py-4 font-semibold text-sm">Apostilla</th>
+              <th class="px-5 py-4 font-semibold text-sm">Tiempo estimado</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-muted/20">
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Venezuela</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Registro Civil / SAREN / MPPRE</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">20-40 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Argentina</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Registro Civil provincial / TAD</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla electrónica o física</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">15-30 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Colombia</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Registraduría Nacional / Cancillería</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla electrónica</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">15-25 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Ecuador</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Registro Civil / Cancillería</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">20-35 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Perú</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">RENIEC / Ministerio de RREE</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">20-35 días hábiles</td>
+            </tr>
+            <tr class="hover:bg-muted-light/50 transition">
+              <td class="px-5 py-4 font-medium text-primary text-sm">Bolivia</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">SERECI / Cancillería</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">Apostilla de La Haya</td>
+              <td class="px-5 py-4 text-primary/70 text-sm">25-45 días hábiles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile stacked cards -->
+      <div class="lg:hidden space-y-4">
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Venezuela</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Autoridad emisora</dt><dd class="text-primary/70 text-right">Registro Civil / SAREN / MPPRE</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">20-40 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Argentina</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Autoridad emisora</dt><dd class="text-primary/70 text-right">Registro Civil provincial / TAD</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Electrónica o física</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">15-30 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Colombia</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Autoridad emisora</dt><dd class="text-primary/70 text-right">Registraduría Nacional / Cancillería</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla electrónica</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">15-25 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Ecuador</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Autoridad emisora</dt><dd class="text-primary/70 text-right">Registro Civil / Cancillería</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">20-35 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Perú</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Autoridad emisora</dt><dd class="text-primary/70 text-right">RENIEC / Ministerio de RREE</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">20-35 días hábiles</dd></div>
+          </dl>
+        </div>
+        <div class="bg-white rounded-2xl border border-muted/30 shadow-sm p-5">
+          <h3 class="font-semibold text-primary text-lg mb-3">Bolivia</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Autoridad emisora</dt><dd class="text-primary/70 text-right">SERECI / Cancillería</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Apostilla</dt><dd class="text-primary/70">Apostilla de La Haya</dd></div>
+            <div class="flex justify-between gap-2"><dt class="text-primary/50 font-medium">Tiempo estimado</dt><dd class="text-primary/70">25-45 días hábiles</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Preguntas frecuentes sobre la partida de nacimiento
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Resolvemos las dudas más comunes sobre la obtención y apostilla de la partida de nacimiento
+        </p>
+      </div>
+
+      <div class="space-y-3 md:space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-xl border border-muted/30 overflow-hidden shadow-sm">
+            <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none hover:bg-muted-light/50 transition">
+              <h3 class="text-base md:text-lg font-medium text-primary pr-4">{faq.question}</h3>
+              <svg
+                class="w-5 h-5 text-accent transform group-open:rotate-180 transition-transform flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-primary/70">
+              <p class="text-sm md:text-base leading-relaxed">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related blog posts -->
+  <section class="py-16 md:py-24 bg-muted-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+          Guías relacionadas
+        </h2>
+        <p class="text-lg md:text-xl text-primary/70 max-w-2xl mx-auto">
+          Artículos con información práctica sobre apostilla de documentos y trámites en España
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <a href="/blog/apostilla-partida-nacimiento-requisitos/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Documentos</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Partida de nacimiento apostillada: requisitos</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Guía completa sobre los requisitos para apostillar tu partida de nacimiento desde cualquier país latinoamericano.</p>
+          </div>
+        </a>
+
+        <a href="/blog/documentos-residencia-espana-apostilla/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Residencia</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos apostillados para la residencia en España</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para solicitar tu permiso de residencia en España.</p>
+          </div>
+        </a>
+
+        <a href="/blog/documentos-reagrupacion-familiar-espana/" class="block bg-white rounded-2xl border border-muted/30 overflow-hidden card-hover group">
+          <div class="p-6">
+            <span class="text-xs font-medium text-accent uppercase tracking-wide">Reagrupación</span>
+            <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition mt-2 mb-2">Documentos para la reagrupación familiar</h3>
+            <p class="text-primary/70 text-sm leading-relaxed">Qué documentos apostillados necesitas para reagrupar a tu familia en España.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/blog/" class="btn btn-outline btn-md">
+          Ver todos los artículos
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contacto" class="py-16 md:py-24 bg-white scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-muted/10 p-6 sm:p-8 md:p-12">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
+            Solicita tu partida de nacimiento apostillada
+          </h2>
+          <p class="text-lg md:text-xl text-primary/70">
+            Cuéntanos tu caso y te enviamos presupuesto sin compromiso
+          </p>
+        </div>
+
+        <form class="space-y-5 md:space-y-6" id="contact-form">
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-primary mb-2">Nombre completo *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="tu@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2">Teléfono *</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition placeholder:text-primary/40"
+                placeholder="+34 600 000 000"
+              />
+            </div>
+            <div>
+              <label for="pais" class="block text-sm font-medium text-primary mb-2">País de origen *</label>
+              <select
+                id="pais"
+                name="pais"
+                required
+                class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+              >
+                <option value="">Selecciona tu país</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro">Otro país</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="documento" class="block text-sm font-medium text-primary mb-2">¿Para qué trámite necesitas la partida? *</label>
+            <select
+              id="documento"
+              name="documento"
+              required
+              class="w-full h-12 px-4 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition bg-white appearance-none cursor-pointer"
+              style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23bfbfbf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-repeat: no-repeat; background-size: 20px;"
+            >
+              <option value="">Selecciona un trámite</option>
+              <option value="partida-nacimiento-nacionalidad">Partida de nacimiento (para nacionalidad)</option>
+              <option value="partida-nacimiento-residencia">Partida de nacimiento (para residencia)</option>
+              <option value="partida-nacimiento-reagrupacion">Partida de nacimiento (para reagrupación)</option>
+              <option value="partida-nacimiento-otro">Partida de nacimiento (otro trámite)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2">Información adicional</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="3"
+              class="w-full px-4 py-3 border border-muted/60 rounded-lg text-base focus:ring-2 focus:ring-accent/30 focus:border-accent transition resize-none placeholder:text-primary/40"
+              placeholder="Cuéntanos más detalles: ciudad de nacimiento, para qué necesitas la partida, si tienes alguna urgencia, etc."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacidad"
+              name="privacidad"
+              required
+              class="mt-0.5 w-5 h-5 text-accent border-muted/60 rounded focus:ring-accent/30 cursor-pointer"
+            />
+            <label for="privacidad" class="text-sm text-primary/70 cursor-pointer">
+              He leído y acepto la <a href="/politica-privacidad/" class="text-accent hover:underline font-medium">política de privacidad</a> *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Solicitar presupuesto gratis
+          </button>
+
+          <p class="text-center text-sm text-primary/50">
+            Sin compromiso. Te respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+    import '../scripts/contact-form';
+  </script>
+</BaseLayout>
