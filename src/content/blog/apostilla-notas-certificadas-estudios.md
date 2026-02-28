@@ -1,7 +1,7 @@
 ---
-title: "Apostilla de notas certificadas y certificados de estudio: Guía para España"
+title: "Apostilla de notas y certificados de estudio"
 description: "Cómo apostillar notas certificadas, récord académico y certificados de estudio de Venezuela, Argentina, Colombia y Ecuador para trámites en España."
-publishedDate: "2026-04-07"
+publishedDate: "2026-03-19"
 author: "Tramitia"
 category: "documentos"
 keywords:

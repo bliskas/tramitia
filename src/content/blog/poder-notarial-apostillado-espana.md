@@ -1,7 +1,7 @@
 ---
 title: "Poder notarial apostillado: Cómo obtenerlo desde España"
 description: "Guía completa sobre el poder notarial apostillado. Cómo obtenerlo desde España para gestionar trámites en tu país de origen: Venezuela, Argentina y Colombia."
-publishedDate: "2026-04-01"
+publishedDate: "2026-03-15"
 updatedDate: "2026-02-14"
 author: "Tramitia"
 category: "documentos"

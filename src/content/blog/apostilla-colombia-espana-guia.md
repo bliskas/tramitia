@@ -1,5 +1,5 @@
 ---
-title: "Cómo apostillar documentos colombianos desde España: Guía completa 2026"
+title: "Apostillar documentos colombianos desde España"
 description: "Guía oficial para apostillar partidas de nacimiento, antecedentes penales y títulos colombianos desde España. Proceso Cancillería Colombia online."
 publishedDate: "2026-02-19"
 author: "Tramitia"

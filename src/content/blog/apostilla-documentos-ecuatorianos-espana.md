@@ -1,7 +1,7 @@
 ---
-title: "Cómo apostillar documentos ecuatorianos desde España: Guía completa 2026"
+title: "Apostillar documentos ecuatorianos desde España"
 description: "Guía para apostillar documentos ecuatorianos desde España. Proceso en la Cancillería de Ecuador, costos, plazos y requisitos para partidas, títulos y antecedentes penales."
-publishedDate: "2026-03-17"
+publishedDate: "2026-03-05"
 author: "Tramitia"
 category: "guias"
 keywords:

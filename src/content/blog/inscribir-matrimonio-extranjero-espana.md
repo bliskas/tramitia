@@ -1,7 +1,7 @@
 ---
-title: "Cómo inscribir un matrimonio extranjero en España: Documentos y apostilla"
+title: "Inscribir matrimonio extranjero en España: Guía"
 description: "Guía completa para inscribir tu matrimonio celebrado en el extranjero en el Registro Civil español. Documentos apostillados, proceso y plazos actualizados 2026."
-publishedDate: "2026-04-04"
+publishedDate: "2026-03-17"
 author: "Tramitia"
 category: "tramites"
 keywords:

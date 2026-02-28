@@ -1,5 +1,5 @@
 ---
-title: "Diferencia entre legalización y apostilla: Cuál necesitas en España"
+title: "Legalización vs apostilla: Cuál necesitas en España"
 description: "Guía completa sobre la diferencia entre legalización consular y apostilla de La Haya. Descubre cuál necesitas para usar tus documentos en España según tu país de origen."
 publishedDate: "2026-02-08"
 author: "Tramitia"

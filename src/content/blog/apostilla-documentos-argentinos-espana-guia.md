@@ -1,5 +1,5 @@
 ---
-title: "Cómo apostillar documentos argentinos desde España en 2026: Guía completa"
+title: "Apostillar documentos argentinos desde España"
 description: "Guía paso a paso para apostillar partidas de nacimiento, antecedentes penales y otros documentos argentinos estando en España. Incluye tiempos, costes y alternativas."
 publishedDate: "2026-02-19"
 author: "Tramitia"

@@ -1,7 +1,7 @@
 ---
-title: "Arraigo social en España: Documentos apostillados que necesitas"
+title: "Arraigo social en España: Documentos apostillados"
 description: "Guía completa sobre el arraigo social en España. Requisitos, documentos apostillados necesarios, proceso paso a paso y requisitos por nacionalidad."
-publishedDate: "2026-03-23"
+publishedDate: "2026-03-09"
 updatedDate: "2026-02-14"
 author: "Tramitia"
 category: "guias"

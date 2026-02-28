@@ -1,7 +1,7 @@
 ---
-title: "Homologación de títulos en España: Documentos y apostillas necesarias"
+title: "Homologar títulos en España: Documentos necesarios"
 description: "Guía completa para homologar tu título universitario en España. Documentos apostillados, proceso en el Ministerio de Universidades y requisitos 2026."
-publishedDate: "2026-03-05"
+publishedDate: "2026-03-01"
 author: "Tramitia"
 category: "guias"
 keywords:

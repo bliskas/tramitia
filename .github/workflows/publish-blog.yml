@@ -1,0 +1,37 @@
+name: Auto-publish blog posts
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Cada día a las 8:00 UTC
+  workflow_dispatch:       # Trigger manual desde GitHub
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find and publish due posts
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          CHANGED=0
+          for file in src/content/blog/*.md; do
+            DRAFT=$(grep -m1 '^draft:' "$file" | awk '{print $2}')
+            PUB_DATE=$(grep -m1 '^publishedDate:' "$file" | awk '{print $2}' | tr -d '"')
+            if [ "$DRAFT" = "true" ] && [ "$PUB_DATE" \<= "$TODAY" ]; then
+              sed -i 's/^draft: true/draft: false/' "$file"
+              CHANGED=$((CHANGED + 1))
+              echo "Published: $file (date: $PUB_DATE)"
+            fi
+          done
+          if [ $CHANGED -gt 0 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add src/content/blog/
+            git commit -m "content: auto-publish $CHANGED blog post(s)"
+            git push
+          else
+            echo "No posts due for publishing today"
+          fi
